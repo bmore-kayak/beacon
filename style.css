@@ -49,6 +49,7 @@ td:last-child {
 #note {
   margin-top: 1.5rem;
   line-height: 1.4;
+  white-space: pre-line;
 }
 
 footer {
