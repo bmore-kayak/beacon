@@ -51,18 +51,28 @@ def main():
 
     data = {
         "location": "Baltimore Harbor",
-        "overall": "🔴 Don't Go" if failing else "🟢 Good",
+        "overall": {
+            "status": "🔴" if failing else "🟢",
+            "label": "Don't Go" if failing else "Good",
+        },
         "updated": datetime.now().strftime("%Y-%m-%d %I:%M %p"),
-        "conditions": [
-            ["🌬 Wind", "🟢", "Pending"],
-            ["🌊 Waves", "🟢", "Pending"],
-            ["⛈ Storms", "🟢", "Pending"],
-            ["🚩 Small Craft", "🟢", "Pending"],
-            ["🦠 Water Contact", "🔴" if failing else "🟢", f"{min(counts)}–{max(counts)} MPN" if counts else "Unavailable"],
-            ["🌡 Water Temp", "🟢", "Pending"],
-        ],
+        "conditions": {
+            "wind": {"icon": "🌬", "label": "Wind", "status": "🟢", "detail": "Pending"},
+            "waves": {"icon": "🌊", "label": "Waves", "status": "🟢", "detail": "Pending"},
+            "storms": {"icon": "⛈", "label": "Storms", "status": "🟢", "detail": "Pending"},
+            "small_craft": {"icon": "🚩", "label": "Small Craft", "status": "🟢", "detail": "Pending"},
+            "water_contact": {
+                "icon": "🦠",
+                "label": "Water Contact",
+                "status": "🔴" if failing else "🟢",
+                "detail": f"{min(counts)}–{max(counts)} MPN" if counts else "Unavailable",
+                "passing": passing,
+                "failing": failing,
+                "stations": stations,
+            },
+            "water_temp": {"icon": "🌡", "label": "Water Temp", "status": "🟢", "detail": "Pending"},
+        },
         "note": f"Water contact: {passing}/{len(stations)} passing, {failing}/{len(stations)} failing.",
-        "stations": stations,
     }
 
     OUT.write_text(json.dumps(data, indent=2), encoding="utf-8")
