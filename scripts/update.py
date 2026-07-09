@@ -465,34 +465,45 @@ def advisory_condition(alerts):
         "Hazardous Weather Outlook",
     ]
 
-    matched = []
+    api_items = []
 
-    for event in priority:
-        for alert in alerts:
-            if alert.get("properties", {}).get("event") == event:
-                matched.append(alert)
+    for alert in alerts:
+        properties = alert.get("properties", {})
+        event = properties.get("event")
 
-    names = [
-        alert.get("properties", {}).get("event")
-        for alert in matched
-    ]
+        if event not in priority:
+            continue
 
-    for name in marine_text_alert_names():
-        if name not in names:
-            names.append(name)
+        api_items.append({
+            "event": event,
+            "ends": properties.get("ends") or properties.get("expires"),
+        })
 
-    red_alerts = [
-        name for name in names
-        if name != "Hazardous Weather Outlook"
+    # Add advisories found on the marine page when the Alerts API misses them.
+    for event in marine_text_alert_names():
+        if not any(item["event"] == event for item in api_items):
+            api_items.append({
+                "event": event,
+                "ends": None,
+            })
+
+    # Sort using Beacon's advisory priority.
+    items = sorted(
+        api_items,
+        key=lambda item: priority.index(item["event"]),
+    )
+
+    red_items = [
+        item for item in items
+        if item["event"] != "Hazardous Weather Outlook"
     ]
 
     return {
         "icon": "⚠️",
         "label": "Advisories",
-        "status": "🔴" if red_alerts else "🟠" if matched else "🟢",
-        "detail": names[0] if names else "None",
-        "items": names,
-        "alerts": matched,
+        "status": "🔴" if red_items else "🟠" if items else "🟢",
+        "detail": items[0]["event"] if items else "None",
+        "items": items,
         "source": {
             "provider": "National Weather Service",
             "location": "ANZ538",
@@ -502,10 +513,9 @@ def advisory_condition(alerts):
         },
     }
 
-def format_alert(alert):
-    p = alert.get("properties", {})
-    event = p.get("event")
-    ends = p.get("ends") or p.get("expires")
+def format_alert(item):
+    event = item.get("event")
+    ends = item.get("ends")
 
     if not event:
         return None
@@ -554,15 +564,15 @@ def overall_status(conditions):
 
 
 def note(conditions, water):
-    alerts = conditions["advisories"].get("alerts", [])
-
-    if alerts:
+    advisories = conditions["advisories"].get("items", [])
+    
+    if advisories:
         lines = [
             formatted
-            for alert in alerts
-            if (formatted := format_alert(alert))
+            for item in advisories
+            if (formatted := format_alert(item))
         ]
-
+    
         return "\n".join(lines)
 
     if conditions["storms"]["status"] == "🔴":
