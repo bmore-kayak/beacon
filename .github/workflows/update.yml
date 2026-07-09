@@ -3,7 +3,7 @@ name: Update Beacon
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 9 * * *" # 5am ET during daylight time
+    - cron: "0 */2 * * *"
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: "3.x"
 
-      - run: pip install requests
+      - run: pip install -r requirements.txt
 
       - run: python scripts/update.py
 
