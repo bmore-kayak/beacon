@@ -1,50 +1,86 @@
 {
   "location": "Baltimore Harbor",
   "overall": {
-    "status": "🔴",
-    "label": "Don't Go"
+    "status": "\ud83d\udfe2",
+    "label": "Good"
   },
-  "updated": "2026-07-09 05:00 AM",
+  "updated": "2026-07-09 05:55 PM",
   "conditions": {
     "wind": {
-      "icon": "🌬",
+      "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "🟢",
+      "status": "\ud83d\udfe2",
       "detail": "Pending"
     },
     "waves": {
-      "icon": "🌊",
+      "icon": "\ud83c\udf0a",
       "label": "Waves",
-      "status": "🟢",
+      "status": "\ud83d\udfe2",
       "detail": "Pending"
     },
     "storms": {
-      "icon": "⛈",
+      "icon": "\u26c8",
       "label": "Storms",
-      "status": "🟢",
+      "status": "\ud83d\udfe2",
       "detail": "Pending"
     },
     "small_craft": {
-      "icon": "🚩",
+      "icon": "\ud83d\udea9",
       "label": "Small Craft",
-      "status": "🟢",
+      "status": "\ud83d\udfe2",
       "detail": "Pending"
     },
     "water_contact": {
-      "icon": "🦠",
+      "icon": "\ud83e\udda0",
       "label": "Water Contact",
-      "status": "🔴",
-      "detail": "201–5717 MPN",
-      "passing": 0,
-      "failing": 5,
-      "stations": []
+      "status": "\ud83d\udfe2",
+      "detail": "10\u201398 MPN",
+      "passing": 5,
+      "failing": 0,
+      "stations": [
+        {
+          "site": "Fells Point",
+          "date": 1783512000000,
+          "status": "\ud83d\udfe2",
+          "advisory": "Passing",
+          "bacteria": 52
+        },
+        {
+          "site": "Canton Waterfront Park",
+          "date": 1783512000000,
+          "status": "\ud83d\udfe2",
+          "advisory": "Passing",
+          "bacteria": 98
+        },
+        {
+          "site": "Mr. Trash Wheel",
+          "date": 1783512000000,
+          "status": "\ud83d\udfe2",
+          "advisory": "Passing",
+          "bacteria": 20
+        },
+        {
+          "site": "Downtown Sailing Center",
+          "date": 1783512000000,
+          "status": "\ud83d\udfe2",
+          "advisory": "Passing",
+          "bacteria": 10
+        },
+        {
+          "site": "Inner Harbor",
+          "date": 1783512000000,
+          "status": "\ud83d\udfe2",
+          "advisory": "Passing",
+          "bacteria": 98
+        }
+      ]
     },
     "water_temp": {
-      "icon": "🌡",
+      "icon": "\ud83c\udf21",
       "label": "Water Temp",
-      "status": "🟢",
+      "status": "\ud83d\udfe2",
       "detail": "Pending"
     }
   },
-  "note": "Water contact is the limiting factor today."
+  "note": "Water contact: 5/5 passing, 0/5 failing."
 }
