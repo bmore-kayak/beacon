@@ -20,68 +20,133 @@ async function main() {
   }
 }
 
+
 function renderCondition(key, condition) {
   const details = document.createElement("details");
   details.className = "condition";
 
-  const expanded = renderExpandedContent(key, condition);
-
   details.innerHTML = `
     <summary class="condition-row">
-      <span class="condition-label">${condition.icon} ${condition.label}</span>
-      <span class="condition-status">${condition.status}</span>
-      <span class="condition-detail">${condition.detail}</span>
+      <span class="condition-label">
+        ${condition.icon} ${condition.label}
+      </span>
+
+      <span class="condition-status">
+        ${condition.status}
+      </span>
+
+      <span class="condition-detail">
+        ${condition.detail}
+      </span>
+
       <span class="chevron">▾</span>
     </summary>
 
-    ${expanded}
+    <div class="condition-details">
+      ${renderDetails(key, condition)}
+    </div>
   `;
 
   return details;
 }
 
-function renderExpandedContent(key, condition) {
-  if (key !== "water_contact") {
-    return "";
+
+function renderDetails(key, condition) {
+  let content = "";
+
+  if (key === "advisories") {
+    content += renderAdvisories(condition.alerts);
   }
 
-  const stations = condition.stations || [];
-  const source = condition.source || {};
+  if (key === "water_contact") {
+    content += renderStations(condition.stations);
+  }
+
+  content += renderSource(condition.source);
+
+  return content;
+}
+
+
+function renderAdvisories(alerts = []) {
+  if (!alerts.length) {
+    return `<div class="expanded-empty">No active advisories.</div>`;
+  }
 
   return `
-    <div class="condition-details">
-      <div class="stations">
-        ${stations.map(station => `
-          <div class="station">
-            <span>${station.site}</span>
-            <span>${station.status} ${station.bacteria ?? "—"} MPN</span>
-          </div>
-        `).join("")}
-      </div>
+    <div class="advisory-list">
+      ${alerts.map(alert => {
+        const event = alert.properties?.event || "Advisory";
+        const ends =
+          alert.properties?.ends ||
+          alert.properties?.expires;
 
-      <div class="detail-footer">
-        <div>${source.provider || "Waterfront Partnership"}</div>
-        <div>${formatDate(source.updated)}</div>
-      </div>
+        return `
+          <div class="advisory-item">
+            <span>${event}</span>
+            ${ends ? `<span>Until ${formatTime(ends)}</span>` : ""}
+          </div>
+        `;
+      }).join("")}
     </div>
   `;
 }
 
-function formatDate(value) {
-  if (!value) return "";
 
-  const date = new Date(value);
+function renderStations(stations = []) {
+  return `
+    <div class="stations">
+      ${stations.map(station => `
+        <div class="station">
+          <span>${station.site}</span>
+          <span>
+            ${station.status}
+            ${station.bacteria ?? "—"} MPN
+          </span>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
 
-  if (Number.isNaN(date.getTime())) {
-    return value;
+
+function renderSource(source) {
+  if (!source) {
+    return "";
   }
 
-  return `Updated ${date.toLocaleString([], {
+  return `
+    <div class="detail-footer">
+      ${source.location ? `<div>${source.location}</div>` : ""}
+      ${source.provider ? `<div>${source.provider}</div>` : ""}
+      ${source.updated
+        ? `<div>Updated ${formatDate(source.updated)}</div>`
+        : ""}
+    </div>
+  `;
+}
+
+
+function formatDate(value) {
+  const date = new Date(value);
+
+  return date.toLocaleString([], {
     month: "short",
     day: "numeric",
     hour: "numeric",
     minute: "2-digit",
-  })}`;
+  });
 }
+
+
+function formatTime(value) {
+  const date = new Date(value);
+
+  return date.toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  });
+}
+
 
 main();
