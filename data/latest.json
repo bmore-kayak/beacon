@@ -4,19 +4,19 @@
     "status": "\ud83d\udfe0",
     "label": "Poor"
   },
-  "updated": "2026-07-09 06:02 PM",
+  "updated": "2026-07-09 06:33 PM",
   "conditions": {
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "5 to 10 kt"
+      "detail": "10 kt"
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "1 ft or less"
+      "detail": "1 ft"
     },
     "storms": {
       "icon": "\u26c8",
@@ -28,7 +28,7 @@
       "icon": "\ud83d\udea9",
       "label": "Small Craft",
       "status": "\ud83d\udfe2",
-      "detail": "None"
+      "detail": "Severe Thunderstorm Watch"
     },
     "water_contact": {
       "icon": "\ud83e\udda0",
@@ -82,5 +82,5 @@
       "detail": "Pending"
     }
   },
-  "note": "All sampled stations are passing."
+  "note": "All sampled stations are passing: 5/5."
 }
