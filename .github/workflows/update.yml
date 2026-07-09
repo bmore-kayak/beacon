@@ -1,0 +1,32 @@
+name: Update Beacon
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * *" # 5am ET during daylight time
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - run: pip install requests
+
+      - run: python scripts/update.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/latest.json
+          git diff --cached --quiet || git commit -m "Update conditions"
+          git push
