@@ -1,157 +1,32 @@
 {
   "location": "Baltimore Inner Harbor",
   "overall": {
-    "status": "\ud83d\udd34",
-    "label": "Don't Go"
+    "status": "\ud83d\udfe0",
+    "label": "Poor Conditions"
   },
-  "updated": "2026-07-09 06:52 PM EDT",
+  "updated": "2026-07-09 07:01 PM EDT",
   "conditions": {
     "advisories": {
       "icon": "\u26a0\ufe0f",
       "label": "Advisories",
-      "status": "\ud83d\udd34",
-      "detail": "Severe Thunderstorm Watch",
-      "items": [
-        "Severe Thunderstorm Watch"
-      ],
-      "alerts": [
-        {
-          "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7166a3eb4df9bdcae00a62a7e413f852a1530515.003.1",
-          "type": "Feature",
-          "geometry": null,
-          "properties": {
-            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7166a3eb4df9bdcae00a62a7e413f852a1530515.003.1",
-            "@type": "wx:Alert",
-            "id": "urn:oid:2.49.0.1.840.0.7166a3eb4df9bdcae00a62a7e413f852a1530515.003.1",
-            "areaDesc": "Chesapeake Bay north of Pooles Island MD; Chesapeake Bay from Pooles Island to Sandy Point MD; Chesapeake Bay from Sandy Point to North Beach MD; Chesapeake Bay from North Beach to Drum Point MD; Chesapeake Bay from Drum Point MD to Smith Point VA; Tidal Potomac from Key Bridge to Indian Head MD; Tidal Potomac from Indian Head to Cobb Island MD; Tidal Potomac from Cobb Island MD to Smith Point VA; Patapsco River including Baltimore Harbor; Chester River to Queenstown MD; Eastern Bay; Choptank River to Cambridge MD and the Little Choptank River; Patuxent River to Broomes Island MD; Tangier Sound and the inland waters surrounding Bloodsworth Island",
-            "geocode": {
-              "SAME": [
-                "073530",
-                "073531",
-                "073532",
-                "073533",
-                "073534",
-                "073535",
-                "073536",
-                "073537",
-                "073538",
-                "073539",
-                "073540",
-                "073541",
-                "073542",
-                "073543"
-              ],
-              "UGC": [
-                "ANZ530",
-                "ANZ531",
-                "ANZ532",
-                "ANZ533",
-                "ANZ534",
-                "ANZ535",
-                "ANZ536",
-                "ANZ537",
-                "ANZ538",
-                "ANZ539",
-                "ANZ540",
-                "ANZ541",
-                "ANZ542",
-                "ANZ543"
-              ]
-            },
-            "affectedZones": [
-              "https://api.weather.gov/zones/forecast/ANZ530",
-              "https://api.weather.gov/zones/forecast/ANZ531",
-              "https://api.weather.gov/zones/forecast/ANZ532",
-              "https://api.weather.gov/zones/forecast/ANZ533",
-              "https://api.weather.gov/zones/forecast/ANZ534",
-              "https://api.weather.gov/zones/forecast/ANZ535",
-              "https://api.weather.gov/zones/forecast/ANZ536",
-              "https://api.weather.gov/zones/forecast/ANZ537",
-              "https://api.weather.gov/zones/forecast/ANZ538",
-              "https://api.weather.gov/zones/forecast/ANZ539",
-              "https://api.weather.gov/zones/forecast/ANZ540",
-              "https://api.weather.gov/zones/forecast/ANZ541",
-              "https://api.weather.gov/zones/forecast/ANZ542",
-              "https://api.weather.gov/zones/forecast/ANZ543"
-            ],
-            "references": [
-              {
-                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.682efa435d788afe830df0757e698a6a7d8da551.002.1",
-                "identifier": "urn:oid:2.49.0.1.840.0.682efa435d788afe830df0757e698a6a7d8da551.002.1",
-                "sender": "w-nws.webmaster@noaa.gov",
-                "sent": "2026-07-09T14:30:00-04:00"
-              }
-            ],
-            "sent": "2026-07-09T17:50:00-04:00",
-            "effective": "2026-07-09T17:50:00-04:00",
-            "onset": "2026-07-09T17:50:00-04:00",
-            "expires": "2026-07-09T22:00:00-04:00",
-            "ends": "2026-07-09T22:00:00-04:00",
-            "status": "Actual",
-            "messageType": "Update",
-            "category": "Met",
-            "severity": "Severe",
-            "certainty": "Possible",
-            "urgency": "Future",
-            "event": "Severe Thunderstorm Watch",
-            "sender": "w-nws.webmaster@noaa.gov",
-            "senderName": "NWS Baltimore MD/Washington DC",
-            "headline": "Severe Thunderstorm Watch issued July 9 at 5:50PM EDT until July 9 at 10:00PM EDT by NWS Baltimore MD/Washington DC",
-            "description": "SEVERE THUNDERSTORM WATCH 474 REMAINS VALID UNTIL 10 PM EDT THIS\nEVENING FOR THE FOLLOWING AREAS\n\nTHIS WATCH INCLUDES THE FOLLOWING ADJACENT COASTAL WATERS\n\nCHESAPEAKE BAY NORTH OF POOLES ISLAND MD\nCHESAPEAKE BAY FROM POOLES ISLAND TO SANDY POINT MD\n\nCHESAPEAKE BAY FROM SANDY POINT TO NORTH BEACH MD\n\nCHESAPEAKE BAY FROM NORTH BEACH TO DRUM POINT MD\n\nCHESAPEAKE BAY FROM DRUM POINT MD TO SMITH POINT VA\n\nTIDAL POTOMAC FROM KEY BRIDGE TO INDIAN HEAD MD\n\nTIDAL POTOMAC FROM INDIAN HEAD TO COBB ISLAND MD\n\nTIDAL POTOMAC FROM COBB ISLAND MD TO SMITH POINT VA\n\nPATAPSCO RIVER INCLUDING BALTIMORE HARBOR\nCHESTER RIVER TO QUEENSTOWN MD\nEASTERN BAY\nCHOPTANK RIVER TO CAMBRIDGE MD AND THE LITTLE CHOPTANK RIVER\n\nPATUXENT RIVER TO BROOMES ISLAND MD\nTANGIER SOUND AND THE INLAND WATERS SURROUNDING BLOODSWORTH\nISLAND",
-            "instruction": null,
-            "response": "Monitor",
-            "note": null,
-            "parameters": {
-              "AWIPSidentifier": [
-                "WCNLWX"
-              ],
-              "WMOidentifier": [
-                "WWUS61 KLWX 092150"
-              ],
-              "BLOCKCHANNEL": [
-                "EAS",
-                "NWEM",
-                "CMAS"
-              ],
-              "EAS-ORG": [
-                "WXR"
-              ],
-              "VTEC": [
-                "/O.CON.KLWX.SV.A.0474.000000T0000Z-260710T0200Z/"
-              ],
-              "eventEndingTime": [
-                "2026-07-09T22:00:00-04:00"
-              ]
-            },
-            "scope": "Public",
-            "code": "IPAWSv1.0",
-            "language": "en-US",
-            "web": "http://www.weather.gov",
-            "eventCode": {
-              "SAME": [
-                "SVA"
-              ],
-              "NationalWeatherService": [
-                "SVA"
-              ]
-            }
-          }
-        }
-      ]
+      "status": "\ud83d\udfe2",
+      "detail": "None",
+      "items": [],
+      "alerts": []
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Possible after 6 PM"
+      "detail": "Possible after 7 PM"
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "10 kt, gusts 13",
+      "detail": "10 kt, gusts 12",
       "speed_kt": 10,
-      "gust_kt": 13,
+      "gust_kt": 12,
       "source": "CBIBS"
     },
     "waves": {
@@ -226,5 +101,5 @@
       ]
     }
   },
-  "note": "Severe Thunderstorm Watch until 10:00 PM."
+  "note": "Thunderstorms possible."
 }
