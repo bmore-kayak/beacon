@@ -106,6 +106,15 @@ td:last-child {
   white-space: nowrap;
 }
 
+.chevron {
+    display:inline-block;
+    transition:transform .18s ease;
+}
+
+.condition[open] .chevron {
+    transform:rotate(180deg);
+}
+
 .detail-footer {
   margin-top: 0.85rem;
   padding-top: 0.75rem;
