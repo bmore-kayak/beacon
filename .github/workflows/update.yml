@@ -22,6 +22,8 @@ jobs:
       - run: pip install -r requirements.txt
 
       - run: python scripts/update.py
+        env:
+          CBIBS_API_KEY: ${{ secrets.CBIBS_API_KEY }}
 
       - name: Commit updated data
         run: |
