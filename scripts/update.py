@@ -1,6 +1,6 @@
 import json
 import re
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 import requests
@@ -8,6 +8,7 @@ import requests
 OUT = Path("data/latest.json")
 
 WATERFRONT_URL = "https://services2.arcgis.com/orhH6cbKzLjUCxfK/arcgis/rest/services/Baltimore_Harbor_2024_Water_Quality_Data_with_2023_Historic_Data/FeatureServer/0/query?where=1%3D1&outFields=Site_Name,New_Sample_Date,New_Sample_Status,New_Sample_BacteriaCount,Rain_amount_past7days&returnGeometry=false&f=json"
+
 NOAA_FORECAST_URL = "https://api.weather.gov/zones/forecast/ANZ538/forecast"
 NOAA_ALERTS_URL = "https://api.weather.gov/alerts/active?zone=ANZ538"
 
@@ -68,13 +69,19 @@ def waterfront_conditions():
     }
 
 
-def first_period():
-    periods = get_json(NOAA_FORECAST_URL).get("properties", {}).get("periods", [])
-    return periods[0] if periods else {}
+def forecast_periods():
+    return get_json(NOAA_FORECAST_URL).get("properties", {}).get("periods", [])
 
 
 def active_alerts():
     return get_json(NOAA_ALERTS_URL).get("features", [])
+
+
+def combined_forecast_text(periods, count=3):
+    return " ".join(
+        p.get("detailedForecast", "")
+        for p in periods[:count]
+    )
 
 
 def extract_waves(text):
@@ -82,27 +89,56 @@ def extract_waves(text):
     return match.group(1).strip() if match else "Pending"
 
 
-def noaa_conditions():
-    period = first_period()
-    alerts = active_alerts()
+def storm_status(text):
+    lower = text.lower()
 
-    forecast = period.get("detailedForecast", "")
-    wind = period.get("windSpeed", "Pending")
-    waves = extract_waves(forecast)
+    if "thunderstorm" in lower or "tstm" in lower:
+        return {
+            "icon": "⛈",
+            "label": "Storms",
+            "status": "🟠",
+            "detail": "Thunderstorms possible",
+        }
 
-    text = forecast.lower()
-    storms = "Thunderstorms possible" if "thunderstorm" in text or "tstm" in text else "None noted"
+    return {
+        "icon": "⛈",
+        "label": "Storms",
+        "status": "🟢",
+        "detail": "None noted",
+    }
 
-    alert_names = [
+
+def small_craft_status(alerts):
+    names = [
         a.get("properties", {}).get("event", "")
         for a in alerts
+        if a.get("properties", {}).get("event")
     ]
 
-    small_craft = any("Small Craft Advisory" in name for name in alert_names)
-    severe_marine = any(
+    severe = any(
         name in ["Special Marine Warning", "Gale Warning"]
-        for name in alert_names
+        for name in names
     )
+
+    small_craft = any("Small Craft Advisory" in name for name in names)
+
+    return {
+        "icon": "🚩",
+        "label": "Small Craft",
+        "status": "🔴" if severe else "🟠" if small_craft else "🟢",
+        "detail": ", ".join(names) if names else "None",
+    }
+
+
+def noaa_conditions():
+    periods = forecast_periods()
+    alerts = active_alerts()
+
+    current = periods[0] if periods else {}
+    text = combined_forecast_text(periods)
+
+    wind = current.get("windSpeed", "Pending")
+    waves = extract_waves(text)
 
     return {
         "wind": {
@@ -117,18 +153,8 @@ def noaa_conditions():
             "status": "🟢",
             "detail": waves,
         },
-        "storms": {
-            "icon": "⛈",
-            "label": "Storms",
-            "status": "🟠" if storms != "None noted" else "🟢",
-            "detail": storms,
-        },
-        "small_craft": {
-            "icon": "🚩",
-            "label": "Small Craft",
-            "status": "🔴" if severe_marine else "🟠" if small_craft else "🟢",
-            "detail": ", ".join(alert_names) if alert_names else "None",
-        },
+        "storms": storm_status(text),
+        "small_craft": small_craft_status(alerts),
         "water_temp": {
             "icon": "🌡",
             "label": "Water Temp",
