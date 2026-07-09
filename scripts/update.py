@@ -97,11 +97,31 @@ def waterfront_conditions():
     passing = sum(s["status"] == "🟢" for s in stations)
     failing = sum(s["status"] == "🔴" for s in stations)
 
+    sample_dates = [
+        s["date"]
+        for s in stations
+        if s["date"] is not None
+    ]
+    
+    latest_sample = (
+        datetime.fromtimestamp(
+            max(sample_dates) / 1000,
+            tz=ZoneInfo("America/New_York"),
+        ).isoformat()
+        if sample_dates else None
+    )
+    
     return {
         "icon": "🦠",
         "label": "Water Contact",
         "status": "🔴" if failing else "🟢",
         "detail": f"{min(counts)}–{max(counts)} MPN" if counts else "Unavailable",
+    
+        "source": {
+            "provider": "Waterfront Partnership",
+            "updated": latest_sample,
+        },
+    
         "passing": passing,
         "failing": failing,
         "stations": stations,
