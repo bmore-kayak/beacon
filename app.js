@@ -31,7 +31,7 @@ function renderCondition(key, condition) {
       <span class="condition-label">${condition.icon} ${condition.label}</span>
       <span class="condition-status">${condition.status}</span>
       <span class="condition-detail">${condition.detail}</span>
-      <span class="condition-chevron" aria-hidden="true">▾</span>
+      <span class="chevron">▾</span>
     </summary>
 
     ${expanded}
