@@ -8,6 +8,7 @@ from pathlib import Path
 import requests
 
 OUT = Path("data/latest.json")
+HISTORY = Path("data/history.jsonl")
 
 CBIBS_API_KEY = os.getenv("CBIBS_API_KEY")
 
@@ -479,6 +480,67 @@ def note(conditions, water):
 
     return "Favorable conditions."
 
+def append_history(data):
+    c = data["conditions"]
+
+    def parse_number(text):
+        if not text or text == "Unavailable":
+            return None
+
+        m = re.search(r"-?\d+(?:\.\d+)?", text)
+        return float(m.group()) if m else None
+
+    history = {
+        "schema": 1,
+        "timestamp": datetime.now(ZoneInfo("America/New_York")).isoformat(),
+
+        "overall": data["overall"]["status"],
+
+        "advisories": c["advisories"].get("items", []),
+
+        "storms": {
+            "status": c["storms"]["status"],
+            "detail": c["storms"]["detail"],
+        },
+
+        "wind": {
+            "status": c["wind"]["status"],
+            "speed_kt": parse_number(c["wind"]["detail"]),
+            "gust_kt": (
+                parse_number(
+                    c["wind"]["detail"].split("gusts", 1)[1]
+                )
+                if "gusts" in c["wind"]["detail"]
+                else None
+            ),
+        },
+
+        "waves": {
+            "status": c["waves"]["status"],
+            "height_ft": parse_number(c["waves"]["detail"]),
+        },
+
+        "air_temp": {
+            "status": c["air_temp"]["status"],
+            "temp_f": parse_number(c["air_temp"]["detail"]),
+        },
+
+        "water_temp": {
+            "status": c["water_temp"]["status"],
+            "temp_f": parse_number(c["water_temp"]["detail"]),
+        },
+
+        "water_contact": {
+            "status": c["water_contact"]["status"],
+            "passing": c["water_contact"]["passing"],
+            "failing": c["water_contact"]["failing"],
+            "stations": c["water_contact"]["stations"],
+        },
+    }
+
+    with HISTORY.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(history) + "\n")
+
 
 def main():
     water = waterfront_conditions()
@@ -505,6 +567,8 @@ def main():
     }
 
     OUT.write_text(json.dumps(data, indent=2), encoding="utf-8")
+
+    append_history(data)
 
 
 if __name__ == "__main__":
