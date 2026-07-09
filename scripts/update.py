@@ -1,57 +1,54 @@
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
 
-WATERFRONT_URL = "https://services2.arcgis.com/orhH6cbKzLjUCxfK/arcgis/rest/services/Baltimore_Harbor_2024_Water_Quality_Data_with_2023_Historic_Data/FeatureServer/0/query?where=1%3D1&outFields=Site_Name,New_Sample_Date,New_Sample_Status,New_Sample_BacteriaCount,Rain_amount_past7days&returnGeometry=false&f=json"
-MARINE_URL = "https://forecast.weather.gov/shmrn.php?mz=anz538&syn=anz500"
-
 OUT = Path("data/latest.json")
+
+WATERFRONT_URL = "https://services2.arcgis.com/orhH6cbKzLjUCxfK/arcgis/rest/services/Baltimore_Harbor_2024_Water_Quality_Data_with_2023_Historic_Data/FeatureServer/0/query?where=1%3D1&outFields=Site_Name,New_Sample_Date,New_Sample_Status,New_Sample_BacteriaCount,Rain_amount_past7days&returnGeometry=false&f=json"
+NOAA_FORECAST_URL = "https://api.weather.gov/zones/forecast/ANZ538/forecast"
+NOAA_ALERTS_URL = "https://api.weather.gov/alerts/active?zone=ANZ538"
+
 PASS_LIMIT = 104
 
 
-def fetch_json(url):
-    response = requests.get(url, timeout=30)
+def get_json(url):
+    response = requests.get(
+        url,
+        timeout=30,
+        headers={"User-Agent": "Beacon / bmore-kayak"},
+    )
     response.raise_for_status()
     return response.json()
-
-
-def fetch_text(url):
-    response = requests.get(url, timeout=30)
-    response.raise_for_status()
-    return response.text
 
 
 def clean_count(value):
     return None if value is None else int(float(value))
 
 
-def score_station(advisory, count):
+def station_status(advisory, count):
     if advisory:
         return "🟢" if "pass" in advisory.lower() else "🔴"
-
     if count is None:
         return "🟡"
-
     return "🟢" if count <= PASS_LIMIT else "🔴"
 
 
 def waterfront_conditions():
-    raw = fetch_json(WATERFRONT_URL)
+    raw = get_json(WATERFRONT_URL)
 
     stations = []
-    for feature in raw["features"]:
-        a = feature["attributes"]
-
+    for feature in raw.get("features", []):
+        a = feature.get("attributes", {})
         count = clean_count(a.get("New_Sample_BacteriaCount"))
         advisory = a.get("New_Sample_Status")
 
         stations.append({
             "site": a.get("Site_Name"),
             "date": a.get("New_Sample_Date"),
-            "status": score_station(advisory, count),
+            "status": station_status(advisory, count),
             "advisory": advisory,
             "bacteria": count,
         })
@@ -71,32 +68,41 @@ def waterfront_conditions():
     }
 
 
-def first_match(patterns, text, fallback="Pending"):
-    for pattern in patterns:
-        match = re.search(pattern, text, re.IGNORECASE)
-        if match:
-            return match.group(1).strip()
-    return fallback
+def first_period():
+    periods = get_json(NOAA_FORECAST_URL).get("properties", {}).get("periods", [])
+    return periods[0] if periods else {}
 
 
-def marine_conditions():
-    text = fetch_text(MARINE_URL)
-    lower = text.lower()
+def active_alerts():
+    return get_json(NOAA_ALERTS_URL).get("features", [])
 
-    wind = first_match([
-        r"winds?\s+([^\.]+)",
-    ], text)
 
-    waves = first_match([
-        r"waves?\s+([^\.]+)",
-        r"seas?\s+([^\.]+)",
-    ], text)
+def extract_waves(text):
+    match = re.search(r"waves?\s+([^.,;]+)", text, re.I)
+    return match.group(1).strip() if match else "Pending"
 
-    storms = "Thunderstorms possible" if (
-        "tstm" in lower or "thunderstorm" in lower
-    ) else "None noted"
 
-    small_craft = "Advisory" if "small craft advisory" in lower else "None"
+def noaa_conditions():
+    period = first_period()
+    alerts = active_alerts()
+
+    forecast = period.get("detailedForecast", "")
+    wind = period.get("windSpeed", "Pending")
+    waves = extract_waves(forecast)
+
+    text = forecast.lower()
+    storms = "Thunderstorms possible" if "thunderstorm" in text or "tstm" in text else "None noted"
+
+    alert_names = [
+        a.get("properties", {}).get("event", "")
+        for a in alerts
+    ]
+
+    small_craft = any("Small Craft Advisory" in name for name in alert_names)
+    severe_marine = any(
+        name in ["Special Marine Warning", "Gale Warning"]
+        for name in alert_names
+    )
 
     return {
         "wind": {
@@ -120,8 +126,14 @@ def marine_conditions():
         "small_craft": {
             "icon": "🚩",
             "label": "Small Craft",
-            "status": "🟠" if small_craft != "None" else "🟢",
-            "detail": small_craft,
+            "status": "🔴" if severe_marine else "🟠" if small_craft else "🟢",
+            "detail": ", ".join(alert_names) if alert_names else "None",
+        },
+        "water_temp": {
+            "icon": "🌡",
+            "label": "Water Temp",
+            "status": "🟢",
+            "detail": "Pending",
         },
     }
 
@@ -131,32 +143,38 @@ def overall_status(conditions):
 
     if "🔴" in statuses:
         return {"status": "🔴", "label": "Don't Go"}
-
     if "🟠" in statuses:
         return {"status": "🟠", "label": "Poor"}
-
     if "🟡" in statuses:
         return {"status": "🟡", "label": "Caution"}
 
     return {"status": "🟢", "label": "Good"}
 
 
+def note(water):
+    total = len(water["stations"])
+
+    if water["failing"] == 0:
+        return f"All sampled stations are passing: {water['passing']}/{total}."
+
+    return (
+        f"Water contact is the limiting factor: "
+        f"{water['passing']}/{total} passing, "
+        f"{water['failing']}/{total} failing."
+    )
+
+
 def main():
-    marine = marine_conditions()
-    water_contact = waterfront_conditions()
+    water = waterfront_conditions()
+    marine = noaa_conditions()
 
     conditions = {
         "wind": marine["wind"],
         "waves": marine["waves"],
         "storms": marine["storms"],
         "small_craft": marine["small_craft"],
-        "water_contact": water_contact,
-        "water_temp": {
-            "icon": "🌡",
-            "label": "Water Temp",
-            "status": "🟢",
-            "detail": "Pending",
-        },
+        "water_contact": water,
+        "water_temp": marine["water_temp"],
     }
 
     data = {
@@ -164,13 +182,7 @@ def main():
         "overall": overall_status(conditions),
         "updated": datetime.now().strftime("%Y-%m-%d %I:%M %p"),
         "conditions": conditions,
-        "note": (
-            "All sampled stations are passing."
-            if water_contact["failing"] == 0
-            else f"Water contact is the limiting factor: "
-                 f"{water_contact['passing']}/{len(water_contact['stations'])} passing, "
-                 f"{water_contact['failing']}/{len(water_contact['stations'])} failing."
-        ),
+        "note": note(water),
     }
 
     OUT.write_text(json.dumps(data, indent=2), encoding="utf-8")
