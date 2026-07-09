@@ -68,26 +68,21 @@ function renderDetails(key, condition) {
 }
 
 
-function renderAdvisories(alerts = []) {
-  if (!alerts.length) {
+function renderAdvisories(items = []) {
+  if (!items.length) {
     return `<div class="expanded-empty">No active advisories.</div>`;
   }
 
   return `
     <div class="advisory-list">
-      ${alerts.map(alert => {
-        const event = alert.properties?.event || "Advisory";
-        const ends =
-          alert.properties?.ends ||
-          alert.properties?.expires;
-
-        return `
-          <div class="advisory-item">
-            <span>${event}</span>
-            ${ends ? `<span>Until ${formatTime(ends)}</span>` : ""}
-          </div>
-        `;
-      }).join("")}
+      ${items.map(item => `
+        <div class="advisory-item">
+          <span>${item.event}</span>
+          ${item.ends
+            ? `<span>Until ${formatTime(item.ends)}</span>`
+            : ""}
+        </div>
+      `).join("")}
     </div>
   `;
 }
