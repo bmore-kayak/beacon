@@ -1,10 +1,10 @@
 {
   "location": "Baltimore Harbor",
   "overall": {
-    "status": "\ud83d\udd34",
-    "label": "Don't Go"
+    "status": "\ud83d\udfe0",
+    "label": "Poor"
   },
-  "updated": "2026-07-09 06:51 PM",
+  "updated": "2026-07-09 03:42 PM EDT",
   "conditions": {
     "small_craft": {
       "icon": "\ud83d\udea9",
@@ -12,29 +12,42 @@
       "status": "\ud83d\udfe2",
       "detail": "None"
     },
+    "storms": {
+      "icon": "\u26c8",
+      "label": "Storms",
+      "status": "\ud83d\udfe0",
+      "detail": "Possible after 3 PM"
+    },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe2",
-      "detail": "10 kt"
+      "status": "\ud83d\udfe1",
+      "detail": "11 kt, gusts 13",
+      "speed_kt": 11,
+      "gust_kt": 13,
+      "source": "CBIBS"
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "1 ft"
+      "detail": "0.5 ft",
+      "height_ft": 0.5,
+      "source": "CBIBS"
     },
-    "storms": {
-      "icon": "\u26c8",
-      "label": "Storms",
-      "status": "\ud83d\udd34",
-      "detail": "Severe Thunderstorm Watch"
+    "air_temp": {
+      "icon": "\ud83c\udf21",
+      "label": "Air Temp",
+      "status": "\ud83d\udfe2",
+      "detail": "81\u00b0F",
+      "source": "CBIBS"
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
-      "status": "\ud83d\udfe1",
-      "detail": "Unavailable"
+      "status": "\ud83d\udfe2",
+      "detail": "82\u00b0F",
+      "source": "CBIBS"
     },
     "water_contact": {
       "icon": "\ud83e\udda0",
@@ -82,5 +95,5 @@
       ]
     }
   },
-  "note": "All sampled stations are passing: 5/5."
+  "note": "Thunderstorms possible."
 }
