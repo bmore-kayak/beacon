@@ -2,6 +2,7 @@ import json
 import os
 import re
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import requests
@@ -357,22 +358,21 @@ def small_craft_condition(alerts):
         if a.get("properties", {}).get("event")
     ]
 
-    severe = [
+    marine_alerts = [
         name for name in names
-        if name in ["Special Marine Warning", "Gale Warning"]
+        if name in [
+            "Small Craft Advisory",
+            "Special Marine Warning",
+            "Gale Warning",
+            "Storm Warning",
+            "Hurricane Force Wind Warning",
+        ]
     ]
-
-    small_craft = [
-        name for name in names
-        if "Small Craft Advisory" in name
-    ]
-
-    marine_alerts = severe + small_craft
 
     return {
         "icon": "🚩",
         "label": "Small Craft",
-        "status": "🔴" if severe else "🟠" if small_craft else "🟢",
+        "status": "🔴" if marine_alerts else "🟢",
         "detail": ", ".join(marine_alerts) if marine_alerts else "None",
     }
 
@@ -414,17 +414,32 @@ def overall_status(conditions):
     return {"status": "🟢", "label": "Good"}
 
 
-def note(water):
-    total = len(water["stations"])
+def note(conditions, water):
+    if conditions["small_craft"]["status"] == "🔴":
+        return "Marine advisory."
 
-    if water["failing"] == 0:
-        return f"All sampled stations are passing: {water['passing']}/{total}."
+    if conditions["storms"]["status"] == "🔴":
+        return "Thunderstorms expected."
 
-    return (
-        f"Water contact is the limiting factor: "
-        f"{water['passing']}/{total} passing, "
-        f"{water['failing']}/{total} failing."
-    )
+    if conditions["storms"]["status"] == "🟠":
+        return "Thunderstorms possible."
+
+    if water["status"] == "🔴":
+        return "Avoid water contact."
+
+    if conditions["wind"]["status"] == "🔴":
+        return "Strong winds."
+
+    if conditions["waves"]["status"] == "🔴":
+        return "Rough harbor."
+
+    if conditions["wind"]["status"] == "🟠":
+        return "Elevated winds."
+
+    if conditions["waves"]["status"] == "🟠":
+        return "Choppy water."
+
+    return "Favorable conditions."
 
 
 def main():
@@ -444,9 +459,11 @@ def main():
     data = {
         "location": "Baltimore Harbor",
         "overall": overall_status(conditions),
-        "updated": datetime.now().strftime("%Y-%m-%d %I:%M %p"),
+        "updated": datetime.now(
+            ZoneInfo("America/New_York")
+        ).strftime("%Y-%m-%d %I:%M %p %Z")
         "conditions": conditions,
-        "note": note(water),
+        "note": note(conditions, water),
     }
 
     OUT.write_text(json.dumps(data, indent=2), encoding="utf-8")
