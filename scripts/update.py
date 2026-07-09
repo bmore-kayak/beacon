@@ -9,7 +9,7 @@ OUT = Path("data/latest.json")
 
 WATERFRONT_URL = "https://services2.arcgis.com/orhH6cbKzLjUCxfK/arcgis/rest/services/Baltimore_Harbor_2024_Water_Quality_Data_with_2023_Historic_Data/FeatureServer/0/query?where=1%3D1&outFields=Site_Name,New_Sample_Date,New_Sample_Status,New_Sample_BacteriaCount,Rain_amount_past7days&returnGeometry=false&f=json"
 
-NOAA_FORECAST_URL = "https://api.weather.gov/zones/forecast/ANZ538/forecast"
+NOAA_FORECAST_URL = "https://forecast.weather.gov/shmrn.php?mz=anz538"
 NOAA_ALERTS_URL = "https://api.weather.gov/alerts/active?zone=ANZ538"
 
 PASS_LIMIT = 104
@@ -24,6 +24,14 @@ def get_json(url):
     response.raise_for_status()
     return response.json()
 
+def get_text(url):
+    response = requests.get(
+        url,
+        timeout=30,
+        headers={"User-Agent": "Beacon / bmore-kayak"},
+    )
+    response.raise_for_status()
+    return response.text
 
 def clean_count(value):
     return None if value is None else int(float(value))
@@ -69,20 +77,13 @@ def waterfront_conditions():
     }
 
 
-def forecast_periods():
-    return get_json(NOAA_FORECAST_URL).get("properties", {}).get("periods", [])
+def marine_forecast_text():
+    return get_text(NOAA_FORECAST_URL)
 
 
 def active_alerts():
     return get_json(NOAA_ALERTS_URL).get("features", [])
-
-
-def combined_forecast_text(periods, count=3):
-    return " ".join(
-        p.get("detailedForecast", "")
-        for p in periods[:count]
-    )
-
+    
 
 def extract_waves(text):
     match = re.search(r"waves?\s+([^.,;]+)", text, re.I)
@@ -131,13 +132,12 @@ def small_craft_status(alerts):
 
 
 def noaa_conditions():
-    periods = forecast_periods()
+    text = marine_forecast_text()
     alerts = active_alerts()
 
-    current = periods[0] if periods else {}
-    text = combined_forecast_text(periods)
+    wind = re.search(r"winds?\s+([^\.]+)", text, re.I)
+    wind = wind.group(1).strip() if wind else "Pending"
 
-    wind = current.get("windSpeed", "Pending")
     waves = extract_waves(text)
 
     return {
@@ -162,7 +162,6 @@ def noaa_conditions():
             "detail": "Pending",
         },
     }
-
 
 def overall_status(conditions):
     statuses = [c["status"] for c in conditions.values()]
