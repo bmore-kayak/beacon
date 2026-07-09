@@ -8,23 +8,79 @@ async function main() {
     `${data.overall.status} ${data.overall.label}`;
 
   document.getElementById("note").textContent = data.note;
+
   document.getElementById("updated").textContent =
     `Last updated ${data.updated}`;
 
-  const tbody = document.getElementById("conditions");
-  tbody.innerHTML = "";
+  const container = document.getElementById("conditions");
+  container.innerHTML = "";
 
-  for (const condition of Object.values(data.conditions)) {
-    const row = document.createElement("tr");
-
-    row.innerHTML = `
-      <td>${condition.icon} ${condition.label}</td>
-      <td>${condition.status}</td>
-      <td>${condition.detail}</td>
-    `;
-
-    tbody.appendChild(row);
+  for (const [key, condition] of Object.entries(data.conditions)) {
+    container.appendChild(renderCondition(key, condition));
   }
+}
+
+function renderCondition(key, condition) {
+  const details = document.createElement("details");
+  details.className = "condition";
+
+  const expanded = renderExpandedContent(key, condition);
+
+  details.innerHTML = `
+    <summary class="condition-row">
+      <span class="condition-label">${condition.icon} ${condition.label}</span>
+      <span class="condition-status">${condition.status}</span>
+      <span class="condition-detail">${condition.detail}</span>
+    </summary>
+
+    ${expanded}
+  `;
+
+  return details;
+}
+
+function renderExpandedContent(key, condition) {
+  if (key !== "water_contact") {
+    return "";
+  }
+
+  const stations = condition.stations || [];
+  const source = condition.source || {};
+
+  return `
+    <div class="condition-details">
+      <div class="stations">
+        ${stations.map(station => `
+          <div class="station">
+            <span>${station.site}</span>
+            <span>${station.status} ${station.bacteria ?? "—"} MPN</span>
+          </div>
+        `).join("")}
+      </div>
+
+      <div class="detail-footer">
+        <div>${source.provider || "Waterfront Partnership"}</div>
+        <div>${formatDate(source.updated)}</div>
+      </div>
+    </div>
+  `;
+}
+
+function formatDate(value) {
+  if (!value) return "";
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return `Updated ${date.toLocaleString([], {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  })}`;
 }
 
 main();
