@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Don't Go"
   },
-  "updated": "2026-07-09 06:30 PM EDT",
+  "updated": "2026-07-09 06:35 PM EDT",
   "conditions": {
     "advisories": {
       "icon": "\u26a0\ufe0f",
@@ -149,9 +149,9 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe0",
-      "detail": "12 kt, gusts 15",
-      "speed_kt": 12,
-      "gust_kt": 15,
+      "detail": "11 kt, gusts 14",
+      "speed_kt": 11,
+      "gust_kt": 14,
       "source": "CBIBS"
     },
     "waves": {
