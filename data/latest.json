@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Don't Go"
   },
-  "updated": "2026-07-09 06:35 PM EDT",
+  "updated": "2026-07-09 06:52 PM EDT",
   "conditions": {
     "advisories": {
       "icon": "\u26a0\ufe0f",
@@ -148,10 +148,10 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "11 kt, gusts 14",
-      "speed_kt": 11,
-      "gust_kt": 14,
+      "status": "\ud83d\udfe1",
+      "detail": "10 kt, gusts 13",
+      "speed_kt": 10,
+      "gust_kt": 13,
       "source": "CBIBS"
     },
     "waves": {
@@ -181,6 +181,10 @@
       "label": "Water Contact",
       "status": "\ud83d\udfe2",
       "detail": "10\u201398 MPN",
+      "source": {
+        "provider": "Waterfront Partnership",
+        "updated": "2026-07-08T08:00:00-04:00"
+      },
       "passing": 5,
       "failing": 0,
       "stations": [
