@@ -351,29 +351,41 @@ def storm_condition(periods):
     }
 
 
-def small_craft_condition(alerts):
+def advisory_condition(alerts):
     names = [
         a.get("properties", {}).get("event", "")
         for a in alerts
         if a.get("properties", {}).get("event")
     ]
 
-    marine_alerts = [
-        name for name in names
-        if name in [
-            "Small Craft Advisory",
-            "Special Marine Warning",
-            "Gale Warning",
-            "Storm Warning",
-            "Hurricane Force Wind Warning",
-        ]
+    priority = [
+        "Special Marine Warning",
+        "Storm Warning",
+        "Gale Warning",
+        "Hurricane Force Wind Warning",
+        "Small Craft Advisory",
+        "Tornado Warning",
+        "Severe Thunderstorm Warning",
+        "Tornado Watch",
+        "Severe Thunderstorm Watch",
+        "Flash Flood Warning",
+        "Flash Flood Watch",
+        "Hazardous Weather Outlook",
+    ]
+
+    active = [name for name in priority if name in names]
+
+    red_alerts = [
+        name for name in active
+        if name != "Hazardous Weather Outlook"
     ]
 
     return {
-        "icon": "🚩",
-        "label": "Small Craft",
-        "status": "🔴" if marine_alerts else "🟢",
-        "detail": ", ".join(marine_alerts) if marine_alerts else "None",
+        "icon": "⚠️",
+        "label": "Advisories",
+        "status": "🔴" if red_alerts else "🟠" if active else "🟢",
+        "detail": active[0] if active else "None",
+        "items": active,
     }
 
 
@@ -392,7 +404,7 @@ def marine_conditions():
     alerts = safe_call(nws_alerts, [])
 
     return {
-        "small_craft": small_craft_condition(alerts),
+        "advisories": advisory_condition(alerts),
         "wind": cbibs_wind(cbibs) or safe_call(coops_wind) or unavailable("Wind"),
         "waves": cbibs_waves(cbibs) or safe_call(forecast_waves) or unavailable("Waves"),
         "storms": storm_condition(periods),
@@ -407,15 +419,15 @@ def overall_status(conditions):
     if "🔴" in statuses:
         return {"status": "🔴", "label": "Don't Go"}
     if "🟠" in statuses:
-        return {"status": "🟠", "label": "Poor"}
+        return {"status": "🟠", "label": "Poor Conditions"}
     if "🟡" in statuses:
-        return {"status": "🟡", "label": "Caution"}
+        return {"status": "🟡", "label": "Use Caution"}
 
-    return {"status": "🟢", "label": "Good"}
+    return {"status": "🟢", "label": "Good to Go"}
 
 
 def note(conditions, water):
-    if conditions["small_craft"]["status"] == "🔴":
+    if conditions["advisories"]["status"] == "🔴":
         return "Marine advisory."
 
     if conditions["storms"]["status"] == "🔴":
@@ -447,7 +459,7 @@ def main():
     marine = marine_conditions()
 
     conditions = {
-        "small_craft": marine["small_craft"],
+        "advisories": marine["advisories"],
         "storms": marine["storms"],
         "wind": marine["wind"],
         "waves": marine["waves"],
@@ -457,7 +469,7 @@ def main():
     }
 
     data = {
-        "location": "Baltimore Harbor",
+        "location": "Baltimore Inner Harbor",
         "overall": overall_status(conditions),
         "updated": datetime.now(
             ZoneInfo("America/New_York")
