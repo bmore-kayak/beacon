@@ -1,17 +1,20 @@
 {
   "location": "Baltimore Inner Harbor",
   "overall": {
-    "status": "\ud83d\udfe0",
-    "label": "Poor Conditions"
+    "status": "\ud83d\udd34",
+    "label": "Don't Go"
   },
-  "updated": "2026-07-09 07:01 PM EDT",
+  "updated": "2026-07-09 07:20 PM EDT",
   "conditions": {
     "advisories": {
       "icon": "\u26a0\ufe0f",
       "label": "Advisories",
-      "status": "\ud83d\udfe2",
-      "detail": "None",
-      "items": [],
+      "status": "\ud83d\udd34",
+      "detail": "Severe Thunderstorm Watch",
+      "items": [
+        "Severe Thunderstorm Watch",
+        "Hazardous Weather Outlook"
+      ],
       "alerts": []
     },
     "storms": {
@@ -24,9 +27,9 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "10 kt, gusts 12",
-      "speed_kt": 10,
-      "gust_kt": 12,
+      "detail": "8 kt, gusts 10",
+      "speed_kt": 8,
+      "gust_kt": 10,
       "source": "CBIBS"
     },
     "waves": {
