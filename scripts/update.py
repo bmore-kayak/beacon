@@ -92,10 +92,24 @@ def extract_waves(text):
     return match.group(1).strip() if match else "Pending"
 
 
-def storm_status(text):
-    lower = text.lower()
+def storm_status(text, alerts):
+    forecast_storms = "thunderstorm" in text.lower() or "tstm" in text.lower()
 
-    if "thunderstorm" in lower or "tstm" in lower:
+    storm_alerts = [
+        a.get("properties", {}).get("event", "")
+        for a in alerts
+        if "Thunderstorm" in a.get("properties", {}).get("event", "")
+    ]
+
+    if storm_alerts:
+        return {
+            "icon": "⛈",
+            "label": "Storms",
+            "status": "🔴",
+            "detail": ", ".join(storm_alerts),
+        }
+
+    if forecast_storms:
         return {
             "icon": "⛈",
             "label": "Storms",
@@ -118,18 +132,23 @@ def small_craft_status(alerts):
         if a.get("properties", {}).get("event")
     ]
 
-    severe = any(
-        name in ["Special Marine Warning", "Gale Warning"]
-        for name in names
-    )
+    severe_marine = [
+        name for name in names
+        if name in ["Special Marine Warning", "Gale Warning"]
+    ]
 
-    small_craft = any("Small Craft Advisory" in name for name in names)
+    small_craft = [
+        name for name in names
+        if "Small Craft Advisory" in name
+    ]
+
+    marine_alerts = severe_marine + small_craft
 
     return {
         "icon": "🚩",
         "label": "Small Craft",
-        "status": "🔴" if severe else "🟠" if small_craft else "🟢",
-        "detail": ", ".join(names) if names else "None",
+        "status": "🔴" if severe_marine else "🟠" if small_craft else "🟢",
+        "detail": ", ".join(marine_alerts) if marine_alerts else "None",
     }
 
 def water_temp_condition():
@@ -174,7 +193,7 @@ def noaa_conditions():
             "status": "🟢",
             "detail": waves,
         },
-        "storms": storm_status(text),
+        "storms": storm_status(text, alerts),
         "small_craft": small_craft_status(alerts),
         "water_temp": water_temp_condition(),
     }
@@ -210,12 +229,12 @@ def main():
     marine = noaa_conditions()
 
     conditions = {
+        "small_craft": marine["small_craft"],
         "wind": marine["wind"],
         "waves": marine["waves"],
         "storms": marine["storms"],
-        "small_craft": marine["small_craft"],
-        "water_contact": water,
         "water_temp": marine["water_temp"],
+        "water_contact": water,
     }
 
     data = {
