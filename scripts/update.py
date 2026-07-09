@@ -12,6 +12,8 @@ WATERFRONT_URL = "https://services2.arcgis.com/orhH6cbKzLjUCxfK/arcgis/rest/serv
 NOAA_FORECAST_URL = "https://forecast.weather.gov/shmrn.php?mz=anz538"
 NOAA_ALERTS_URL = "https://api.weather.gov/alerts/active?zone=ANZ538"
 
+WATER_TEMP_URL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?station=8574680&product=water_temperature&date=latest&units=english&time_zone=lst_ldt&format=json"
+
 PASS_LIMIT = 104
 
 
@@ -130,6 +132,25 @@ def small_craft_status(alerts):
         "detail": ", ".join(names) if names else "None",
     }
 
+def water_temp_condition():
+    try:
+        raw = get_json(WATER_TEMP_URL)
+        reading = raw.get("data", [{}])[0]
+        temp = round(float(reading["v"]))
+
+        return {
+            "icon": "🌡",
+            "label": "Water Temp",
+            "status": "🟢",
+            "detail": f"{temp}°F",
+        }
+    except Exception:
+        return {
+            "icon": "🌡",
+            "label": "Water Temp",
+            "status": "🟡",
+            "detail": "Unavailable",
+        }
 
 def noaa_conditions():
     text = marine_forecast_text()
@@ -155,12 +176,7 @@ def noaa_conditions():
         },
         "storms": storm_status(text),
         "small_craft": small_craft_status(alerts),
-        "water_temp": {
-            "icon": "🌡",
-            "label": "Water Temp",
-            "status": "🟢",
-            "detail": "Pending",
-        },
+        "water_temp": water_temp_condition(),
     }
 
 def overall_status(conditions):
