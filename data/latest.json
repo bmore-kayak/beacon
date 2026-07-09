@@ -1,34 +1,34 @@
 {
   "location": "Baltimore Harbor",
   "overall": {
-    "status": "\ud83d\udfe2",
-    "label": "Good"
+    "status": "\ud83d\udfe0",
+    "label": "Poor"
   },
-  "updated": "2026-07-09 05:55 PM",
+  "updated": "2026-07-09 06:02 PM",
   "conditions": {
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "Pending"
+      "detail": "5 to 10 kt"
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "Pending"
+      "detail": "1 ft or less"
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
-      "status": "\ud83d\udfe2",
-      "detail": "Pending"
+      "status": "\ud83d\udfe0",
+      "detail": "Thunderstorms possible"
     },
     "small_craft": {
       "icon": "\ud83d\udea9",
       "label": "Small Craft",
       "status": "\ud83d\udfe2",
-      "detail": "Pending"
+      "detail": "None"
     },
     "water_contact": {
       "icon": "\ud83e\udda0",
@@ -82,5 +82,5 @@
       "detail": "Pending"
     }
   },
-  "note": "Water contact: 5/5 passing, 0/5 failing."
+  "note": "All sampled stations are passing."
 }
