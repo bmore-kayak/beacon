@@ -371,7 +371,33 @@ def storm_condition(periods):
         "detail": f"Possible after {hour}",
     }
 
+def marine_text_alert_names():
+    text = safe_call(lambda: get_text(NWS_MARINE_TEXT_URL), "") or ""
+    upper = text.upper()
 
+    alerts = []
+
+    checks = [
+        ("Special Marine Warning", "SPECIAL MARINE WARNING"),
+        ("Storm Warning", "STORM WARNING"),
+        ("Gale Warning", "GALE WARNING"),
+        ("Hurricane Force Wind Warning", "HURRICANE FORCE WIND WARNING"),
+        ("Small Craft Advisory", "SMALL CRAFT ADVISORY"),
+        ("Tornado Warning", "TORNADO WARNING"),
+        ("Severe Thunderstorm Warning", "SEVERE THUNDERSTORM WARNING"),
+        ("Tornado Watch", "TORNADO WATCH"),
+        ("Severe Thunderstorm Watch", "SEVERE THUNDERSTORM WATCH"),
+        ("Flash Flood Warning", "FLASH FLOOD WARNING"),
+        ("Flash Flood Watch", "FLASH FLOOD WATCH"),
+        ("Hazardous Weather Outlook", "HAZARDOUS WEATHER OUTLOOK"),
+    ]
+
+    for label, phrase in checks:
+        if phrase in upper:
+            alerts.append(label)
+
+    return alerts
+    
 def advisory_condition(alerts):
     priority = [
         "Special Marine Warning",
@@ -399,6 +425,10 @@ def advisory_condition(alerts):
         alert.get("properties", {}).get("event")
         for alert in matched
     ]
+
+    for name in marine_text_alert_names():
+        if name not in names:
+            names.append(name)
 
     red_alerts = [
         name for name in names
