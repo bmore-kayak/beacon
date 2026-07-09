@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Poor"
   },
-  "updated": "2026-07-09 06:33 PM",
+  "updated": "2026-07-09 06:47 PM",
   "conditions": {
     "wind": {
       "icon": "\ud83c\udf2c",
@@ -78,8 +78,8 @@
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
-      "status": "\ud83d\udfe2",
-      "detail": "Pending"
+      "status": "\ud83d\udfe1",
+      "detail": "Unavailable"
     }
   },
   "note": "All sampled stations are passing: 5/5."
