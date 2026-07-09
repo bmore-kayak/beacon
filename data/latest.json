@@ -1,14 +1,75 @@
 {
   "location": "Baltimore Harbor",
-  "overall": "🔴 Don't Go",
-  "updated": "2026-07-09 11:00 AM",
+  "overall": "\ud83d\udfe2 Good",
+  "updated": "2026-07-09 05:48 PM",
   "conditions": [
-    ["🌬 Wind", "🟢", "6 kt"],
-    ["🌊 Waves", "🟢", "<1 ft"],
-    ["⛈ Storms", "🟠", "PM storms"],
-    ["🚩 Small Craft", "🟢", "None"],
-    ["🦠 Water Contact", "🔴", "201–5717 MPN"],
-    ["🌡 Water Temp", "🟢", "78°F"]
+    [
+      "\ud83c\udf2c Wind",
+      "\ud83d\udfe2",
+      "Pending"
+    ],
+    [
+      "\ud83c\udf0a Waves",
+      "\ud83d\udfe2",
+      "Pending"
+    ],
+    [
+      "\u26c8 Storms",
+      "\ud83d\udfe2",
+      "Pending"
+    ],
+    [
+      "\ud83d\udea9 Small Craft",
+      "\ud83d\udfe2",
+      "Pending"
+    ],
+    [
+      "\ud83e\udda0 Water Contact",
+      "\ud83d\udfe2",
+      "10\u201398 MPN"
+    ],
+    [
+      "\ud83c\udf21 Water Temp",
+      "\ud83d\udfe2",
+      "Pending"
+    ]
   ],
-  "note": "Water contact advisory is the limiting factor today."
+  "note": "Water contact: 5/5 passing, 0/5 failing.",
+  "stations": [
+    {
+      "site": "Fells Point",
+      "date": 1783512000000,
+      "status": "\ud83d\udfe2",
+      "advisory": "Passing",
+      "bacteria": 52
+    },
+    {
+      "site": "Canton Waterfront Park",
+      "date": 1783512000000,
+      "status": "\ud83d\udfe2",
+      "advisory": "Passing",
+      "bacteria": 98
+    },
+    {
+      "site": "Mr. Trash Wheel",
+      "date": 1783512000000,
+      "status": "\ud83d\udfe2",
+      "advisory": "Passing",
+      "bacteria": 20
+    },
+    {
+      "site": "Downtown Sailing Center",
+      "date": 1783512000000,
+      "status": "\ud83d\udfe2",
+      "advisory": "Passing",
+      "bacteria": 10
+    },
+    {
+      "site": "Inner Harbor",
+      "date": 1783512000000,
+      "status": "\ud83d\udfe2",
+      "advisory": "Passing",
+      "bacteria": 98
+    }
+  ]
 }
