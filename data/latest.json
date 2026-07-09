@@ -1,11 +1,17 @@
 {
   "location": "Baltimore Harbor",
   "overall": {
-    "status": "\ud83d\udfe0",
-    "label": "Poor"
+    "status": "\ud83d\udd34",
+    "label": "Don't Go"
   },
-  "updated": "2026-07-09 06:47 PM",
+  "updated": "2026-07-09 06:51 PM",
   "conditions": {
+    "small_craft": {
+      "icon": "\ud83d\udea9",
+      "label": "Small Craft",
+      "status": "\ud83d\udfe2",
+      "detail": "None"
+    },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
@@ -21,14 +27,14 @@
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
-      "status": "\ud83d\udfe0",
-      "detail": "Thunderstorms possible"
-    },
-    "small_craft": {
-      "icon": "\ud83d\udea9",
-      "label": "Small Craft",
-      "status": "\ud83d\udfe2",
+      "status": "\ud83d\udd34",
       "detail": "Severe Thunderstorm Watch"
+    },
+    "water_temp": {
+      "icon": "\ud83c\udf21",
+      "label": "Water Temp",
+      "status": "\ud83d\udfe1",
+      "detail": "Unavailable"
     },
     "water_contact": {
       "icon": "\ud83e\udda0",
@@ -74,12 +80,6 @@
           "bacteria": 98
         }
       ]
-    },
-    "water_temp": {
-      "icon": "\ud83c\udf21",
-      "label": "Water Temp",
-      "status": "\ud83d\udfe1",
-      "detail": "Unavailable"
     }
   },
   "note": "All sampled stations are passing: 5/5."
