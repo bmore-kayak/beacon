@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Don't Go"
   },
-  "updated": "2026-07-09 04:48 PM EDT",
+  "updated": "2026-07-09 06:30 PM EDT",
   "conditions": {
     "advisories": {
       "icon": "\u26a0\ufe0f",
@@ -16,13 +16,13 @@
       ],
       "alerts": [
         {
-          "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.682efa435d788afe830df0757e698a6a7d8da551.002.1",
+          "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7166a3eb4df9bdcae00a62a7e413f852a1530515.003.1",
           "type": "Feature",
           "geometry": null,
           "properties": {
-            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.682efa435d788afe830df0757e698a6a7d8da551.002.1",
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7166a3eb4df9bdcae00a62a7e413f852a1530515.003.1",
             "@type": "wx:Alert",
-            "id": "urn:oid:2.49.0.1.840.0.682efa435d788afe830df0757e698a6a7d8da551.002.1",
+            "id": "urn:oid:2.49.0.1.840.0.7166a3eb4df9bdcae00a62a7e413f852a1530515.003.1",
             "areaDesc": "Chesapeake Bay north of Pooles Island MD; Chesapeake Bay from Pooles Island to Sandy Point MD; Chesapeake Bay from Sandy Point to North Beach MD; Chesapeake Bay from North Beach to Drum Point MD; Chesapeake Bay from Drum Point MD to Smith Point VA; Tidal Potomac from Key Bridge to Indian Head MD; Tidal Potomac from Indian Head to Cobb Island MD; Tidal Potomac from Cobb Island MD to Smith Point VA; Patapsco River including Baltimore Harbor; Chester River to Queenstown MD; Eastern Bay; Choptank River to Cambridge MD and the Little Choptank River; Patuxent River to Broomes Island MD; Tangier Sound and the inland waters surrounding Bloodsworth Island",
             "geocode": {
               "SAME": [
@@ -74,14 +74,21 @@
               "https://api.weather.gov/zones/forecast/ANZ542",
               "https://api.weather.gov/zones/forecast/ANZ543"
             ],
-            "references": [],
-            "sent": "2026-07-09T14:30:00-04:00",
-            "effective": "2026-07-09T14:30:00-04:00",
-            "onset": "2026-07-09T14:30:00-04:00",
+            "references": [
+              {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.682efa435d788afe830df0757e698a6a7d8da551.002.1",
+                "identifier": "urn:oid:2.49.0.1.840.0.682efa435d788afe830df0757e698a6a7d8da551.002.1",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "sent": "2026-07-09T14:30:00-04:00"
+              }
+            ],
+            "sent": "2026-07-09T17:50:00-04:00",
+            "effective": "2026-07-09T17:50:00-04:00",
+            "onset": "2026-07-09T17:50:00-04:00",
             "expires": "2026-07-09T22:00:00-04:00",
             "ends": "2026-07-09T22:00:00-04:00",
             "status": "Actual",
-            "messageType": "Alert",
+            "messageType": "Update",
             "category": "Met",
             "severity": "Severe",
             "certainty": "Possible",
@@ -89,8 +96,8 @@
             "event": "Severe Thunderstorm Watch",
             "sender": "w-nws.webmaster@noaa.gov",
             "senderName": "NWS Baltimore MD/Washington DC",
-            "headline": "Severe Thunderstorm Watch issued July 9 at 2:30PM EDT until July 9 at 10:00PM EDT by NWS Baltimore MD/Washington DC",
-            "description": "THE NATIONAL WEATHER SERVICE HAS ISSUED SEVERE THUNDERSTORM WATCH\n474 IN EFFECT UNTIL 10 PM EDT THIS EVENING FOR THE FOLLOWING\nAREAS\n\nTHIS WATCH INCLUDES THE FOLLOWING ADJACENT COASTAL WATERS\n\nCHESAPEAKE BAY NORTH OF POOLES ISLAND MD\nCHESAPEAKE BAY FROM POOLES ISLAND TO SANDY POINT MD\n\nCHESAPEAKE BAY FROM SANDY POINT TO NORTH BEACH MD\n\nCHESAPEAKE BAY FROM NORTH BEACH TO DRUM POINT MD\n\nCHESAPEAKE BAY FROM DRUM POINT MD TO SMITH POINT VA\n\nTIDAL POTOMAC FROM KEY BRIDGE TO INDIAN HEAD MD\n\nTIDAL POTOMAC FROM INDIAN HEAD TO COBB ISLAND MD\n\nTIDAL POTOMAC FROM COBB ISLAND MD TO SMITH POINT VA\n\nPATAPSCO RIVER INCLUDING BALTIMORE HARBOR\nCHESTER RIVER TO QUEENSTOWN MD\nEASTERN BAY\nCHOPTANK RIVER TO CAMBRIDGE MD AND THE LITTLE CHOPTANK RIVER\n\nPATUXENT RIVER TO BROOMES ISLAND MD\nTANGIER SOUND AND THE INLAND WATERS SURROUNDING BLOODSWORTH\nISLAND",
+            "headline": "Severe Thunderstorm Watch issued July 9 at 5:50PM EDT until July 9 at 10:00PM EDT by NWS Baltimore MD/Washington DC",
+            "description": "SEVERE THUNDERSTORM WATCH 474 REMAINS VALID UNTIL 10 PM EDT THIS\nEVENING FOR THE FOLLOWING AREAS\n\nTHIS WATCH INCLUDES THE FOLLOWING ADJACENT COASTAL WATERS\n\nCHESAPEAKE BAY NORTH OF POOLES ISLAND MD\nCHESAPEAKE BAY FROM POOLES ISLAND TO SANDY POINT MD\n\nCHESAPEAKE BAY FROM SANDY POINT TO NORTH BEACH MD\n\nCHESAPEAKE BAY FROM NORTH BEACH TO DRUM POINT MD\n\nCHESAPEAKE BAY FROM DRUM POINT MD TO SMITH POINT VA\n\nTIDAL POTOMAC FROM KEY BRIDGE TO INDIAN HEAD MD\n\nTIDAL POTOMAC FROM INDIAN HEAD TO COBB ISLAND MD\n\nTIDAL POTOMAC FROM COBB ISLAND MD TO SMITH POINT VA\n\nPATAPSCO RIVER INCLUDING BALTIMORE HARBOR\nCHESTER RIVER TO QUEENSTOWN MD\nEASTERN BAY\nCHOPTANK RIVER TO CAMBRIDGE MD AND THE LITTLE CHOPTANK RIVER\n\nPATUXENT RIVER TO BROOMES ISLAND MD\nTANGIER SOUND AND THE INLAND WATERS SURROUNDING BLOODSWORTH\nISLAND",
             "instruction": null,
             "response": "Monitor",
             "note": null,
@@ -99,7 +106,7 @@
                 "WCNLWX"
               ],
               "WMOidentifier": [
-                "WWUS61 KLWX 091830"
+                "WWUS61 KLWX 092150"
               ],
               "BLOCKCHANNEL": [
                 "EAS",
@@ -110,7 +117,7 @@
                 "WXR"
               ],
               "VTEC": [
-                "/O.NEW.KLWX.SV.A.0474.260709T1830Z-260710T0200Z/"
+                "/O.CON.KLWX.SV.A.0474.000000T0000Z-260710T0200Z/"
               ],
               "eventEndingTime": [
                 "2026-07-09T22:00:00-04:00"
@@ -136,30 +143,30 @@
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Possible after 4 PM"
+      "detail": "Possible after 6 PM"
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "8 kt, gusts 10",
-      "speed_kt": 8,
-      "gust_kt": 10,
+      "status": "\ud83d\udfe0",
+      "detail": "12 kt, gusts 15",
+      "speed_kt": 12,
+      "gust_kt": 15,
       "source": "CBIBS"
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.6 ft",
-      "height_ft": 0.6,
+      "detail": "0.4 ft",
+      "height_ft": 0.4,
       "source": "CBIBS"
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "77\u00b0F",
+      "detail": "75\u00b0F",
       "source": "CBIBS"
     },
     "water_temp": {
