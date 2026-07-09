@@ -1,5 +1,5 @@
 async function main() {
-  const response = await fetch("../data/latest.json");
+  const response = await fetch("data/latest.json");
   const data = await response.json();
 
   document.title = `Beacon • ${data.location}`;
