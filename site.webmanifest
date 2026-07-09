@@ -1,0 +1,17 @@
+{
+  "name": "Beacon",
+  "short_name": "Beacon",
+  "description": "Baltimore Inner Harbor - Kayak conditions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eef8ff",
+  "theme_color": "#68bde8",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f6a3.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
