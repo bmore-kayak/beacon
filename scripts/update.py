@@ -461,7 +461,7 @@ def main():
         "overall": overall_status(conditions),
         "updated": datetime.now(
             ZoneInfo("America/New_York")
-        ).strftime("%Y-%m-%d %I:%M %p %Z")
+        ).strftime("%Y-%m-%d %I:%M %p %Z"),
         "conditions": conditions,
         "note": note(conditions, water),
     }
