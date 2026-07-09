@@ -352,12 +352,6 @@ def storm_condition(periods):
 
 
 def advisory_condition(alerts):
-    names = [
-        a.get("properties", {}).get("event", "")
-        for a in alerts
-        if a.get("properties", {}).get("event")
-    ]
-
     priority = [
         "Special Marine Warning",
         "Storm Warning",
@@ -373,22 +367,46 @@ def advisory_condition(alerts):
         "Hazardous Weather Outlook",
     ]
 
-    active = [name for name in priority if name in names]
+    matched = []
+
+    for event in priority:
+        for alert in alerts:
+            if alert.get("properties", {}).get("event") == event:
+                matched.append(alert)
+
+    names = [
+        alert.get("properties", {}).get("event")
+        for alert in matched
+    ]
 
     red_alerts = [
-        name for name in active
+        name for name in names
         if name != "Hazardous Weather Outlook"
     ]
 
     return {
         "icon": "⚠️",
         "label": "Advisories",
-        "status": "🔴" if red_alerts else "🟠" if active else "🟢",
-        "detail": active[0] if active else "None",
-        "items": active,
+        "status": "🔴" if red_alerts else "🟠" if matched else "🟢",
+        "detail": names[0] if names else "None",
+        "items": names,
+        "alerts": matched,
     }
 
+def format_alert(alert):
+    p = alert.get("properties", {})
+    event = p.get("event")
+    ends = p.get("ends") or p.get("expires")
 
+    if not event:
+        return None
+
+    if ends:
+        end_time = datetime.fromisoformat(ends).strftime("%-I:%M %p")
+        return f"{event} until {end_time}."
+
+    return f"{event}."
+    
 def unavailable(label):
     return {
         "icon": "🌡",
@@ -427,8 +445,16 @@ def overall_status(conditions):
 
 
 def note(conditions, water):
-    if conditions["advisories"]["status"] == "🔴":
-        return "Marine advisory."
+    alerts = conditions["advisories"].get("alerts", [])
+
+    if alerts:
+        lines = [
+            formatted
+            for alert in alerts
+            if (formatted := format_alert(alert))
+        ]
+
+        return "\n".join(lines)
 
     if conditions["storms"]["status"] == "🔴":
         return "Thunderstorms expected."
