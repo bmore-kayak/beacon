@@ -1,75 +1,50 @@
 {
   "location": "Baltimore Harbor",
-  "overall": "\ud83d\udfe2 Good",
-  "updated": "2026-07-09 05:48 PM",
-  "conditions": [
-    [
-      "\ud83c\udf2c Wind",
-      "\ud83d\udfe2",
-      "Pending"
-    ],
-    [
-      "\ud83c\udf0a Waves",
-      "\ud83d\udfe2",
-      "Pending"
-    ],
-    [
-      "\u26c8 Storms",
-      "\ud83d\udfe2",
-      "Pending"
-    ],
-    [
-      "\ud83d\udea9 Small Craft",
-      "\ud83d\udfe2",
-      "Pending"
-    ],
-    [
-      "\ud83e\udda0 Water Contact",
-      "\ud83d\udfe2",
-      "10\u201398 MPN"
-    ],
-    [
-      "\ud83c\udf21 Water Temp",
-      "\ud83d\udfe2",
-      "Pending"
-    ]
-  ],
-  "note": "Water contact: 5/5 passing, 0/5 failing.",
-  "stations": [
-    {
-      "site": "Fells Point",
-      "date": 1783512000000,
-      "status": "\ud83d\udfe2",
-      "advisory": "Passing",
-      "bacteria": 52
+  "overall": {
+    "status": "🔴",
+    "label": "Don't Go"
+  },
+  "updated": "2026-07-09 05:00 AM",
+  "conditions": {
+    "wind": {
+      "icon": "🌬",
+      "label": "Wind",
+      "status": "🟢",
+      "detail": "Pending"
     },
-    {
-      "site": "Canton Waterfront Park",
-      "date": 1783512000000,
-      "status": "\ud83d\udfe2",
-      "advisory": "Passing",
-      "bacteria": 98
+    "waves": {
+      "icon": "🌊",
+      "label": "Waves",
+      "status": "🟢",
+      "detail": "Pending"
     },
-    {
-      "site": "Mr. Trash Wheel",
-      "date": 1783512000000,
-      "status": "\ud83d\udfe2",
-      "advisory": "Passing",
-      "bacteria": 20
+    "storms": {
+      "icon": "⛈",
+      "label": "Storms",
+      "status": "🟢",
+      "detail": "Pending"
     },
-    {
-      "site": "Downtown Sailing Center",
-      "date": 1783512000000,
-      "status": "\ud83d\udfe2",
-      "advisory": "Passing",
-      "bacteria": 10
+    "small_craft": {
+      "icon": "🚩",
+      "label": "Small Craft",
+      "status": "🟢",
+      "detail": "Pending"
     },
-    {
-      "site": "Inner Harbor",
-      "date": 1783512000000,
-      "status": "\ud83d\udfe2",
-      "advisory": "Passing",
-      "bacteria": 98
+    "water_contact": {
+      "icon": "🦠",
+      "label": "Water Contact",
+      "status": "🔴",
+      "detail": "201–5717 MPN",
+      "passing": 0,
+      "failing": 5,
+      "stations": []
+    },
+    "water_temp": {
+      "icon": "🌡",
+      "label": "Water Temp",
+      "status": "🟢",
+      "detail": "Pending"
     }
-  ]
+  },
+  "note": "Water contact is the limiting factor today."
 }
