@@ -55,7 +55,7 @@ function renderDetails(key, condition) {
   let content = "";
 
   if (key === "advisories") {
-    content += renderAdvisories(condition.alerts);
+    content += renderAdvisories(condition.items);
   }
 
   if (key === "water_contact") {
