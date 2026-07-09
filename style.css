@@ -52,6 +52,69 @@ td:last-child {
   white-space: pre-line;
 }
 
+.conditions {
+  width: 100%;
+}
+
+.condition {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.condition summary {
+  list-style: none;
+}
+
+.condition summary::-webkit-details-marker {
+  display: none;
+}
+
+.condition-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.8rem 0;
+  cursor: pointer;
+}
+
+.condition-label {
+  font-weight: 500;
+}
+
+.condition-status {
+  text-align: center;
+}
+
+.condition-detail {
+  text-align: right;
+  color: #374151;
+}
+
+.condition-details {
+  padding: 0.25rem 0 1rem 1.25rem;
+}
+
+.station {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  font-size: 0.92rem;
+}
+
+.station span:last-child {
+  white-space: nowrap;
+}
+
+.detail-footer {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
 .sources {
     margin-top: 2rem;
     font-size: 0.9rem;
