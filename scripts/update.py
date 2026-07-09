@@ -179,7 +179,13 @@ def coops_wind():
         "detail": f"{direction} {speed} kt, gusts {gust}",
         "speed_kt": speed,
         "gust_kt": gust,
-        "source": "CO-OPS",
+        "source": {
+            "provider": "NOAA CO-OPS",
+            "location": "Baltimore",
+            "updated": datetime.now(
+                ZoneInfo("America/New_York")
+            ).isoformat(),
+        },
     }
 
 
@@ -214,7 +220,13 @@ def ndbc_water_temp():
             "label": "Water Temp",
             "status": "🟢",
             "detail": f"{temp_f}°F",
-            "source": "NDBC",
+            "source": {
+                "provider": "NOAA NDBC",
+                "location": "BLTM2",
+                "updated": sample_time.astimezone(
+                    ZoneInfo("America/New_York")
+                ).isoformat(),
+            },
         }
 
     return None
@@ -257,7 +269,13 @@ def cbibs_wind(values):
         "detail": f"{speed_kt} kt, gusts {gust_kt}",
         "speed_kt": speed_kt,
         "gust_kt": gust_kt,
-        "source": "CBIBS",
+        "source": {
+            "provider": "NOAA CBIBS",
+            "location": "Baltimore Harbor Buoy",
+            "updated": datetime.now(
+                ZoneInfo("America/New_York")
+            ).isoformat(),
+        },
     }
 
 
@@ -275,7 +293,13 @@ def cbibs_waves(values):
         "status": score_waves(waves_ft),
         "detail": f"{waves_ft} ft",
         "height_ft": waves_ft,
-        "source": "CBIBS",
+        "source": {
+            "provider": "NOAA CBIBS",
+            "location": "Baltimore Harbor Buoy",
+            "updated": datetime.now(
+                ZoneInfo("America/New_York")
+            ).isoformat(),
+        },
     }
 
 
@@ -292,7 +316,13 @@ def cbibs_air_temp(values):
         "label": "Air Temp",
         "status": "🟢",
         "detail": f"{temp_f}°F",
-        "source": "CBIBS",
+        "source": {
+            "provider": "NOAA CBIBS",
+            "location": "Baltimore Harbor Buoy",
+            "updated": datetime.now(
+                ZoneInfo("America/New_York")
+            ).isoformat(),
+        },
     }
 
 
@@ -309,7 +339,13 @@ def cbibs_water_temp(values):
         "label": "Water Temp",
         "status": "🟢",
         "detail": f"{temp_f}°F",
-        "source": "CBIBS",
+        "source": {
+            "provider": "NOAA CBIBS",
+            "location": "Baltimore Harbor Buoy",
+            "updated": datetime.now(
+                ZoneInfo("America/New_York")
+            ).isoformat(),
+        },
     }
 
 
@@ -329,7 +365,11 @@ def forecast_air_temp(periods):
         "label": "Air Temp",
         "status": "🟢",
         "detail": f"{temps[0]}°F",
-        "source": "NWS",
+        "source": {
+            "provider": "National Weather Service",
+            "location": "Baltimore Harbor",
+            "updated": periods[0]["startTime"],
+        },
     }
 
 
@@ -342,7 +382,13 @@ def forecast_waves():
         "label": "Waves",
         "status": "🟢",
         "detail": match.group(1).strip() if match else "Unavailable",
-        "source": "NWS",
+        "source": {
+            "provider": "National Weather Service",
+            "location": "ANZ538",
+            "updated": datetime.now(
+                ZoneInfo("America/New_York")
+            ).isoformat(),
+        },
     }
 
 
@@ -369,6 +415,11 @@ def storm_condition(periods):
         "label": "Storms",
         "status": "🟠",
         "detail": f"Possible after {hour}",
+        "source": {
+            "provider": "National Weather Service",
+            "location": "Baltimore Harbor",
+            "updated": periods[0]["startTime"],
+        },
     }
 
 def marine_text_alert_names():
@@ -442,6 +493,13 @@ def advisory_condition(alerts):
         "detail": names[0] if names else "None",
         "items": names,
         "alerts": matched,
+        "source": {
+            "provider": "National Weather Service",
+            "location": "ANZ538",
+            "updated": datetime.now(
+                ZoneInfo("America/New_York")
+            ).isoformat(),
+        },
     }
 
 def format_alert(alert):
