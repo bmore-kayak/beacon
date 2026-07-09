@@ -1,0 +1,14 @@
+{
+  "location": "Baltimore Harbor",
+  "overall": "🔴 Don't Go",
+  "updated": "2026-07-09 11:00 AM",
+  "conditions": [
+    ["🌬 Wind", "🟢", "6 kt"],
+    ["🌊 Waves", "🟢", "<1 ft"],
+    ["⛈ Storms", "🟠", "PM storms"],
+    ["🚩 Small Craft", "🟢", "None"],
+    ["🦠 Water Contact", "🔴", "201–5717 MPN"],
+    ["🌡 Water Temp", "🟢", "78°F"]
+  ],
+  "note": "Water contact advisory is the limiting factor today."
+}
