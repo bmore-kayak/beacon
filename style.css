@@ -31,6 +31,12 @@ main {
   color: color-mix(in srgb, CanvasText 68%, Canvas);
 }
 
+.subtitle {
+  margin: 0.15rem 0 0.9rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
 h1 {
   margin: 0;
   font-size: clamp(2rem, 8vw, 3.4rem);
