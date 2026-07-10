@@ -2,8 +2,6 @@ name: Update Beacon
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/10 * * * *"
 
 permissions:
   contents: write
