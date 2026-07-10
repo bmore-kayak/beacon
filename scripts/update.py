@@ -592,16 +592,15 @@ def note(conditions, water):
         return "\n".join(lines)
 
     if conditions["storms"]["status"] == "🔴":
-
         return "Thunderstorms possible now."
     
     if conditions["storms"]["status"] == "🟠":
-    
         return "Thunderstorms possible soon."
-    
+        
     if conditions["storms"]["status"] == "🟡":
-    
-        return conditions["storms"]["detail"] + "."
+        detail = conditions["storms"]["detail"]
+        time_text = detail.replace("Possible after ", "")
+        return f"Plan to be off the water before {time_text}."
 
     if water["status"] == "🔴":
         return "Avoid water contact."
