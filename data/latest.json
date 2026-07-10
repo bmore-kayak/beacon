@@ -4,23 +4,18 @@
     "status": "\ud83d\udfe0",
     "label": "Poor Conditions"
   },
-  "updated": "2026-07-09 08:08 PM EDT",
+  "updated": "2026-07-09 08:59 PM EDT",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea9",
       "label": "Advisories",
-      "status": "\ud83d\udfe0",
-      "detail": "Hazardous Weather Outlook",
-      "items": [
-        {
-          "event": "Hazardous Weather Outlook",
-          "ends": null
-        }
-      ],
+      "status": "\ud83d\udfe2",
+      "detail": "None",
+      "items": [],
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-09T20:08:02.739292-04:00"
+        "updated": "2026-07-09T20:59:37.268946-04:00"
       }
     },
     "storms": {
@@ -37,26 +32,26 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe2",
-      "detail": "7 kt, gusts 9",
-      "speed_kt": 7,
-      "gust_kt": 9,
+      "status": "\ud83d\udfe1",
+      "detail": "12 kt, gusts 13",
+      "speed_kt": 12,
+      "gust_kt": 13,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-09T20:08:02.739329-04:00"
+        "updated": "2026-07-09T20:59:37.268966-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-09T20:08:02.739354-04:00"
+        "updated": "2026-07-09T20:59:37.269008-04:00"
       }
     },
     "air_temp": {
@@ -67,7 +62,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-09T20:08:02.739407-04:00"
+        "updated": "2026-07-09T20:59:37.269055-04:00"
       }
     },
     "water_temp": {
@@ -78,7 +73,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-09T20:08:02.739415-04:00"
+        "updated": "2026-07-09T20:59:37.269063-04:00"
       }
     },
     "water_contact": {
@@ -131,5 +126,5 @@
       ]
     }
   },
-  "note": "Hazardous Weather Outlook."
+  "note": "Thunderstorms possible."
 }
