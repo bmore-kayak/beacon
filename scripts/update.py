@@ -600,6 +600,9 @@ def note(conditions, water):
     
         return "\n".join(lines)
 
+    if conditions["storms"]["status"] == "🔴":
+        return conditions["storms"]["detail"] + "."
+    
     if conditions["storms"]["status"] == "🟠":
         return conditions["storms"]["detail"] + "."
     
