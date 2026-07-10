@@ -47,7 +47,7 @@ function renderCondition(key, condition) {
       </span>
 
      <span class="condition-detail">
-        ${condition.direction_deg != null ? windArrow(condition.direction_deg) : ""}
+        ${key === "wind" ? windArrow(condition.direction_deg) : ""}
         ${condition.detail}
       </span>
 
