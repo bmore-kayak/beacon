@@ -592,10 +592,16 @@ def note(conditions, water):
         return "\n".join(lines)
 
     if conditions["storms"]["status"] == "🔴":
-        return "Thunderstorms expected."
 
+        return "Thunderstorms possible now."
+    
     if conditions["storms"]["status"] == "🟠":
-        return "Thunderstorms possible."
+    
+        return "Thunderstorms possible soon."
+    
+    if conditions["storms"]["status"] == "🟡":
+    
+        return conditions["storms"]["detail"] + "."
 
     if water["status"] == "🔴":
         return "Avoid water contact."
