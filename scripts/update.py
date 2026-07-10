@@ -416,18 +416,26 @@ def storm_condition(periods):
 
     now = datetime.now(timezone.utc)
     first_start = datetime.fromisoformat(storm_periods[0]["startTime"])
-    first_end = datetime.fromisoformat(storm_periods[0]["endTime"])
-    time_until = first_start - now
+    window_end = datetime.fromisoformat(storm_periods[0]["endTime"])
 
-    if first_start <= now < first_end:
-        status = "🔴"
-        detail = "Possible now"
-    elif time_until <= timedelta(hours=2):
-        status = "🟠"
-        detail = f"Possible by {first_start.strftime('%-I %p')}"
-    else:
+    # Extend through consecutive hourly storm periods.
+    for period in storm_periods[1:]:
+        period_start = datetime.fromisoformat(period["startTime"])
+
+        if period_start > window_end:
+            break
+
+        window_end = datetime.fromisoformat(period["endTime"])
+
+    start_text = first_start.strftime("%-I %p")
+    end_text = window_end.strftime("%-I %p")
+
+    if now < first_start - timedelta(hours=2):
         status = "🟡"
-        detail = f"Possible after {first_start.strftime('%-I %p')}"
+        detail = f"Possible after {start_text}"
+    else:
+        status = "🟠"
+        detail = f"Storm risk {start_text}–{end_text}"
 
     return {
         "icon": "⛈",
@@ -435,6 +443,7 @@ def storm_condition(periods):
         "status": status,
         "detail": detail,
         "starts": first_start.isoformat(),
+        "ends": window_end.isoformat(),
         "source": source,
     }
 
@@ -591,15 +600,11 @@ def note(conditions, water):
     
         return "\n".join(lines)
 
-    if conditions["storms"]["status"] == "🔴":
-        return "Thunderstorms possible now."
-    
     if conditions["storms"]["status"] == "🟠":
-        return "Thunderstorms possible soon."
-        
+        return conditions["storms"]["detail"] + "."
+    
     if conditions["storms"]["status"] == "🟡":
-        detail = conditions["storms"]["detail"]
-        time_text = detail.replace("Possible after ", "")
+        time_text = conditions["storms"]["detail"].replace("Possible after ", "")
         return f"Plan to be off the water before {time_text}."
 
     if water["status"] == "🔴":
