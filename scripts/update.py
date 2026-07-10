@@ -170,15 +170,20 @@ def coops_wind():
 
     speed = round(float(row["s"]))
     gust = round(float(row["g"]))
-    direction = row.get("dr", "")
+    direction = row.get("d")
 
     return {
         "icon": "🌬",
         "label": "Wind",
         "status": score_wind(gust),
-        "detail": f"{direction} {speed} kt, gusts {gust}",
+        "detail": f"{speed} kt, gusts {gust}",
         "speed_kt": speed,
         "gust_kt": gust,
+        "direction_deg": (
+            round(float(direction), 1)
+            if direction not in (None, "")
+            else None
+        ),
         "source": {
             "provider": "NOAA CO-OPS",
             "location": "Baltimore",
@@ -187,7 +192,6 @@ def coops_wind():
             ).isoformat(),
         },
     }
-
 
 def ndbc_water_temp():
     text = get_text(NDBC_URL)
@@ -255,6 +259,7 @@ def score_waves(waves_ft):
 def cbibs_wind(values):
     speed = values.get("wind_speed")
     gust = values.get("wind_speed_of_gust")
+    direction = values.get("wind_from_direction")
 
     if speed is None or gust is None:
         return None
@@ -269,6 +274,11 @@ def cbibs_wind(values):
         "detail": f"{speed_kt} kt, gusts {gust_kt}",
         "speed_kt": speed_kt,
         "gust_kt": gust_kt,
+        "direction_deg": (
+            round(float(direction), 1)
+            if direction is not None
+            else None
+        ),
         "source": {
             "provider": "NOAA CBIBS",
             "location": "Baltimore Harbor Buoy",
