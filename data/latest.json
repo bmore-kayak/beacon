@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Use Caution"
   },
-  "updated": "2026-07-10 08:32 AM EDT",
+  "updated": "2026-07-10 08:36 AM EDT",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea9",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-10T08:32:31.710438-04:00"
+        "updated": "2026-07-10T08:36:29.406653-04:00"
       }
     },
     "storms": {
@@ -40,7 +40,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-10T08:32:31.710471-04:00"
+        "updated": "2026-07-10T08:36:29.406702-04:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-10T08:32:31.710492-04:00"
+        "updated": "2026-07-10T08:36:29.406726-04:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-10T08:32:31.710548-04:00"
+        "updated": "2026-07-10T08:36:29.406793-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-10T08:32:31.710555-04:00"
+        "updated": "2026-07-10T08:36:29.406801-04:00"
       }
     },
     "bacteria": {
@@ -127,5 +127,5 @@
       ]
     }
   },
-  "note": "Favorable conditions."
+  "note": "Possible after 2 PM."
 }
