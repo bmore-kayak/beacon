@@ -113,7 +113,7 @@ def waterfront_conditions():
     
     return {
         "icon": "🦠",
-        "label": "Water Contact",
+        "label": "Bacteria",
         "status": "🔴" if failing else "🟢",
         "detail": f"{min(counts)}–{max(counts)} MPN" if counts else "Unavailable",
     
@@ -678,7 +678,7 @@ def append_history(data):
             "source": source_info(water_temp),
         },
 
-        "water_contact": {
+        "bacteria": {
             "status": water_contact["status"],
             "passing": water_contact["passing"],
             "failing": water_contact["failing"],
@@ -702,7 +702,7 @@ def main():
         "waves": marine["waves"],
         "air_temp": marine["air_temp"],
         "water_temp": marine["water_temp"],
-        "water_contact": water,
+        "bacteria": water,
     }
 
     data = {
