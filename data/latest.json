@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Poor Conditions"
   },
-  "updated": "2026-07-10 07:46 AM EDT",
+  "updated": "2026-07-10 08:00 AM EDT",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea9",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-10T07:46:18.916431-04:00"
+        "updated": "2026-07-10T08:00:40.496204-04:00"
       }
     },
     "storms": {
@@ -26,7 +26,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-07-10T07:00:00-04:00"
+        "updated": "2026-07-10T08:00:00-04:00"
       }
     },
     "wind": {
@@ -39,30 +39,30 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-10T07:46:18.916465-04:00"
+        "updated": "2026-07-10T08:00:40.496233-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.6 ft",
-      "height_ft": 0.6,
+      "detail": "0.4 ft",
+      "height_ft": 0.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-10T07:46:18.916486-04:00"
+        "updated": "2026-07-10T08:00:40.496252-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "76\u00b0F",
+      "detail": "77\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-10T07:46:18.916542-04:00"
+        "updated": "2026-07-10T08:00:40.496295-04:00"
       }
     },
     "water_temp": {
@@ -73,7 +73,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-10T07:46:18.916555-04:00"
+        "updated": "2026-07-10T08:00:40.496302-04:00"
       }
     },
     "water_contact": {
