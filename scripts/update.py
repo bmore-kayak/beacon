@@ -399,27 +399,43 @@ def storm_condition(periods):
         or "thunderstorm" in p.get("detailedForecast", "").lower()
     ]
 
+    source = {
+        "provider": "National Weather Service",
+        "location": "Baltimore Inner Harbor",
+        "updated": periods[0]["startTime"] if periods else None,
+    }
+
     if not storm_periods:
         return {
             "icon": "⛈",
             "label": "Storms",
             "status": "🟢",
             "detail": "None noted",
+            "source": source,
         }
 
-    first = datetime.fromisoformat(storm_periods[0]["startTime"])
-    hour = first.strftime("%-I %p")
+    now = datetime.now(timezone.utc)
+    first_start = datetime.fromisoformat(storm_periods[0]["startTime"])
+    first_end = datetime.fromisoformat(storm_periods[0]["endTime"])
+    time_until = first_start - now
+
+    if first_start <= now < first_end:
+        status = "🔴"
+        detail = "Possible now"
+    elif time_until <= timedelta(hours=2):
+        status = "🟠"
+        detail = f"Possible by {first_start.strftime('%-I %p')}"
+    else:
+        status = "🟡"
+        detail = f"Possible after {first_start.strftime('%-I %p')}"
 
     return {
         "icon": "⛈",
         "label": "Storms",
-        "status": "🟠",
-        "detail": f"Possible after {hour}",
-        "source": {
-            "provider": "National Weather Service",
-            "location": "Baltimore Harbor",
-            "updated": periods[0]["startTime"],
-        },
+        "status": status,
+        "detail": detail,
+        "starts": first_start.isoformat(),
+        "source": source,
     }
 
 def marine_text_alert_names():
