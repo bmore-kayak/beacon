@@ -591,11 +591,11 @@ def overall_status(conditions):
     if "🔴" in statuses:
         return {"status": "🔴", "label": "Don't Go"}
     if "🟠" in statuses:
-        return {"status": "🟠", "label": "Poor Conditions"}
+        return {"status": "🟠", "label": "Use caution"}
     if "🟡" in statuses:
-        return {"status": "🟡", "label": "Use Caution"}
+        return {"status": "🟡", "label": "Moderate conditions"}
 
-    return {"status": "🟢", "label": "Good to Go"}
+    return {"status": "🟢", "label": "Good conditions"}
 
 
 def note(conditions, water):
