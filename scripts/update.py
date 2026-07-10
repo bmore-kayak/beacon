@@ -621,7 +621,7 @@ def append_history(data):
     waves = conditions["waves"]
     air_temp = conditions["air_temp"]
     water_temp = conditions["water_temp"]
-    water_contact = conditions["water_contact"]
+    bacteria = conditions["bacteria"]
     advisories = conditions["advisories"]
 
     history = {
@@ -679,11 +679,11 @@ def append_history(data):
         },
 
         "bacteria": {
-            "status": water_contact["status"],
-            "passing": water_contact["passing"],
-            "failing": water_contact["failing"],
-            "stations": water_contact["stations"],
-            "source": source_info(water_contact),
+            "status": bacteria["status"],
+            "passing": bacteria["passing"],
+            "failing": bacteria["failing"],
+            "stations": bacteria["stations"],
+            "source": source_info(bacteria),
         },
     }
 
