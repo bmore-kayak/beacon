@@ -20,6 +20,17 @@ async function main() {
   }
 }
 
+function windArrow(direction) {
+  const rotation = (direction + 180) % 360;
+
+  return `
+    <span
+      class="wind-arrow"
+      style="--rotation:${rotation}deg"
+      aria-hidden="true"
+    >↑</span>
+  `;
+}
 
 function renderCondition(key, condition) {
   const details = document.createElement("details");
@@ -35,7 +46,8 @@ function renderCondition(key, condition) {
         ${condition.status}
       </span>
 
-      <span class="condition-detail">
+     <span class="condition-detail">
+        ${condition.direction_deg != null ? windArrow(condition.direction_deg) : ""}
         ${condition.detail}
       </span>
 
