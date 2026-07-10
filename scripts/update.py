@@ -599,65 +599,96 @@ def note(conditions, water):
     return "Favorable conditions."
 
 def append_history(data):
-    c = data["conditions"]
+    conditions = data["conditions"]
 
-    def parse_number(text):
-        if not text or text == "Unavailable":
+    def number(value):
+        if value is None:
             return None
 
-        m = re.search(r"-?\d+(?:\.\d+)?", text)
-        return float(m.group()) if m else None
+        match = re.search(r"-?\d+(?:\.\d+)?", str(value))
+        return float(match.group()) if match else None
+
+    def source_info(condition):
+        source = condition.get("source") or {}
+
+        return {
+            "provider": source.get("provider"),
+            "location": source.get("location"),
+            "observed": source.get("updated"),
+        }
+
+    wind = conditions["wind"]
+    waves = conditions["waves"]
+    air_temp = conditions["air_temp"]
+    water_temp = conditions["water_temp"]
+    water_contact = conditions["water_contact"]
+    advisories = conditions["advisories"]
 
     history = {
         "schema": 1,
-        "timestamp": datetime.now(ZoneInfo("America/New_York")).isoformat(),
+        "timestamp": datetime.now(
+            ZoneInfo("America/New_York")
+        ).isoformat(),
 
         "overall": data["overall"]["status"],
 
-        "advisories": c["advisories"].get("items", []),
+        "advisories": {
+            "status": advisories["status"],
+            "items": advisories.get("items", []),
+            "source": source_info(advisories),
+        },
 
         "storms": {
-            "status": c["storms"]["status"],
-            "detail": c["storms"]["detail"],
+            "status": conditions["storms"]["status"],
+            "detail": conditions["storms"]["detail"],
+            "source": source_info(conditions["storms"]),
         },
 
         "wind": {
-            "status": c["wind"]["status"],
-            "speed_kt": parse_number(c["wind"]["detail"]),
-            "gust_kt": (
-                parse_number(
-                    c["wind"]["detail"].split("gusts", 1)[1]
-                )
-                if "gusts" in c["wind"]["detail"]
-                else None
-            ),
+            "status": wind["status"],
+            "speed_kt": wind.get("speed_kt")
+                or number(wind.get("detail")),
+            "gust_kt": wind.get("gust_kt")
+                or (
+                    number(wind["detail"].split("gusts", 1)[1])
+                    if "gusts" in wind.get("detail", "")
+                    else None
+                ),
+            "source": source_info(wind),
         },
 
         "waves": {
-            "status": c["waves"]["status"],
-            "height_ft": parse_number(c["waves"]["detail"]),
+            "status": waves["status"],
+            "height_ft": waves.get("height_ft")
+                or number(waves.get("detail")),
+            "source": source_info(waves),
         },
 
         "air_temp": {
-            "status": c["air_temp"]["status"],
-            "temp_f": parse_number(c["air_temp"]["detail"]),
+            "status": air_temp["status"],
+            "temp_f": air_temp.get("temp_f")
+                or number(air_temp.get("detail")),
+            "source": source_info(air_temp),
         },
 
         "water_temp": {
-            "status": c["water_temp"]["status"],
-            "temp_f": parse_number(c["water_temp"]["detail"]),
+            "status": water_temp["status"],
+            "temp_f": water_temp.get("temp_f")
+                or number(water_temp.get("detail")),
+            "source": source_info(water_temp),
         },
 
         "water_contact": {
-            "status": c["water_contact"]["status"],
-            "passing": c["water_contact"]["passing"],
-            "failing": c["water_contact"]["failing"],
-            "stations": c["water_contact"]["stations"],
+            "status": water_contact["status"],
+            "passing": water_contact["passing"],
+            "failing": water_contact["failing"],
+            "stations": water_contact["stations"],
+            "source": source_info(water_contact),
         },
     }
 
-    with HISTORY.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(history) + "\n")
+    with HISTORY.open("a", encoding="utf-8") as file:
+        file.write(json.dumps(history) + "\n")
 
 
 def main():
