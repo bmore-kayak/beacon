@@ -58,7 +58,7 @@ function renderDetails(key, condition) {
     content += renderAdvisories(condition.items);
   }
 
-  if (key === "water_contact") {
+  if (key === "bacteria") {
     content += renderStations(condition.stations);
   }
 
