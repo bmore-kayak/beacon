@@ -3,7 +3,7 @@ name: Update Beacon
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */4 * * *"
+    - cron: "43 */1 * * *"
 
 permissions:
   contents: write
