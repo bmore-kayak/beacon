@@ -31,6 +31,30 @@ main {
   color: color-mix(in srgb, CanvasText 68%, Canvas);
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.brand-icon {
+    font-size: 2.6rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.location {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.tagline {
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
 h1 {
   margin: 0;
   font-size: clamp(2rem, 8vw, 3.4rem);
