@@ -499,7 +499,7 @@ def advisory_condition(alerts):
     ]
 
     return {
-        "icon": "⚠️",
+        "icon": "🚩",
         "label": "Advisories",
         "status": "🔴" if red_items else "🟠" if items else "🟢",
         "detail": items[0]["event"] if items else "None",
