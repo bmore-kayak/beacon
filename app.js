@@ -76,6 +76,14 @@ function renderDetails(key, condition) {
     content += renderAdvisories(condition.items);
   }
 
+  if (key === "rainfall" && condition.message) {
+    content += `
+      <div class="expanded-note">
+        ${condition.message}
+      </div>
+    `;
+  }
+
   if (key === "bacteria") {
     content += renderStations(condition.stations);
   }
