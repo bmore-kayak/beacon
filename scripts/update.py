@@ -70,7 +70,7 @@ STATION_REGIONS = {
         "Curtis Creek",
         "Wagners Point",
     },
-    "Lower Harbor": {
+    "Outer Harbor": {
         "Bear Creek",
         "Bodkin Creek",
         "Cox Creek",
