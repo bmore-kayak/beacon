@@ -1093,11 +1093,11 @@ def append_history(data):
             "source": source_info(water_temp),
         },
 
-        "rainfall": {
-            "status": rainfall["status"],
-            "rain_7day_in": rainfall.get("rain_7day_in"),
-            "source": source_info(rainfall),
-        },
+        #"rainfall": {
+        #    "status": rainfall["status"],
+        #    "rain_7day_in": rainfall.get("rain_7day_in"),
+        #    "source": source_info(rainfall),
+        #},
 
         "bacteria": {
             "status": bacteria["status"],
@@ -1119,7 +1119,7 @@ def main():
 
     water = bacteria_conditions(waterfront, bww)
     marine = marine_conditions()
-    rainfall = rainfall_condition(waterfront)
+    #rainfall = rainfall_condition(waterfront)
 
     conditions = {
         "advisories": marine["advisories"],
@@ -1128,7 +1128,7 @@ def main():
         "waves": marine["waves"],
         "air_temp": marine["air_temp"],
         "water_temp": marine["water_temp"],
-        "rainfall": rainfall,
+        #"rainfall": rainfall,
         "bacteria": water,
     }
 
