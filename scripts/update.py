@@ -484,7 +484,9 @@ def marine_text_alert_names():
 
     return alerts
     
-def advisory_condition(alerts):
+def advisory_condition(api_alerts, marine_text_names=None):
+    marine_text_names = marine_text_names or []
+
     priority = [
         "Tornado Warning",
         "Special Marine Warning",
@@ -493,9 +495,9 @@ def advisory_condition(alerts):
         "Gale Warning",
         "Hurricane Force Wind Warning",
         "Small Craft Advisory",
+        "Flash Flood Warning",
         "Tornado Watch",
         "Severe Thunderstorm Watch",
-        "Flash Flood Warning",
         "Flash Flood Watch",
         "Hazardous Weather Outlook",
     ]
@@ -517,17 +519,39 @@ def advisory_condition(alerts):
         "Flash Flood Watch",
     }
 
-    matched = []
+    items_by_event = {}
 
-    for event in priority:
-        for alert in alerts:
-            if alert.get("properties", {}).get("event") == event:
-                matched.append(alert)
+    # Official NWS Alerts API results.
+    for alert in api_alerts:
+        properties = alert.get("properties", {})
+        event = properties.get("event")
 
-    names = [
-        alert.get("properties", {}).get("event")
-        for alert in matched
+        if event not in priority:
+            continue
+
+        items_by_event[event] = {
+            "event": event,
+            "ends": (
+                properties.get("ends")
+                or properties.get("expires")
+            ),
+        }
+
+    # Products found in the marine forecast page, including HWO.
+    for event in marine_text_names:
+        if event in priority and event not in items_by_event:
+            items_by_event[event] = {
+                "event": event,
+                "ends": None,
+            }
+
+    items = [
+        items_by_event[event]
+        for event in priority
+        if event in items_by_event
     ]
+
+    names = [item["event"] for item in items]
 
     if any(name in red_events for name in names):
         status = "🔴"
@@ -539,12 +563,18 @@ def advisory_condition(alerts):
         status = "🟢"
 
     return {
-        "icon": "🚩",
+        "icon": "🚨",
         "label": "Alerts",
         "status": status,
         "detail": names[0] if names else "None",
-        "items": names,
-        "alerts": matched,
+        "items": items,
+        "source": {
+            "provider": "National Weather Service",
+            "location": "ANZ538",
+            "updated": datetime.now(
+                ZoneInfo("America/New_York")
+            ).isoformat(),
+        },
     }
 
 def format_alert(item):
@@ -573,9 +603,10 @@ def marine_conditions():
     cbibs = safe_call(cbibs_measurements, {})
     periods = safe_call(nws_hourly_periods, [])
     alerts = safe_call(nws_alerts, [])
+    marine_alert_names = safe_call(marine_text_alert_names, [])
 
     return {
-        "advisories": advisory_condition(alerts),
+        "advisories": advisory_condition(alerts, marine_alert_names),
         "wind": cbibs_wind(cbibs) or safe_call(coops_wind) or unavailable("Wind"),
         "waves": cbibs_waves(cbibs) or safe_call(forecast_waves) or unavailable("Waves"),
         "storms": storm_condition(periods),
@@ -620,11 +651,10 @@ def note(conditions, water):
     
     if conditions["storms"]["status"] == "🟠":
         return conditions["storms"]["detail"] + "."
-    
-    if conditions["storms"]["status"] == "🟡":
-        time_text = conditions["storms"]["detail"].replace("Possible after ", "")
-        return f"Plan to be off the water before {time_text}."
 
+    if conditions["storms"]["status"] == "🟡":
+        return conditions["storms"]["detail"] + "."
+        
     if water["status"] == "🔴":
         return "Avoid water contact."
 
@@ -698,6 +728,7 @@ def append_history(data):
                     if "gusts" in wind.get("detail", "")
                     else None
                 ),
+            "direction_deg": wind.get("direction_deg"),
             "source": source_info(wind),
         },
 
