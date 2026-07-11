@@ -42,6 +42,8 @@ STATION_NAMES = {
 
     "Ft. McHenry Channel": "Fort McHenry",
 
+    "Middle Branch A": "Middle Branch",
+
     "Mainstem A": "Harbor Tunnel",
     "Mainstem B": "Wagners Point",
     "Mainstem C": "Key Bridge / Fort Carroll",
@@ -64,7 +66,7 @@ STATION_REGIONS = {
         "Ferry Bar Park",
         "Harbor Tunnel",
         "Masonville Channel",
-        "Middle Branch A",
+        "Middle Branch",
         "Patapsco Outlet",
     },
     "Curtis Bay": {
