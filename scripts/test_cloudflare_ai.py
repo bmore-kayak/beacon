@@ -17,30 +17,32 @@ if not API_TOKEN:
 
 
 system_prompt = """
-You are writing today's harbor note.
+Write the short harbor note shown directly in Beacon.
 
-This text appears directly in the app.
+Beacon has already evaluated the conditions. Trust its overall status,
+condition statuses, details, and notes. Do not perform a new safety
+assessment from the raw measurements.
+
 Return only the note itself.
 
-Write in a calm, understated voice.
-Favor observation over instruction.
-Let the facts carry the weight.
+Write in a calm, natural, understated voice.
 
-Use only the supplied data.
-Never invent conditions, measurements, causes, or timing.
+Priorities:
+1. Reflect Beacon's overall assessment.
+2. Explain the most important reason for it.
+3. Mention an important upcoming change or uncertainty when relevant.
+4. Prefer condition details and notes over interpreting raw numbers.
 
-Write the shortest useful note possible.
-Use one sentence when one sentence is enough.
-Use two or three short sentences only when the conditions are genuinely mixed.
-
-The note should answer, when relevant:
-- What are conditions like now?
-- What is likely to change?
-- What uncertainty matters?
-
-Avoid bureaucratic phrases, dramatic language, and weather-broadcast style.
-Do not mention Beacon, JSON, APIs, AI, your task, or the reader.
-Return plain text only.
+Rules:
+- Use only the supplied data.
+- Do not contradict the overall assessment.
+- Do not invent or reinterpret conditions.
+- Do not assign descriptive labels to measurements unless supplied.
+- Clearly distinguish current conditions from future conditions.
+- Use one sentence when enough, and no more than three short sentences.
+- Avoid bureaucratic, dramatic, promotional, or overly poetic language.
+- Do not mention Beacon, JSON, APIs, AI, the prompt, or the reader.
+- Return plain text only.
 """.strip()
 
 
@@ -48,141 +50,338 @@ samples = [
     {
         "name": "Good now, storms later",
         "data": {
+            "location": "Baltimore Inner Harbor",
             "overall": {
-                "status": "caution",
+                "status": "🟠",
                 "label": "Use caution",
             },
-            "current": {
-                "wind_mph": 5,
-                "gust_mph": 8,
-                "waves_ft": 0.3,
-                "lightning_within_25_miles": False,
-                "rain": "none",
+            "updated": "2026-07-11 12:00 PM EDT",
+            "conditions": {
+                "advisories": {
+                    "icon": "🚨",
+                    "label": "Alerts",
+                    "status": "🟡",
+                    "detail": "Storm risk from 6 PM to 1 AM",
+                    "items": [
+                        {
+                            "event": "Hazardous Weather Outlook",
+                            "starts": "6 PM",
+                            "ends": "1 AM",
+                        }
+                    ],
+                },
+                "wind": {
+                    "icon": "💨",
+                    "label": "Wind",
+                    "status": "🟢",
+                    "detail": "5 mph, gusting to 8 mph",
+                    "trend": "Increasing after 5 PM",
+                },
+                "waves": {
+                    "icon": "🌊",
+                    "label": "Waves",
+                    "status": "🟢",
+                    "detail": "0.3 ft",
+                },
+                "lightning": {
+                    "icon": "⚡",
+                    "label": "Lightning",
+                    "status": "🟢",
+                    "detail": "None detected within 25 miles",
+                },
+                "water_quality": {
+                    "icon": "🧪",
+                    "label": "Water quality",
+                    "status": "🟢",
+                    "detail": "Acceptable",
+                },
             },
-            "forecast": {
-                "storm_risk": True,
-                "storm_window": "6 PM–1 AM",
-                "wind_trend": "increasing after 5 PM",
-            },
-            "water_quality": {
-                "status": "acceptable",
-            },
+            "notes": [
+                "Conditions are favorable now.",
+                "Storm risk begins around 6 PM.",
+                "Winds are expected to increase after 5 PM.",
+            ],
         },
     },
     {
         "name": "Multiple current hazards",
         "data": {
+            "location": "Baltimore Inner Harbor",
             "overall": {
-                "status": "no_go",
-                "label": "Stay off the water",
+                "status": "🔴",
+                "label": "Do not go",
             },
-            "current": {
-                "wind_mph": 16,
-                "gust_mph": 27,
-                "waves_ft": 1.4,
-                "lightning_nearest_miles": 8,
-                "rain": "heavy",
+            "updated": "2026-07-11 4:30 PM EDT",
+            "conditions": {
+                "advisories": {
+                    "icon": "🚨",
+                    "label": "Alerts",
+                    "status": "🔴",
+                    "detail": "Severe Thunderstorm Warning",
+                    "items": [
+                        {
+                            "event": "Severe Thunderstorm Warning",
+                            "ends": "5:15 PM",
+                        }
+                    ],
+                },
+                "wind": {
+                    "icon": "💨",
+                    "label": "Wind",
+                    "status": "🔴",
+                    "detail": "16 mph, gusting to 27 mph",
+                },
+                "waves": {
+                    "icon": "🌊",
+                    "label": "Waves",
+                    "status": "🟠",
+                    "detail": "1.4 ft",
+                },
+                "lightning": {
+                    "icon": "⚡",
+                    "label": "Lightning",
+                    "status": "🔴",
+                    "detail": "Nearest strike 8 miles away",
+                },
+                "rain": {
+                    "icon": "🌧️",
+                    "label": "Rain",
+                    "status": "🔴",
+                    "detail": "Heavy rain",
+                },
+                "water_quality": {
+                    "icon": "🧪",
+                    "label": "Water quality",
+                    "status": "⚪",
+                    "detail": "Unavailable",
+                },
             },
-            "alerts": [
-                "Severe Thunderstorm Warning",
+            "notes": [
+                "A Severe Thunderstorm Warning is in effect.",
+                "Lightning is 8 miles from the harbor.",
+                "Strong gusts and heavy rain are occurring.",
             ],
-            "water_quality": {
-                "status": "unknown",
-            },
         },
     },
     {
-        "name": "Mixed water quality and weather",
+        "name": "Calm weather, water advisory",
         "data": {
+            "location": "Baltimore Inner Harbor",
             "overall": {
-                "status": "no_go",
-                "label": "Stay off the water",
+                "status": "🔴",
+                "label": "Do not go",
             },
-            "current": {
-                "wind_mph": 4,
-                "gust_mph": 7,
-                "waves_ft": 0.2,
-                "lightning_within_25_miles": False,
-                "rain": "none",
+            "updated": "2026-07-11 9:00 AM EDT",
+            "conditions": {
+                "advisories": {
+                    "icon": "🚨",
+                    "label": "Alerts",
+                    "status": "🟢",
+                    "detail": "No active weather alerts",
+                    "items": [],
+                },
+                "wind": {
+                    "icon": "💨",
+                    "label": "Wind",
+                    "status": "🟢",
+                    "detail": "4 mph, gusting to 7 mph",
+                },
+                "waves": {
+                    "icon": "🌊",
+                    "label": "Waves",
+                    "status": "🟢",
+                    "detail": "0.2 ft",
+                },
+                "lightning": {
+                    "icon": "⚡",
+                    "label": "Lightning",
+                    "status": "🟢",
+                    "detail": "None detected within 25 miles",
+                },
+                "water_quality": {
+                    "icon": "🧪",
+                    "label": "Water quality",
+                    "status": "🔴",
+                    "detail": "Water Contact Advisory",
+                    "items": [
+                        {
+                            "bacteria_count_mpn_100ml": 1354,
+                            "sample_age_days": 2,
+                        }
+                    ],
+                },
             },
-            "forecast": {
-                "storm_risk": False,
-            },
-            "water_quality": {
-                "status": "advisory",
-                "bacteria_count_mpn_100ml": 1354,
-                "sample_age_days": 2,
-            },
+            "notes": [
+                "Weather conditions are favorable.",
+                "A Water Contact Advisory remains in effect.",
+                "The latest bacteria count is 1,354 MPN/100 mL.",
+            ],
         },
     },
     {
         "name": "Conditions improving",
         "data": {
+            "location": "Baltimore Inner Harbor",
             "overall": {
-                "status": "caution",
+                "status": "🟠",
                 "label": "Use caution",
             },
-            "current": {
-                "wind_mph": 12,
-                "gust_mph": 18,
-                "waves_ft": 0.9,
-                "lightning_within_25_miles": False,
-                "rain": "ending",
+            "updated": "2026-07-11 2:00 PM EDT",
+            "conditions": {
+                "advisories": {
+                    "icon": "🚨",
+                    "label": "Alerts",
+                    "status": "🟢",
+                    "detail": "No active alerts",
+                    "items": [],
+                },
+                "wind": {
+                    "icon": "💨",
+                    "label": "Wind",
+                    "status": "🟠",
+                    "detail": "12 mph, gusting to 18 mph",
+                    "trend": "Decreasing",
+                },
+                "waves": {
+                    "icon": "🌊",
+                    "label": "Waves",
+                    "status": "🟠",
+                    "detail": "0.9 ft",
+                    "trend": "Subsiding",
+                },
+                "rain": {
+                    "icon": "🌧️",
+                    "label": "Rain",
+                    "status": "🟡",
+                    "detail": "Ending within the next hour",
+                },
+                "lightning": {
+                    "icon": "⚡",
+                    "label": "Lightning",
+                    "status": "🟢",
+                    "detail": "None detected within 25 miles",
+                },
+                "water_quality": {
+                    "icon": "🧪",
+                    "label": "Water quality",
+                    "status": "🟢",
+                    "detail": "Acceptable",
+                },
             },
-            "trend": {
-                "wind": "decreasing",
-                "waves": "subsiding",
-                "rain": "ending within the next hour",
-            },
-            "water_quality": {
-                "status": "acceptable",
-            },
+            "notes": [
+                "Wind and waves remain elevated.",
+                "Conditions are gradually improving.",
+                "Rain should end within the next hour.",
+            ],
         },
     },
     {
-        "name": "Uncertain data",
+        "name": "Important data unavailable",
         "data": {
+            "location": "Baltimore Inner Harbor",
             "overall": {
-                "status": "caution",
+                "status": "🟠",
                 "label": "Use caution",
             },
-            "current": {
-                "wind_mph": 6,
-                "gust_mph": 9,
-                "waves_ft": None,
-                "lightning_data": "unavailable",
-                "rain": "none",
+            "updated": "2026-07-11 11:00 AM EDT",
+            "conditions": {
+                "advisories": {
+                    "icon": "🚨",
+                    "label": "Alerts",
+                    "status": "🟡",
+                    "detail": "Storms possible after 4 PM",
+                    "items": [],
+                },
+                "wind": {
+                    "icon": "💨",
+                    "label": "Wind",
+                    "status": "🟢",
+                    "detail": "6 mph, gusting to 9 mph",
+                },
+                "waves": {
+                    "icon": "🌊",
+                    "label": "Waves",
+                    "status": "⚪",
+                    "detail": "Unavailable",
+                },
+                "lightning": {
+                    "icon": "⚡",
+                    "label": "Lightning",
+                    "status": "⚪",
+                    "detail": "Data unavailable",
+                },
+                "water_quality": {
+                    "icon": "🧪",
+                    "label": "Water quality",
+                    "status": "⚪",
+                    "detail": "Data unavailable",
+                },
             },
-            "forecast": {
-                "storm_risk": "possible after 4 PM",
-            },
-            "water_quality": {
-                "status": "unavailable",
-            },
+            "notes": [
+                "Storms are possible after 4 PM.",
+                "Lightning and water-quality data are unavailable.",
+                "Conditions cannot be fully assessed.",
+            ],
         },
     },
     {
-        "name": "Calm but cold water",
+        "name": "Calm surface, cold water",
         "data": {
+            "location": "Baltimore Inner Harbor",
             "overall": {
-                "status": "caution",
+                "status": "🟠",
                 "label": "Use caution",
             },
-            "current": {
-                "wind_mph": 3,
-                "gust_mph": 5,
-                "waves_ft": 0.2,
-                "lightning_within_25_miles": False,
-                "rain": "none",
-                "air_temperature_f": 61,
-                "water_temperature_f": 48,
+            "updated": "2026-03-18 10:00 AM EDT",
+            "conditions": {
+                "advisories": {
+                    "icon": "🚨",
+                    "label": "Alerts",
+                    "status": "🟢",
+                    "detail": "No active alerts",
+                    "items": [],
+                },
+                "wind": {
+                    "icon": "💨",
+                    "label": "Wind",
+                    "status": "🟢",
+                    "detail": "3 mph, gusting to 5 mph",
+                },
+                "waves": {
+                    "icon": "🌊",
+                    "label": "Waves",
+                    "status": "🟢",
+                    "detail": "0.2 ft",
+                },
+                "weather": {
+                    "icon": "🌤️",
+                    "label": "Weather",
+                    "status": "🟢",
+                    "detail": "Air temperature 61°F",
+                },
+                "water_temperature": {
+                    "icon": "🌡️",
+                    "label": "Water temperature",
+                    "status": "🟠",
+                    "detail": "48°F",
+                },
+                "lightning": {
+                    "icon": "⚡",
+                    "label": "Lightning",
+                    "status": "🟢",
+                    "detail": "None detected within 25 miles",
+                },
+                "water_quality": {
+                    "icon": "🧪",
+                    "label": "Water quality",
+                    "status": "🟢",
+                    "detail": "Acceptable",
+                },
             },
-            "forecast": {
-                "storm_risk": False,
-            },
-            "water_quality": {
-                "status": "acceptable",
-            },
+            "notes": [
+                "Surface conditions are favorable.",
+                "Water temperature remains cold at 48°F.",
+            ],
         },
     },
 ]
@@ -192,7 +391,6 @@ url = (
     "https://api.cloudflare.com/client/v4/accounts/"
     f"{ACCOUNT_ID}/ai/run/{MODEL}"
 )
-
 
 for sample in samples:
     payload = {
@@ -209,8 +407,8 @@ for sample in samples:
                 ),
             },
         ],
-        "max_tokens": 140,
-        "temperature": 0.15,
+        "max_tokens": 120,
+        "temperature": 0.1,
     }
 
     response = requests.post(
@@ -231,7 +429,7 @@ for sample in samples:
     body = response.json()
 
     if not response.ok:
-        print(json.dumps(body, indent=2))
+        print(json.dumps(body, indent=2, ensure_ascii=False))
         continue
 
     summary = body["result"].get("response")
@@ -241,8 +439,6 @@ for sample in samples:
             body["result"]["choices"][0]["message"]["content"]
         )
 
-    print("Input:")
-    print(json.dumps(sample["data"], indent=2, ensure_ascii=False))
     print()
     print("Harbor note:")
     print(" ".join(summary.split()))
