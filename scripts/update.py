@@ -10,19 +10,75 @@ import requests
 OUT = Path("data/latest.json")
 HISTORY = Path("data/history.jsonl")
 
-CBIBS_API_KEY = os.getenv("CBIBS_API_KEY")
 
+CBIBS_API_KEY = os.getenv("CBIBS_API_KEY")
 CBIBS_URL = "https://mw.buoybay.noaa.gov/api/v1/json/station/BH"
+
+COOPS_WIND_URL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?station=8574680&product=wind&date=latest&units=english&time_zone=lst_ldt&format=json"
+
 WATERFRONT_URL = "https://services2.arcgis.com/orhH6cbKzLjUCxfK/arcgis/rest/services/Baltimore_Harbor_2024_Water_Quality_Data_with_2023_Historic_Data/FeatureServer/0/query?where=1%3D1&outFields=Site_Name,New_Sample_Date,New_Sample_Status,New_Sample_BacteriaCount,Rain_amount_past7days&returnGeometry=false&f=json"
+BWW_URL = "https://services7.arcgis.com/c8xL4vl5qpC34Rk7/ArcGIS/rest/services/Readings/FeatureServer/0/query"
+
 NWS_POINTS_URL = "https://api.weather.gov/points/39.2826,-76.6107"
 NWS_ALERTS_URL = "https://api.weather.gov/alerts/active?zone=ANZ538"
 NWS_MARINE_TEXT_URL = "https://forecast.weather.gov/shmrn.php?mz=anz538"
-COOPS_WIND_URL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?station=8574680&product=wind&date=latest&units=english&time_zone=lst_ldt&format=json"
+
 NDBC_URL = "https://www.ndbc.noaa.gov/data/realtime2/BLTM2.txt"
 
 PASS_LIMIT = 104
 WINDOW_HOURS = 8
+STALE_SAMPLE_DAYS = 45
 
+STATION_NAMES = {
+    "Canton Park": "Canton Waterfront Park",
+    "Canton Waterfront Park": "Canton Waterfront Park",
+
+    "Northwest Branch A": "Domino Sugar / Sandlot",
+
+    "Northwest Branch B": "Fells Point",
+    "Fells Point": "Fells Point",
+
+    "Mainstem A": "Harbor Tunnel",
+    "Mainstem B": "Wagners Point",
+    "Mainstem C": "Key Bridge",
+    "Mainstem D": "Outer Harbor Midpoint",
+    "Mainstem E": "Outer Harbor Entrance",
+}
+
+STATION_REGIONS = {
+    "Inner Harbor": {
+        "Canton Waterfront Park",
+        "Dragon Boats",
+        "Jones Falls Outlet",
+        "Domino Sugar / Sandlot",
+        "Fells Point",
+        "Science Center",
+        "Ft. McHenry Channel",
+    },
+    "Middle Branch": {
+        "Middle Branch A",
+        "Ferry Bar Park",
+        "Patapsco Outlet",
+        "Masonville Channel",
+        "Harbor Tunnel",
+    },
+    "Curtis Bay": {
+        "Curtis Bay",
+        "Curtis Creek",
+        "Wagners Point",
+    },
+    "Lower Harbor": {
+        "Bear Creek",
+        "Bodkin Creek",
+        "Cox Creek",
+        "Key Bridge",
+        "Outer Harbor Midpoint",
+        "Outer Harbor Entrance",
+        "Old Road Bay",
+        "Rock Creek",
+        "Stoney Creek",
+    },
+}
 
 def get_json(url, params=None):
     response = requests.get(
@@ -76,57 +132,285 @@ def safe_call(fn, fallback=None):
         return fallback
 
 
-def waterfront_conditions():
+def waterfront_data():
     raw = get_json(WATERFRONT_URL)
 
     stations = []
+
     for feature in raw.get("features", []):
         a = feature.get("attributes", {})
+
         count = clean_count(a.get("New_Sample_BacteriaCount"))
         advisory = a.get("New_Sample_Status")
 
         stations.append({
+            "source": "wp",
             "site": a.get("Site_Name"),
-            "date": a.get("New_Sample_Date"),
+            "sample_date": a.get("New_Sample_Date"),
             "status": station_status(advisory, count),
-            "advisory": advisory,
             "bacteria": count,
+            "latitude": None,
+            "longitude": None,
+        })
+        
+    return stations
+
+def bww_data():
+    raw = get_json(
+        BWW_URL,
+        params={
+            "where": (
+                "latest_reading = 'Latest Sample' "
+                "AND site_id_from_site_id IS NOT NULL "
+                "AND watershed_from_site_id = 'Tidal Patapsco River'"
+            ),
+            "outFields": (
+                "site_id_from_site_id,"
+                "site_name_from_site_id,"
+                "watershed_from_site_id,"
+                "collection_datetime,"
+                "bacteria,"
+                "dissolved_oxygen,"
+                "chlorophyll,"
+                "turbidity,"
+                "salinity,"
+                "latitude,"
+                "longitude"
+            ),
+            "returnGeometry": "false",
+            "orderByFields": "collection_datetime DESC",
+            "f": "json",
+        },
+    )
+
+    stations = []
+    
+    for feature in raw.get("features", []):
+        a = feature.get("attributes", {})
+    
+        bacteria = clean_count(a.get("bacteria"))
+        sample_date = sample_datetime(a.get("collection_datetime"))
+        
+        stale = (
+            sample_date is None
+            or datetime.now(ZoneInfo("America/New_York")) - sample_date
+            > timedelta(days=STALE_SAMPLE_DAYS)
+        )
+        
+        status = (
+            "⚪"
+            if stale or bacteria is None
+            else station_status(None, bacteria)
+        )
+    
+        stations.append({
+            "source": "bww",
+            "site": a.get("site_name_from_site_id"),
+            "site_id": a.get("site_id_from_site_id"),
+            "watershed": a.get("watershed_from_site_id"),
+            "sample_date": (
+                sample_date.isoformat()
+                if sample_date else None
+            ),
+            "status": status,
+            "stale": stale,
+            "bacteria": bacteria,
+    
+            "dissolved_oxygen": a.get("dissolved_oxygen"),
+            "chlorophyll": a.get("chlorophyll"),
+            "turbidity": a.get("turbidity"),
+            "salinity": a.get("salinity"),
+    
+            "latitude": a.get("latitude"),
+            "longitude": a.get("longitude"),
         })
 
-    counts = [s["bacteria"] for s in stations if s["bacteria"] is not None]
-    passing = sum(s["status"] == "🟢" for s in stations)
-    failing = sum(s["status"] == "🔴" for s in stations)
+    return stations
+    
+def sample_datetime(value):
+    if value is None:
+        return None
 
-    sample_dates = [
-        s["date"]
-        for s in stations
-        if s["date"] is not None
+    if isinstance(value, (int, float)):
+        return datetime.fromtimestamp(
+            value / 1000,
+            tz=ZoneInfo("America/New_York"),
+        )
+
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(
+                tzinfo=ZoneInfo("America/New_York")
+            )
+
+        return parsed
+    except ValueError:
+        return None
+
+
+def station_region(station):
+    site = station_name(station)
+
+    for region, sites in STATION_REGIONS.items():
+        if site in sites:
+            return region
+
+    return "Other"
+
+
+def station_name(station):
+    site = station.get("site")
+    return STATION_NAMES.get(site, site)
+    
+
+def station_key(station):
+    site = station_name(station) or ""
+    return site.lower().replace(" ", "-").replace("/", "-")
+
+
+def merge_stations(stations):
+    grouped = {}
+
+    for station in stations:
+        grouped.setdefault(
+            station_key(station),
+            [],
+        ).append(station)
+
+    merged = []
+
+    for station_group in grouped.values():
+        bacteria_group = [
+            station
+            for station in station_group
+            if station.get("bacteria") is not None
+        ]
+    
+        candidates = bacteria_group or station_group
+    
+        candidates.sort(
+            key=lambda station: (
+                sample_datetime(
+                    station.get("sample_date")
+                )
+                or datetime.min.replace(tzinfo=timezone.utc),
+                station.get("source") == "wp",
+            ),
+            reverse=True,
+        )
+    
+        latest = candidates[0]
+        sampled = sample_datetime(latest.get("sample_date"))
+
+        merged.append({
+            "site": station_name(latest),
+            "region": station_region(latest),
+            "date": sampled.isoformat() if sampled else None,
+            "status": latest.get("status"),
+            "stale": latest.get("stale", False),
+            "bacteria": latest.get("bacteria"),
+        })
+
+    region_order = {
+        "Inner Harbor": 0,
+        "Middle Branch": 1,
+        "Curtis Bay": 2,
+        "Lower Harbor": 3,
+        "Other": 4,
+    }
+
+    merged.sort(
+        key=lambda station: (
+            region_order.get(station["region"], 99),
+            station["site"] or "",
+        )
+    )
+
+    return merged
+
+
+def bacteria_conditions(waterfront, bww):
+    stations = merge_stations(waterfront + bww)
+    
+    current_stations = [
+        station
+        for station in stations
+        if not station.get("stale")
+        and station.get("bacteria") is not None
+    ]
+
+    inner_harbor = [
+        station
+        for station in current_stations
+        if station["region"] == "Inner Harbor"
     ]
     
-    latest_sample = (
-        datetime.fromtimestamp(
-            max(sample_dates) / 1000,
-            tz=ZoneInfo("America/New_York"),
-        ).isoformat()
-        if sample_dates else None
+    failing_regions = sorted({
+        station["region"]
+        for station in current_stations
+        if station["status"] == "🔴"
+        and station["region"] != "Inner Harbor"
+    })
+    
+    counts = [
+        station["bacteria"]
+        for station in inner_harbor
+        if station["bacteria"] is not None
+    ]
+    
+    passing = sum(
+        station["status"] == "🟢"
+        for station in inner_harbor
     )
     
+    failing = sum(
+        station["status"] == "🔴"
+        for station in inner_harbor
+    )
+
+    sample_dates = [
+        sample_datetime(station["date"])
+        for station in stations
+        if station.get("date")
+    ]
+
+    latest_sample = (
+        max(sample_dates).isoformat()
+        if sample_dates else None
+    )
+
+    providers = []
+
+    if waterfront:
+        providers.append("Waterfront Partnership")
+
+    if bww:
+        providers.append("Baltimore Water Watch")
+
     return {
         "icon": "🦠",
         "label": "Bacteria",
-        "status": "🔴" if failing else "🟢",
-        "detail": f"{min(counts)}–{max(counts)} MPN" if counts else "Unavailable",
-    
+        "status": (
+            "🔴" if failing
+            else "🟢" if inner_harbor
+            else "🟡"
+        ),
+        "detail": (
+            f"{min(counts)}–{max(counts)} MPN"
+            if counts else "Unavailable"
+        ),
         "source": {
-            "provider": "Waterfront Partnership",
+            "provider": " · ".join(providers),
             "updated": latest_sample,
         },
-    
         "passing": passing,
         "failing": failing,
+        "failing_regions": failing_regions,
         "stations": stations,
+        "observations": waterfront + bww,
     }
-
 
 def cbibs_measurements():
     if not CBIBS_API_KEY:
@@ -629,48 +913,46 @@ def overall_status(conditions):
 
 
 def note(conditions, water):
+    notes = []
+
     advisories = conditions["advisories"].get("items", [])
 
-    actionable_advisories = [
-        advisory
-        for advisory in advisories
-        if advisory.get("properties", {}).get("event") != "Hazardous Weather Outlook"
-    ]
-    
-    if actionable_advisories:
-        lines = [
-            formatted
-            for item in actionable_advisories
-            if (formatted := format_alert(item))
-        ]
-    
-        return "\n".join(lines)
+    for advisory in advisories:
+        if advisory.get("event") == "Hazardous Weather Outlook":
+            continue
 
-    if conditions["storms"]["status"] == "🔴":
-        return conditions["storms"]["detail"] + "."
-    
-    if conditions["storms"]["status"] == "🟠":
-        return conditions["storms"]["detail"] + "."
+        formatted = format_alert(advisory)
+        if formatted:
+            notes.append(formatted)
 
-    if conditions["storms"]["status"] == "🟡":
-        return conditions["storms"]["detail"] + "."
-        
+    if conditions["storms"]["status"] in {"🔴", "🟠", "🟡"}:
+        notes.append(conditions["storms"]["detail"] + ".")
+
     if water["status"] == "🔴":
-        return "Avoid water contact."
+        notes.append("Elevated bacteria in Inner Harbor.")
 
     if conditions["wind"]["status"] == "🔴":
-        return "Strong winds."
+        notes.append("Strong winds.")
+    elif conditions["wind"]["status"] == "🟠":
+        notes.append("Elevated winds.")
 
     if conditions["waves"]["status"] == "🔴":
-        return "Rough harbor."
+        notes.append("Rough harbor.")
+    elif conditions["waves"]["status"] == "🟠":
+        notes.append("Choppy water.")
 
-    if conditions["wind"]["status"] == "🟠":
-        return "Elevated winds."
+    regions = water.get("failing_regions", [])
 
-    if conditions["waves"]["status"] == "🟠":
-        return "Choppy water."
+    if len(regions) == 1:
+        notes.append(f"Elevated bacteria in {regions[0]}.")
+    elif len(regions) > 1:
+        notes.append(
+            "Elevated bacteria in "
+            + ", ".join(regions[:-1])
+            + f" and {regions[-1]}."
+        )
 
-    return ""
+    return "\n".join(notes[:3])
 
 def append_history(data):
     conditions = data["conditions"]
@@ -758,6 +1040,7 @@ def append_history(data):
             "passing": bacteria["passing"],
             "failing": bacteria["failing"],
             "stations": bacteria["stations"],
+            "observations": bacteria.get("observations", []),
             "source": source_info(bacteria),
         },
     }
@@ -767,7 +1050,10 @@ def append_history(data):
 
 
 def main():
-    water = waterfront_conditions()
+    waterfront = safe_call(waterfront_data, [])
+    bww = safe_call(bww_data, [])
+
+    water = bacteria_conditions(waterfront, bww)
     marine = marine_conditions()
 
     conditions = {
