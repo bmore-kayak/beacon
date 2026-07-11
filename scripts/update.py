@@ -486,13 +486,13 @@ def marine_text_alert_names():
     
 def advisory_condition(alerts):
     priority = [
+        "Tornado Warning",
         "Special Marine Warning",
+        "Severe Thunderstorm Warning",
         "Storm Warning",
         "Gale Warning",
         "Hurricane Force Wind Warning",
         "Small Craft Advisory",
-        "Tornado Warning",
-        "Severe Thunderstorm Warning",
         "Tornado Watch",
         "Severe Thunderstorm Watch",
         "Flash Flood Warning",
@@ -500,52 +500,51 @@ def advisory_condition(alerts):
         "Hazardous Weather Outlook",
     ]
 
-    api_items = []
+    red_events = {
+        "Tornado Warning",
+        "Special Marine Warning",
+        "Severe Thunderstorm Warning",
+        "Storm Warning",
+        "Gale Warning",
+        "Hurricane Force Wind Warning",
+        "Small Craft Advisory",
+        "Flash Flood Warning",
+    }
 
-    for alert in alerts:
-        properties = alert.get("properties", {})
-        event = properties.get("event")
+    orange_events = {
+        "Tornado Watch",
+        "Severe Thunderstorm Watch",
+        "Flash Flood Watch",
+    }
 
-        if event not in priority:
-            continue
+    matched = []
 
-        api_items.append({
-            "event": event,
-            "ends": properties.get("ends") or properties.get("expires"),
-        })
+    for event in priority:
+        for alert in alerts:
+            if alert.get("properties", {}).get("event") == event:
+                matched.append(alert)
 
-    # Add advisories found on the marine page when the Alerts API misses them.
-    for event in marine_text_alert_names():
-        if not any(item["event"] == event for item in api_items):
-            api_items.append({
-                "event": event,
-                "ends": None,
-            })
-
-    # Sort using Beacon's advisory priority.
-    items = sorted(
-        api_items,
-        key=lambda item: priority.index(item["event"]),
-    )
-
-    red_items = [
-        item for item in items
-        if item["event"] != "Hazardous Weather Outlook"
+    names = [
+        alert.get("properties", {}).get("event")
+        for alert in matched
     ]
+
+    if any(name in red_events for name in names):
+        status = "🔴"
+    elif any(name in orange_events for name in names):
+        status = "🟠"
+    elif names:
+        status = "🟡"
+    else:
+        status = "🟢"
 
     return {
         "icon": "🚩",
-        "label": "Advisories",
-        "status": "🔴" if red_items else "🟠" if items else "🟢",
-        "detail": items[0]["event"] if items else "None",
-        "items": items,
-        "source": {
-            "provider": "National Weather Service",
-            "location": "ANZ538",
-            "updated": datetime.now(
-                ZoneInfo("America/New_York")
-            ).isoformat(),
-        },
+        "label": "Alerts",
+        "status": status,
+        "detail": names[0] if names else "None",
+        "items": names,
+        "alerts": matched,
     }
 
 def format_alert(item):
@@ -589,22 +588,28 @@ def overall_status(conditions):
     statuses = [c["status"] for c in conditions.values()]
 
     if "🔴" in statuses:
-        return {"status": "🔴", "label": "Don't Go"}
+        return {"status": "🔴", "label": "Don't go"}
     if "🟠" in statuses:
         return {"status": "🟠", "label": "Use caution"}
     if "🟡" in statuses:
-        return {"status": "🟡", "label": "Moderate conditions"}
+        return {"status": "🟡", "label": "Heads up"}
 
     return {"status": "🟢", "label": "Good conditions"}
 
 
 def note(conditions, water):
     advisories = conditions["advisories"].get("items", [])
+
+    actionable_advisories = [
+        advisory
+        for advisory in advisories
+        if advisory.get("properties", {}).get("event") != "Hazardous Weather Outlook"
+    ]
     
-    if advisories:
+    if actionable_advisories:
         lines = [
             formatted
-            for item in advisories
+            for item in actionable_advisories
             if (formatted := format_alert(item))
         ]
     
