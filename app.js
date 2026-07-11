@@ -131,15 +131,19 @@ function renderStations(stations = []) {
 
           ${regionStations.map(station => `
             <div class="station">
-              <div class="station-name">
-                ${station.status} ${station.site}
+              <div class="station-info">
+                <div class="station-name">${station.site}</div>
+            
+                <div class="station-date">
+                  ${station.date
+                    ? `Sampled ${formatSampleDate(station.date)}`
+                    : "Sample date unavailable"}
+                </div>
               </div>
-
+            
               <div class="station-reading">
+                ${station.status}
                 ${station.bacteria ?? "—"} MPN
-                ${station.date
-                  ? ` · Sampled ${formatSampleDate(station.date)}`
-                  : " · Sample date unavailable"}
               </div>
             </div>
           `).join("")}
