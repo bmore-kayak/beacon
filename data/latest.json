@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-07-11 03:22 PM EDT",
+  "updated": "2026-07-11 03:29 PM EDT",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -20,7 +20,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-11T15:22:42.708500-04:00"
+        "updated": "2026-07-11T15:29:25.571354-04:00"
       }
     },
     "storms": {
@@ -40,14 +40,14 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "9 kt, gusts 11",
-      "speed_kt": 9,
-      "gust_kt": 11,
-      "direction_deg": 313.3,
+      "detail": "8 kt, gusts 10",
+      "speed_kt": 8,
+      "gust_kt": 10,
+      "direction_deg": 318.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T15:22:42.708539-04:00"
+        "updated": "2026-07-11T15:29:25.571385-04:00"
       }
     },
     "waves": {
@@ -59,18 +59,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T15:22:42.708557-04:00"
+        "updated": "2026-07-11T15:29:25.571401-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "84\u00b0F",
+      "detail": "85\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T15:22:42.708637-04:00"
+        "updated": "2026-07-11T15:29:25.571470-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T15:22:42.708644-04:00"
+        "updated": "2026-07-11T15:29:25.571477-04:00"
       }
     },
     "bacteria": {
@@ -93,7 +93,7 @@
         "provider": "Waterfront Partnership \u00b7 Baltimore Water Watch",
         "updated": "2026-07-08T08:00:00-04:00"
       },
-      "passing": 10,
+      "passing": 8,
       "failing": 0,
       "failing_regions": [],
       "stations": [
@@ -104,14 +104,6 @@
           "status": "\ud83d\udfe2",
           "stale": false,
           "bacteria": 98
-        },
-        {
-          "site": "Domino Sugar / Sandlot",
-          "region": "Inner Harbor",
-          "date": "2026-07-01T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
-          "bacteria": 10
         },
         {
           "site": "Downtown Sailing Center",
@@ -149,14 +141,6 @@
           "site": "Inner Harbor",
           "region": "Inner Harbor",
           "date": "2026-07-08T08:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
-          "bacteria": 98
-        },
-        {
-          "site": "Jones Falls Outlet",
-          "region": "Inner Harbor",
-          "date": "2026-07-01T00:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
           "bacteria": 98
