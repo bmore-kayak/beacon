@@ -125,32 +125,90 @@ function renderStations(stations = []) {
 
   return `
     <div class="stations">
-      ${Object.entries(regions).map(([region, regionStations]) => `
-        <section class="station-region">
-          <div class="station-region-label">${region}</div>
+      ${Object.entries(regions).map(([region, regionStations]) => {
+        const summary = summarizeRegion(regionStations);
+        const open = regionIsOpen(region);
 
-          ${regionStations.map(station => `
-            <div class="station">
-              <div class="station-info">
-                <div class="station-name">${station.site}</div>
-            
-                <div class="station-date">
-                  ${station.date
-                    ? `Sampled ${formatSampleDate(station.date)}`
-                    : "Sample date unavailable"}
+        return `
+          <details
+            class="station-region"
+            data-region="${region}"
+            ${open ? "open" : ""}
+          >
+            <summary class="station-region-summary">
+              <span class="station-region-label">${region}</span>
+
+              <span class="station-region-status">
+                ${summary.status}
+              </span>
+
+              <span class="station-region-range">
+                ${summary.detail}
+              </span>
+
+              <span class="region-chevron">▾</span>
+            </summary>
+
+            <div class="station-region-content">
+              ${regionStations.map(station => `
+                <div class="station">
+                  <div class="station-info">
+                    <div class="station-name">${station.site}</div>
+
+                    <div class="station-date">
+                      ${station.date
+                        ? `Sampled ${formatSampleDate(station.date)}`
+                        : "Sample date unavailable"}
+                    </div>
+                  </div>
+
+                  <div class="station-reading">
+                    ${station.status} ${station.bacteria ?? "—"} MPN
+                  </div>
                 </div>
-              </div>
-            
-              <div class="station-reading">
-                ${station.status} ${station.bacteria ?? "—"} MPN
-              </div>
+              `).join("")}
             </div>
-          `).join("")}
-        </section>
-      `).join("")}
+          </details>
+        `;
+      }).join("")}
     </div>
   `;
 }
+
+
+function summarizeRegion(stations) {
+  const current = stations.filter(station =>
+    !station.stale &&
+    station.bacteria != null
+  );
+
+  if (!current.length) {
+    return {
+      status: "⚪",
+      detail: "Older samples",
+    };
+  }
+
+  const counts = current.map(station => station.bacteria);
+  const failing = current.some(station => station.status === "🔴");
+
+  return {
+    status: failing ? "🔴" : "🟢",
+    detail: `${Math.min(...counts)}–${Math.max(...counts)} MPN`,
+  };
+}
+
+
+function regionIsOpen(region) {
+  const saved = localStorage.getItem(`beacon-region-${region}`);
+
+  if (saved !== null) {
+    return saved === "open";
+  }
+
+  return region === "Inner Harbor";
+}
+
 
 
 function renderSource(key, source) {
@@ -212,5 +270,20 @@ function formatTime(value) {
   });
 }
 
+
+document.addEventListener("toggle", event => {
+  const details = event.target;
+
+  if (!details.matches(".station-region")) {
+    return;
+  }
+
+  const region = details.dataset.region;
+
+  localStorage.setItem(
+    `beacon-region-${region}`,
+    details.open ? "open" : "closed"
+  );
+}, true);
 
 main();
