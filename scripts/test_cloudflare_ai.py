@@ -1,6 +1,7 @@
 import json
 import os
 import sys
+from datetime import datetime
 
 import requests
 
@@ -16,438 +17,171 @@ if not API_TOKEN:
     sys.exit("Missing CF_AI_WORKERS")
 
 
-system_prompt = """
-You are writing today's harbor note for Beacon.
+# Approximate Inner Harbor coordinates.
+LATITUDE = 39.285
+LONGITUDE = -76.612
 
-This note appears directly in the app.
+OPEN_METEO_URL = "https://api.open-meteo.com/v1/forecast"
+
+params = {
+    "latitude": LATITUDE,
+    "longitude": LONGITUDE,
+    "hourly": ",".join(
+        [
+            "temperature_2m",
+            "precipitation_probability",
+            "precipitation",
+            "rain",
+            "showers",
+            "weather_code",
+            "cloud_cover",
+            "visibility",
+            "wind_speed_10m",
+            "wind_gusts_10m",
+            "wind_direction_10m",
+            "cape",
+        ]
+    ),
+    "forecast_hours": 12,
+    "temperature_unit": "fahrenheit",
+    "wind_speed_unit": "mph",
+    "precipitation_unit": "inch",
+    "timezone": "America/New_York",
+    "models": "gfs_hrrr",
+}
+
+weather_response = requests.get(
+    OPEN_METEO_URL,
+    params=params,
+    timeout=30,
+)
+
+print("Open-Meteo status:", weather_response.status_code)
+weather_response.raise_for_status()
+
+weather = weather_response.json()
+
+print()
+print("Raw Open-Meteo JSON:")
+print(json.dumps(weather, indent=2))
+
+
+hourly = weather["hourly"]
+hour_count = min(6, len(hourly["time"]))
+
+next_hours = []
+
+for index in range(hour_count):
+    next_hours.append(
+        {
+            "time": hourly["time"][index],
+            "temperature_f": hourly["temperature_2m"][index],
+            "precipitation_probability_percent":
+                hourly["precipitation_probability"][index],
+            "precipitation_in": hourly["precipitation"][index],
+            "rain_in": hourly["rain"][index],
+            "showers_in": hourly["showers"][index],
+            "weather_code": hourly["weather_code"][index],
+            "cloud_cover_percent": hourly["cloud_cover"][index],
+            "visibility_ft": hourly["visibility"][index],
+            "wind_mph": hourly["wind_speed_10m"][index],
+            "gust_mph": hourly["wind_gusts_10m"][index],
+            "wind_direction_degrees":
+                hourly["wind_direction_10m"][index],
+            "cape_j_kg": hourly["cape"][index],
+        }
+    )
+
+
+ai_input = {
+    "location": "Baltimore Inner Harbor",
+    "generated_at": datetime.now().isoformat(timespec="seconds"),
+    "forecast_type": "hourly",
+    "hours": next_hours,
+}
+
+
+system_prompt = """
+Write a short harbor forecast note from the supplied hourly forecast.
+
+This is an experimental forecast summary, not Beacon's final safety
+assessment.
+
 Return only the note itself.
 
-Beacon has already evaluated the conditions.
-Do not perform your own safety assessment.
-Trust the supplied overall status, condition statuses, details, and notes.
+Focus on:
+- what conditions are like during the first hour,
+- meaningful changes over the following hours,
+- the timing of rain, storms, wind, or reduced visibility.
 
-Write as someone who knows the harbor well.
-
-The note should be calm, clear, and understated.
-Favor simple observations over explanations.
-Use the fewest words that still communicate what matters.
-
-When appropriate:
-- reflect the overall assessment,
-- explain the primary reason,
-- mention an important upcoming change,
-- mention important uncertainty.
-
-Use one sentence when enough.
-Never more than three short sentences.
-
-Use only the supplied information.
-Never invent facts or reinterpret measurements.
-Clearly distinguish current conditions from future conditions.
-
-Avoid repetitive wording.
-Avoid bureaucratic or weather-broadcast language.
-Avoid explaining your reasoning.
-
-Do not mention Beacon, JSON, APIs, AI, your instructions, or the reader.
-
-Return plain text only.
+Rules:
+- Use only the supplied information.
+- Do not claim that conditions are safe or unsafe.
+- Do not infer lightning from weather codes, CAPE, clouds, or rain.
+- Do not invent storm timing.
+- Do not describe a trend unless the hourly values support it.
+- Prefer meaningful changes over listing every measurement.
+- Use one to three short sentences.
+- Clearly distinguish current or near-term conditions from later conditions.
+- Avoid bureaucratic, dramatic, or weather-broadcast language.
+- Do not mention JSON, APIs, AI, or the prompt.
+- Return plain text only.
 """.strip()
 
 
-samples = [
-    {
-        "name": "Good now, storms later",
-        "data": {
-            "location": "Baltimore Inner Harbor",
-            "overall": {
-                "status": "🟠",
-                "label": "Use caution",
-            },
-            "updated": "2026-07-11 12:00 PM EDT",
-            "conditions": {
-                "advisories": {
-                    "icon": "🚨",
-                    "label": "Alerts",
-                    "status": "🟡",
-                    "detail": "Storm risk from 6 PM to 1 AM",
-                    "items": [
-                        {
-                            "event": "Hazardous Weather Outlook",
-                            "starts": "6 PM",
-                            "ends": "1 AM",
-                        }
-                    ],
-                },
-                "wind": {
-                    "icon": "💨",
-                    "label": "Wind",
-                    "status": "🟢",
-                    "detail": "5 mph, gusting to 8 mph",
-                    "trend": "Increasing after 5 PM",
-                },
-                "waves": {
-                    "icon": "🌊",
-                    "label": "Waves",
-                    "status": "🟢",
-                    "detail": "0.3 ft",
-                },
-                "lightning": {
-                    "icon": "⚡",
-                    "label": "Lightning",
-                    "status": "🟢",
-                    "detail": "None detected within 25 miles",
-                },
-                "water_quality": {
-                    "icon": "🧪",
-                    "label": "Water quality",
-                    "status": "🟢",
-                    "detail": "Acceptable",
-                },
-            },
-            "notes": [
-                "Conditions are favorable now.",
-                "Storm risk begins around 6 PM.",
-                "Winds are expected to increase after 5 PM.",
-            ],
-        },
-    },
-    {
-        "name": "Multiple current hazards",
-        "data": {
-            "location": "Baltimore Inner Harbor",
-            "overall": {
-                "status": "🔴",
-                "label": "Do not go",
-            },
-            "updated": "2026-07-11 4:30 PM EDT",
-            "conditions": {
-                "advisories": {
-                    "icon": "🚨",
-                    "label": "Alerts",
-                    "status": "🔴",
-                    "detail": "Severe Thunderstorm Warning",
-                    "items": [
-                        {
-                            "event": "Severe Thunderstorm Warning",
-                            "ends": "5:15 PM",
-                        }
-                    ],
-                },
-                "wind": {
-                    "icon": "💨",
-                    "label": "Wind",
-                    "status": "🔴",
-                    "detail": "16 mph, gusting to 27 mph",
-                },
-                "waves": {
-                    "icon": "🌊",
-                    "label": "Waves",
-                    "status": "🟠",
-                    "detail": "1.4 ft",
-                },
-                "lightning": {
-                    "icon": "⚡",
-                    "label": "Lightning",
-                    "status": "🔴",
-                    "detail": "Nearest strike 8 miles away",
-                },
-                "rain": {
-                    "icon": "🌧️",
-                    "label": "Rain",
-                    "status": "🔴",
-                    "detail": "Heavy rain",
-                },
-                "water_quality": {
-                    "icon": "🧪",
-                    "label": "Water quality",
-                    "status": "⚪",
-                    "detail": "Unavailable",
-                },
-            },
-            "notes": [
-                "A Severe Thunderstorm Warning is in effect.",
-                "Lightning is 8 miles from the harbor.",
-                "Strong gusts and heavy rain are occurring.",
-            ],
-        },
-    },
-    {
-        "name": "Calm weather, water advisory",
-        "data": {
-            "location": "Baltimore Inner Harbor",
-            "overall": {
-                "status": "🔴",
-                "label": "Do not go",
-            },
-            "updated": "2026-07-11 9:00 AM EDT",
-            "conditions": {
-                "advisories": {
-                    "icon": "🚨",
-                    "label": "Alerts",
-                    "status": "🟢",
-                    "detail": "No active weather alerts",
-                    "items": [],
-                },
-                "wind": {
-                    "icon": "💨",
-                    "label": "Wind",
-                    "status": "🟢",
-                    "detail": "4 mph, gusting to 7 mph",
-                },
-                "waves": {
-                    "icon": "🌊",
-                    "label": "Waves",
-                    "status": "🟢",
-                    "detail": "0.2 ft",
-                },
-                "lightning": {
-                    "icon": "⚡",
-                    "label": "Lightning",
-                    "status": "🟢",
-                    "detail": "None detected within 25 miles",
-                },
-                "water_quality": {
-                    "icon": "🧪",
-                    "label": "Water quality",
-                    "status": "🔴",
-                    "detail": "Water Contact Advisory",
-                    "items": [
-                        {
-                            "bacteria_count_mpn_100ml": 1354,
-                            "sample_age_days": 2,
-                        }
-                    ],
-                },
-            },
-            "notes": [
-                "Weather conditions are favorable.",
-                "A Water Contact Advisory remains in effect.",
-                "The latest bacteria count is 1,354 MPN/100 mL.",
-            ],
-        },
-    },
-    {
-        "name": "Conditions improving",
-        "data": {
-            "location": "Baltimore Inner Harbor",
-            "overall": {
-                "status": "🟠",
-                "label": "Use caution",
-            },
-            "updated": "2026-07-11 2:00 PM EDT",
-            "conditions": {
-                "advisories": {
-                    "icon": "🚨",
-                    "label": "Alerts",
-                    "status": "🟢",
-                    "detail": "No active alerts",
-                    "items": [],
-                },
-                "wind": {
-                    "icon": "💨",
-                    "label": "Wind",
-                    "status": "🟠",
-                    "detail": "12 mph, gusting to 18 mph",
-                    "trend": "Decreasing",
-                },
-                "waves": {
-                    "icon": "🌊",
-                    "label": "Waves",
-                    "status": "🟠",
-                    "detail": "0.9 ft",
-                    "trend": "Subsiding",
-                },
-                "rain": {
-                    "icon": "🌧️",
-                    "label": "Rain",
-                    "status": "🟡",
-                    "detail": "Ending within the next hour",
-                },
-                "lightning": {
-                    "icon": "⚡",
-                    "label": "Lightning",
-                    "status": "🟢",
-                    "detail": "None detected within 25 miles",
-                },
-                "water_quality": {
-                    "icon": "🧪",
-                    "label": "Water quality",
-                    "status": "🟢",
-                    "detail": "Acceptable",
-                },
-            },
-            "notes": [
-                "Wind and waves remain elevated.",
-                "Conditions are gradually improving.",
-                "Rain should end within the next hour.",
-            ],
-        },
-    },
-    {
-        "name": "Important data unavailable",
-        "data": {
-            "location": "Baltimore Inner Harbor",
-            "overall": {
-                "status": "🟠",
-                "label": "Use caution",
-            },
-            "updated": "2026-07-11 11:00 AM EDT",
-            "conditions": {
-                "advisories": {
-                    "icon": "🚨",
-                    "label": "Alerts",
-                    "status": "🟡",
-                    "detail": "Storms possible after 4 PM",
-                    "items": [],
-                },
-                "wind": {
-                    "icon": "💨",
-                    "label": "Wind",
-                    "status": "🟢",
-                    "detail": "6 mph, gusting to 9 mph",
-                },
-                "waves": {
-                    "icon": "🌊",
-                    "label": "Waves",
-                    "status": "⚪",
-                    "detail": "Unavailable",
-                },
-                "lightning": {
-                    "icon": "⚡",
-                    "label": "Lightning",
-                    "status": "⚪",
-                    "detail": "Data unavailable",
-                },
-                "water_quality": {
-                    "icon": "🧪",
-                    "label": "Water quality",
-                    "status": "⚪",
-                    "detail": "Data unavailable",
-                },
-            },
-            "notes": [
-                "Storms are possible after 4 PM.",
-                "Lightning and water-quality data are unavailable.",
-                "Conditions cannot be fully assessed.",
-            ],
-        },
-    },
-    {
-        "name": "Calm surface, cold water",
-        "data": {
-            "location": "Baltimore Inner Harbor",
-            "overall": {
-                "status": "🟠",
-                "label": "Use caution",
-            },
-            "updated": "2026-03-18 10:00 AM EDT",
-            "conditions": {
-                "advisories": {
-                    "icon": "🚨",
-                    "label": "Alerts",
-                    "status": "🟢",
-                    "detail": "No active alerts",
-                    "items": [],
-                },
-                "wind": {
-                    "icon": "💨",
-                    "label": "Wind",
-                    "status": "🟢",
-                    "detail": "3 mph, gusting to 5 mph",
-                },
-                "waves": {
-                    "icon": "🌊",
-                    "label": "Waves",
-                    "status": "🟢",
-                    "detail": "0.2 ft",
-                },
-                "weather": {
-                    "icon": "🌤️",
-                    "label": "Weather",
-                    "status": "🟢",
-                    "detail": "Air temperature 61°F",
-                },
-                "water_temperature": {
-                    "icon": "🌡️",
-                    "label": "Water temperature",
-                    "status": "🟠",
-                    "detail": "48°F",
-                },
-                "lightning": {
-                    "icon": "⚡",
-                    "label": "Lightning",
-                    "status": "🟢",
-                    "detail": "None detected within 25 miles",
-                },
-                "water_quality": {
-                    "icon": "🧪",
-                    "label": "Water quality",
-                    "status": "🟢",
-                    "detail": "Acceptable",
-                },
-            },
-            "notes": [
-                "Surface conditions are favorable.",
-                "Water temperature remains cold at 48°F.",
-            ],
-        },
-    },
-]
-
-
-url = (
+cloudflare_url = (
     "https://api.cloudflare.com/client/v4/accounts/"
     f"{ACCOUNT_ID}/ai/run/{MODEL}"
 )
 
-for sample in samples:
-    payload = {
-        "messages": [
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": json.dumps(
-                    sample["data"],
-                    ensure_ascii=False,
-                ),
-            },
-        ],
-        "max_tokens": 120,
-        "temperature": 0.1,
-    }
-
-    response = requests.post(
-        url,
-        headers={
-            "Authorization": f"Bearer {API_TOKEN}",
-            "Content-Type": "application/json",
+payload = {
+    "messages": [
+        {
+            "role": "system",
+            "content": system_prompt,
         },
-        json=payload,
-        timeout=30,
+        {
+            "role": "user",
+            "content": json.dumps(
+                ai_input,
+                ensure_ascii=False,
+            ),
+        },
+    ],
+    "max_tokens": 140,
+    "temperature": 0.1,
+}
+
+ai_response = requests.post(
+    cloudflare_url,
+    headers={
+        "Authorization": f"Bearer {API_TOKEN}",
+        "Content-Type": "application/json",
+    },
+    json=payload,
+    timeout=30,
+)
+
+print()
+print("Cloudflare status:", ai_response.status_code)
+
+body = ai_response.json()
+
+if not ai_response.ok:
+    print(json.dumps(body, indent=2))
+    sys.exit(1)
+
+summary = body["result"].get("response")
+
+if not summary:
+    summary = (
+        body["result"]["choices"][0]["message"]["content"]
     )
 
-    print()
-    print("=" * 60)
-    print(sample["name"])
-    print("HTTP status:", response.status_code)
+print()
+print("Forecast input:")
+print(json.dumps(ai_input, indent=2))
 
-    body = response.json()
-
-    if not response.ok:
-        print(json.dumps(body, indent=2, ensure_ascii=False))
-        continue
-
-    summary = body["result"].get("response")
-
-    if not summary:
-        summary = (
-            body["result"]["choices"][0]["message"]["content"]
-        )
-
-    print()
-    print("Harbor note:")
-    print(" ".join(summary.split()))
+print()
+print("Harbor forecast note:")
+print(" ".join(summary.split()))
