@@ -49,6 +49,7 @@ STATION_REGIONS = {
     "Inner Harbor": {
         "Canton Waterfront Park",
         "Domino Sugar / Sandlot",
+        "Downtown Sailing Center",
         "Dragon Boats",
         "Fells Point",
         "Ft. McHenry Channel",
@@ -58,7 +59,6 @@ STATION_REGIONS = {
         "Science Center",
     },
     "Middle Branch": {
-        "Downtown Sailing Center",
         "Ferry Bar Park",
         "Harbor Tunnel",
         "Masonville Channel",
