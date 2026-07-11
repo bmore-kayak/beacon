@@ -33,7 +33,9 @@ STATION_NAMES = {
     "Canton Park": "Canton Waterfront Park",
     "Canton Waterfront Park": "Canton Waterfront Park",
 
-    "Northwest Branch A": "Domino Sugar / Sandlot",
+    "Jones Falls Outlet": "Mr. Trash Wheel",
+    
+    "Northwest Branch A": "Downtown Sailing Center",
 
     "Northwest Branch B": "Fells Point",
     "Fells Point": "Fells Point",
@@ -56,7 +58,6 @@ STATION_REGIONS = {
         "Fells Point",
         "Fort McHenry",
         "Inner Harbor",
-        "Jones Falls Outlet",
         "Mr. Trash Wheel",
         "Science Center",
     },
