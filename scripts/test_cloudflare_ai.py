@@ -208,10 +208,10 @@ Allowed notice types:
 
 Create a notice only when the event indicates one of the following:
 
-- A dock, launch, kayak, or other club equipment is closed, unavailable,
+- A dock, launch, kayak, or other club resource is closed, unavailable,
   reserved, restricted, or likely to be heavily in use.
-- A training session or organized activity at a club location is likely
-  to reduce kayak or equipment availability.
+- A Fells Point / Bond Street Wharf new-member orientation or training
+  session is scheduled and trainees will use club kayaks there.
 - Access to the launch or location is restricted.
 - The event describes a cancellation, postponement, registration problem,
   or material logistics change.
@@ -226,18 +226,25 @@ Do not create a notice merely because:
 - an event requires an RSVP,
 - an event has limited participant capacity,
 - the event is social, instructional, or recreational without affecting
-  general member access or safety.
+  general member access or safety,
+- training occurs somewhere other than Fells Point unless the source
+  explicitly says club docks, kayaks, or equipment will be unavailable,
+  reserved, restricted, or heavily used.
 
-Special guidance:
-- New-member orientation or training at Fells Point / Bond Street Wharf
-  should normally be an equipment conflict because trainees use club
-  kayaks and launch from that location.
+Important rules:
 - Do not call something a closure unless the source explicitly says it
   is closed.
+- Do not assume other members lose access merely because an event or
+  training session is taking place.
+- Do not infer an equipment conflict from rescue training, instruction,
+  or group activity outside Fells Point unless the source explicitly
+  supports that conclusion.
 - Do not invent the number of kayaks affected.
-- Do not invent broader boat traffic impacts from a small club outing.
-- Dates, times, venue, and source URL are stored separately by code.
-  Do not repeat them unless needed for the short summary.
+- Do not invent broader boat-traffic impacts from a small club outing.
+- Prefer no notice over a speculative notice.
+- When relevant is true, always return a short, non-null title and summary.
+- Dates, times, venue, address, and source URL are stored separately by
+  code, so the summary should not repeat all of them unless needed for clarity.
 
 Return one JSON object with exactly these fields:
 
@@ -253,8 +260,12 @@ Return one JSON object with exactly these fields:
   "confidence": "low | medium | high"
 }
 
-The title and summary appear directly in the app.
-Keep them calm, specific, and concise.
+Writing style:
+- calm
+- specific
+- concise
+- factual
+- no speculation
 
 Return JSON only.
 """.strip()
