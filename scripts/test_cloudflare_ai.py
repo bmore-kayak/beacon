@@ -78,11 +78,16 @@ def event_fingerprint(event):
     return hashlib.sha256(encoded).hexdigest()
 
 
-def extract_json_object(text):
-    if not text:
-        raise ValueError("Empty AI response")
+def extract_json_object(value):
+    if isinstance(value, dict):
+        return value
 
-    text = text.strip()
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(
+            f"Unexpected AI response type: {type(value).__name__}"
+        )
+
+    text = value.strip()
 
     if text.startswith("```"):
         text = re.sub(
