@@ -42,7 +42,7 @@ STATION_NAMES = {
     "Mainstem B": "Wagners Point",
     "Mainstem C": "Key Bridge",
     "Mainstem D": "Outer Harbor Midpoint",
-    "Mainstem E": "Outer Harbor Entrance",
+    "Mainstem E": "Outer Harbor Mouth",
 }
 
 STATION_REGIONS = {
@@ -76,7 +76,7 @@ STATION_REGIONS = {
         "Cox Creek",
         "Key Bridge",
         "Old Road Bay",
-        "Outer Harbor Entrance",
+        "Outer Harbor Mouth",
         "Outer Harbor Midpoint",
         "Rock Creek",
         "Stoney Creek",
