@@ -38,9 +38,11 @@ STATION_NAMES = {
     "Northwest Branch B": "Fells Point",
     "Fells Point": "Fells Point",
 
+    "Ft. McHenry Channel": "Fort McHenry",
+
     "Mainstem A": "Harbor Tunnel",
     "Mainstem B": "Wagners Point",
-    "Mainstem C": "Key Bridge",
+    "Mainstem C": "Key Bridge / Fort Carroll",
     "Mainstem D": "Outer Harbor Midpoint",
     "Mainstem E": "Outer Harbor Mouth",
 }
@@ -52,7 +54,7 @@ STATION_REGIONS = {
         "Downtown Sailing Center",
         "Dragon Boats",
         "Fells Point",
-        "Ft. McHenry Channel",
+        "Fort McHenry",
         "Inner Harbor",
         "Jones Falls Outlet",
         "Mr. Trash Wheel",
@@ -74,7 +76,7 @@ STATION_REGIONS = {
         "Bear Creek",
         "Bodkin Creek",
         "Cox Creek",
-        "Key Bridge",
+        "Key Bridge / Fort Carroll",
         "Old Road Bay",
         "Outer Harbor Mouth",
         "Outer Harbor Midpoint",
