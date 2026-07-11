@@ -23,4 +23,4 @@ jobs:
         env:
           CF_ACCT_ID: ${{ secrets.CF_ACCT_ID }}
           CF_AI_WORKERS: ${{ secrets.CF_AI_WORKERS }}
-        run: python scripts/test_cloudflare_ai.py
+        run: python test_cloudflare_ai.py
