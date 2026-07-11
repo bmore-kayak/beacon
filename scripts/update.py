@@ -1036,7 +1036,7 @@ def append_history(data):
     water_temp = conditions["water_temp"]
     bacteria = conditions["bacteria"]
     advisories = conditions["advisories"]
-    rainfall = conditions["rainfall"]
+    #rainfall = conditions["rainfall"]
 
     history = {
         "schema": 1,
