@@ -635,7 +635,7 @@ def note(conditions, water):
     if conditions["waves"]["status"] == "🟠":
         return "Choppy water."
 
-    return "Favorable conditions."
+    return ""
 
 def append_history(data):
     conditions = data["conditions"]
