@@ -206,7 +206,7 @@ function regionIsOpen(region) {
     return saved === "open";
   }
 
-  return region === "Inner Harbor";
+  return false;
 }
 
 
