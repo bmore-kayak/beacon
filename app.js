@@ -20,7 +20,12 @@ async function main() {
   }
 }
 
+
 function windArrow(direction) {
+  if (direction == null) {
+    return "";
+  }
+
   const rotation = (direction + 180) % 360;
 
   return `
@@ -31,6 +36,7 @@ function windArrow(direction) {
     >↑</span>
   `;
 }
+
 
 function renderCondition(key, condition) {
   const details = document.createElement("details");
@@ -46,7 +52,7 @@ function renderCondition(key, condition) {
         ${condition.status}
       </span>
 
-     <span class="condition-detail">
+      <span class="condition-detail">
         ${key === "wind" ? windArrow(condition.direction_deg) : ""}
         ${condition.detail}
       </span>
@@ -74,7 +80,7 @@ function renderDetails(key, condition) {
     content += renderStations(condition.stations);
   }
 
-  content += renderSource(condition.source);
+  content += renderSource(key, condition.source);
 
   return content;
 }
@@ -101,36 +107,84 @@ function renderAdvisories(items = []) {
 
 
 function renderStations(stations = []) {
+  if (!stations.length) {
+    return `<div class="expanded-empty">No station data available.</div>`;
+  }
+
+  const regions = {};
+
+  for (const station of stations) {
+    const region = station.region || "Other";
+
+    if (!regions[region]) {
+      regions[region] = [];
+    }
+
+    regions[region].push(station);
+  }
+
   return `
     <div class="stations">
-      ${stations.map(station => `
-        <div class="station">
-          <span>${station.site}</span>
-          <span>
-            ${station.status}
-            ${station.bacteria ?? "—"} MPN
-          </span>
-        </div>
+      ${Object.entries(regions).map(([region, regionStations]) => `
+        <section class="station-region">
+          <div class="station-region-label">${region}</div>
+
+          ${regionStations.map(station => `
+            <div class="station">
+              <div class="station-name">
+                ${station.status} ${station.site}
+              </div>
+
+              <div class="station-reading">
+                ${station.bacteria ?? "—"} MPN
+                ${station.date
+                  ? ` · Sampled ${formatSampleDate(station.date)}`
+                  : " · Sample date unavailable"}
+              </div>
+            </div>
+          `).join("")}
+        </section>
       `).join("")}
     </div>
   `;
 }
 
 
-function renderSource(source) {
+function renderSource(key, source) {
   if (!source) {
     return "";
   }
 
+  const providers = source.provider
+    ? source.provider.split(" · ")
+    : [];
+
   return `
     <div class="detail-footer">
       ${source.location ? `<div>${source.location}</div>` : ""}
-      ${source.provider ? `<div>${source.provider}</div>` : ""}
+
+      ${providers.map(provider => `
+        <div>${provider}</div>
+      `).join("")}
+
       ${source.updated
-        ? `<div>Updated ${formatDate(source.updated)}</div>`
+        ? `<div>${key === "bacteria" ? "Latest sample" : "Updated"} ${formatDate(source.updated)}</div>`
         : ""}
     </div>
   `;
+}
+
+
+function formatSampleDate(value) {
+  const date = new Date(value);
+
+  return date.toLocaleDateString([], {
+    month: "short",
+    day: "numeric",
+    year: date.getFullYear() === new Date().getFullYear()
+      ? undefined
+      : "numeric",
+  });
 }
 
 
