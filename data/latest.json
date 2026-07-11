@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-07-11 01:33 PM EDT",
+  "updated": "2026-07-11 02:00 PM EDT",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -20,57 +20,57 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-11T13:33:47.163973-04:00"
+        "updated": "2026-07-11T14:00:37.915704-04:00"
       }
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Storm risk 1 PM\u201310 PM",
-      "starts": "2026-07-11T13:00:00-04:00",
-      "ends": "2026-07-11T22:00:00-04:00",
+      "detail": "Storm risk 2 PM\u201311 PM",
+      "starts": "2026-07-11T14:00:00-04:00",
+      "ends": "2026-07-11T23:00:00-04:00",
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-11T13:00:00-04:00"
+        "updated": "2026-07-11T14:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "13 kt, gusts 17",
-      "speed_kt": 13,
-      "gust_kt": 17,
-      "direction_deg": 251.6,
+      "status": "\ud83d\udfe2",
+      "detail": "4 kt, gusts 5",
+      "speed_kt": 4,
+      "gust_kt": 5,
+      "direction_deg": 197.9,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T13:33:47.164008-04:00"
+        "updated": "2026-07-11T14:00:37.915732-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.4 ft",
+      "height_ft": 0.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T13:33:47.164024-04:00"
+        "updated": "2026-07-11T14:00:37.915747-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "79\u00b0F",
+      "detail": "82\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T13:33:47.164097-04:00"
+        "updated": "2026-07-11T14:00:37.915813-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T13:33:47.164104-04:00"
+        "updated": "2026-07-11T14:00:37.915820-04:00"
       }
     },
     "bacteria": {
@@ -93,7 +93,7 @@
         "provider": "Waterfront Partnership \u00b7 Baltimore Water Watch",
         "updated": "2026-07-08T08:00:00-04:00"
       },
-      "passing": 9,
+      "passing": 10,
       "failing": 0,
       "failing_regions": [],
       "stations": [
@@ -109,6 +109,14 @@
           "site": "Domino Sugar / Sandlot",
           "region": "Inner Harbor",
           "date": "2026-07-01T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10
+        },
+        {
+          "site": "Downtown Sailing Center",
+          "region": "Inner Harbor",
+          "date": "2026-07-08T08:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
           "bacteria": 10
@@ -168,14 +176,6 @@
           "status": "\ud83d\udfe2",
           "stale": false,
           "bacteria": 52
-        },
-        {
-          "site": "Downtown Sailing Center",
-          "region": "Middle Branch",
-          "date": "2026-07-08T08:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
-          "bacteria": 10
         },
         {
           "site": "Ferry Bar Park",
@@ -243,7 +243,7 @@
         },
         {
           "site": "Bear Creek",
-          "region": "Lower Harbor",
+          "region": "Outer Harbor",
           "date": "2026-06-24T00:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
@@ -251,7 +251,7 @@
         },
         {
           "site": "Bodkin Creek",
-          "region": "Lower Harbor",
+          "region": "Outer Harbor",
           "date": "2026-06-24T00:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
@@ -259,7 +259,7 @@
         },
         {
           "site": "Cox Creek",
-          "region": "Lower Harbor",
+          "region": "Outer Harbor",
           "date": "2022-09-13T00:00:00-04:00",
           "status": "\u26aa",
           "stale": true,
@@ -267,7 +267,7 @@
         },
         {
           "site": "Key Bridge",
-          "region": "Lower Harbor",
+          "region": "Outer Harbor",
           "date": "2026-06-24T00:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
@@ -275,7 +275,7 @@
         },
         {
           "site": "Old Road Bay",
-          "region": "Lower Harbor",
+          "region": "Outer Harbor",
           "date": "2026-06-24T00:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
@@ -283,7 +283,7 @@
         },
         {
           "site": "Outer Harbor Entrance",
-          "region": "Lower Harbor",
+          "region": "Outer Harbor",
           "date": "2026-06-24T00:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
@@ -291,7 +291,7 @@
         },
         {
           "site": "Outer Harbor Midpoint",
-          "region": "Lower Harbor",
+          "region": "Outer Harbor",
           "date": "2026-06-24T00:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
@@ -299,7 +299,7 @@
         },
         {
           "site": "Rock Creek",
-          "region": "Lower Harbor",
+          "region": "Outer Harbor",
           "date": "2026-06-24T00:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
@@ -307,7 +307,7 @@
         },
         {
           "site": "Stoney Creek",
-          "region": "Lower Harbor",
+          "region": "Outer Harbor",
           "date": "2026-06-24T00:00:00-04:00",
           "status": "\ud83d\udfe2",
           "stale": false,
@@ -747,5 +747,5 @@
       ]
     }
   },
-  "note": "Storm risk 1 PM\u201310 PM.\nElevated winds."
+  "note": "Storm risk 2 PM\u201311 PM."
 }
