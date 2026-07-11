@@ -70,6 +70,11 @@ h1 {
   color: color-mix(in srgb, CanvasText 82%, Canvas);
 }
 
+.expanded-note {
+  line-height: 1.45;
+  color: color-mix(in srgb, CanvasText 72%, Canvas);
+}
+
 /* Conditions */
 
 .conditions {
