@@ -135,7 +135,9 @@ def safe_call(fn, fallback=None):
         return fn()
     except Exception:
         return fallback
-
+        
+def clean_number(value):
+    return None if value is None else float(value)
 
 def waterfront_data():
     raw = get_json(WATERFRONT_URL)
@@ -156,9 +158,59 @@ def waterfront_data():
             "bacteria": count,
             "latitude": None,
             "longitude": None,
+            "rain_7day": clean_number(a.get("Rain_amount_past7days")),
         })
         
     return stations
+
+def score_rainfall(inches):
+    if inches >= 3:
+        return "🟠"
+    if inches >= 1.5:
+        return "🟡"
+    return "🟢"
+
+
+def rainfall_condition(stations):
+    values = [
+        station["rain_7day"]
+        for station in stations
+        if station.get("rain_7day") is not None
+    ]
+
+    if not values:
+        return {
+            "icon": "🌧",
+            "label": "Rainfall",
+            "status": "🟡",
+            "detail": "Unavailable",
+        }
+
+    rain = max(values)
+
+    sample_dates = [
+        sample_datetime(station.get("sample_date"))
+        for station in stations
+        if station.get("sample_date")
+    ]
+
+    updated = (
+        max(sample_dates).isoformat()
+        if sample_dates else None
+    )
+
+    return {
+        "icon": "🌧",
+        "label": "Rainfall",
+        "status": score_rainfall(rain),
+        "detail": f"{rain:g} in / 7 days",
+        "message": "Runoff from heavy rainfall may elevate bacteria levels before next bacteria sample is collected.",
+        "rain_7day_in": rain,
+        "source": {
+            "provider": "Waterfront Partnership",
+            "updated": updated,
+        },
+    }
 
 def bww_data():
     raw = get_json(
@@ -322,7 +374,7 @@ def merge_stations(stations):
         "Inner Harbor": 0,
         "Middle Branch": 1,
         "Curtis Bay": 2,
-        "Lower Harbor": 3,
+        "Outer Harbor": 3,
         "Other": 4,
     }
 
@@ -984,6 +1036,7 @@ def append_history(data):
     water_temp = conditions["water_temp"]
     bacteria = conditions["bacteria"]
     advisories = conditions["advisories"]
+    rainfall = conditions["rainfall"]
 
     history = {
         "schema": 1,
@@ -1040,6 +1093,12 @@ def append_history(data):
             "source": source_info(water_temp),
         },
 
+        "rainfall": {
+            "status": rainfall["status"],
+            "rain_7day_in": rainfall.get("rain_7day_in"),
+            "source": source_info(rainfall),
+        },
+
         "bacteria": {
             "status": bacteria["status"],
             "passing": bacteria["passing"],
@@ -1060,6 +1119,7 @@ def main():
 
     water = bacteria_conditions(waterfront, bww)
     marine = marine_conditions()
+    rainfall = rainfall_condition(waterfront)
 
     conditions = {
         "advisories": marine["advisories"],
@@ -1068,6 +1128,7 @@ def main():
         "waves": marine["waves"],
         "air_temp": marine["air_temp"],
         "water_temp": marine["water_temp"],
+        "rainfall": rainfall,
         "bacteria": water,
     }
 
