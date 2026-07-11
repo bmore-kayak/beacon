@@ -424,10 +424,7 @@ for event in events:
 save_state(state)
 
 items.sort(
-    key=lambda item: (
-        not item["notice"],
-        item["starts_at"],
-    )
+    key=lambda item: item["starts_at"]
 )
 
 
