@@ -5,6 +5,7 @@ import os
 import re
 import sys
 from datetime import datetime, timedelta
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
@@ -15,13 +16,19 @@ API_TOKEN = os.getenv("CF_AI_WORKERS")
 
 MODEL = "@cf/meta/llama-3.1-8b-fast-v2"
 
-CKC_EVENTS_URL = (
+EVENTS_URL = (
     "https://cantonkayakclub.com/"
     "wp-json/tribe/events/v1/events"
 )
 
+STATE_FILE = Path("data/club_event_state.json")
+
 TIMEZONE = ZoneInfo("America/New_York")
-NOTICE_WINDOW_DAYS = 7
+WINDOW_DAYS = 7
+
+MAX_DESCRIPTION_CHARS = 5000
+MAX_TITLE_CHARS = 90
+MAX_SUMMARY_CHARS = 180
 
 
 if not ACCOUNT_ID:
@@ -31,20 +38,76 @@ if not API_TOKEN:
     sys.exit("Missing CF_AI_WORKERS")
 
 
-def clean_html(value):
-    if not value:
-        return ""
+SYSTEM_PROMPT = """
+Write a short app entry for an upcoming Canton Kayak Club event.
 
-    text = re.sub(
-        r"<(script|style).*?>.*?</\1>",
-        " ",
-        value,
-        flags=re.DOTALL | re.IGNORECASE,
+Return one JSON object:
+
+{
+  "title": "short clear title",
+  "summary": "one short useful sentence",
+  "notice": true or false
+}
+
+Use only the supplied event information.
+
+Set notice to true when the event indicates:
+- a closure,
+- reduced kayak or equipment availability,
+- restricted access,
+- cancellation or a material change,
+- unusual vessel traffic,
+- a marine restriction,
+- or another broader water-safety concern.
+
+Otherwise set notice to false.
+
+Fells Point or Bond Street Wharf orientation and training should normally
+be marked as a notice because club kayaks are used during those sessions.
+
+Writing rules:
+- Keep the title short.
+- Put the location first when it is important.
+- Keep the summary under 180 characters.
+- Focus on what a club member would find useful.
+- Do not invent facts, restrictions, closures, or traffic impacts.
+- Do not repeat every date, time, address, or contact detail.
+- Return JSON only.
+""".strip()
+
+
+def clean_html(value):
+    text = re.sub(r"<[^>]+>", " ", value or "")
+    return " ".join(html.unescape(text).split())
+
+
+def load_state():
+    if not STATE_FILE.exists():
+        return {}
+
+    try:
+        return json.loads(
+            STATE_FILE.read_text(encoding="utf-8")
+        )
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def save_state(state):
+    STATE_FILE.parent.mkdir(
+        parents=True,
+        exist_ok=True,
     )
 
-    text = re.sub(r"<[^>]+>", " ", text)
-    text = html.unescape(text)
-    return " ".join(text.split())
+    STATE_FILE.write_text(
+        json.dumps(
+            state,
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
 
 def parse_local_datetime(value):
@@ -54,130 +117,58 @@ def parse_local_datetime(value):
     ).replace(tzinfo=TIMEZONE)
 
 
-def iso_local(value):
-    return value.isoformat(timespec="seconds")
+def fetch_events(now):
+    end = now + timedelta(days=WINDOW_DAYS)
 
-
-def event_fingerprint(event):
-    meaningful_fields = {
-        "title": event.get("title"),
-        "description": event.get("description"),
-        "start_date": event.get("start_date"),
-        "end_date": event.get("end_date"),
-        "venue": event.get("venue"),
-        "categories": event.get("categories"),
-        "status": event.get("status"),
-    }
-
-    encoded = json.dumps(
-        meaningful_fields,
-        sort_keys=True,
-        ensure_ascii=False,
-    ).encode("utf-8")
-
-    return hashlib.sha256(encoded).hexdigest()
-
-
-def extract_json_object(value):
-    if isinstance(value, dict):
-        return value
-
-    if not isinstance(value, str) or not value.strip():
-        raise ValueError(
-            f"Unexpected AI response type: {type(value).__name__}"
-        )
-
-    text = value.strip()
-
-    if text.startswith("```"):
-        text = re.sub(
-            r"^```(?:json)?\s*",
-            "",
-            text,
-            flags=re.IGNORECASE,
-        )
-        text = re.sub(r"\s*```$", "", text)
-
-    first_brace = text.find("{")
-    last_brace = text.rfind("}")
-
-    if first_brace == -1 or last_brace == -1:
-        raise ValueError(
-            f"AI did not return a JSON object: {text}"
-        )
-
-    return json.loads(
-        text[first_brace:last_brace + 1]
+    response = requests.get(
+        EVENTS_URL,
+        params={
+            "per_page": 50,
+            "start_date": now.strftime(
+                "%Y-%m-%d %H:%M:%S"
+            ),
+            "end_date": end.strftime(
+                "%Y-%m-%d %H:%M:%S"
+            ),
+            "status": "publish",
+        },
+        timeout=30,
     )
 
+    response.raise_for_status()
 
-def fetch_upcoming_events():
-    now = datetime.now(TIMEZONE)
-    end = now + timedelta(days=NOTICE_WINDOW_DAYS)
-
-    params = {
-        "page": 1,
-        "per_page": 10,
-        "start_date": now.strftime("%Y-%m-%d %H:%M:%S"),
-        "end_date": end.strftime("%Y-%m-%d %H:%M:%S"),
-        "status": "publish",
-    }
-
-    events = []
-
-    while True:
-        response = requests.get(
-            CKC_EVENTS_URL,
-            params=params,
-            timeout=30,
-        )
-
-        print(
-            f"CKC page {params['page']} status:",
-            response.status_code,
-        )
-
-        response.raise_for_status()
-        body = response.json()
-
-        events.extend(body.get("events", []))
-
-        total_pages = body.get("total_pages", 1)
-
-        if params["page"] >= total_pages:
-            break
-
-        params["page"] += 1
-
-    return events
+    return response.json().get("events", [])
 
 
-def normalize_event(event):
-    venue = event.get("venue") or {}
-    categories = event.get("categories") or []
+def normalize_event(raw):
+    venue = raw.get("venue") or {}
 
-    if isinstance(venue, list):
+    if not isinstance(venue, dict):
         venue = {}
 
+    categories = raw.get("categories") or []
+
     return {
-        "event_id": event.get("id"),
-        "title": clean_html(event.get("title")),
+        "event_id": raw.get("id"),
+        "title": clean_html(raw.get("title")),
         "description": clean_html(
-            event.get("description")
-        ),
-        "start": event.get("start_date"),
-        "end": event.get("end_date"),
-        "modified_utc": event.get("modified_utc"),
-        "url": event.get("url"),
+            raw.get("description")
+        )[:MAX_DESCRIPTION_CHARS],
+        "start": raw.get("start_date"),
+        "end": raw.get("end_date"),
+        "modified_utc": raw.get("modified_utc"),
+        "url": raw.get("url"),
         "venue": {
-            "name": clean_html(venue.get("venue")),
-            "slug": venue.get("slug"),
-            "address": clean_html(venue.get("address")),
-            "city": clean_html(venue.get("city")),
-            "state": clean_html(
-                venue.get("state")
-                or venue.get("province")
+            "name": clean_html(
+                venue.get("venue")
             ),
+            "address": clean_html(
+                venue.get("address")
+            ),
+            "city": clean_html(
+                venue.get("city")
+            ),
+            "slug": venue.get("slug"),
         },
         "categories": [
             {
@@ -191,132 +182,90 @@ def normalize_event(event):
     }
 
 
-SYSTEM_PROMPT = """
-Classify an upcoming Canton Kayak Club event for Beacon.
+def fingerprint(event):
+    relevant_fields = {
+        "title": event["title"],
+        "description": event["description"],
+        "start": event["start"],
+        "end": event["end"],
+        "venue": event["venue"],
+        "categories": event["categories"],
+    }
 
-Beacon should show only notices that affect a member's ability to use
-club docks, kayaks, equipment, or safely navigate the surrounding water.
+    encoded = json.dumps(
+        relevant_fields,
+        sort_keys=True,
+        ensure_ascii=False,
+    ).encode("utf-8")
 
-Allowed notice types:
-- closure
-- equipment_conflict
-- restricted_access
-- water_safety
-- increased_boat_traffic
-- cancellation_or_change
-- none
+    return hashlib.sha256(encoded).hexdigest()
 
-Create a notice only when the event indicates one of the following:
 
-- A dock, launch, kayak, or other club resource is closed, unavailable,
-  reserved, restricted, or likely to be heavily in use.
-- A Fells Point / Bond Street Wharf new-member orientation or training
-  session is scheduled and trainees will use club kayaks there.
-- Access to the launch or location is restricted.
-- The event describes a cancellation, postponement, registration problem,
-  or material logistics change.
-- The event identifies a broader water-safety issue such as a marine
-  restriction, safety zone, unusually heavy vessel traffic, boat parade,
-  regatta, fireworks zone, tall-ship event, or similar public activity.
+def parse_ai_json(value):
+    if isinstance(value, dict):
+        return value
 
-Do not create a notice merely because:
-- a normal small club paddle is scheduled,
-- participants are told to check the weather,
-- the route may encounter ordinary boat traffic,
-- an event requires an RSVP,
-- an event has limited participant capacity,
-- the event is social, instructional, or recreational without affecting
-  general member access or safety,
-- training occurs somewhere other than Fells Point unless the source
-  explicitly says club docks, kayaks, or equipment will be unavailable,
-  reserved, restricted, or heavily used.
+    text = str(value or "").strip()
 
-Important rules:
-- Do not call something a closure unless the source explicitly says it
-  is closed.
-- Do not assume other members lose access merely because an event or
-  training session is taking place.
-- Do not infer an equipment conflict from rescue training, instruction,
-  or group activity outside Fells Point unless the source explicitly
-  supports that conclusion.
-- Do not invent the number of kayaks affected.
-- Do not invent broader boat-traffic impacts from a small club outing.
-- Prefer no notice over a speculative notice.
-- When relevant is true, always return a short, non-null title and summary.
-- Dates, times, venue, address, and source URL are stored separately by
-  code, so the summary should not repeat all of them unless needed for clarity.
+    text = re.sub(
+        r"^```(?:json)?\s*",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    text = re.sub(r"\s*```$", "", text)
 
-Return one JSON object with exactly these fields:
+    start = text.find("{")
+    end = text.rfind("}")
 
-{
-  "relevant": true or false,
-  "type": "closure | equipment_conflict | restricted_access |
-           water_safety | increased_boat_traffic |
-           cancellation_or_change | none",
-  "severity": "info | caution | critical",
-  "title": "short notice title or null",
-  "summary": "one short factual sentence or null",
-  "reason": "brief explanation of the classification",
-  "confidence": "low | medium | high"
-}
+    if start == -1 or end == -1:
+        raise ValueError(
+            "Cloudflare did not return JSON"
+        )
 
-Writing style:
-- calm
-- specific
-- concise
-- factual
-- no speculation
-
-Return JSON only.
-""".strip()
+    return json.loads(text[start : end + 1])
 
 
 def classify_event(event):
-    cloudflare_url = (
-        "https://api.cloudflare.com/client/v4/accounts/"
-        f"{ACCOUNT_ID}/ai/run/{MODEL}"
+    url = (
+        "https://api.cloudflare.com/client/v4/"
+        f"accounts/{ACCOUNT_ID}/ai/run/{MODEL}"
     )
 
-    payload = {
-        "messages": [
-            {
-                "role": "system",
-                "content": SYSTEM_PROMPT,
-            },
-            {
-                "role": "user",
-                "content": json.dumps(
-                    event,
-                    ensure_ascii=False,
-                ),
-            },
-        ],
-        "max_tokens": 250,
-        "temperature": 0.0,
-    }
-
     response = requests.post(
-        cloudflare_url,
+        url,
         headers={
-            "Authorization": f"Bearer {API_TOKEN}",
+            "Authorization": (
+                f"Bearer {API_TOKEN}"
+            ),
             "Content-Type": "application/json",
         },
-        json=payload,
+        json={
+            "messages": [
+                {
+                    "role": "system",
+                    "content": SYSTEM_PROMPT,
+                },
+                {
+                    "role": "user",
+                    "content": json.dumps(
+                        event,
+                        ensure_ascii=False,
+                    ),
+                },
+            ],
+            "max_tokens": 180,
+            "temperature": 0,
+        },
         timeout=30,
     )
 
-    if not response.ok:
-        print(
-            json.dumps(
-                response.json(),
-                indent=2,
-                ensure_ascii=False,
-            )
-        )
-        response.raise_for_status()
+    response.raise_for_status()
 
-    body = response.json()
-    result = body.get("result", {})
+    result = response.json().get(
+        "result",
+        {},
+    )
 
     content = result.get("response")
 
@@ -327,91 +276,122 @@ def classify_event(event):
             .get("content")
         )
 
-    return extract_json_object(content)
+    return parse_ai_json(content)
 
 
-events = fetch_upcoming_events()
+def validate_ai_result(result):
+    title = str(
+        result.get("title") or ""
+    ).strip()
 
-print()
+    summary = str(
+        result.get("summary") or ""
+    ).strip()
+
+    notice = bool(result.get("notice"))
+
+    if not title:
+        raise ValueError(
+            "AI result is missing title"
+        )
+
+    if not summary:
+        raise ValueError(
+            "AI result is missing summary"
+        )
+
+    if len(title) > MAX_TITLE_CHARS:
+        raise ValueError(
+            "AI title is too long"
+        )
+
+    if len(summary) > MAX_SUMMARY_CHARS:
+        raise ValueError(
+            "AI summary is too long"
+        )
+
+    return {
+        "title": title,
+        "summary": summary,
+        "notice": notice,
+    }
+
+
+now = datetime.now(TIMEZONE)
+
+state = load_state()
+events = [
+    normalize_event(raw)
+    for raw in fetch_events(now)
+]
+
+items = []
+
 print(f"Upcoming events found: {len(events)}")
 
 
-reviewed_at = datetime.now(TIMEZONE)
-notices = []
+for event in events:
+    event_id = str(event["event_id"])
+    current_fingerprint = fingerprint(event)
 
+    saved = state.get(event_id)
 
-for raw_event in events:
-    event = normalize_event(raw_event)
+    if (
+        saved
+        and saved.get("fingerprint")
+        == current_fingerprint
+    ):
+        ai_result = saved["ai_result"]
+        source = "cached"
 
-    print()
-    print("=" * 70)
-    print(event["title"])
+    else:
+        try:
+            ai_result = validate_ai_result(
+                classify_event(event)
+            )
+        except (
+            requests.RequestException,
+            ValueError,
+            json.JSONDecodeError,
+        ) as exc:
+            print(
+                f"{event['title']}: failed: {exc}"
+            )
+            continue
+
+        state[event_id] = {
+            "fingerprint": current_fingerprint,
+            "source_modified_at": (
+                event["modified_utc"]
+            ),
+            "reviewed_at": now.isoformat(
+                timespec="seconds"
+            ),
+            "ai_result": ai_result,
+        }
+
+        source = "cloudflare"
+
     print(
-        f"{event['start']} to {event['end']}"
+        f"{event['title']}: "
+        f"{'notice' if ai_result['notice'] else 'event'} "
+        f"({source})"
     )
-    print(
-        "Venue:",
-        event["venue"]["name"] or "Not specified",
-    )
-
-    try:
-        ai_result = classify_event(event)
-    except (
-        requests.RequestException,
-        ValueError,
-        json.JSONDecodeError,
-    ) as exc:
-        print("Classification failed:", exc)
-        continue
-
-    print()
-    print("AI result:")
-    print(
-        json.dumps(
-            ai_result,
-            indent=2,
-            ensure_ascii=False,
-        )
-    )
-
-    if not ai_result.get("relevant"):
-        continue
-
-    notice_type = ai_result.get("type")
-
-    allowed_types = {
-        "closure",
-        "equipment_conflict",
-        "restricted_access",
-        "water_safety",
-        "increased_boat_traffic",
-        "cancellation_or_change",
-    }
-
-    if notice_type not in allowed_types:
-        print(
-            "Skipped because notice type was invalid:",
-            notice_type,
-        )
-        continue
 
     starts_at = parse_local_datetime(
         event["start"]
     )
+
     ends_at = parse_local_datetime(
         event["end"]
     )
 
-    notices.append(
+    items.append(
         {
             "event_id": event["event_id"],
-            "type": notice_type,
-            "severity": ai_result.get(
-                "severity",
-                "info",
-            ),
-            "title": ai_result.get("title"),
-            "summary": ai_result.get("summary"),
+            "title": ai_result["title"],
+            "summary": ai_result["summary"],
+            "notice": ai_result["notice"],
             "location": (
                 event["venue"]["name"]
                 or None
@@ -420,72 +400,60 @@ for raw_event in events:
                 event["venue"]["address"]
                 or None
             ),
-            "starts_at": iso_local(starts_at),
-            "ends_at": iso_local(ends_at),
-            "show_from": iso_local(
-                starts_at
-                - timedelta(
-                    days=NOTICE_WINDOW_DAYS
-                )
+            "starts_at": starts_at.isoformat(
+                timespec="seconds"
+            ),
+            "ends_at": ends_at.isoformat(
+                timespec="seconds"
             ),
             "source_modified_at": (
                 event["modified_utc"]
             ),
-            "reviewed_at": iso_local(
-                reviewed_at
-            ),
+            "reviewed_at": state[event_id][
+                "reviewed_at"
+            ],
             "source_url": event["url"],
-            "fingerprint": event_fingerprint(
-                raw_event
-            ),
-            "confidence": ai_result.get(
-                "confidence"
-            ),
-            "classification_reason": (
-                ai_result.get("reason")
-            ),
         }
     )
 
 
-notices.sort(
-    key=lambda notice: notice["starts_at"]
+save_state(state)
+
+items.sort(
+    key=lambda item: (
+        not item["notice"],
+        item["starts_at"],
+    )
 )
 
 
 latest_fragment = {
-    "club_notices": {
+    "club": {
         "icon": "🛶",
-        "label": "Club notices",
-        "status": (
-            "🟡"
-            if notices
-            else "🟢"
-        ),
+        "label": "Club",
         "detail": (
-            f"{len(notices)} upcoming notice"
-            if len(notices) == 1
-            else f"{len(notices)} upcoming notices"
-            if notices
-            else "No current club notices"
+            f"{len(items)} upcoming event"
+            if len(items) == 1
+            else f"{len(items)} upcoming events"
+            if items
+            else "No upcoming events"
         ),
-        "items": notices,
+        "items": items,
         "source": {
             "label": "Canton Kayak Club",
             "url": (
-                "https://cantonkayakclub.com/events/"
+                "https://cantonkayakclub.com/"
+                "events/"
             ),
         },
-        "reviewed_at": iso_local(reviewed_at),
+        "reviewed_at": now.isoformat(
+            timespec="seconds"
+        ),
     }
 }
 
 
 print()
-print("=" * 70)
-print("PROPOSED latest.json FRAGMENT")
-print("=" * 70)
-
 print(
     json.dumps(
         latest_fragment,
