@@ -152,17 +152,65 @@ h1 {
   width: 100%;
 }
 
-.station-region + .station-region {
-  margin-top: 1.15rem;
+.station-region {
+  border-top: 1px solid color-mix(in srgb, CanvasText 8%, transparent);
+}
+
+.station-region:first-child {
+  border-top: none;
+}
+
+.station-region-summary {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(6rem, auto)
+    1rem;
+  align-items: center;
+  column-gap: 0.8rem;
+  padding: 0.65rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.station-region-summary::-webkit-details-marker {
+  display: none;
 }
 
 .station-region-label {
-  margin-bottom: 0.35rem;
   font-size: 0.72rem;
   font-weight: 650;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: color-mix(in srgb, CanvasText 46%, Canvas);
+}
+
+.station-region-status {
+  width: 1.5rem;
+  text-align: center;
+}
+
+.station-region-range {
+  text-align: right;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, CanvasText 70%, Canvas);
+}
+
+.region-chevron {
+  justify-self: end;
+  font-size: 0.75rem;
+  color: color-mix(in srgb, CanvasText 45%, Canvas);
+  transition: transform 0.15s ease;
+}
+
+.station-region[open] .region-chevron {
+  transform: rotate(180deg);
+}
+
+.station-region-content {
+  padding-left: 1rem;
+  padding-bottom: 0.4rem;
 }
 
 .station {
