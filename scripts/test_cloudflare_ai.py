@@ -41,7 +41,7 @@ if not API_TOKEN:
 SYSTEM_PROMPT = """
 Write a short app entry for an upcoming Canton Kayak Club event.
 
-Return one JSON object:
+Return JSON only:
 
 {
   "title": "short clear title",
@@ -66,13 +66,17 @@ Fells Point or Bond Street Wharf orientation and training should normally
 be marked as a notice because club kayaks are used during those sessions.
 
 Writing rules:
-- Keep the title short.
-- Put the location first when it is important.
-- Keep the summary under 180 characters.
-- Focus on what a club member would find useful.
+- Begin the title with the location when a location is known.
+- Describe the activity or practical effect after the location.
+- Do not include dates or times in the title or summary; they are displayed separately.
+- Do not repeat the full venue name when a shorter location name is clear.
+- Keep the title under 60 characters.
+- Keep the summary to one short factual sentence under 140 characters.
+- For notices, describe the practical effect on members.
+- For ordinary events, summarize the activity, skill level, or notable destination.
+- Do not include RSVP limits unless they are the main useful detail.
+- Do not use promotional phrases such as "join us," "lovely," or "memorable."
 - Do not invent facts, restrictions, closures, or traffic impacts.
-- Do not repeat every date, time, address, or contact detail.
-- Return JSON only.
 """.strip()
 
 
