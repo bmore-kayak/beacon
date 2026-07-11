@@ -166,21 +166,33 @@ h1 {
 }
 
 .station {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
   padding: 0.48rem 0;
 }
 
-.station-name {
+.station-info {
   min-width: 0;
+}
+
+.station-name {
   font-size: 0.92rem;
   font-weight: 500;
 }
 
-.station-reading {
+.station-date {
   margin-top: 0.12rem;
-  padding-left: 1.45rem;
   font-size: 0.82rem;
   line-height: 1.35;
   color: color-mix(in srgb, CanvasText 58%, Canvas);
+}
+
+.station-reading {
+  white-space: nowrap;
+  text-align: right;
+  font-size: 0.88rem;
 }
 
 .detail-footer {
@@ -262,11 +274,19 @@ h1 {
     padding-left: 1rem;
   }
 
+  .station {
+    gap: 0.65rem;
+  }
+  
   .station-name {
     font-size: 0.88rem;
   }
   
-  .station-reading {
+  .station-date {
     font-size: 0.79rem;
+  }
+  
+  .station-reading {
+    font-size: 0.84rem;
   }
 }
