@@ -52,7 +52,6 @@ STATION_NAMES = {
 STATION_REGIONS = {
     "Inner Harbor": {
         "Canton Waterfront Park",
-        "Domino Sugar / Sandlot",
         "Downtown Sailing Center",
         "Dragon Boats",
         "Fells Point",
