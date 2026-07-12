@@ -169,20 +169,34 @@ h1 {
   display: inline-block;
   margin-right: 0.2rem;
   transform: rotate(var(--rotation));
-  animation: breeze 3.5s ease-in-out infinite;
+  transform-origin: center calc(-1 * var(--rotation));
+  rotate(var(--rotation));
+  animation: breeze 5s ease-in-out infinite;
 }
 
 @keyframes breeze {
   0%,100% {
     transform:
       translateX(0)
-      rotate(calc(var(--rotation) - 2deg));
+      rotate(calc(var(--rotation) - 3.5deg));
+  }
+  
+    20% {
+    transform:
+      translateX(0px)
+      rotate(calc(var(--rotation) + 4deg));
   }
 
   50% {
     transform:
-      translateX(1px)
-      rotate(calc(var(--rotation) + 2deg));
+      translateX(0px)
+      rotate(calc(var(--rotation) - 3.5deg));
+  }
+  
+    80% {
+    transform:
+      translateX(0px)
+      rotate(calc(var(--rotation) + 6deg));
   }
 }
 
