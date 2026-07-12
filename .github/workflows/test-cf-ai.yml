@@ -3,6 +3,9 @@ name: Test Cloudflare Workers AI
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   test-ai:
     runs-on: ubuntu-latest
@@ -24,3 +27,17 @@ jobs:
           CF_ACCT_ID: ${{ secrets.CF_ACCT_ID }}
           CF_AI_WORKERS: ${{ secrets.CF_AI_WORKERS }}
         run: python scripts/test_cloudflare_ai.py
+
+      - name: Commit generated club data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/club.json data/club_event_state.json
+
+          if git diff --cached --quiet; then
+            echo "No club data changes to commit"
+          else
+            git commit -m "Update club event data"
+            git push
+          fi
