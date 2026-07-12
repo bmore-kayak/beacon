@@ -210,6 +210,19 @@ h1 {
   border-bottom: none;
 }
 
+.club-event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.club-event-status {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
 .club-event-title {
   font-weight: 600;
   line-height: 1.35;
