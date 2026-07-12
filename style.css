@@ -32,28 +32,38 @@ main {
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.5rem;
 }
 
 .brand-icon {
-    font-size: 2.6rem;
-    line-height: 1;
-    flex-shrink: 0;
+  flex-shrink: 0;
+  font-size: 2.6rem;
+  line-height: 1;
 }
 
 .location {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.2;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .tagline {
-    margin-top: 0.2rem;
-    font-size: 0.9rem;
-    color: #6b7280;
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, CanvasText 58%, Canvas);
+}
+
+.tagline-separator {
+  margin: 0 0.2rem;
+}
+
+.tagline #updated {
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
 }
 
 h1 {
@@ -79,12 +89,14 @@ h1 {
 
 .conditions {
   width: 100%;
-  border-top: 1px solid color-mix(in srgb, CanvasText 14%, transparent);
+  border-top: 1px solid
+    color-mix(in srgb, CanvasText 14%, transparent);
 }
 
 .condition {
   width: 100%;
-  border-bottom: 1px solid color-mix(in srgb, CanvasText 14%, transparent);
+  border-bottom: 1px solid
+    color-mix(in srgb, CanvasText 14%, transparent);
 }
 
 .condition summary {
@@ -141,7 +153,7 @@ h1 {
   transform: rotate(180deg);
 }
 
-/* Expanded Water Contact content */
+/* Expanded content */
 
 .condition-details {
   padding: 0.15rem 0 1rem 1.5rem;
@@ -149,16 +161,95 @@ h1 {
 
 .wind-arrow {
   display: inline-block;
-  transform: rotate(var(--rotation));
   margin-right: 0.2rem;
+  transform: rotate(var(--rotation));
 }
+
+.expanded-empty {
+  padding: 0.25rem 0;
+  font-size: 0.88rem;
+  color: color-mix(in srgb, CanvasText 58%, Canvas);
+}
+
+/* Advisories */
+
+.advisory-list {
+  width: 100%;
+}
+
+.advisory-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid
+    color-mix(in srgb, CanvasText 8%, transparent);
+}
+
+.advisory-item:last-child {
+  border-bottom: none;
+}
+
+/* Club events */
+
+.club-event-list {
+  display: grid;
+}
+
+.club-event-item {
+  display: block;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid
+    color-mix(in srgb, CanvasText 10%, transparent);
+  color: inherit;
+  text-decoration: none;
+}
+
+.club-event-item:last-child {
+  border-bottom: none;
+}
+
+.club-event-title {
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.club-event-summary {
+  margin-top: 0.25rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: color-mix(in srgb, CanvasText 68%, Canvas);
+}
+
+.club-event-time {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: color-mix(in srgb, CanvasText 52%, Canvas);
+}
+
+.club-event-notice {
+  margin: 0.35rem 0;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, #f59e0b 8%, Canvas);
+}
+
+.club-event-item:hover .club-event-title,
+.club-event-item:focus-visible .club-event-title {
+  text-decoration: underline;
+}
+
+/* Stations */
 
 .stations {
   width: 100%;
 }
 
 .station-region {
-  border-top: 1px solid color-mix(in srgb, CanvasText 8%, transparent);
+  border-top: 1px solid
+    color-mix(in srgb, CanvasText 8%, transparent);
 }
 
 .station-region:first-child {
@@ -249,18 +340,21 @@ h1 {
 .detail-footer {
   margin-top: 0.8rem;
   padding-top: 0.7rem;
-  border-top: 1px solid color-mix(in srgb, CanvasText 12%, transparent);
+  border-top: 1px solid
+    color-mix(in srgb, CanvasText 12%, transparent);
   font-size: 0.82rem;
   line-height: 1.45;
   color: color-mix(in srgb, CanvasText 52%, Canvas);
 }
 
-/* Global timestamp */
+.detail-footer a {
+  color: inherit;
+  text-decoration: none;
+}
 
-#updated {
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
-  color: color-mix(in srgb, CanvasText 52%, Canvas);
+.detail-footer a:hover,
+.detail-footer a:focus-visible {
+  text-decoration: underline;
 }
 
 /* Sources */
@@ -268,7 +362,8 @@ h1 {
 .sources {
   margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid color-mix(in srgb, CanvasText 12%, transparent);
+  border-top: 1px solid
+    color-mix(in srgb, CanvasText 12%, transparent);
   font-size: 0.85rem;
   color: color-mix(in srgb, CanvasText 52%, Canvas);
 }
@@ -325,18 +420,34 @@ h1 {
     padding-left: 1rem;
   }
 
+  .club-event-item {
+    padding: 0.8rem 0;
+  }
+
+  .club-event-notice {
+    padding: 0.7rem;
+  }
+
+  .club-event-title {
+    font-size: 0.92rem;
+  }
+
+  .club-event-summary {
+    font-size: 0.84rem;
+  }
+
   .station {
     gap: 0.65rem;
   }
-  
+
   .station-name {
     font-size: 0.88rem;
   }
-  
+
   .station-date {
     font-size: 0.79rem;
   }
-  
+
   .station-reading {
     font-size: 0.84rem;
   }
