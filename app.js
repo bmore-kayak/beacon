@@ -103,6 +103,17 @@ function renderDetails(key, condition) {
     content += renderClubNotices(condition.items);
   }
 
+  if (
+    !["advisories", "rainfall", "bacteria", "club_notices"].includes(key) &&
+    condition.detail
+  ) {
+    content += `
+      <div class="expanded-note">
+        ${condition.detail}
+      </div>
+    `;
+  }
+
   content += renderSource(key, condition.source);
 
   return content;
