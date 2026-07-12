@@ -110,8 +110,8 @@ h1 {
 .condition-row {
   display: grid;
   grid-template-columns:
+    max-content
     minmax(0, 1fr)
-    minmax(0, 12rem)
     1.5rem
     1rem;
   align-items: center;
@@ -123,6 +123,7 @@ h1 {
 
 .condition-label {
   min-width: 0;
+  white-space: nowrap;
   font-weight: 500;
 }
 
@@ -133,11 +134,11 @@ h1 {
 
 .condition-detail {
   min-width: 0;
-  text-align: right;
-  color: color-mix(in srgb, CanvasText 78%, Canvas);
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: right;
+  text-overflow: ellipsis;
+  color: color-mix(in srgb, CanvasText 78%, Canvas);
 }
 
 .chevron {
@@ -439,8 +440,8 @@ h1 {
 
   .condition-row {
     grid-template-columns:
+      max-content
       minmax(0, 1fr)
-      minmax(0, 9rem)
       1.5rem
       0.8rem;
     column-gap: 0.55rem;
