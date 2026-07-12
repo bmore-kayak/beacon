@@ -1,0 +1,92 @@
+{
+  "247354": {
+    "fingerprint": "f89256abbc8b80a2fcffc3f37b0d2ab55df1bb5df7cc9e9289cbc383ea0f4c4c",
+    "source_modified_at": "2026-07-03 19:17:34",
+    "reviewed_at": "2026-07-11T20:09:18-04:00",
+    "ai_result": {
+      "title": "Dundalk: Saturday Morning Pre-Party Paddle",
+      "summary": "Join Michelle and Rob for a laid-back, beginner-friendly paddle around Dundalk at a slow-moderate pace.",
+      "notice": false
+    }
+  },
+  "247249": {
+    "fingerprint": "dd6cff7ce20bef36cdb625e34060c7d3c7c42126112e41064884e5ff782a1397",
+    "source_modified_at": "2026-06-22 14:05:37",
+    "reviewed_at": "2026-07-11T20:09:18-04:00",
+    "ai_result": {
+      "title": "Dundalk: Going Away Party for Ray & Allen",
+      "summary": "Farewell celebration for the club's President and Treasurer on the water at Hard Yacht Cafe.",
+      "notice": false
+    }
+  },
+  "247487": {
+    "fingerprint": "7a7295dbdf186f2d52156df90bc65fd69080b3bf9ddd60f4b90f57ba1efe8e7a",
+    "source_modified_at": "2026-07-10 22:36:46",
+    "reviewed_at": "2026-07-11T20:09:18-04:00",
+    "ai_result": {
+      "title": "BMore Peninsula: Intermediate-level paddle to Nick's Fish House",
+      "summary": "Join Colleen for a paddle brunch to Nick's Fish House, departing from the Baltimore Peninsula dock.",
+      "notice": false
+    }
+  },
+  "247351": {
+    "fingerprint": "1598847acfc4a70209e2b110b787599b5c4acd11465cb1f253c3c8acb9ed9098",
+    "source_modified_at": "2026-07-03 19:02:35",
+    "reviewed_at": "2026-07-11T20:09:18-04:00",
+    "ai_result": {
+      "title": "Solleys Cove: Ghost Ships and Brunch",
+      "summary": "A 5-mile paddle to see ghost ships and enjoy brunch at Ramshead Dockside.",
+      "notice": false
+    }
+  },
+  "247408": {
+    "fingerprint": "d01c9f74c9ab70dab0c04e2f34b42e43454996cd2f72875901691ca201ed108a",
+    "source_modified_at": "2026-07-05 12:31:17",
+    "reviewed_at": "2026-07-11T20:09:18-04:00",
+    "ai_result": {
+      "title": "Fells Point: Kayak availability may be limited",
+      "summary": "New-member orientation will use club kayaks, limiting availability for other members.",
+      "notice": true
+    }
+  },
+  "247536": {
+    "fingerprint": "2795970397c09003a6fa61bf0c9bb65b2201af16a4545352b19f61ce402171f8",
+    "source_modified_at": "2026-07-09 13:26:19",
+    "reviewed_at": "2026-07-11T20:09:18-04:00",
+    "ai_result": {
+      "title": "Delta: Paddle Pals",
+      "summary": "Explore the Conowingo Islands & Muddy Creek with Ricardo S. Expect an exploratory pace and distance between 5 – 8 miles.",
+      "notice": false
+    }
+  },
+  "247357": {
+    "fingerprint": "55bfb8d8509abc8ef0e496d0fa555ee42a668c29832b888c4f11f8b3cd0f1775",
+    "source_modified_at": "2026-07-03 19:29:41",
+    "reviewed_at": "2026-07-11T20:09:18-04:00",
+    "ai_result": {
+      "title": "Dundalk: Taco Tuesday Paddle",
+      "summary": "Join Michelle for a laid-back paddle around Dundalk with a beginner-friendly pace, followed by Taco Tuesday at The Hard Yacht Café.",
+      "notice": false
+    }
+  },
+  "247331": {
+    "fingerprint": "7c02a9b922d9b85ff048c795eef5c42c3c23ca0005feb9cc77a3fab8c6b8fee4",
+    "source_modified_at": "2026-07-11 19:25:15",
+    "reviewed_at": "2026-07-11T20:09:18-04:00",
+    "ai_result": {
+      "title": "Delta: Rescue Training",
+      "summary": "Learn and practice rescue skills such as wet exit, partner rescue, self-rescue, and emptying a kayak.",
+      "notice": false
+    }
+  },
+  "247362": {
+    "fingerprint": "e78628672e23c63eb729bd045afc270c89a5d0ac75f35f37bcbce002087c4c99",
+    "source_modified_at": "2026-07-04 14:16:24",
+    "reviewed_at": "2026-07-11T20:09:18-04:00",
+    "ai_result": {
+      "title": "Havre de Grace: Paddle to the Lighthouse",
+      "summary": "Explore Havre de Grace's open water and scenic views with Michelle.",
+      "notice": false
+    }
+  }
+}

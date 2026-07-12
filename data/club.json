@@ -1,0 +1,131 @@
+{
+  "club": {
+    "icon": "🛶",
+    "label": "Club",
+    "detail": "9 upcoming events",
+    "items": [
+      {
+        "event_id": 247354,
+        "title": "Dundalk: Saturday Morning Pre-Party Paddle",
+        "summary": "Join Michelle and Rob for a laid-back, beginner-friendly paddle around Dundalk at a slow-moderate pace.",
+        "notice": false,
+        "location": "Anchor Bay East Marina (Hard Yacht Cafe) – Bear Creek",
+        "address": "8500 Cove Rd",
+        "starts_at": "2026-07-11T10:00:00-04:00",
+        "ends_at": "2026-07-11T12:30:00-04:00",
+        "source_modified_at": "2026-07-03 19:17:34",
+        "reviewed_at": "2026-07-11T20:09:18-04:00",
+        "source_url": "https://cantonkayakclub.com/event/paddle-palssaturday-morning-pre-party-paddle-july-11-10am-to-1230pm-anchor-bay-east-w-michelle-s-and-rob-b/"
+      },
+      {
+        "event_id": 247249,
+        "title": "Dundalk: Going Away Party for Ray & Allen",
+        "summary": "Farewell celebration for the club's President and Treasurer on the water at Hard Yacht Cafe.",
+        "notice": false,
+        "location": "Hard Yacht Cafe",
+        "address": "8500 Cove Road",
+        "starts_at": "2026-07-11T13:00:00-04:00",
+        "ends_at": "2026-07-11T15:00:00-04:00",
+        "source_modified_at": "2026-06-22 14:05:37",
+        "reviewed_at": "2026-07-11T20:09:18-04:00",
+        "source_url": "https://cantonkayakclub.com/event/going-away-party-for-ray-allen-saturday-7-11-1-3pm-hard-yacht-cafe/"
+      },
+      {
+        "event_id": 247487,
+        "title": "BMore Peninsula: Intermediate-level paddle to Nick's Fish House",
+        "summary": "Join Colleen for a paddle brunch to Nick's Fish House, departing from the Baltimore Peninsula dock.",
+        "notice": false,
+        "location": "BMore Peninsula – Port Covington Marina – The Cove",
+        "address": "225 East Cromwell Street",
+        "starts_at": "2026-07-12T09:00:00-04:00",
+        "ends_at": "2026-07-12T11:00:00-04:00",
+        "source_modified_at": "2026-07-10 22:36:46",
+        "reviewed_at": "2026-07-11T20:09:18-04:00",
+        "source_url": "https://cantonkayakclub.com/event/pop-up-paddle-palkayaking-crabs-and-crushes-w-colleen-sunday-july-12-9-11am/"
+      },
+      {
+        "event_id": 247351,
+        "title": "Solleys Cove: Ghost Ships and Brunch",
+        "summary": "A 5-mile paddle to see ghost ships and enjoy brunch at Ramshead Dockside.",
+        "notice": false,
+        "location": "Solleys Cove",
+        "address": "7360 Carbide Rd21226",
+        "starts_at": "2026-07-12T10:00:00-04:00",
+        "ends_at": "2026-07-12T13:00:00-04:00",
+        "source_modified_at": "2026-07-03 19:02:35",
+        "reviewed_at": "2026-07-11T20:09:18-04:00",
+        "source_url": "https://cantonkayakclub.com/event/paddle-pal-solleys-cove-ghost-ships-and-brunch-w-lisa-m-sunday-july-12-10am-1pm/"
+      },
+      {
+        "event_id": 247408,
+        "title": "Fells Point: Kayak availability may be limited",
+        "summary": "New-member orientation will use club kayaks, limiting availability for other members.",
+        "notice": true,
+        "location": "Fells Point",
+        "address": "Bond Street Wharf​",
+        "starts_at": "2026-07-12T15:00:00-04:00",
+        "ends_at": "2026-07-12T18:00:00-04:00",
+        "source_modified_at": "2026-07-05 12:31:17",
+        "reviewed_at": "2026-07-11T20:09:18-04:00",
+        "source_url": "https://cantonkayakclub.com/event/ckc-orientation-training-22-sun-pm-07-12-26-from-300-600p-at-fells-point/"
+      },
+      {
+        "event_id": 247536,
+        "title": "Delta: Paddle Pals",
+        "summary": "Explore the Conowingo Islands & Muddy Creek with Ricardo S. Expect an exploratory pace and distance between 5 – 8 miles.",
+        "notice": false,
+        "location": "Delta, PA",
+        "address": "497 Cold Cabin Road",
+        "starts_at": "2026-07-13T10:30:00-04:00",
+        "ends_at": "2026-07-13T16:30:00-04:00",
+        "source_modified_at": "2026-07-09 13:26:19",
+        "reviewed_at": "2026-07-11T20:09:18-04:00",
+        "source_url": "https://cantonkayakclub.com/event/paddle-palsdelta-with-ricardo-s-monday-july-13-1030-am-4sh-pm-explore-the-conowingo-islands-muddy-creek/"
+      },
+      {
+        "event_id": 247357,
+        "title": "Dundalk: Taco Tuesday Paddle",
+        "summary": "Join Michelle for a laid-back paddle around Dundalk with a beginner-friendly pace, followed by Taco Tuesday at The Hard Yacht Café.",
+        "notice": false,
+        "location": "Anchor Bay East Marina (Hard Yacht Cafe) – Bear Creek",
+        "address": "8500 Cove Rd",
+        "starts_at": "2026-07-14T17:00:00-04:00",
+        "ends_at": "2026-07-14T19:00:00-04:00",
+        "source_modified_at": "2026-07-03 19:29:41",
+        "reviewed_at": "2026-07-11T20:09:18-04:00",
+        "source_url": "https://cantonkayakclub.com/event/paddle-palstaco-tuesday-paddle-july-14-5-pm-to-7-pm-anchor-bay-east-w-michelle-s-it-would/"
+      },
+      {
+        "event_id": 247331,
+        "title": "Delta: Rescue Training",
+        "summary": "Learn and practice rescue skills such as wet exit, partner rescue, self-rescue, and emptying a kayak.",
+        "notice": false,
+        "location": "Delta, PA",
+        "address": "497 Cold Cabin Road",
+        "starts_at": "2026-07-18T09:00:00-04:00",
+        "ends_at": "2026-07-18T12:00:00-04:00",
+        "source_modified_at": "2026-07-11 19:25:15",
+        "reviewed_at": "2026-07-11T20:09:18-04:00",
+        "source_url": "https://cantonkayakclub.com/event/01-canton-kayak-club-rescue-training-sat-morning-7-18-900-1200p-at-delta-pa-first-one-for-the-season/"
+      },
+      {
+        "event_id": 247362,
+        "title": "Havre de Grace: Paddle to the Lighthouse",
+        "summary": "Explore Havre de Grace's open water and scenic views with Michelle.",
+        "notice": false,
+        "location": "Havre de Grace",
+        "address": "100 Congress AVe, havre de grace, md 21078",
+        "starts_at": "2026-07-18T09:00:00-04:00",
+        "ends_at": "2026-07-18T12:00:00-04:00",
+        "source_modified_at": "2026-07-04 14:16:24",
+        "reviewed_at": "2026-07-11T20:09:18-04:00",
+        "source_url": "https://cantonkayakclub.com/event/paddle-palssaturday-july-18-9-am-to-noon-havre-de-grace-w-michelle-s/"
+      }
+    ],
+    "source": {
+      "label": "Canton Kayak Club",
+      "url": "https://cantonkayakclub.com/events/"
+    },
+    "reviewed_at": "2026-07-11T20:09:18-04:00"
+  }
+}
