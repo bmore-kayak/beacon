@@ -10,7 +10,13 @@ async function main() {
   document.getElementById("note").textContent = data.note;
 
   document.getElementById("updated").textContent =
-    `Last updated ${data.updated}`;
+    `Updated ${formatUpdatedTime(data.updated)}`;
+
+  const appLocation = document.getElementById("app-location");
+
+  if (appLocation) {
+    appLocation.textContent = data.location;
+  }
 
   const container = document.getElementById("conditions");
   container.innerHTML = "";
@@ -108,6 +114,7 @@ function renderAdvisories(items = []) {
       ${items.map(item => `
         <div class="advisory-item">
           <span>${item.event}</span>
+
           ${item.ends
             ? `<span>Until ${formatTime(item.ends)}</span>`
             : ""}
@@ -120,29 +127,37 @@ function renderAdvisories(items = []) {
 
 function renderClubNotices(items = []) {
   if (!items.length) {
-    return `<div class="expanded-empty">No upcoming club events.</div>`;
+    return `
+      <div class="expanded-empty">
+        No upcoming club events.
+      </div>
+    `;
   }
 
   return `
-    <div class="advisory-list">
+    <div class="club-event-list">
       ${items.map(item => `
-        <div class="advisory-item">
-          <div>
-            <strong>${item.notice ? "🟡 " : ""}${item.title}</strong><br>
-            ${item.summary}<br>
-            <small>
-              ${formatEventWindow(item.starts_at, item.ends_at)}
-            </small>
+        <a
+          class="club-event-item ${item.notice ? "club-event-notice" : ""}"
+          href="${item.source_url}"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="club-event-title">
+            ${item.notice ? "🟡 " : ""}${item.title}
           </div>
 
-          <a
-            href="${item.source_url}"
-            target="_blank"
-            rel="noopener"
-          >
-            ↗
-          </a>
-        </div>
+          <div class="club-event-summary">
+            ${item.summary}
+          </div>
+
+          <div class="club-event-time">
+            ${formatEventWindow(
+              item.starts_at,
+              item.ends_at
+            )}
+          </div>
+        </a>
       `).join("")}
     </div>
   `;
@@ -179,7 +194,9 @@ function renderStations(stations = []) {
             ${open ? "open" : ""}
           >
             <summary class="station-region-summary">
-              <span class="station-region-label">${region}</span>
+              <span class="station-region-label">
+                ${region}
+              </span>
 
               <span class="station-region-status">
                 ${summary.status}
@@ -196,7 +213,9 @@ function renderStations(stations = []) {
               ${regionStations.map(station => `
                 <div class="station">
                   <div class="station-info">
-                    <div class="station-name">${station.site}</div>
+                    <div class="station-name">
+                      ${station.site}
+                    </div>
 
                     <div class="station-date">
                       ${station.date
@@ -206,7 +225,8 @@ function renderStations(stations = []) {
                   </div>
 
                   <div class="station-reading">
-                    ${station.status} ${station.bacteria ?? "—"} MPN
+                    ${station.status}
+                    ${station.bacteria ?? "—"} MPN
                   </div>
                 </div>
               `).join("")}
@@ -233,7 +253,9 @@ function summarizeRegion(stations) {
   }
 
   const counts = current.map(station => station.bacteria);
-  const failing = current.some(station => station.status === "🔴");
+  const failing = current.some(
+    station => station.status === "🔴"
+  );
 
   return {
     status: failing ? "🔴" : "🟢",
@@ -243,7 +265,9 @@ function summarizeRegion(stations) {
 
 
 function regionIsOpen(region) {
-  const saved = localStorage.getItem(`beacon-region-${region}`);
+  const saved = localStorage.getItem(
+    `beacon-region-${region}`
+  );
 
   if (saved !== null) {
     return saved === "open";
@@ -253,10 +277,25 @@ function regionIsOpen(region) {
 }
 
 
-
 function renderSource(key, source) {
   if (!source) {
     return "";
+  }
+
+  if (source.label && source.url) {
+    return `
+      <div class="detail-footer">
+        <div>
+          <a
+            href="${source.url}"
+            target="_blank"
+            rel="noopener"
+          >
+            ${source.label}
+          </a>
+        </div>
+      </div>
+    `;
   }
 
   const providers = source.provider
@@ -265,14 +304,21 @@ function renderSource(key, source) {
 
   return `
     <div class="detail-footer">
-      ${source.location ? `<div>${source.location}</div>` : ""}
+      ${source.location
+        ? `<div>${source.location}</div>`
+        : ""}
 
       ${providers.map(provider => `
         <div>${provider}</div>
       `).join("")}
 
       ${source.updated
-        ? `<div>${key === "bacteria" ? "Latest sample" : "Updated"} ${formatDate(source.updated)}</div>`
+        ? `
+          <div>
+            ${key === "bacteria" ? "Latest sample" : "Updated"}
+            ${formatDate(source.updated)}
+          </div>
+        `
         : ""}
     </div>
   `;
@@ -314,37 +360,59 @@ function formatTime(value) {
 }
 
 
-function formatEventWindow(start, end) {
-  const s = new Date(start);
-  const e = new Date(end);
+function formatEventWindow(startValue, endValue) {
+  const start = new Date(startValue);
+  const end = new Date(endValue);
 
-  return `${s.toLocaleDateString([], {
+  const date = start.toLocaleDateString([], {
     weekday: "short",
     month: "short",
     day: "numeric",
-  })} · ${s.toLocaleTimeString([], {
+  });
+
+  const startTime = start.toLocaleTimeString([], {
     hour: "numeric",
     minute: "2-digit",
-  })}–${e.toLocaleTimeString([], {
+  });
+
+  const endTime = end.toLocaleTimeString([], {
     hour: "numeric",
     minute: "2-digit",
-  })}`;
+  });
+
+  return `${date} · ${startTime}–${endTime}`;
 }
 
 
-document.addEventListener("toggle", event => {
-  const details = event.target;
+function formatUpdatedTime(value) {
+  const date = new Date(value);
 
-  if (!details.matches(".station-region")) {
-    return;
-  }
+  return date.toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+    timeZoneName: "short",
+  });
+}
 
-  const region = details.dataset.region;
 
-  localStorage.setItem(
-    `beacon-region-${region}`,
-    details.open ? "open" : "closed"
-  );
-}, true);
+document.addEventListener(
+  "toggle",
+  event => {
+    const details = event.target;
+
+    if (!details.matches(".station-region")) {
+      return;
+    }
+
+    const region = details.dataset.region;
+
+    localStorage.setItem(
+      `beacon-region-${region}`,
+      details.open ? "open" : "closed"
+    );
+  },
+  true
+);
+
 
 main();
