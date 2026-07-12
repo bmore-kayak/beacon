@@ -197,15 +197,15 @@ function renderStations(stations = []) {
               <span class="station-region-label">
                 ${region}
               </span>
-
-              <span class="station-region-status">
-                ${summary.status}
-              </span>
-
+            
               <span class="station-region-range">
                 ${summary.detail}
               </span>
-
+            
+              <span class="station-region-status">
+                ${summary.status}
+              </span>
+            
               <span class="region-chevron">▾</span>
             </summary>
 
