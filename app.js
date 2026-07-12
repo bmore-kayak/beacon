@@ -191,32 +191,33 @@ function renderWindDetails(condition) {
 
   return `
     <div class="wind-details">
-      <div class="wind-detail-direction">
-        ${direction != null ? windArrow(direction) : ""}
+      <div class="wind-detail-item">
+        <div class="wind-detail-label">Direction</div>
 
-        <div>
-          <div class="wind-detail-label">Direction</div>
-          <div class="wind-detail-value">
+        <div class="wind-direction-value">
+          ${direction != null ? windArrow(direction) : ""}
+
+          <span>
             ${direction != null
               ? `${cardinalDirection(direction)} · ${Math.round(direction)}°`
               : "Unavailable"}
-          </div>
+          </span>
         </div>
       </div>
 
-      <div class="wind-detail-grid">
-        <div>
-          <div class="wind-detail-label">Wind</div>
-          <div class="wind-detail-value">
-            ${condition.speed_kt ?? "—"} kt
-          </div>
-        </div>
+      <div class="wind-detail-item">
+        <div class="wind-detail-label">Sustained</div>
 
-        <div>
-          <div class="wind-detail-label">Gusts</div>
-          <div class="wind-detail-value">
-            ${condition.gust_kt ?? "—"} kt
-          </div>
+        <div class="wind-detail-value">
+          ${condition.speed_kt ?? "—"} kt
+        </div>
+      </div>
+
+      <div class="wind-detail-item">
+        <div class="wind-detail-label">Gusts</div>
+
+        <div class="wind-detail-value">
+          ${condition.gust_kt ?? "—"} kt
         </div>
       </div>
     </div>
