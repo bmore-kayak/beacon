@@ -970,7 +970,7 @@ def overall_status(conditions):
     if "🟡" in statuses:
         return {"status": "🟡", "label": "Heads up"}
 
-    return {"status": "🟢", "label": "Good conditions"}
+    return {"status": "🟢", "label": "Looks good"}
 
 
 def note(conditions, water, club_notes):
