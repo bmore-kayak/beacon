@@ -143,8 +143,16 @@ function renderClubNotices(items = []) {
           target="_blank"
           rel="noopener"
         >
-          <div class="club-event-title">
-            ${item.notice ? "🟡 " : ""}${item.title}
+          <div class="club-event-header">
+            <div class="club-event-title">
+              ${item.title}
+            </div>
+
+            ${
+              item.notice
+                ? `<div class="club-event-status">🟡</div>`
+                : ""
+            }
           </div>
 
           <div class="club-event-summary">
