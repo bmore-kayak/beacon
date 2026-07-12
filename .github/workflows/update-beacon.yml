@@ -19,9 +19,12 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: python scripts/update.py
+      - name: Update Beacon data
+        run: python scripts/update.py
         env:
           CBIBS_API_KEY: ${{ secrets.CBIBS_API_KEY }}
+          CF_ACCT_ID: ${{ secrets.CF_ACCT_ID }}
+          CF_AI_WORKERS: ${{ secrets.CF_AI_WORKERS }}
 
       - name: Commit updated data
         run: |
