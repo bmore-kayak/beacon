@@ -75,5 +75,16 @@
       "title": "Havre de Grace: Paddle to the Lighthouse and the Bay",
       "summary": "Join Michelle for a paddle to the Lighthouse and the Bay in Havre de Grace."
     }
+  },
+  "247369": {
+    "prompt_version": 1,
+    "fingerprint": "c3a943e166288f1107c830e182d13d94079d805435e413a3da848c5d8c30d7eb",
+    "source_modified_at": "2026-07-04 14:27:31",
+    "reviewed_at": "2026-07-12T00:00:39-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Susquehanna River: Intermediate-level paddle",
+      "summary": "Join Katie for an intermediate-level paddle on the Susquehanna River, exploring Muddy Creek and river islands."
+    }
   }
 }

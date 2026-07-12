@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-07-11T23:43:56-04:00",
+  "updated": "2026-07-12T00:00:44-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -20,46 +20,46 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-11T23:43:54.556198-04:00"
+        "updated": "2026-07-12T00:00:39.965785-04:00"
       }
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Storm risk 11 PM\u20131 AM",
-      "starts": "2026-07-11T23:00:00-04:00",
+      "detail": "Storm risk 12 AM\u20131 AM",
+      "starts": "2026-07-12T00:00:00-04:00",
       "ends": "2026-07-12T01:00:00-04:00",
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-11T23:00:00-04:00"
+        "updated": "2026-07-12T00:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "11 kt, gusts 13",
-      "speed_kt": 11,
-      "gust_kt": 13,
-      "direction_deg": 84.3,
+      "detail": "8 kt, gusts 11",
+      "speed_kt": 8,
+      "gust_kt": 11,
+      "direction_deg": 79.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T23:43:54.556233-04:00"
+        "updated": "2026-07-12T00:00:39.965820-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T23:43:54.556250-04:00"
+        "updated": "2026-07-12T00:00:39.965836-04:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T23:43:54.556312-04:00"
+        "updated": "2026-07-12T00:00:39.965894-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T23:43:54.556319-04:00"
+        "updated": "2026-07-12T00:00:39.965901-04:00"
       }
     },
     "bacteria": {
@@ -738,8 +738,8 @@
     "club_notices": {
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
-      "status": "\u26aa",
-      "detail": "1 notice \u00b7 7 upcoming events",
+      "status": "\ud83d\udfe1",
+      "detail": "Fells Point: Kayak availability may be limited",
       "items": [
         {
           "event_id": 247487,
@@ -831,14 +831,27 @@
           "source_modified_at": "2026-07-04 14:16:24",
           "reviewed_at": "2026-07-11T22:27:53-04:00",
           "source_url": "https://cantonkayakclub.com/event/paddle-palssaturday-july-18-9-am-to-noon-havre-de-grace-w-michelle-s/"
+        },
+        {
+          "event_id": 247369,
+          "title": "Susquehanna River: Intermediate-level paddle",
+          "summary": "Join Katie for an intermediate-level paddle on the Susquehanna River, exploring Muddy Creek and river islands.",
+          "notice": false,
+          "location": null,
+          "address": null,
+          "starts_at": "2026-07-19T10:00:00-04:00",
+          "ends_at": "2026-07-19T13:00:00-04:00",
+          "source_modified_at": "2026-07-04 14:27:31",
+          "reviewed_at": "2026-07-12T00:00:39-04:00",
+          "source_url": "https://cantonkayakclub.com/event/paddle-paldelta-paddle-w-katie-l-sunday-july-19-10am-1pm/"
         }
       ],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-11T23:43:54-04:00"
+      "checked_at": "2026-07-12T00:00:39-04:00"
     }
   },
-  "note": "Storm risk 11 PM\u20131 AM."
+  "note": "Storm risk 12 AM\u20131 AM.\nFells Point: Kayak availability may be limited \u00b7 3 PM\u20136 PM"
 }
