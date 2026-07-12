@@ -135,9 +135,6 @@ h1 {
   min-width: 0;
   text-align: right;
   color: color-mix(in srgb, CanvasText 78%, Canvas);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .chevron {
@@ -453,6 +450,12 @@ h1 {
 
   .condition-details {
     padding-left: 1rem;
+  }
+
+  .condition-detail {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .club-event-item {
