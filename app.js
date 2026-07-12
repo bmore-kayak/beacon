@@ -88,6 +88,10 @@ function renderDetails(key, condition) {
     content += renderStations(condition.stations);
   }
 
+  if (key === "club_notices") {
+    content += renderClubNotices(condition.items);
+  }
+
   content += renderSource(key, condition.source);
 
   return content;
@@ -107,6 +111,37 @@ function renderAdvisories(items = []) {
           ${item.ends
             ? `<span>Until ${formatTime(item.ends)}</span>`
             : ""}
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+
+function renderClubNotices(items = []) {
+  if (!items.length) {
+    return `<div class="expanded-empty">No upcoming club events.</div>`;
+  }
+
+  return `
+    <div class="advisory-list">
+      ${items.map(item => `
+        <div class="advisory-item">
+          <div>
+            <strong>${item.notice ? "🟡 " : ""}${item.title}</strong><br>
+            ${item.summary}<br>
+            <small>
+              ${formatEventWindow(item.starts_at, item.ends_at)}
+            </small>
+          </div>
+
+          <a
+            href="${item.source_url}"
+            target="_blank"
+            rel="noopener"
+          >
+            ↗
+          </a>
         </div>
       `).join("")}
     </div>
@@ -276,6 +311,24 @@ function formatTime(value) {
     hour: "numeric",
     minute: "2-digit",
   });
+}
+
+
+function formatEventWindow(start, end) {
+  const s = new Date(start);
+  const e = new Date(end);
+
+  return `${s.toLocaleDateString([], {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+  })} · ${s.toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  })}–${e.toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  })}`;
 }
 
 
