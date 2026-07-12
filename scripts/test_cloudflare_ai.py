@@ -10,6 +10,8 @@ from zoneinfo import ZoneInfo
 
 import requests
 
+STATE_FILE = Path("data/club_event_state.json")
+OUTPUT_FILE = Path("data/club.json")
 
 ACCOUNT_ID = os.getenv("CF_ACCT_ID")
 API_TOKEN = os.getenv("CF_AI_WORKERS")
@@ -66,17 +68,27 @@ Fells Point or Bond Street Wharf orientation and training should normally
 be marked as a notice because club kayaks are used during those sessions.
 
 Writing rules:
-- Begin the title with the location when a location is known.
-- Describe the activity or practical effect after the location.
-- Do not include dates or times in the title or summary; they are displayed separately.
-- Do not repeat the full venue name when a shorter location name is clear.
+- When a location is known, begin the title with:
+  "<location>: "
+- Use a short, natural location name rather than the full venue name.
+- If the location cannot be determined, omit the location prefix.
+- After the location, preserve the event's distinguishing activity,
+  theme, or practical effect.
+- Avoid generic duplicate titles such as "Dundalk Paddle Pals."
+- Do not include dates or times in the title or summary; they are
+  displayed separately.
+- Do not begin the summary with "Join."
 - Keep the title under 60 characters.
 - Keep the summary to one short factual sentence under 140 characters.
-- For notices, describe the practical effect on members.
-- For ordinary events, summarize the activity, skill level, or notable destination.
-- Do not include RSVP limits unless they are the main useful detail.
-- Do not use promotional phrases such as "join us," "lovely," or "memorable."
-- Do not invent facts, restrictions, closures, or traffic impacts.
+
+For notice=true:
+- Describe the practical effect on members.
+- Example:
+  title: "Fells Point: Kayak availability may be limited"
+  summary: "New-member orientation will use club kayaks."
+
+For notice=false:
+- Summarize the activity, skill level, route, or destination.
 """.strip()
 
 
@@ -113,6 +125,21 @@ def save_state(state):
         encoding="utf-8",
     )
 
+def save_json(path, data):
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    path.write_text(
+        json.dumps(
+            data,
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
 def parse_local_datetime(value):
     return datetime.strptime(
@@ -453,6 +480,16 @@ latest_fragment = {
     }
 }
 
+save_json(
+    OUTPUT_FILE,
+    latest_fragment,
+)
+
+print()
+print(
+    f"Saved {len(items)} club events to "
+    f"{OUTPUT_FILE}"
+)
 
 print()
 print(
