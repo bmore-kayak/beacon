@@ -48,6 +48,48 @@ function windArrow(direction) {
   `;
 }
 
+function cardinalDirection(degrees) {
+  if (degrees == null) {
+    return "";
+  }
+
+  const directions = [
+    "N",
+    "NNE",
+    "NE",
+    "ENE",
+    "E",
+    "ESE",
+    "SE",
+    "SSE",
+    "S",
+    "SSW",
+    "SW",
+    "WSW",
+    "W",
+    "WNW",
+    "NW",
+    "NNW",
+  ];
+
+  const normalized = ((degrees % 360) + 360) % 360;
+
+  return directions[
+    Math.round(normalized / 22.5) % 16
+  ];
+}
+
+
+function windDirectionLabel(direction) {
+  if (direction == null) {
+    return "";
+  }
+
+  return `
+    ${windArrow(direction)}
+    ${cardinalDirection(direction)} ·
+  `;
+}
 
 function renderCondition(key, condition) {
   const details = document.createElement("details");
@@ -60,7 +102,7 @@ function renderCondition(key, condition) {
       </span>
 
       <span class="condition-detail">
-        ${key === "wind" ? windArrow(condition.direction_deg) : ""}
+        ${key === "wind" ? windDirectionLabel(condition.direction_deg) : ""}
         ${condition.detail}
       </span>
       
@@ -87,6 +129,10 @@ function renderDetails(key, condition) {
     content += renderAdvisories(condition.items);
   }
 
+  if (key === "wind") {
+    content += renderWindDetails(condition);
+  }
+
   if (key === "rainfall" && condition.message) {
     content += `
       <div class="expanded-note">
@@ -104,7 +150,7 @@ function renderDetails(key, condition) {
   }
 
   if (
-    !["advisories", "rainfall", "bacteria", "club_notices"].includes(key) &&
+    !["advisories", "wind", "rainfall", "bacteria", "club_notices"].includes(key) &&
     condition.detail
   ) {
     content += `
@@ -140,6 +186,42 @@ function renderAdvisories(items = []) {
   `;
 }
 
+function renderWindDetails(condition) {
+  const direction = condition.direction_deg;
+
+  return `
+    <div class="wind-details">
+      <div class="wind-detail-direction">
+        ${direction != null ? windArrow(direction) : ""}
+
+        <div>
+          <div class="wind-detail-label">Direction</div>
+          <div class="wind-detail-value">
+            ${direction != null
+              ? `${cardinalDirection(direction)} · ${Math.round(direction)}°`
+              : "Unavailable"}
+          </div>
+        </div>
+      </div>
+
+      <div class="wind-detail-grid">
+        <div>
+          <div class="wind-detail-label">Wind</div>
+          <div class="wind-detail-value">
+            ${condition.speed_kt ?? "—"} kt
+          </div>
+        </div>
+
+        <div>
+          <div class="wind-detail-label">Gusts</div>
+          <div class="wind-detail-value">
+            ${condition.gust_kt ?? "—"} kt
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
 
 function renderClubNotices(items = []) {
   if (!items.length) {
