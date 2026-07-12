@@ -376,18 +376,16 @@ def validate_ai_result(result):
 
 
 def is_today(starts_at, ends_at, now):
-    start_of_day = now.replace(
+    end_of_day = now.replace(
         hour=0,
         minute=0,
         second=0,
         microsecond=0,
-    )
-
-    end_of_day = start_of_day + timedelta(days=1)
+    ) + timedelta(days=1)
 
     return (
         starts_at < end_of_day
-        and ends_at >= start_of_day
+        and ends_at >= now
     )
 
 
@@ -437,33 +435,39 @@ def get_club_notices(now=None):
     items = []
     active_ids = set()
 
+    
     for raw in raw_events:
         event = normalize_event(raw)
         event_id = str(event["event_id"])
+    
+        starts_at = parse_local_datetime(event["start"])
+        ends_at = parse_local_datetime(event["end"])
+    
+        # Ignore events that have already ended.
+        if ends_at <= now:
+            continue
+    
         active_ids.add(event_id)
-
+    
         fingerprint = event_fingerprint(event)
         saved = state.get(event_id)
-
+    
         cache_valid = (
             saved
             and saved.get("fingerprint") == fingerprint
-            and saved.get("prompt_version")
-            == PROMPT_VERSION
-            and isinstance(
-                saved.get("ai_result"),
-                dict,
-            )
+            and saved.get("prompt_version") == PROMPT_VERSION
+            and isinstance(saved.get("ai_result"), dict)
         )
-
+    
         if cache_valid:
             ai_result = saved["ai_result"]
-
+    
         else:
             try:
                 ai_result = validate_ai_result(
                     classify_event(event)
                 )
+    
             except (
                 requests.RequestException,
                 RuntimeError,
@@ -479,52 +483,33 @@ def get_club_notices(now=None):
                     ai_result = saved["ai_result"]
                 else:
                     continue
-
+    
             state[event_id] = {
                 "prompt_version": PROMPT_VERSION,
                 "fingerprint": fingerprint,
-                "source_modified_at": (
-                    event["modified_utc"]
-                ),
+                "source_modified_at": event["modified_utc"],
                 "reviewed_at": now.isoformat(
                     timespec="seconds"
                 ),
                 "ai_result": ai_result,
             }
-
-        starts_at = parse_local_datetime(
-            event["start"]
-        )
-        ends_at = parse_local_datetime(
-            event["end"]
-        )
-
+    
         items.append(
             {
                 "event_id": event["event_id"],
                 "title": ai_result["title"],
                 "summary": ai_result["summary"],
                 "notice": ai_result["notice"],
-                "location": (
-                    event["venue"]["name"]
-                    or None
-                ),
-                "address": (
-                    event["venue"]["address"]
-                    or None
-                ),
+                "location": event["venue"]["name"] or None,
+                "address": event["venue"]["address"] or None,
                 "starts_at": starts_at.isoformat(
                     timespec="seconds"
                 ),
                 "ends_at": ends_at.isoformat(
                     timespec="seconds"
                 ),
-                "source_modified_at": (
-                    event["modified_utc"]
-                ),
-                "reviewed_at": state[event_id][
-                    "reviewed_at"
-                ],
+                "source_modified_at": event["modified_utc"],
+                "reviewed_at": state[event_id]["reviewed_at"],
                 "source_url": event["url"],
             }
         )
@@ -568,25 +553,30 @@ def get_club_notices(now=None):
     if today_notices:
         status = "🟡"
         detail = today_notices[0]["title"]
+    
     elif upcoming_notices:
         status = "⚪"
-        count = len(upcoming_notices)
+    
+        notice_count = len(upcoming_notices)
+        event_count = len(items)
+    
         detail = (
-            "1 upcoming club notice"
-            if count == 1
-            else f"{count} upcoming club notices"
+            f"{notice_count} notice"
+            f"{'s' if notice_count != 1 else ''}"
+            f" · {event_count} upcoming events"
         )
+    
     elif items:
         status = "⚪"
-        count = len(items)
         detail = (
-            "1 upcoming club event"
-            if count == 1
-            else f"{count} upcoming club events"
+            "1 upcoming event"
+            if len(items) == 1
+            else f"{len(items)} upcoming events"
         )
+    
     else:
         status = "⚪"
-        detail = "No upcoming club events"
+        detail = "No upcoming events"
 
     note_lines = []
 
