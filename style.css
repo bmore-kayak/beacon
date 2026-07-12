@@ -492,4 +492,17 @@ h1 {
   .station-reading {
     font-size: 0.84rem;
   }
+  
+  .club-event-title {
+    font-size: 0.88rem;
+    font-weight: 500;
+  }
+
+  .club-event-summary {
+    font-size: 0.82rem;
+  }
+
+  .club-event-time {
+    font-size: 0.75rem;
+  }
 }
