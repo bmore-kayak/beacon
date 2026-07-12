@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-07-11 06:38 PM EDT",
+  "updated": "2026-07-11 10:27 PM EDT",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -20,68 +20,68 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-11T18:38:30.379029-04:00"
+        "updated": "2026-07-11T22:27:53.950919-04:00"
       }
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Storm risk 6 PM\u20131 AM",
-      "starts": "2026-07-11T18:00:00-04:00",
+      "detail": "Storm risk 10 PM\u20131 AM",
+      "starts": "2026-07-11T22:00:00-04:00",
       "ends": "2026-07-12T01:00:00-04:00",
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-11T18:00:00-04:00"
+        "updated": "2026-07-11T22:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe2",
-      "detail": "5 kt, gusts 6",
-      "speed_kt": 5,
-      "gust_kt": 6,
-      "direction_deg": 117.6,
+      "status": "\ud83d\udfe0",
+      "detail": "11 kt, gusts 14",
+      "speed_kt": 11,
+      "gust_kt": 14,
+      "direction_deg": 82.8,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T18:38:30.379055-04:00"
+        "updated": "2026-07-11T22:27:53.950947-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.4 ft",
-      "height_ft": 0.4,
+      "detail": "0.3 ft",
+      "height_ft": 0.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T18:38:30.379070-04:00"
+        "updated": "2026-07-11T22:27:53.950963-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "84\u00b0F",
+      "detail": "76\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T18:38:30.379131-04:00"
+        "updated": "2026-07-11T22:27:53.951022-04:00"
       }
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
       "status": "\ud83d\udfe2",
-      "detail": "83\u00b0F",
+      "detail": "82\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-11T18:38:30.379138-04:00"
+        "updated": "2026-07-11T22:27:53.951029-04:00"
       }
     },
     "bacteria": {
@@ -734,7 +734,111 @@
           "longitude": -76.523868
         }
       ]
+    },
+    "club_notices": {
+      "icon": "\ud83d\udef6",
+      "label": "Club Notices",
+      "status": "\u26aa",
+      "detail": "1 notice \u00b7 7 upcoming events",
+      "items": [
+        {
+          "event_id": 247487,
+          "title": "Bmore Peninsula: Paddle to Nick's Fish House",
+          "summary": "Join Colleen for an intermediate-level paddle to Nick's Fish House for brunch.",
+          "notice": false,
+          "location": "BMore Peninsula \u2013 Port Covington Marina \u2013 The Cove",
+          "address": "225 East Cromwell Street",
+          "starts_at": "2026-07-12T09:00:00-04:00",
+          "ends_at": "2026-07-12T11:00:00-04:00",
+          "source_modified_at": "2026-07-10 22:36:46",
+          "reviewed_at": "2026-07-11T22:27:53-04:00",
+          "source_url": "https://cantonkayakclub.com/event/pop-up-paddle-palkayaking-crabs-and-crushes-w-colleen-sunday-july-12-9-11am/"
+        },
+        {
+          "event_id": 247351,
+          "title": "Solley's Cove: Ghost Ships and Brunch",
+          "summary": "Join Lisa for a 5-mile paddle to see ghost ships and enjoy brunch at Ramshead Dockside.",
+          "notice": false,
+          "location": "Solleys Cove",
+          "address": "7360 Carbide Rd21226",
+          "starts_at": "2026-07-12T10:00:00-04:00",
+          "ends_at": "2026-07-12T13:00:00-04:00",
+          "source_modified_at": "2026-07-03 19:02:35",
+          "reviewed_at": "2026-07-11T22:27:53-04:00",
+          "source_url": "https://cantonkayakclub.com/event/paddle-pal-solleys-cove-ghost-ships-and-brunch-w-lisa-m-sunday-july-12-10am-1pm/"
+        },
+        {
+          "event_id": 247408,
+          "title": "Fells Point: Kayak availability may be limited",
+          "summary": "New-member orientation will use club kayaks.",
+          "notice": true,
+          "location": "Fells Point",
+          "address": "Bond Street Wharf\u200b",
+          "starts_at": "2026-07-12T15:00:00-04:00",
+          "ends_at": "2026-07-12T18:00:00-04:00",
+          "source_modified_at": "2026-07-05 12:31:17",
+          "reviewed_at": "2026-07-11T22:27:53-04:00",
+          "source_url": "https://cantonkayakclub.com/event/ckc-orientation-training-22-sun-pm-07-12-26-from-300-600p-at-fells-point/"
+        },
+        {
+          "event_id": 247536,
+          "title": "Delta: Explore the Conowingo Islands & Muddy Creek",
+          "summary": "Join an exploratory paddle with Ricardo S. covering 5-8 miles.",
+          "notice": false,
+          "location": "Delta, PA",
+          "address": "497 Cold Cabin Road",
+          "starts_at": "2026-07-13T10:30:00-04:00",
+          "ends_at": "2026-07-13T16:30:00-04:00",
+          "source_modified_at": "2026-07-09 13:26:19",
+          "reviewed_at": "2026-07-11T22:27:53-04:00",
+          "source_url": "https://cantonkayakclub.com/event/paddle-palsdelta-with-ricardo-s-monday-july-13-1030-am-4sh-pm-explore-the-conowingo-islands-muddy-creek/"
+        },
+        {
+          "event_id": 247357,
+          "title": "Dundalk: Paddle around Dundalk",
+          "summary": "Join Michelle for a laid-back two-hour paddle at a beginner-friendly slow-moderate pace.",
+          "notice": false,
+          "location": "Anchor Bay East Marina (Hard Yacht Cafe) \u2013 Bear Creek",
+          "address": "8500 Cove Rd",
+          "starts_at": "2026-07-14T17:00:00-04:00",
+          "ends_at": "2026-07-14T19:00:00-04:00",
+          "source_modified_at": "2026-07-03 19:29:41",
+          "reviewed_at": "2026-07-11T22:27:53-04:00",
+          "source_url": "https://cantonkayakclub.com/event/paddle-palstaco-tuesday-paddle-july-14-5-pm-to-7-pm-anchor-bay-east-w-michelle-s-it-would/"
+        },
+        {
+          "event_id": 247331,
+          "title": "Delta, PA: Rescue Training",
+          "summary": "Attendees will learn and practice rescue skills such as wet exit, partner rescue, self-rescue, and emptying a kayak.",
+          "notice": false,
+          "location": "Delta, PA",
+          "address": "497 Cold Cabin Road",
+          "starts_at": "2026-07-18T09:00:00-04:00",
+          "ends_at": "2026-07-18T12:00:00-04:00",
+          "source_modified_at": "2026-07-11 19:25:15",
+          "reviewed_at": "2026-07-11T22:27:53-04:00",
+          "source_url": "https://cantonkayakclub.com/event/01-canton-kayak-club-rescue-training-sat-morning-7-18-900-1200p-at-delta-pa-first-one-for-the-season/"
+        },
+        {
+          "event_id": 247362,
+          "title": "Havre de Grace: Paddle to the Lighthouse and the Bay",
+          "summary": "Join Michelle for a paddle to the Lighthouse and the Bay in Havre de Grace.",
+          "notice": false,
+          "location": "Havre de Grace",
+          "address": "100 Congress AVe, havre de grace, md 21078",
+          "starts_at": "2026-07-18T09:00:00-04:00",
+          "ends_at": "2026-07-18T12:00:00-04:00",
+          "source_modified_at": "2026-07-04 14:16:24",
+          "reviewed_at": "2026-07-11T22:27:53-04:00",
+          "source_url": "https://cantonkayakclub.com/event/paddle-palssaturday-july-18-9-am-to-noon-havre-de-grace-w-michelle-s/"
+        }
+      ],
+      "source": {
+        "label": "Canton Kayak Club",
+        "url": "https://cantonkayakclub.com/events/"
+      },
+      "checked_at": "2026-07-11T22:27:53-04:00"
     }
   },
-  "note": "Storm risk 6 PM\u20131 AM."
+  "note": "Storm risk 10 PM\u20131 AM.\nElevated winds."
 }
