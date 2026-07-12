@@ -440,7 +440,7 @@ h1 {
   .condition-row {
     grid-template-columns:
       minmax(0, 1fr)
-      minmax(0, 9rem)
+      minmax(0, auto)
       1.5rem
       0.8rem;
     column-gap: 0.55rem;
