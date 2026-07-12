@@ -6,12 +6,18 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: beacon-data-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -30,6 +36,15 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
           git add data/
-          git diff --cached --quiet || git commit -m "Update conditions"
-          git push
+
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+
+          git commit -m "Update conditions"
+
+          git pull --rebase origin main
+          git push origin main
