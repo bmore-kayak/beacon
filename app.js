@@ -233,8 +233,13 @@ function renderStations(stations = []) {
                   </div>
 
                   <div class="station-reading">
-                    ${station.status}
-                    ${station.bacteria ?? "—"} MPN
+                    <span class="station-value">
+                      ${station.bacteria ?? "—"} MPN
+                    </span>
+                  
+                    <span class="station-status">
+                      ${station.status}
+                    </span>
                   </div>
                 </div>
               `).join("")}
