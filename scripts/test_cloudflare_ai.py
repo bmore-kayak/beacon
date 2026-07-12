@@ -41,54 +41,86 @@ if not API_TOKEN:
 
 
 SYSTEM_PROMPT = """
-Write a short app entry for an upcoming Canton Kayak Club event.
+You are summarizing Canton Kayak Club events for a kayaking conditions app.
 
-Return JSON only:
+Your job is to decide whether an event is a normal club event or an important notice.
+
+Return ONLY valid JSON in this format:
 
 {
-  "title": "short clear title",
-  "summary": "one short useful sentence",
-  "notice": true or false
+  "notice": true,
+  "title": "...",
+  "summary": "..."
 }
 
-Use only the supplied event information.
+or
 
-Set notice to true when the event indicates:
-- a closure,
-- reduced kayak or equipment availability,
-- restricted access,
-- cancellation or a material change,
-- unusual vessel traffic,
-- a marine restriction,
-- or another broader water-safety concern.
+{
+  "notice": false,
+  "title": "...",
+  "summary": "..."
+}
 
-Otherwise set notice to false.
+A notice is something that may affect members beyond simply having an event scheduled.
 
-Fells Point or Bond Street Wharf orientation and training should normally
-be marked as a notice because club kayaks are used during those sessions.
+Examples include:
+- Fells Point orientation or training that will use club kayaks.
+- Temporary closures or restricted access.
+- Dock, launch, or equipment availability.
+- Public events that significantly increase boat traffic.
+- Safety advisories or operational changes.
+
+Everything else is a normal event.
 
 Writing rules:
-- When a location is known, begin the title with:
-  "<location>: "
-- Use a short, natural location name rather than the full venue name.
-- If the location cannot be determined, omit the location prefix.
-- After the location, preserve the event's distinguishing activity,
-  theme, or practical effect.
-- Avoid generic duplicate titles such as "Dundalk Paddle Pals."
-- Do not include dates or times in the title or summary; they are
-  displayed separately.
-- Do not begin the summary with "Join."
+
 - Keep the title under 60 characters.
-- Keep the summary to one short factual sentence under 140 characters.
+- Keep the summary under 140 characters.
+- When a recognizable location exists, begin the title with:
 
-For notice=true:
-- Describe the practical effect on members.
-- Example:
-  title: "Fells Point: Kayak availability may be limited"
-  summary: "New-member orientation will use club kayaks."
+  "<Location>: "
 
-For notice=false:
-- Summarize the activity, skill level, route, or destination.
+  Examples:
+  - Fells Point:
+  - Dundalk:
+  - Delta:
+  - Havre de Grace:
+
+- If no simple location can be determined, omit the location prefix.
+
+For notices:
+- Describe the practical impact to members.
+- Prefer titles like:
+  "Fells Point: Kayak availability may be limited"
+- The summary should explain why.
+
+Example:
+
+{
+  "notice": true,
+  "title": "Fells Point: Kayak availability may be limited",
+  "summary": "New-member orientation will use club kayaks."
+}
+
+For normal events:
+- Summarize the activity, destination, or theme.
+- Preserve what makes the event unique.
+- Avoid promotional language.
+- Do not begin the summary with "Join."
+- Do not repeat information already shown elsewhere (dates, times, RSVP, capacity, organizer names, weather reminders).
+
+Use only information present in the event.
+
+Event:
+
+Title:
+{title}
+
+Venue:
+{venue}
+
+Description:
+{description}
 """.strip()
 
 
