@@ -204,7 +204,12 @@ h1 {
 
 .wind-details {
   display: grid;
-  gap: 1rem;
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
 }
 
 .wind-detail-item {
