@@ -54,13 +54,13 @@ function renderCondition(key, condition) {
         ${condition.icon} ${condition.label}
       </span>
 
-      <span class="condition-status">
-        ${condition.status}
-      </span>
-
       <span class="condition-detail">
         ${key === "wind" ? windArrow(condition.direction_deg) : ""}
         ${condition.detail}
+      </span>
+      
+      <span class="condition-status">
+        ${condition.status}
       </span>
 
       <span class="chevron">▾</span>
