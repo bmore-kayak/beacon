@@ -1,3 +1,5 @@
+from club_events import get_club_notices
+
 import json
 import os
 import re
@@ -971,8 +973,9 @@ def overall_status(conditions):
     return {"status": "🟢", "label": "Good conditions"}
 
 
-def note(conditions, water):
+def note(conditions, water, club_notes):
     notes = []
+    club_notes = club_notes or []
 
     advisories = conditions["advisories"].get("items", [])
 
@@ -1011,7 +1014,8 @@ def note(conditions, water):
             + f" and {regions[-1]}."
         )
 
-    return "\n".join(notes[:3])
+    notes = notes[:3] + club_notes
+    return "\n".join(notes)
 
 def append_history(data):
     conditions = data["conditions"]
@@ -1123,6 +1127,8 @@ def main():
     marine = marine_conditions()
     #rainfall = rainfall_condition(waterfront)
 
+    club_condition, club_notes = get_club_notices()
+
     conditions = {
         "advisories": marine["advisories"],
         "storms": marine["storms"],
@@ -1132,6 +1138,7 @@ def main():
         "water_temp": marine["water_temp"],
         #"rainfall": rainfall,
         "bacteria": water,
+        "club_notices": club_condition
     }
 
     data = {
@@ -1141,7 +1148,7 @@ def main():
             ZoneInfo("America/New_York")
         ).strftime("%Y-%m-%d %I:%M %p %Z"),
         "conditions": conditions,
-        "note": note(conditions, water),
+        "note": note(conditions, water, club_notes),
     }
 
     OUT.write_text(json.dumps(data, indent=2), encoding="utf-8")
