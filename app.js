@@ -1,5 +1,10 @@
 async function main() {
-  const response = await fetch("data/latest.json");
+  const response = await fetch(
+    `data/latest.json?v=${Date.now()}`,
+    {
+      cache: "no-store",
+    }
+  );
   const data = await response.json();
 
   document.title = `Beacon • ${data.location}`;
