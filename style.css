@@ -210,6 +210,8 @@ h1 {
     minmax(0, 1fr);
   gap: 1.25rem;
   align-items: start;
+  border-top: none;
+  padding-top: 0;
 }
 
 .wind-detail-item {
