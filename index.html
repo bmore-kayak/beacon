@@ -3,65 +3,104 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Beacon</title>
+
   <link rel="stylesheet" href="style.css">
-  <link rel="icon"
-      type="image/svg+xml"
-      href="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f6a3.svg">
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f6a3.svg"
+  >
+
   <link
     rel="apple-touch-icon"
-    href="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f6a3.svg">
+    href="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f6a3.svg"
+  >
+
   <link rel="manifest" href="site.webmanifest">
+
   <meta name="theme-color" content="#68bde8">
 </head>
+
 <body>
   <main>
     <div class="brand">
       <div class="brand-icon">🚣</div>
-    
+
       <div>
-        <div class="location">Should I paddle today?</div>
-        <div class="tagline">Baltimore Inner Harbor</div>
+        <div class="location">
+          Should I paddle today?
+        </div>
+
+        <div class="tagline">
+          <span id="app-location">Baltimore Harbor</span>
+          <span class="tagline-separator">·</span>
+          <span id="updated"></span>
+        </div>
       </div>
     </div>
+
     <h1 id="overall">Loading...</h1>
-    
+
     <p id="note"></p>
-    
-    <div id="conditions" class="conditions"></div>
-    
-    <footer id="updated"></footer>
+
+    <div
+      id="conditions"
+      class="conditions"
+    ></div>
 
     <section class="sources">
       <h3>Sources</h3>
-    
+
       <ul>
         <li>
-          <a href="https://forecast.weather.gov/showsigmz.php?mz=ANZ538" target="_blank" rel="noopener">
+          <a
+            href="https://forecast.weather.gov/showsigmz.php?mz=ANZ538"
+            target="_blank"
+            rel="noopener"
+          >
             National Weather Service Marine Alerts
           </a>
         </li>
-        
+
         <li>
-          <a href="https://forecast.weather.gov/shmrn.php?mz=ANZ538" target="_blank" rel="noopener">
+          <a
+            href="https://forecast.weather.gov/shmrn.php?mz=ANZ538"
+            target="_blank"
+            rel="noopener"
+          >
             National Weather Service Marine Forecast
           </a>
         </li>
-    
+
         <li>
-          <a href="https://buoybay.noaa.gov/locations/baltimore-harbor" target="_blank" rel="noopener">
+          <a
+            href="https://buoybay.noaa.gov/locations/baltimore-harbor"
+            target="_blank"
+            rel="noopener"
+          >
             NOAA Chesapeake Bay Interpretive Buoy System
           </a>
         </li>
 
         <li>
-          <a href="https://www.waterfrontpartnership.org/water-quality-monitoring" target="_blank" rel="noopener">
+          <a
+            href="https://www.waterfrontpartnership.org/water-quality-monitoring"
+            target="_blank"
+            rel="noopener"
+          >
             Waterfront Partnership
           </a>
         </li>
 
         <li>
-          <a href="https://baltimorewaterwatch.org" target="_blank" rel="noopener">
+          <a
+            href="https://baltimorewaterwatch.org"
+            target="_blank"
+            rel="noopener"
+          >
             Baltimore Water Watch
           </a>
         </li>
