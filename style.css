@@ -200,6 +200,43 @@ h1 {
   }
 }
 
+/* Wind */
+
+.wind-details {
+  display: grid;
+  gap: 1rem;
+}
+
+.wind-detail-direction {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.wind-detail-direction .wind-arrow {
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.wind-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.wind-detail-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: color-mix(in srgb, CanvasText 52%, Canvas);
+}
+
+.wind-detail-value {
+  margin-top: 0.15rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
 
 .expanded-empty {
   padding: 0.25rem 0;
