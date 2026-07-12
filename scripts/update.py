@@ -1142,7 +1142,7 @@ def main():
     }
 
     data = {
-        "location": "Baltimore Inner Harbor",
+        "location": "Baltimore Harbor",
         "overall": overall_status(conditions),
         "updated": datetime.now(
             ZoneInfo("America/New_York")
