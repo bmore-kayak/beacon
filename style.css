@@ -496,6 +496,13 @@ h1 {
   text-decoration: underline;
 }
 
+.app-note {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: color-mix(in srgb, CanvasText 48%, Canvas);
+}
+
 /* Mobile */
 
 @media (max-width: 560px) {
