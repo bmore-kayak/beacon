@@ -202,27 +202,20 @@ h1 {
 
 /* Wind */
 
+/* Wind */
+
 .wind-details {
   display: grid;
-  gap: 1rem;
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
 }
 
-.wind-detail-direction {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.wind-detail-direction .wind-arrow {
-  flex-shrink: 0;
-  margin: 0;
-  font-size: 1.25rem;
-}
-
-.wind-detail-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+.wind-detail-item {
+  min-width: 0;
 }
 
 .wind-detail-label {
@@ -231,12 +224,24 @@ h1 {
   color: color-mix(in srgb, CanvasText 52%, Canvas);
 }
 
-.wind-detail-value {
-  margin-top: 0.15rem;
+.wind-detail-value,
+.wind-direction-value {
+  margin-top: 0.2rem;
   font-size: 0.92rem;
   font-weight: 500;
 }
 
+.wind-direction-value {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.wind-direction-value .wind-arrow {
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 1.1rem;
+}
 
 .expanded-empty {
   padding: 0.25rem 0;
@@ -523,6 +528,19 @@ h1 {
     padding-left: 1rem;
   }
 
+  .wind-details {
+    grid-template-columns:
+      minmax(0, 1.4fr)
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .wind-detail-value,
+  .wind-direction-value {
+    font-size: 0.88rem;
+  }
+  
   .club-event-item {
     padding: 0.8rem 0;
   }
