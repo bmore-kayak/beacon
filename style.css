@@ -169,7 +169,23 @@ h1 {
   display: inline-block;
   margin-right: 0.2rem;
   transform: rotate(var(--rotation));
+  animation: breeze 3.5s ease-in-out infinite;
 }
+
+@keyframes breeze {
+  0%,100% {
+    transform:
+      translateX(0)
+      rotate(calc(var(--rotation) - 2deg));
+  }
+
+  50% {
+    transform:
+      translateX(1px)
+      rotate(calc(var(--rotation) + 2deg));
+  }
+}
+
 
 .expanded-empty {
   padding: 0.25rem 0;
