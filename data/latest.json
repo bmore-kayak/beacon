@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Don't go"
   },
-  "updated": "2026-07-13T14:00:46-04:00",
+  "updated": "2026-07-13T14:30:41-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-13T14:00:44.107241-04:00"
+        "updated": "2026-07-13T14:30:41.012146-04:00"
       }
     },
     "storms": {
@@ -32,49 +32,49 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "9 kt, gusts 11",
-      "speed_kt": 9,
-      "gust_kt": 11,
-      "direction_deg": 134.9,
+      "status": "\ud83d\udfe2",
+      "detail": "7 kt, gusts 9",
+      "speed_kt": 7,
+      "gust_kt": 9,
+      "direction_deg": 142.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-13T14:00:44.107279-04:00"
+        "updated": "2026-07-13T14:30:41.012235-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.4 ft",
+      "height_ft": 0.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-13T14:00:44.107298-04:00"
+        "updated": "2026-07-13T14:30:41.012257-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "79\u00b0F",
+      "detail": "80\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-13T14:00:44.107313-04:00"
+        "updated": "2026-07-13T14:30:41.012277-04:00"
       }
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
       "status": "\ud83d\udfe2",
-      "detail": "83\u00b0F",
+      "detail": "82\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-13T14:00:44.107321-04:00"
+        "updated": "2026-07-13T14:30:41.012284-04:00"
       }
     },
     "bacteria": {
@@ -732,92 +732,13 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "1 notice \u00b7 6 upcoming events",
-      "items": [
-        {
-          "event_id": 247536,
-          "title": "Delta: Explore the Conowingo Islands & Muddy Creek",
-          "summary": "Join an exploratory paddle with Ricardo S. covering 5-8 miles.",
-          "notice": false,
-          "location": "Delta, PA",
-          "address": "497 Cold Cabin Road",
-          "starts_at": "2026-07-13T10:30:00-04:00",
-          "ends_at": "2026-07-13T16:30:00-04:00",
-          "source_modified_at": "2026-07-09 13:26:19",
-          "reviewed_at": "2026-07-12T09:15:04-04:00",
-          "source_url": "https://cantonkayakclub.com/event/paddle-palsdelta-with-ricardo-s-monday-july-13-1030-am-4sh-pm-explore-the-conowingo-islands-muddy-creek/"
-        },
-        {
-          "event_id": 247357,
-          "title": "Dundalk: Paddle around Dundalk",
-          "summary": "Join Michelle for a laid-back two-hour paddle at a beginner-friendly slow-moderate pace.",
-          "notice": false,
-          "location": "Anchor Bay East Marina (Hard Yacht Cafe) \u2013 Bear Creek",
-          "address": "8500 Cove Rd",
-          "starts_at": "2026-07-14T17:00:00-04:00",
-          "ends_at": "2026-07-14T19:00:00-04:00",
-          "source_modified_at": "2026-07-03 19:29:41",
-          "reviewed_at": "2026-07-12T09:15:04-04:00",
-          "source_url": "https://cantonkayakclub.com/event/paddle-palstaco-tuesday-paddle-july-14-5-pm-to-7-pm-anchor-bay-east-w-michelle-s-it-would/"
-        },
-        {
-          "event_id": 247584,
-          "title": "Fells Point: Kayak availability may be limited",
-          "summary": "New-member orientation will use club kayaks.",
-          "notice": true,
-          "location": "Fells Point",
-          "address": "Bond Street Wharf\u200b",
-          "starts_at": "2026-07-17T17:30:00-04:00",
-          "ends_at": "2026-07-17T20:30:00-04:00",
-          "source_modified_at": "2026-07-13 17:46:27",
-          "reviewed_at": "2026-07-13T14:00:44-04:00",
-          "source_url": "https://cantonkayakclub.com/event/ckc-orientation-training-23-fri-pm-07-17-26-from-530-830p-at-fells-point-2/"
-        },
-        {
-          "event_id": 247331,
-          "title": "Delta, PA: Rescue Training",
-          "summary": "Attendees will learn and practice skills such as wet exit, partner rescue, self-rescue, and emptying a kayak when it takes on water.",
-          "notice": false,
-          "location": "Delta, PA",
-          "address": "497 Cold Cabin Road",
-          "starts_at": "2026-07-18T09:00:00-04:00",
-          "ends_at": "2026-07-18T12:00:00-04:00",
-          "source_modified_at": "2026-07-13 12:06:26",
-          "reviewed_at": "2026-07-12T22:30:37-04:00",
-          "source_url": "https://cantonkayakclub.com/event/01-canton-kayak-club-rescue-training-sat-morning-7-18-900-1200p-at-delta-pa-first-one-for-the-season/"
-        },
-        {
-          "event_id": 247362,
-          "title": "Havre de Grace: Paddle to the Lighthouse and the Bay",
-          "summary": "Join Michelle for a paddle to the Lighthouse and the Bay in Havre de Grace.",
-          "notice": false,
-          "location": "Havre de Grace",
-          "address": "100 Congress AVe, havre de grace, md 21078",
-          "starts_at": "2026-07-18T09:00:00-04:00",
-          "ends_at": "2026-07-18T12:00:00-04:00",
-          "source_modified_at": "2026-07-04 14:16:24",
-          "reviewed_at": "2026-07-12T09:15:04-04:00",
-          "source_url": "https://cantonkayakclub.com/event/paddle-palssaturday-july-18-9-am-to-noon-havre-de-grace-w-michelle-s/"
-        },
-        {
-          "event_id": 247369,
-          "title": "Susquehanna River: Intermediate-level paddle",
-          "summary": "Join Katie for an intermediate-level paddle on the Susquehanna River, exploring Muddy Creek and river islands.",
-          "notice": false,
-          "location": null,
-          "address": null,
-          "starts_at": "2026-07-19T10:00:00-04:00",
-          "ends_at": "2026-07-19T13:00:00-04:00",
-          "source_modified_at": "2026-07-04 14:27:31",
-          "reviewed_at": "2026-07-12T09:15:04-04:00",
-          "source_url": "https://cantonkayakclub.com/event/paddle-paldelta-paddle-w-katie-l-sunday-july-19-10am-1pm/"
-        }
-      ],
+      "detail": "Club events unavailable",
+      "items": [],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-13T14:00:44-04:00"
+      "checked_at": "2026-07-13T14:30:41-04:00"
     }
   },
   "note": "Elevated bacteria in Inner Harbor."
