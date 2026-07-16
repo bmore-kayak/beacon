@@ -1,10 +1,10 @@
 {
   "location": "Baltimore Harbor",
   "overall": {
-    "status": "\ud83d\udfe1",
-    "label": "Heads up"
+    "status": "\ud83d\udfe2",
+    "label": "Looks good"
   },
-  "updated": "2026-07-15T21:30:39-04:00",
+  "updated": "2026-07-15T22:00:46-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-15T21:30:38.045260-04:00"
+        "updated": "2026-07-15T22:00:44.498865-04:00"
       }
     },
     "storms": {
@@ -26,21 +26,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-15T21:00:00-04:00"
+        "updated": "2026-07-15T22:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "8 kt, gusts 10",
+      "status": "\ud83d\udfe2",
+      "detail": "8 kt, gusts 9",
       "speed_kt": 8,
-      "gust_kt": 10,
-      "direction_deg": 240.2,
+      "gust_kt": 9,
+      "direction_deg": 248.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-15T21:30:38.045289-04:00"
+        "updated": "2026-07-15T22:00:44.498898-04:00"
       }
     },
     "waves": {
@@ -52,18 +52,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-15T21:30:38.045303-04:00"
+        "updated": "2026-07-15T22:00:44.498914-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "88\u00b0F",
+      "detail": "87\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-15T21:30:38.045317-04:00"
+        "updated": "2026-07-15T22:00:44.498929-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-15T21:30:38.045323-04:00"
+        "updated": "2026-07-15T22:00:44.498935-04:00"
       }
     },
     "bacteria": {
@@ -795,7 +795,7 @@
           "address": "8500 Cove Rd",
           "starts_at": "2026-07-21T17:00:00-04:00",
           "ends_at": "2026-07-21T19:00:00-04:00",
-          "source_modified_at": "2026-07-12 14:44:11",
+          "source_modified_at": "2026-07-16 01:54:35",
           "reviewed_at": "2026-07-14T00:00:43-04:00",
           "source_url": "https://cantonkayakclub.com/event/paddle-palstaco-tuesday-paddle-july-21-5-pm-to-7-pm-anchor-bay-east-w-michelle-s/"
         },
@@ -817,7 +817,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-15T21:30:38-04:00"
+      "checked_at": "2026-07-15T22:00:44-04:00"
     }
   },
   "note": ""
