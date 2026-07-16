@@ -828,90 +828,78 @@ def marine_text_alert_names():
             alerts.append(label)
 
     return alerts
-    
+
+
+def alert_status(event):
+    name = event.lower()
+
+    if name == "small craft advisory" or name.endswith("warning"):
+        return "🔴"
+
+    if name.endswith(("watch", "advisory")):
+        return "🟠"
+        
+    return "🟡"
+
 def advisory_condition(api_alerts, marine_text_names=None):
     marine_text_names = marine_text_names or []
+    now = datetime.now(timezone.utc)
+    items = []
 
-    priority = [
-        "Tornado Warning",
-        "Special Marine Warning",
-        "Severe Thunderstorm Warning",
-        "Storm Warning",
-        "Gale Warning",
-        "Hurricane Force Wind Warning",
-        "Small Craft Advisory",
-        "Flash Flood Warning",
-        "Tornado Watch",
-        "Severe Thunderstorm Watch",
-        "Flash Flood Watch",
-        "Hazardous Weather Outlook",
-    ]
-
-    red_events = {
-        "Tornado Warning",
-        "Special Marine Warning",
-        "Severe Thunderstorm Warning",
-        "Storm Warning",
-        "Gale Warning",
-        "Hurricane Force Wind Warning",
-        "Small Craft Advisory",
-        "Flash Flood Warning",
-    }
-
-    orange_events = {
-        "Tornado Watch",
-        "Severe Thunderstorm Watch",
-        "Flash Flood Watch",
-    }
-
-    items_by_event = {}
-
-    # Official NWS Alerts API results.
     for alert in api_alerts:
         properties = alert.get("properties", {})
         event = properties.get("event")
-
-        if event not in priority:
+    
+        if not event:
             continue
-
-        items_by_event[event] = {
+    
+        starts = properties.get("onset") or properties.get("effective")
+        ends = properties.get("ends") or properties.get("expires")
+        full_status = alert_status(event)
+        start_time = sample_datetime(starts)
+    
+        status = (
+            "🟡"
+            if start_time and start_time > now + timedelta(hours=2)
+            else full_status
+        )
+    
+        item = {
             "event": event,
-            "ends": (
-                properties.get("ends")
-                or properties.get("expires")
-            ),
+            "status": status,
+            "starts": starts,
+            "ends": ends,
         }
-
-    # Products found in the marine forecast page, including HWO.
+    
+        if item not in items:
+            items.append(item)
+    
+    existing = {item["event"] for item in items}
+    
     for event in marine_text_names:
-        if event in priority and event not in items_by_event:
-            items_by_event[event] = {
+        if event not in existing:
+            items.append({
                 "event": event,
+                "status": alert_status(event),
+                "starts": None,
                 "ends": None,
-            }
+            })
 
-    items = [
-        items_by_event[event]
-        for event in priority
-        if event in items_by_event
-    ]
-
-    names = [item["event"] for item in items]
-
-    if any(name in red_events for name in names):
-        status = "🔴"
-    elif any(name in orange_events for name in names):
-        status = "🟠"
-    elif names:
-        status = "🟡"
-    else:
-        status = "🟢"
+    rank = {"🟢": 0, "🟡": 1, "🟠": 2, "🔴": 3}
+    status = max(
+        (item["status"] for item in items),
+        key=rank.get,
+        default="🟢",
+    )
 
     return {
         "icon": "🚨",
         "label": "Alerts",
         "status": status,
-        "detail": names[0] if names else "None",
+        "detail": max(
+            items,
+            key=lambda item: rank[item["status"]],
+        )["event"] if items else "None",
         "items": items,
         "source": {
             "provider": "National Weather Service",
@@ -924,16 +912,29 @@ def advisory_condition(api_alerts, marine_text_names=None):
 
 def format_alert(item):
     event = item.get("event")
-    ends = item.get("ends")
+    starts = sample_datetime(item.get("starts"))
+    ends = sample_datetime(item.get("ends"))
+    now = datetime.now(ZoneInfo("America/New_York"))
 
     if not event:
         return None
 
-    if ends:
-        end_time = datetime.fromisoformat(ends).strftime("%-I:%M %p")
-        return f"{event} until {end_time}."
+    if starts and ends:
+        if starts <= now:
+            return f"{event} until {ends.strftime('%-I:%M %p')}."
 
-    return f"{event}."
+        return (
+            f"{event} from {starts.strftime('%-I:%M %p')} "
+            f"to {ends.strftime('%-I:%M %p')}."
+        )
+
+    if ends:
+        return f"{event} until {ends.strftime('%-I:%M %p')}."
+
+    if starts:
+        return f"{event} beginning {starts.strftime('%-I:%M %p')}."
+
+    return f"{event}; time not specified."
     
 def unavailable(label):
     return {
@@ -978,14 +979,11 @@ def note(conditions, water, club_notes):
     club_notes = club_notes or []
 
     advisories = conditions["advisories"].get("items", [])
-
-    for advisory in advisories:
-        if advisory.get("event") == "Hazardous Weather Outlook":
-            continue
-
-        formatted = format_alert(advisory)
-        if formatted:
-            notes.append(formatted)
+    alert_notes = [
+        formatted
+        for advisory in advisories
+        if (formatted := format_alert(advisory))
+    ]
 
     if conditions["storms"]["status"] in {"🔴", "🟠", "🟡"}:
         notes.append(conditions["storms"]["detail"] + ".")
@@ -1014,7 +1012,7 @@ def note(conditions, water, club_notes):
             + f" and {regions[-1]}."
         )
 
-    notes = notes[:3] + club_notes
+    notes = alert_notes + notes[:3] + club_notes
     return "\n".join(notes)
 
 def append_history(data):
