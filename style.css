@@ -210,6 +210,7 @@ h1 {
 
 .wind-detail-item {
   min-width: 0;
+  border-top: none;
 }
 
 .wind-detail-label {
