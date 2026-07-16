@@ -64,5 +64,16 @@
       "title": "Chesapeake Harbour: Paddle to Back Creek",
       "summary": "Join a paddle from Chesapeake Harbour to Back Creek with music and sunset views."
     }
+  },
+  "247648": {
+    "prompt_version": 1,
+    "fingerprint": "0030e9beaf2061eb8f4f38ec467453d4f1c28aa6460dbb83c242fc5bf56f9049",
+    "source_modified_at": "2026-07-16 02:54:13",
+    "reviewed_at": "2026-07-15T23:00:44-04:00",
+    "ai_result": {
+      "notice": true,
+      "title": "Fells Point: Kayak availability may be limited",
+      "summary": "New-member orientation will use club kayaks."
+    }
   }
 }
