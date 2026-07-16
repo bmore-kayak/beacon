@@ -933,7 +933,7 @@ def format_alert(item):
     if starts:
         return f"{event} beginning {starts.strftime('%-I:%M %p')}."
 
-    return f"{event}; time not specified."
+    return event
     
 def unavailable(label):
     return {
