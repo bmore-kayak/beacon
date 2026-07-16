@@ -175,11 +175,8 @@ function renderAdvisories(items = []) {
     <div class="advisory-list">
       ${items.map(item => `
         <div class="advisory-item">
-          <span>${item.event}</span>
-
-          ${item.ends
-            ? `<span>Until ${formatTime(item.ends)}</span>`
-            : ""}
+          <span>${item.status} ${item.event}</span>
+          <span>${formatAlertTime(item)}</span>
         </div>
       `).join("")}
     </div>
@@ -469,6 +466,29 @@ function formatTime(value) {
     hour: "numeric",
     minute: "2-digit",
   });
+}
+
+function formatAlertTime(item) {
+  const starts = item.starts ? new Date(item.starts) : null;
+  const ends = item.ends ? new Date(item.ends) : null;
+  const now = new Date();
+
+  const time = d =>
+    d.toLocaleTimeString([], {
+      hour: "numeric",
+      minute: "2-digit",
+    });
+
+  if (starts && ends) {
+    return starts <= now
+      ? `Until ${time(ends)}`
+      : `${time(starts)}–${time(ends)}`;
+  }
+
+  if (ends) return `Until ${time(ends)}`;
+  if (starts) return `Beginning ${time(starts)}`;
+
+  return "Time not specified";
 }
 
 
