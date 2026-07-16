@@ -806,8 +806,6 @@ def marine_text_alert_names():
     text = safe_call(lambda: get_text(NWS_MARINE_TEXT_URL), "") or ""
     upper = text.upper()
 
-    alerts = []
-
     checks = [
         ("Special Marine Warning", "SPECIAL MARINE WARNING"),
         ("Storm Warning", "STORM WARNING"),
@@ -823,11 +821,11 @@ def marine_text_alert_names():
         ("Hazardous Weather Outlook", "HAZARDOUS WEATHER OUTLOOK"),
     ]
 
-    for label, phrase in checks:
-        if phrase in upper:
-            alerts.append(label)
-
-    return alerts
+    return [
+        label
+        for label, phrase in checks
+        if phrase in upper
+    ]
 
 
 def alert_status(event):
@@ -840,7 +838,8 @@ def alert_status(event):
         return "🟠"
         
     return "🟡"
-
+    
+    
 def advisory_condition(api_alerts, marine_text_names=None):
     marine_text_names = marine_text_names or []
     now = datetime.now(timezone.utc)
@@ -918,7 +917,7 @@ def format_alert(item):
 
     if not event:
         return None
-
+        
     if starts and ends:
         if starts <= now:
             return f"{event} until {ends.strftime('%-I:%M %p')}."
@@ -949,10 +948,16 @@ def marine_conditions():
     cbibs = safe_call(cbibs_measurements, {})
     periods = safe_call(nws_hourly_periods, [])
     alerts = safe_call(nws_alerts, [])
-    marine_alert_names = safe_call(marine_text_alert_names, [])
-
+    marine_alert_names = safe_call(
+        marine_text_alert_names,
+        [],
+    )
+    
     return {
-        "advisories": advisory_condition(alerts, marine_alert_names),
+        "advisories": advisory_condition(
+            alerts,
+            marine_alert_names,
+        ),
         "wind": cbibs_wind(cbibs) or safe_call(coops_wind) or unavailable("Wind"),
         "waves": cbibs_waves(cbibs) or safe_call(forecast_waves) or unavailable("Waves"),
         "storms": storm_condition(periods),
