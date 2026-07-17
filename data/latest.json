@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Heads up"
   },
-  "updated": "2026-07-17T07:30:30-04:00",
+  "updated": "2026-07-17T08:00:38-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-17T07:30:28.603702-04:00"
+        "updated": "2026-07-17T08:00:35.256066-04:00"
       }
     },
     "storms": {
@@ -33,21 +33,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-17T07:00:00-04:00"
+        "updated": "2026-07-17T08:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "6 kt, gusts 7",
+      "detail": "6 kt, gusts 8",
       "speed_kt": 6,
-      "gust_kt": 7,
-      "direction_deg": 359.3,
+      "gust_kt": 8,
+      "direction_deg": 9.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-17T07:30:28.603732-04:00"
+        "updated": "2026-07-17T08:00:35.256099-04:00"
       }
     },
     "waves": {
@@ -59,7 +59,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-17T07:30:28.603748-04:00"
+        "updated": "2026-07-17T08:00:35.256115-04:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-17T07:30:28.603762-04:00"
+        "updated": "2026-07-17T08:00:35.256128-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-17T07:30:28.603768-04:00"
+        "updated": "2026-07-17T08:00:35.256134-04:00"
       }
     },
     "bacteria": {
@@ -863,7 +863,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-17T07:30:28-04:00"
+      "checked_at": "2026-07-17T08:00:35-04:00"
     }
   },
   "note": "Hazardous Weather Outlook\nFells Point: Kayak availability may be limited \u00b7 5:30 PM\u20138:30 PM"
