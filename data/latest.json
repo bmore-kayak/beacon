@@ -4,37 +4,19 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-07-18T18:00:31-04:00",
+  "updated": "2026-07-18T18:31:54-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
       "label": "Alerts",
       "status": "\ud83d\udd34",
-      "detail": "5 active alerts",
+      "detail": "2 active alerts",
       "items": [
         {
           "event": "Small Craft Advisory",
           "status": "\ud83d\udd34",
           "starts": "2026-07-18T11:00:00-04:00",
           "ends": "2026-07-18T23:00:00-04:00"
-        },
-        {
-          "event": "Heat Advisory",
-          "status": "\ud83d\udfe0",
-          "starts": "2026-07-18T11:00:00-04:00",
-          "ends": "2026-07-18T19:00:00-04:00"
-        },
-        {
-          "event": "Flood Watch",
-          "status": "\ud83d\udfe0",
-          "starts": "2026-07-18T14:00:00-04:00",
-          "ends": "2026-07-18T20:00:00-04:00"
-        },
-        {
-          "event": "Tornado Watch",
-          "status": "\ud83d\udfe0",
-          "starts": "2026-07-18T16:33:00-04:00",
-          "ends": "2026-07-18T21:00:00-04:00"
         },
         {
           "event": "Air Quality Alert",
@@ -46,7 +28,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-07-18T18:00:30.929947-04:00"
+        "updated": "2026-07-18T18:31:50.950123-04:00"
       }
     },
     "storms": {
@@ -65,15 +47,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe2",
-      "detail": "7 kt, gusts 9",
-      "speed_kt": 7,
-      "gust_kt": 9,
-      "direction_deg": 237.3,
+      "status": "\ud83d\udfe0",
+      "detail": "13 kt, gusts 16",
+      "speed_kt": 13,
+      "gust_kt": 16,
+      "direction_deg": 224.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T18:00:30.929976-04:00"
+        "updated": "2026-07-18T18:31:50.950153-04:00"
       }
     },
     "waves": {
@@ -85,18 +67,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T18:00:30.929992-04:00"
+        "updated": "2026-07-18T18:31:50.950168-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "75\u00b0F",
+      "detail": "76\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T18:00:30.930054-04:00"
+        "updated": "2026-07-18T18:31:50.950225-04:00"
       }
     },
     "water_temp": {
@@ -107,7 +89,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T18:00:30.930061-04:00"
+        "updated": "2026-07-18T18:31:50.950230-04:00"
       }
     },
     "bacteria": {
@@ -774,15 +756,15 @@
       "items": [
         {
           "event_id": 247369,
-          "title": "Susquehanna River: Intermediate-level paddle",
-          "summary": "Join Katie for an intermediate-level paddle on the Susquehanna River, exploring Muddy Creek and river islands.",
+          "title": "Delta Paddle with Katie L",
+          "summary": "Join Katie for an intermediate-level paddle on the Susquehanna River.",
           "notice": false,
           "location": null,
           "address": null,
           "starts_at": "2026-07-19T10:00:00-04:00",
           "ends_at": "2026-07-19T13:00:00-04:00",
-          "source_modified_at": "2026-07-04 14:27:31",
-          "reviewed_at": "2026-07-12T09:15:04-04:00",
+          "source_modified_at": "2026-07-18 22:02:30",
+          "reviewed_at": "2026-07-18T18:31:50-04:00",
           "source_url": "https://cantonkayakclub.com/event/paddle-paldelta-paddle-w-katie-l-sunday-july-19-10am-1pm/"
         },
         {
@@ -868,9 +850,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-18T17:31:50-04:00"
+      "checked_at": "2026-07-18T18:31:50-04:00"
     }
   },
   "club_notes": [],
-  "note": "5 active alerts.\nStorm risk 6 PM\u201310 PM.\nElevated bacteria in Inner Harbor."
+  "note": "Small Craft Advisory until 11 PM.\nAir Quality Alert until 12 AM.\nStorm risk 6 PM\u201310 PM.\nElevated bacteria in Inner Harbor.\nElevated winds."
 }
