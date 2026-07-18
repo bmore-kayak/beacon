@@ -22,9 +22,9 @@ WATERFRONT_URL = "https://services2.arcgis.com/orhH6cbKzLjUCxfK/arcgis/rest/serv
 BWW_URL = "https://services7.arcgis.com/c8xL4vl5qpC34Rk7/ArcGIS/rest/services/Readings/FeatureServer/0/query"
 
 NWS_POINTS_URL = "https://api.weather.gov/points/39.2826,-76.6107"
-NWS_POINT_ALERTS_URL = "https://api.weather.gov/alerts/active?point=39.2826,-76.6107"
 NWS_MARINE_ALERTS_URL = "https://api.weather.gov/alerts/active?zone=ANZ538"
 NWS_MARINE_TEXT_URL = "https://forecast.weather.gov/shmrn.php?mz=anz538"
+NWS_LAND_ALERTS_URL = "https://api.weather.gov/alerts/active?zone=MDZ011"
 
 NDBC_URL = "https://www.ndbc.noaa.gov/data/realtime2/BLTM2.txt"
 
@@ -559,14 +559,14 @@ def nws_hourly_periods():
 def nws_alerts():
     marine = safe_call(
         lambda: get_json(
-            NWS_MARINE_ALERTS_URL
+            NWS_ALERTS_URL
         ).get("features", []),
         [],
     )
 
-    point = safe_call(
+    land = safe_call(
         lambda: get_json(
-            NWS_POINT_ALERTS_URL
+            NWS_LAND_ALERTS_URL
         ).get("features", []),
         [],
     )
@@ -574,7 +574,7 @@ def nws_alerts():
     alerts = []
     seen = set()
 
-    for alert in marine + point:
+    for alert in marine + land:
         properties = alert.get("properties", {})
 
         alert_id = (
