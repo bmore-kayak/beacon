@@ -151,13 +151,8 @@ def fetch_events(now):
 
     params = {
         "per_page": 50,
-        "start_date": now.strftime(
-            "%Y-%m-%d %H:%M:%S"
-        ),
-        "end_date": end.strftime(
-            "%Y-%m-%d %H:%M:%S"
-        ),
-        "status": "publish",
+        "start_date": now.strftime("%Y-%m-%d"),
+        "end_date": end.strftime("%Y-%m-%d"),
     }
 
     headers = {
@@ -436,10 +431,10 @@ def get_club_notices(now=None):
         return (
             unavailable_condition(
                 now,
-                "No upcoming events",
+                "Club events unavailable",
             ),
             [],
-            True,
+            False,
         )
 
     state = load_state()
