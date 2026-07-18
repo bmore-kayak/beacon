@@ -86,5 +86,16 @@
       "title": "CKC Social – Lighthouse Canton",
       "summary": "Join the Canton Kayak Club for a social event at Lighthouse Canton."
     }
+  },
+  "247637": {
+    "prompt_version": 1,
+    "fingerprint": "53de9358129070cf5b2e632ab5f4dfb28f0fdf2c42a5b9fd114cfa28c6b80d53",
+    "source_modified_at": "2026-07-16 00:13:06",
+    "reviewed_at": "2026-07-18T00:00:26-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Delta, PA: Rescue Training",
+      "summary": "Attendees will learn and practice rescue skills such as wet exit, partner rescue, self-rescue, and emptying a kayak when it takes on water."
+    }
   }
 }
