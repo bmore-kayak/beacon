@@ -982,20 +982,33 @@ def advisory_condition(api_alerts, marine_text_names=None):
             })
 
     rank = {"🟢": 0, "🟡": 1, "🟠": 2, "🔴": 3}
+    
+    items.sort(
+        key=lambda item: (
+            -rank[item["status"]],
+            item["event"].lower(),
+        )
+    )
+    
     status = max(
         (item["status"] for item in items),
         key=rank.get,
         default="🟢",
     )
 
+    details = (
+        f"{len(items)} active alerts"
+        if len(items) > 1
+        else items[0]["event"]
+        if items
+        else "None"
+    )
+
     return {
         "icon": "🚨",
         "label": "Alerts",
         "status": status,
-        "detail": max(
-            items,
-            key=lambda item: rank[item["status"]],
-        )["event"] if items else "None",
+        "detail": details,
         "items": items,
         "source": {
             "provider": "National Weather Service",
@@ -1084,7 +1097,7 @@ def overall_status(conditions):
     statuses = [c["status"] for c in conditions.values()]
 
     if "🔴" in statuses:
-        return {"status": "🔴", "label": "Don't go"}
+        return {"status": "🔴", "label": "Stay off water"}
     if "🟠" in statuses:
         return {"status": "🟠", "label": "Use caution"}
     if "🟡" in statuses:
@@ -1098,11 +1111,16 @@ def note(conditions, water, club_notes):
     club_notes = club_notes or []
 
     advisories = conditions["advisories"].get("items", [])
-    alert_notes = [
-        formatted
-        for advisory in advisories
-        if (formatted := format_alert(advisory))
-    ]
+    if len(advisories) > 2:
+        alert_notes = [
+            f"{len(advisories)} active alerts."
+        ]
+    else:
+        alert_notes = [
+            formatted
+            for advisory in advisories
+            if (formatted := format_alert(advisory))
+        ]
 
     if conditions["storms"]["status"] in {"🔴", "🟠", "🟡"}:
         notes.append(conditions["storms"]["detail"] + ".")
