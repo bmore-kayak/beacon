@@ -982,10 +982,14 @@ def advisory_condition(api_alerts, marine_text_names=None):
             })
 
     rank = {"🟢": 0, "🟡": 1, "🟠": 2, "🔴": 3}
-    
+
     items.sort(
         key=lambda item: (
             -rank[item["status"]],
+            sample_datetime(item.get("ends"))
+            or datetime.max.replace(
+                tzinfo=timezone.utc
+            ),
             item["event"].lower(),
         )
     )
@@ -1012,7 +1016,7 @@ def advisory_condition(api_alerts, marine_text_names=None):
         "items": items,
         "source": {
             "provider": "National Weather Service",
-            "location": "ANZ538",
+            "location": "Baltimore Harbor",
             "updated": datetime.now(
                 ZoneInfo("America/New_York")
             ).isoformat(),
