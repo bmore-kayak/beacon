@@ -251,13 +251,27 @@ h1 {
 }
 
 .advisory-item {
-  display: flex;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    1.5rem;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  column-gap: 0.75rem;
   padding: 0.55rem 0;
   border-bottom: 1px solid
     color-mix(in srgb, CanvasText 8%, transparent);
+}
+
+.advisory-time {
+  text-align: right;
+  white-space: nowrap;
+  color: color-mix(in srgb, CanvasText 68%, Canvas);
+}
+
+.advisory-status {
+  width: 1.5rem;
+  text-align: center;
 }
 
 .advisory-item:last-child {
