@@ -21,7 +21,10 @@ COOPS_WIND_URL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?stat
 WATERFRONT_URL = "https://services2.arcgis.com/orhH6cbKzLjUCxfK/arcgis/rest/services/Baltimore_Harbor_2024_Water_Quality_Data_with_2023_Historic_Data/FeatureServer/0/query?where=1%3D1&outFields=Site_Name,New_Sample_Date,New_Sample_Status,New_Sample_BacteriaCount,Rain_amount_past7days&returnGeometry=false&f=json"
 BWW_URL = "https://services7.arcgis.com/c8xL4vl5qpC34Rk7/ArcGIS/rest/services/Readings/FeatureServer/0/query"
 
+
+
 NWS_POINTS_URL = "https://api.weather.gov/points/39.2826,-76.6107"
+NWS_POINT_ALERTS_URL = "https://api.weather.gov/alerts/active?point=39.2826,-76.6107"
 NWS_MARINE_ALERTS_URL = "https://api.weather.gov/alerts/active?zone=ANZ538"
 NWS_MARINE_TEXT_URL = "https://forecast.weather.gov/shmrn.php?mz=anz538"
 NWS_LAND_ALERTS_URL = "https://api.weather.gov/alerts/active?zone=MDZ011"
@@ -559,7 +562,7 @@ def nws_hourly_periods():
 def nws_alerts():
     marine = safe_call(
         lambda: get_json(
-            NWS_ALERTS_URL
+            NWS_MARINE_ALERTS_URL
         ).get("features", []),
         [],
     )
@@ -571,10 +574,17 @@ def nws_alerts():
         [],
     )
 
+    point = safe_call(
+        lambda: get_json(
+            NWS_POINT_ALERTS_URL
+        ).get("features", []),
+        [],
+    )
+
     alerts = []
     seen = set()
 
-    for alert in marine + land:
+    for alert in marine + land + point:
         properties = alert.get("properties", {})
 
         alert_id = (
@@ -899,13 +909,13 @@ def marine_text_alert_names():
         ("Gale Warning", "GALE WARNING"),
         ("Hurricane Force Wind Warning", "HURRICANE FORCE WIND WARNING"),
         ("Small Craft Advisory", "SMALL CRAFT ADVISORY"),
-        ("Tornado Warning", "TORNADO WARNING"),
-        ("Severe Thunderstorm Warning", "SEVERE THUNDERSTORM WARNING"),
-        ("Tornado Watch", "TORNADO WATCH"),
-        ("Severe Thunderstorm Watch", "SEVERE THUNDERSTORM WATCH"),
-        ("Flash Flood Warning", "FLASH FLOOD WARNING"),
-        ("Flash Flood Watch", "FLASH FLOOD WATCH"),
-        ("Hazardous Weather Outlook", "HAZARDOUS WEATHER OUTLOOK"),
+        #("Tornado Warning", "TORNADO WARNING"),
+        #("Severe Thunderstorm Warning", "SEVERE THUNDERSTORM WARNING"),
+        #("Tornado Watch", "TORNADO WATCH"),
+        #("Severe Thunderstorm Watch", "SEVERE THUNDERSTORM WATCH"),
+        #("Flash Flood Warning", "FLASH FLOOD WARNING"),
+        #("Flash Flood Watch", "FLASH FLOOD WATCH"),
+        #("Hazardous Weather Outlook", "HAZARDOUS WEATHER OUTLOOK"),
     ]
 
     return [
