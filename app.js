@@ -168,15 +168,28 @@ function renderDetails(key, condition) {
 
 function renderAdvisories(items = []) {
   if (!items.length) {
-    return `<div class="expanded-empty">No active advisories.</div>`;
+    return `
+      <div class="expanded-empty">
+        No active advisories.
+      </div>
+    `;
   }
 
   return `
     <div class="advisory-list">
       ${items.map(item => `
         <div class="advisory-item">
-          <span>${item.status} ${item.event}</span>
-          <span>${formatAlertTime(item)}</span>
+          <span class="advisory-name">
+            ${item.event}
+          </span>
+
+          <span class="advisory-time">
+            ${formatAlertTime(item)}
+          </span>
+
+          <span class="advisory-status">
+            ${item.status}
+          </span>
         </div>
       `).join("")}
     </div>
