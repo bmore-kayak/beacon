@@ -429,15 +429,17 @@ def get_club_notices(now=None):
                 "Club events unavailable",
             ),
             [],
+            False,
         )
     
     if not raw_events:
         return (
             unavailable_condition(
                 now,
-                "Club events unavailable",
+                "No upcoming events",
             ),
             [],
+            True,
         )
 
     state = load_state()
@@ -617,4 +619,4 @@ def get_club_notices(now=None):
         ),
     }
 
-    return condition, note_lines
+    return condition, note_lines, True
