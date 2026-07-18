@@ -31,6 +31,7 @@ jobs:
           CBIBS_API_KEY: ${{ secrets.CBIBS_API_KEY }}
           CF_ACCT_ID: ${{ secrets.CF_ACCT_ID }}
           CF_AI_WORKERS: ${{ secrets.CF_AI_WORKERS }}
+          CLUB_EVENT_PROMPT: ${{ secrets.CLUB_EVENT_PROMPT }}
 
       - name: Commit updated data
         run: |
