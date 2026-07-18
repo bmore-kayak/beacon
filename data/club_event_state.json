@@ -1,26 +1,4 @@
 {
-  "247331": {
-    "prompt_version": 1,
-    "fingerprint": "c7e7c3a1b04c7f798409104773f59ab9241d407c148ac06f5cd477aa1d3a6db1",
-    "source_modified_at": "2026-07-13 02:17:23",
-    "reviewed_at": "2026-07-12T22:30:37-04:00",
-    "ai_result": {
-      "notice": false,
-      "title": "Delta, PA: Rescue Training",
-      "summary": "Attendees will learn and practice skills such as wet exit, partner rescue, self-rescue, and emptying a kayak when it takes on water."
-    }
-  },
-  "247362": {
-    "prompt_version": 1,
-    "fingerprint": "e94a5cac86118066dfda027c82e5121b044170a897dcad057f23d34a2c269eea",
-    "source_modified_at": "2026-07-04 14:16:24",
-    "reviewed_at": "2026-07-12T09:15:04-04:00",
-    "ai_result": {
-      "notice": false,
-      "title": "Havre de Grace: Paddle to the Lighthouse and the Bay",
-      "summary": "Join Michelle for a paddle to the Lighthouse and the Bay in Havre de Grace."
-    }
-  },
   "247369": {
     "prompt_version": 1,
     "fingerprint": "c3a943e166288f1107c830e182d13d94079d805435e413a3da848c5d8c30d7eb",
