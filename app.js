@@ -146,7 +146,7 @@ function renderDetails(key, condition) {
   }
 
   if (key === "club_notices") {
-    content += renderClubNotices(condition.items);
+    content += renderClubNotices(condition);
   }
 
   if (
@@ -221,11 +221,17 @@ function renderWindDetails(condition) {
   `;
 }
 
-function renderClubNotices(items = []) {
+function renderClubNotices(condition) {
+  const items = condition.items || [];
+
   if (!items.length) {
     return `
       <div class="expanded-empty">
-        No upcoming club events.
+        ${
+          condition.detail === "Club events unavailable"
+            ? "Club events are currently unavailable."
+            : "No upcoming club events."
+        }
       </div>
     `;
   }
@@ -357,18 +363,27 @@ function summarizeRegion(stations) {
   if (!current.length) {
     return {
       status: "⚪",
-      detail: "Older samples",
+      detail: "Outdated",
     };
   }
 
-  const counts = current.map(station => station.bacteria);
-  const failing = current.some(
-    station => station.status === "🔴"
+  const counts = current.map(
+    station => station.bacteria
   );
 
+  const minimum = Math.min(...counts);
+  const maximum = Math.max(...counts);
+
   return {
-    status: failing ? "🔴" : "🟢",
-    detail: `${Math.min(...counts)}–${Math.max(...counts)} MPN`,
+    status: current.some(
+      station => station.status === "🔴"
+    )
+      ? "🔴"
+      : "🟢",
+
+    detail: minimum === maximum
+      ? `${minimum} MPN`
+      : `${minimum}–${maximum} MPN`,
   };
 }
 
@@ -447,37 +462,42 @@ function formatSampleDate(value) {
 }
 
 
+function timeOptions(date, extra = {}) {
+  return {
+    hour: "numeric",
+    minute: date.getMinutes() === 0
+      ? undefined
+      : "2-digit",
+    ...extra,
+  };
+}
+
 function formatDate(value) {
   const date = new Date(value);
 
   return date.toLocaleString([], {
     month: "short",
     day: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-  });
-}
-
-
-function formatTime(value) {
-  const date = new Date(value);
-
-  return date.toLocaleTimeString([], {
-    hour: "numeric",
-    minute: "2-digit",
+    ...timeOptions(date),
   });
 }
 
 function formatAlertTime(item) {
-  const starts = item.starts ? new Date(item.starts) : null;
-  const ends = item.ends ? new Date(item.ends) : null;
+  const starts = item.starts
+    ? new Date(item.starts)
+    : null;
+
+  const ends = item.ends
+    ? new Date(item.ends)
+    : null;
+
   const now = new Date();
 
-  const time = d =>
-    d.toLocaleTimeString([], {
-      hour: "numeric",
-      minute: "2-digit",
-    });
+  const time = date =>
+    date.toLocaleTimeString(
+      [],
+      timeOptions(date)
+    );
 
   if (starts && ends) {
     return starts <= now
@@ -485,8 +505,13 @@ function formatAlertTime(item) {
       : `${time(starts)}–${time(ends)}`;
   }
 
-  if (ends) return `Until ${time(ends)}`;
-  if (starts) return `Beginning ${time(starts)}`;
+  if (ends) {
+    return `Until ${time(ends)}`;
+  }
+
+  if (starts) {
+    return `Beginning ${time(starts)}`;
+  }
 
   return "Time not specified";
 }
@@ -502,15 +527,15 @@ function formatEventWindow(startValue, endValue) {
     day: "numeric",
   });
 
-  const startTime = start.toLocaleTimeString([], {
-    hour: "numeric",
-    minute: "2-digit",
-  });
+  const startTime = start.toLocaleTimeString(
+    [],
+    timeOptions(start)
+  );
 
-  const endTime = end.toLocaleTimeString([], {
-    hour: "numeric",
-    minute: "2-digit",
-  });
+  const endTime = end.toLocaleTimeString(
+    [],
+    timeOptions(end)
+  );
 
   return `${date} · ${startTime}–${endTime}`;
 }
@@ -519,11 +544,12 @@ function formatEventWindow(startValue, endValue) {
 function formatUpdatedTime(value) {
   const date = new Date(value);
 
-  return date.toLocaleTimeString([], {
-    hour: "numeric",
-    minute: "2-digit",
-    timeZoneName: "short",
-  });
+  return date.toLocaleTimeString(
+    [],
+    timeOptions(date, {
+      timeZoneName: "short",
+    })
+  );
 }
 
 
