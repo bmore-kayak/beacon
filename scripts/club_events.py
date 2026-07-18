@@ -34,64 +34,9 @@ MAX_TITLE_CHARS = 60
 MAX_SUMMARY_CHARS = 140
 
 
-SYSTEM_PROMPT = """
-Summarize an upcoming Canton Kayak Club event for Beacon.
-
-Return only valid JSON:
-
-{
-  "notice": true,
-  "title": "...",
-  "summary": "..."
-}
-
-Set notice to true when the event may affect members beyond the event itself,
-including:
-
-- dock, launch, kayak, or equipment availability,
-- a closure or access restriction,
-- a cancellation or material operational change,
-- unusual vessel traffic,
-- a marine restriction,
-- or another broader water-safety concern.
-
-Fells Point or Bond Street Wharf orientation and training should normally
-be a notice because club kayaks are used during those sessions.
-
-Otherwise set notice to false.
-
-Writing rules:
-
-- Use only the supplied event information.
-- When a recognizable location exists, begin the title with:
-  "<Location>: "
-- Use a short, natural location name.
-- If no location can be determined, omit the location prefix.
-- Do not include dates or times in the title or summary.
-- Do not repeat RSVP limits, contact details, or weather reminders.
-- Do not begin the summary with "Join."
-- Keep the title under 60 characters.
-- Keep the summary to one factual sentence under 140 characters.
-- Do not invent closures, restrictions, equipment conflicts, or traffic impacts.
-
-For notice=true:
-- Describe the practical effect on members.
-- The summary should explain why the effect exists.
-
-Example:
-
-{
-  "notice": true,
-  "title": "Fells Point: Kayak availability may be limited",
-  "summary": "New-member orientation will use club kayaks."
-}
-
-For notice=false:
-- Preserve the event's distinguishing activity, route, or destination.
-- Avoid promotional language.
-
-Return JSON only.
-""".strip()
+SYSTEM_PROMPT = os.getenv("CLUB_EVENT_PROMPT")
+if not SYSTEM_PROMPT:
+    raise RuntimeError("SYSTEM_PROMPT is not configured")
 
 
 def clean_html(value):
