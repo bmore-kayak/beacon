@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Don't go"
   },
-  "updated": "2026-07-18T14:02:29-04:00",
+  "updated": "2026-07-18T14:08:11-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -13,16 +13,34 @@
       "detail": "Small Craft Advisory",
       "items": [
         {
-          "event": "Tornado Watch",
+          "event": "Flood Watch",
           "status": "\ud83d\udfe0",
-          "starts": "2026-07-18T13:55:00-04:00",
-          "ends": "2026-07-18T21:00:00-04:00"
+          "starts": "2026-07-18T14:00:00-04:00",
+          "ends": "2026-07-18T20:00:00-04:00"
+        },
+        {
+          "event": "Heat Advisory",
+          "status": "\ud83d\udfe0",
+          "starts": "2026-07-18T11:00:00-04:00",
+          "ends": "2026-07-18T19:00:00-04:00"
+        },
+        {
+          "event": "Air Quality Alert",
+          "status": "\ud83d\udfe1",
+          "starts": "2026-07-17T16:40:00-04:00",
+          "ends": "2026-07-19T00:00:00-04:00"
         },
         {
           "event": "Small Craft Advisory",
           "status": "\ud83d\udd34",
-          "starts": "2026-07-18T11:00:00-04:00",
-          "ends": "2026-07-18T23:00:00-04:00"
+          "starts": null,
+          "ends": null
+        },
+        {
+          "event": "Tornado Watch",
+          "status": "\ud83d\udfe0",
+          "starts": null,
+          "ends": null
         },
         {
           "event": "Hazardous Weather Outlook",
@@ -34,7 +52,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-07-18T14:02:27.236930-04:00"
+        "updated": "2026-07-18T14:08:09.885928-04:00"
       }
     },
     "storms": {
@@ -57,11 +75,11 @@
       "detail": "9 kt, gusts 11",
       "speed_kt": 9,
       "gust_kt": 11,
-      "direction_deg": 212.3,
+      "direction_deg": 212.9,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T14:02:27.236960-04:00"
+        "updated": "2026-07-18T14:08:09.885960-04:00"
       }
     },
     "waves": {
@@ -73,7 +91,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T14:02:27.236976-04:00"
+        "updated": "2026-07-18T14:08:09.885977-04:00"
       }
     },
     "air_temp": {
@@ -84,7 +102,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T14:02:27.237081-04:00"
+        "updated": "2026-07-18T14:08:09.886046-04:00"
       }
     },
     "water_temp": {
@@ -95,7 +113,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T14:02:27.237097-04:00"
+        "updated": "2026-07-18T14:08:09.886053-04:00"
       }
     },
     "bacteria": {
@@ -856,9 +874,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-18T14:02:27-04:00"
+      "checked_at": "2026-07-18T14:08:09-04:00"
     }
   },
   "club_notes": [],
-  "note": "Tornado Watch until 9 PM.\nSmall Craft Advisory until 11 PM.\nHazardous Weather Outlook\nStorm risk 2 PM\u201310 PM.\nElevated bacteria in Inner Harbor."
+  "note": "Flood Watch until 8 PM.\nHeat Advisory until 7 PM.\nAir Quality Alert until 12 AM.\nSmall Craft Advisory\nTornado Watch\nHazardous Weather Outlook\nStorm risk 2 PM\u201310 PM.\nElevated bacteria in Inner Harbor."
 }
