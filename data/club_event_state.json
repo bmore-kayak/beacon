@@ -86,5 +86,16 @@
       "title": "Fells Point: Mindfulness led by Phillip McKnight",
       "summary": "Join mindfulness teacher Phillip McKnight for a 90-minute kayak session exploring techniques for being present in the moment."
     }
+  },
+  "247700": {
+    "prompt_version": 1,
+    "fingerprint": "346386fd0d83cc74d622f45a1fe51f84fc56ff93baa4243b7c2e46cd56dc4d49",
+    "source_modified_at": "2026-07-19 21:25:20",
+    "reviewed_at": "2026-07-19T17:31:55-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Solleys Cove: Paddle to ghost ships",
+      "summary": "Join Rob for a 5-mile paddle to see the ghost ships at Solleys Cove."
+    }
   }
 }
