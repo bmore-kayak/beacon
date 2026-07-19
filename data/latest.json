@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-07-19T13:00:39-04:00",
+  "updated": "2026-07-19T13:30:31-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-19T13:00:33.690477-04:00"
+        "updated": "2026-07-19T13:30:25.862618-04:00"
       }
     },
     "storms": {
@@ -32,15 +32,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "11 kt, gusts 14",
-      "speed_kt": 11,
-      "gust_kt": 14,
-      "direction_deg": 321.4,
+      "status": "\ud83d\udfe1",
+      "detail": "7 kt, gusts 10",
+      "speed_kt": 7,
+      "gust_kt": 10,
+      "direction_deg": 310.8,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-19T13:00:33.690508-04:00"
+        "updated": "2026-07-19T13:30:25.862651-04:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-19T13:00:33.690525-04:00"
+        "updated": "2026-07-19T13:30:25.862667-04:00"
       }
     },
     "air_temp": {
@@ -63,18 +63,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-19T13:00:33.690564-04:00"
+        "updated": "2026-07-19T13:30:25.862683-04:00"
       }
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
       "status": "\ud83d\udfe2",
-      "detail": "83\u00b0F",
+      "detail": "82\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-19T13:00:33.690572-04:00"
+        "updated": "2026-07-19T13:30:25.862690-04:00"
       }
     },
     "bacteria": {
@@ -848,9 +848,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-19T13:00:33-04:00"
+      "checked_at": "2026-07-19T13:30:25-04:00"
     }
   },
   "club_notes": [],
-  "note": "Elevated bacteria in Inner Harbor, sampled 3 days ago.\nElevated winds."
+  "note": "Elevated bacteria in Inner Harbor, sampled 3 days ago."
 }
