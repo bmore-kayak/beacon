@@ -4,31 +4,25 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-07-18T23:31:59-04:00",
+  "updated": "2026-07-19T00:02:30-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
       "label": "Alerts",
       "status": "\ud83d\udd34",
-      "detail": "2 active alerts",
+      "detail": "Small Craft Advisory",
       "items": [
         {
           "event": "Small Craft Advisory",
           "status": "\ud83d\udd34",
           "starts": null,
           "ends": null
-        },
-        {
-          "event": "Air Quality Alert",
-          "status": "\ud83d\udfe1",
-          "starts": "2026-07-17T16:40:00-04:00",
-          "ends": "2026-07-19T00:00:00-04:00"
         }
       ],
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-07-18T23:31:57.254037-04:00"
+        "updated": "2026-07-19T00:02:27.083641-04:00"
       }
     },
     "storms": {
@@ -39,33 +33,33 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-18T23:00:00-04:00"
+        "updated": "2026-07-19T00:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe2",
-      "detail": "5 kt, gusts 6",
-      "speed_kt": 5,
-      "gust_kt": 6,
-      "direction_deg": 250.2,
+      "status": "\ud83d\udfe1",
+      "detail": "9 kt, gusts 10",
+      "speed_kt": 9,
+      "gust_kt": 10,
+      "direction_deg": 251.8,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T23:31:57.254067-04:00"
+        "updated": "2026-07-19T00:02:27.083674-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T23:31:57.254083-04:00"
+        "updated": "2026-07-19T00:02:27.083691-04:00"
       }
     },
     "air_temp": {
@@ -76,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T23:31:57.254096-04:00"
+        "updated": "2026-07-19T00:02:27.083705-04:00"
       }
     },
     "water_temp": {
@@ -87,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-18T23:31:57.254103-04:00"
+        "updated": "2026-07-19T00:02:27.083712-04:00"
       }
     },
     "bacteria": {
@@ -750,7 +744,7 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "1 notice \u00b7 7 upcoming events",
+      "detail": "1 notice \u00b7 9 upcoming events",
       "items": [
         {
           "event_id": 247369,
@@ -842,15 +836,41 @@
           "source_modified_at": "2026-07-16 00:13:06",
           "reviewed_at": "2026-07-18T00:00:26-04:00",
           "source_url": "https://cantonkayakclub.com/event/02-canton-kayak-club-rescue-training-sat-morning-7-25-900a-1200p-at-delta-pa/"
+        },
+        {
+          "event_id": 247670,
+          "title": "Chesapeake Bay Environmental Center: Eastern Shore adventure",
+          "summary": "Join Michelle and Colleen for a paddle at Marsh Creek, enjoying the natural elements of the Bay.",
+          "notice": false,
+          "location": "Chesapeake Bay Environemental Center (CBEC)",
+          "address": "600 Discovery Ln",
+          "starts_at": "2026-07-26T08:40:00-04:00",
+          "ends_at": "2026-07-26T11:30:00-04:00",
+          "source_modified_at": "2026-07-17 15:33:14",
+          "reviewed_at": "2026-07-19T00:02:27-04:00",
+          "source_url": "https://cantonkayakclub.com/event/paddle-palschesapeake-bay-environmental-center-sunday-july-26-840-1130am-w-michelle-s-and-colleen/"
+        },
+        {
+          "event_id": 246710,
+          "title": "Fells Point: Mindfulness led by Phillip McKnight",
+          "summary": "Join mindfulness teacher Phillip McKnight for a 90-minute kayak session exploring techniques for being present in the moment.",
+          "notice": false,
+          "location": "Fells Point",
+          "address": "Bond Street Wharf\u200b",
+          "starts_at": "2026-07-26T10:00:00-04:00",
+          "ends_at": "2026-07-26T11:30:00-04:00",
+          "source_modified_at": "2026-05-18 01:04:12",
+          "reviewed_at": "2026-07-19T00:02:27-04:00",
+          "source_url": "https://cantonkayakclub.com/event/ckc-kayak-float-01-with-mindfulness-led-by-phillip-mcknight-july-26-10a-1115/"
         }
       ],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-18T23:31:57-04:00"
+      "checked_at": "2026-07-19T00:02:27-04:00"
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory\nAir Quality Alert until 12 AM.\nElevated bacteria in Inner Harbor."
+  "note": "Small Craft Advisory\nElevated bacteria in Inner Harbor."
 }

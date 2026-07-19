@@ -75,5 +75,27 @@
       "title": "Delta, PA: Rescue Training",
       "summary": "Attendees will learn and practice rescue skills such as wet exit, partner rescue, self-rescue, and emptying a kayak when it takes on water."
     }
+  },
+  "247670": {
+    "prompt_version": 1,
+    "fingerprint": "26b897a35e587c4b4a2b2bd8d908d7247761ec9a9ca0ea7e9e951fe4a27223cd",
+    "source_modified_at": "2026-07-17 15:33:14",
+    "reviewed_at": "2026-07-19T00:02:27-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Chesapeake Bay Environmental Center: Eastern Shore adventure",
+      "summary": "Join Michelle and Colleen for a paddle at Marsh Creek, enjoying the natural elements of the Bay."
+    }
+  },
+  "246710": {
+    "prompt_version": 1,
+    "fingerprint": "d3c991d75b8aabd6488f868b7cc3ca3c009ec3ae302fc224350ffa4e87d0aa0f",
+    "source_modified_at": "2026-05-18 01:04:12",
+    "reviewed_at": "2026-07-19T00:02:27-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Fells Point: Mindfulness led by Phillip McKnight",
+      "summary": "Join mindfulness teacher Phillip McKnight for a 90-minute kayak session exploring techniques for being present in the moment."
+    }
   }
 }
