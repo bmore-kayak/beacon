@@ -1041,7 +1041,7 @@ def advisory_condition(api_alerts, marine_text_names=None):
         "items": items,
         "source": {
             "provider": "National Weather Service",
-            "location": "Baltimore Harbor",
+            "location": "Baltimore Inner Harbor",
             "updated": datetime.now(
                 ZoneInfo("America/New_York")
             ).isoformat(),
