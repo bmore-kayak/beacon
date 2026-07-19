@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-07-19T18:00:33-04:00",
+  "updated": "2026-07-19T18:31:44-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-19T18:00:29.050362-04:00"
+        "updated": "2026-07-19T18:31:38.489249-04:00"
       }
     },
     "storms": {
@@ -36,11 +36,11 @@
       "detail": "9 kt, gusts 11",
       "speed_kt": 9,
       "gust_kt": 11,
-      "direction_deg": 321.9,
+      "direction_deg": 351.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-19T18:00:29.050395-04:00"
+        "updated": "2026-07-19T18:31:38.489288-04:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-19T18:00:29.050412-04:00"
+        "updated": "2026-07-19T18:31:38.489308-04:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-19T18:00:29.050427-04:00"
+        "updated": "2026-07-19T18:31:38.489324-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-19T18:00:29.050432-04:00"
+        "updated": "2026-07-19T18:31:38.489332-04:00"
       }
     },
     "bacteria": {
@@ -861,7 +861,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-19T18:00:29-04:00"
+      "checked_at": "2026-07-19T18:31:38-04:00"
     }
   },
   "club_notes": [],
