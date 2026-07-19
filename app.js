@@ -368,9 +368,10 @@ function renderStations(stations = []) {
 
 
 function summarizeRegion(stations) {
-  const current = stations.filter(station =>
-    !station.stale &&
-    station.bacteria != null
+  const current = stations.filter(
+    station =>
+      !station.stale &&
+      station.bacteria != null
   );
 
   if (!current.length) {
@@ -384,19 +385,30 @@ function summarizeRegion(stations) {
     station => station.bacteria
   );
 
+  const rank = {
+    "🟢": 0,
+    "🟡": 1,
+    "🟠": 2,
+    "🔴": 3,
+  };
+
+  const status = current.reduce(
+    (highest, station) =>
+      rank[station.status] > rank[highest]
+        ? station.status
+        : highest,
+    "🟢"
+  );
+
   const minimum = Math.min(...counts);
   const maximum = Math.max(...counts);
 
   return {
-    status: current.some(
-      station => station.status === "🔴"
-    )
-      ? "🔴"
-      : "🟢",
-
-    detail: minimum === maximum
-      ? `${minimum} MPN`
-      : `${minimum}–${maximum} MPN`,
+    status,
+    detail:
+      minimum === maximum
+        ? `${minimum} MPN`
+        : `${minimum}–${maximum} MPN`,
   };
 }
 
