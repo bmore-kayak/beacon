@@ -1181,7 +1181,7 @@ def note(conditions, water, club_notes):
             
             if age > timedelta(days=2):
                 inner_harbor += (
-                    f" , sampled {age.days} days ago"
+                    f", sampled {age.days} days ago"
                 )
     
         regions.append(inner_harbor)
