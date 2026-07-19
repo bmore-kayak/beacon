@@ -33,6 +33,19 @@ MAX_DESCRIPTION_CHARS = 5000
 MAX_TITLE_CHARS = 60
 MAX_SUMMARY_CHARS = 140
 
+HEADERS = {
+    "Accept": "application/json",
+    "User-Agent": (
+        "Beacon/1.0 "
+        "(https://github.com/bmore-kayak/beacon)"
+    ),
+}
+
+CANCELLED_PATTERN = re.compile(
+    r"\b(?:cancelled|canceled)\b",
+    re.IGNORECASE,
+)
+
 
 SYSTEM_PROMPT = os.getenv("CLUB_EVENT_PROMPT")
 if not SYSTEM_PROMPT:
@@ -100,21 +113,13 @@ def fetch_events(now):
         "end_date": end.strftime("%Y-%m-%d"),
     }
 
-    headers = {
-        "Accept": "application/json",
-        "User-Agent": (
-            "Beacon/1.0 "
-            "(https://github.com/bmore-kayak/beacon)"
-        ),
-    }
-
     last_response = None
 
     for attempt in range(3):
         response = requests.get(
             EVENTS_URL,
             params=params,
-            headers=headers,
+            headers=HEADERS,
             timeout=30,
         )
 
@@ -174,6 +179,45 @@ def normalize_event(raw):
             for category in categories
         ],
     }
+
+
+def event_page_titles(url):
+    if not url:
+        return ""
+
+    response = requests.get(
+        url,
+        headers=HEADERS,
+        timeout=30,
+    )
+    response.raise_for_status()
+
+    matches = re.findall(
+        r"<(?:title|h1)[^>]*>(.*?)</(?:title|h1)>",
+        response.text,
+        re.IGNORECASE | re.DOTALL,
+    )
+
+    return " ".join(
+        clean_html(match)
+        for match in matches
+    )
+
+
+def is_cancelled(event):
+    if CANCELLED_PATTERN.search(event["title"]):
+        return True
+
+    try:
+        page_titles = event_page_titles(
+            event.get("url")
+        )
+    except requests.RequestException:
+        return False
+
+    return bool(
+        CANCELLED_PATTERN.search(page_titles)
+    )
 
 
 def event_fingerprint(event):
@@ -351,6 +395,7 @@ def get_club_notices(now=None):
     Return:
         condition: latest.json-compatible Club Notices condition
         note_lines: notice titles and time windows for today
+        success: whether the event feed was retrieved
     """
 
     now = now or datetime.now(TIMEZONE)
@@ -371,7 +416,7 @@ def get_club_notices(now=None):
             [],
             False,
         )
-    
+
     if not raw_events:
         return (
             unavailable_condition(
@@ -385,47 +430,50 @@ def get_club_notices(now=None):
     state = load_state()
     items = []
     active_ids = set()
-    
+
     for raw in raw_events:
         event = normalize_event(raw)
-    
-        if re.search(
-            r"\b(?:cancelled|canceled)\b",
-            event["title"],
-            re.IGNORECASE,
-        ):
+
+        if is_cancelled(event):
             continue
-    
+
         event_id = str(event["event_id"])
-    
-        starts_at = parse_local_datetime(event["start"])
-        ends_at = parse_local_datetime(event["end"])
-    
+
+        starts_at = parse_local_datetime(
+            event["start"]
+        )
+        ends_at = parse_local_datetime(
+            event["end"]
+        )
+
         # Ignore events that have already ended.
         if ends_at <= now:
             continue
-    
+
         active_ids.add(event_id)
-    
+
         fingerprint = event_fingerprint(event)
         saved = state.get(event_id)
-    
+
         cache_valid = (
             saved
             and saved.get("fingerprint") == fingerprint
             and saved.get("prompt_version") == PROMPT_VERSION
-            and isinstance(saved.get("ai_result"), dict)
+            and isinstance(
+                saved.get("ai_result"),
+                dict,
+            )
         )
-    
+
         if cache_valid:
             ai_result = saved["ai_result"]
-    
+
         else:
             try:
                 ai_result = validate_ai_result(
                     classify_event(event)
                 )
-    
+
             except (
                 requests.RequestException,
                 RuntimeError,
@@ -441,33 +489,43 @@ def get_club_notices(now=None):
                     ai_result = saved["ai_result"]
                 else:
                     continue
-    
+
             state[event_id] = {
                 "prompt_version": PROMPT_VERSION,
                 "fingerprint": fingerprint,
-                "source_modified_at": event["modified_utc"],
+                "source_modified_at": event[
+                    "modified_utc"
+                ],
                 "reviewed_at": now.isoformat(
                     timespec="seconds"
                 ),
                 "ai_result": ai_result,
             }
-    
+
         items.append(
             {
                 "event_id": event["event_id"],
                 "title": ai_result["title"],
                 "summary": ai_result["summary"],
                 "notice": ai_result["notice"],
-                "location": event["venue"]["name"] or None,
-                "address": event["venue"]["address"] or None,
+                "location": (
+                    event["venue"]["name"] or None
+                ),
+                "address": (
+                    event["venue"]["address"] or None
+                ),
                 "starts_at": starts_at.isoformat(
                     timespec="seconds"
                 ),
                 "ends_at": ends_at.isoformat(
                     timespec="seconds"
                 ),
-                "source_modified_at": event["modified_utc"],
-                "reviewed_at": state[event_id]["reviewed_at"],
+                "source_modified_at": event[
+                    "modified_utc"
+                ],
+                "reviewed_at": state[event_id][
+                    "reviewed_at"
+                ],
                 "source_url": event["url"],
             }
         )
@@ -499,7 +557,11 @@ def get_club_notices(now=None):
             item["ends_at"]
         )
 
-        if is_today(starts_at, ends_at, now):
+        if is_today(
+            starts_at,
+            ends_at,
+            now,
+        ):
             today_notices.append(item)
 
     upcoming_notices = [
@@ -511,19 +573,19 @@ def get_club_notices(now=None):
     if today_notices:
         status = "🟡"
         detail = today_notices[0]["title"]
-    
+
     elif upcoming_notices:
         status = "⚪"
-    
+
         notice_count = len(upcoming_notices)
         event_count = len(items)
-    
+
         detail = (
             f"{notice_count} notice"
             f"{'s' if notice_count != 1 else ''}"
             f" · {event_count} upcoming events"
         )
-    
+
     elif items:
         status = "⚪"
         detail = (
@@ -531,7 +593,7 @@ def get_club_notices(now=None):
             if len(items) == 1
             else f"{len(items)} upcoming events"
         )
-    
+
     else:
         status = "⚪"
         detail = "No upcoming events"
