@@ -33,7 +33,7 @@ NDBC_URL = "https://www.ndbc.noaa.gov/data/realtime2/BLTM2.txt"
 
 PASS_LIMIT = 104
 WINDOW_HOURS = 8
-STALE_SAMPLE_DAYS = 30
+STALE_SAMPLE_DAYS = 7
 
 STATION_NAMES = {
     "Canton Park": "Canton Waterfront Park",
@@ -138,11 +138,27 @@ def is_stale_sample(sample_date):
     return now - sample_date > timedelta(days=STALE_SAMPLE_DAYS)
 
 
-def station_status(count, stale=False):
-    if stale or count is None:
+def station_status(count, sample_date):
+    if count is None or is_stale_sample(sample_date):
         return "⚪"
 
-    return "🟢" if count <= PASS_LIMIT else "🔴"
+    if count <= PASS_LIMIT:
+        return "🟢"
+
+    age = (
+        datetime.now(
+            ZoneInfo("America/New_York")
+        )
+        - sample_date
+    )
+
+    if age <= timedelta(days=2):
+        return "🔴"
+
+    if age <= timedelta(days=5):
+        return "🟠"
+
+    return "🟡"
 
 
 def format_mpn_range(counts):
@@ -189,7 +205,7 @@ def waterfront_data():
                 sampled.isoformat()
                 if sampled else None
             ),
-            "status": station_status(count, stale),
+            "status": station_status(count, sampled),
             "stale": stale,
             "bacteria": count,
             "latitude": None,
@@ -288,7 +304,7 @@ def bww_data():
             a.get("collection_datetime")
         )
         stale = is_stale_sample(sample_date)
-        status = station_status(bacteria, stale)
+        status = station_status(bacteria, sample_date)
     
         stations.append({
             "source": "bww",
@@ -406,7 +422,7 @@ def merge_stations(stations):
             ),
             "status": station_status(
                 bacteria,
-                stale,
+                sampled,
             ),
             "stale": stale,
             "bacteria": bacteria,
@@ -459,7 +475,7 @@ def bacteria_conditions(waterfront, bww):
     failing_regions = sorted({
         station["region"]
         for station in current_stations
-        if station["status"] == "🔴"
+        if station["bacteria"] > PASS_LIMIT
         and station["region"] != "Inner Harbor"
     })
 
@@ -469,12 +485,12 @@ def bacteria_conditions(waterfront, bww):
     ]
 
     passing = sum(
-        station["status"] == "🟢"
+        station["bacteria"] <= PASS_LIMIT
         for station in current_inner_harbor
     )
-
+    
     failing = sum(
-        station["status"] == "🔴"
+        station["bacteria"] > PASS_LIMIT
         for station in current_inner_harbor
     )
 
@@ -502,7 +518,16 @@ def bacteria_conditions(waterfront, bww):
         )
 
     if current_inner_harbor:
-        status = "🔴" if failing else "🟢"
+        rank = {
+            "🟢": 0,
+            "🟡": 1,
+            "🟠": 2,
+            "🔴": 3,
+        }
+        status = max(
+            (station["status"] for station in current_inner_harbor),
+            key=rank.get,
+        )
         detail = format_mpn_range(counts)
     elif inner_harbor_stations:
         status = "⚪"
@@ -1129,8 +1154,24 @@ def note(conditions, water, club_notes):
     if conditions["storms"]["status"] in {"🔴", "🟠", "🟡"}:
         notes.append(conditions["storms"]["detail"] + ".")
 
-    if water["status"] == "🔴":
-        notes.append("Elevated bacteria in Inner Harbor.")
+    regions = []
+    if water["failing"]:
+        regions.append("Inner Harbor")
+
+    regions.extend(
+        water.get("failing_regions", [])
+    )
+    
+    if len(regions) == 1:
+        notes.append(
+            f"Elevated bacteria in {regions[0]}."
+        )
+    elif len(regions) > 1:
+        notes.append(
+            "Elevated bacteria in "
+            + ", ".join(regions[:-1])
+            + f" and {regions[-1]}."
+        )
 
     if conditions["wind"]["status"] == "🔴":
         notes.append("Strong winds.")
@@ -1141,17 +1182,6 @@ def note(conditions, water, club_notes):
         notes.append("Rough harbor.")
     elif conditions["waves"]["status"] == "🟠":
         notes.append("Choppy water.")
-
-    regions = water.get("failing_regions", [])
-
-    if len(regions) == 1:
-        notes.append(f"Elevated bacteria in {regions[0]}.")
-    elif len(regions) > 1:
-        notes.append(
-            "Elevated bacteria in "
-            + ", ".join(regions[:-1])
-            + f" and {regions[-1]}."
-        )
 
     notes = alert_notes + notes[:3] + club_notes
     return "\n".join(notes)
