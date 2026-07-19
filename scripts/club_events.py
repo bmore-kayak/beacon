@@ -385,10 +385,17 @@ def get_club_notices(now=None):
     state = load_state()
     items = []
     active_ids = set()
-
     
     for raw in raw_events:
         event = normalize_event(raw)
+    
+        if re.search(
+            r"\b(?:cancelled|canceled)\b",
+            event["title"],
+            re.IGNORECASE,
+        ):
+            continue
+    
         event_id = str(event["event_id"])
     
         starts_at = parse_local_datetime(event["start"])
