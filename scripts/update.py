@@ -1155,9 +1155,37 @@ def note(conditions, water, club_notes):
         notes.append(conditions["storms"]["detail"] + ".")
 
     regions = []
+    
     if water["failing"]:
-        regions.append("Inner Harbor")
-
+        elevated_dates = [
+            sample_datetime(station.get("date"))
+            for station in water.get("stations", [])
+            if station.get("region") == "Inner Harbor"
+            and not station.get("stale")
+            and station.get("bacteria") is not None
+            and station["bacteria"] > PASS_LIMIT
+            and station.get("date")
+        ]
+    
+        inner_harbor = "Inner Harbor"
+    
+        if elevated_dates:
+            latest_elevated = max(elevated_dates)
+    
+            age = (
+                datetime.now(
+                    ZoneInfo("America/New_York")
+                )
+                - latest_elevated
+            )
+            
+            if age > timedelta(days=2):
+                inner_harbor += (
+                    f" , sampled {age.days} days ago"
+                )
+    
+        regions.append(inner_harbor)
+    
     regions.extend(
         water.get("failing_regions", [])
     )
