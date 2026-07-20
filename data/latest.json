@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-07-20T01:33:07-04:00",
+  "updated": "2026-07-20T02:00:32-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-20T01:33:01.701090-04:00"
+        "updated": "2026-07-20T02:00:27.643017-04:00"
       }
     },
     "storms": {
@@ -26,7 +26,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-20T01:00:00-04:00"
+        "updated": "2026-07-20T02:00:00-04:00"
       }
     },
     "wind": {
@@ -36,11 +36,11 @@
       "detail": "1 kt, gusts 2",
       "speed_kt": 1,
       "gust_kt": 2,
-      "direction_deg": 87.9,
+      "direction_deg": 79.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-20T01:33:01.701122-04:00"
+        "updated": "2026-07-20T02:00:27.643050-04:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-20T01:33:01.701138-04:00"
+        "updated": "2026-07-20T02:00:27.643067-04:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-20T01:33:01.701152-04:00"
+        "updated": "2026-07-20T02:00:27.643081-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-20T01:33:01.701158-04:00"
+        "updated": "2026-07-20T02:00:27.643087-04:00"
       }
     },
     "bacteria": {
@@ -861,7 +861,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-20T01:33:01-04:00"
+      "checked_at": "2026-07-20T02:00:27-04:00"
     }
   },
   "club_notes": [],
