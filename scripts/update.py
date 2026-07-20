@@ -962,89 +962,95 @@ def alert_status(event):
     return "🟡"
     
     
-def advisory_condition(api_alerts, marine_text_names=None):
-    marine_text_names = marine_text_names or []
-    now = datetime.now(timezone.utc)
+def advisory_condition(api_alerts):
+    now = datetime.now(
+        ZoneInfo("America/New_York")
+    )
+    today = now.replace(
+        hour=0,
+        minute=0,
+        second=0,
+        microsecond=0,
+    )
+    tomorrow = today + timedelta(days=1)
+
     items = []
 
     for alert in api_alerts:
         properties = alert.get("properties", {})
         event = properties.get("event")
-    
-        if not event:
-            continue
-    
-        starts = properties.get("onset") or properties.get("effective")
-        ends = properties.get("ends") or properties.get("expires")
-        full_status = alert_status(event)
-        start_time = sample_datetime(starts)
-    
-        status = (
-            "🟡"
-            if start_time and start_time > now + timedelta(hours=2)
-            else full_status
+
+        starts = (
+            properties.get("onset")
+            or properties.get("effective")
         )
-    
-        item = {
+        ends = (
+            properties.get("ends")
+            or properties.get("expires")
+        )
+
+        start_time = sample_datetime(starts)
+        end_time = sample_datetime(ends)
+
+        if (
+            not event
+            or not start_time
+            or not end_time
+            or start_time >= tomorrow
+            or end_time <= today
+        ):
+            continue
+
+        status = alert_status(event)
+
+        if start_time > now + timedelta(hours=2):
+            status = "🟡"
+
+        items.append({
             "event": event,
             "status": status,
             "starts": starts,
             "ends": ends,
-        }
-    
-        if item not in items:
-            items.append(item)
-    
-    existing = {item["event"] for item in items}
-    
-    for event in marine_text_names:
-        if event not in existing:
-            items.append({
-                "event": event,
-                "status": alert_status(event),
-                "starts": None,
-                "ends": None,
-            })
+        })
 
-    rank = {"🟢": 0, "🟡": 1, "🟠": 2, "🔴": 3}
+    rank = {
+        "🟢": 0,
+        "🟡": 1,
+        "🟠": 2,
+        "🔴": 3,
+    }
 
     items.sort(
         key=lambda item: (
             -rank[item["status"]],
-            sample_datetime(item.get("ends"))
-            or datetime.max.replace(
-                tzinfo=timezone.utc
-            ),
+            sample_datetime(item["ends"]),
             item["event"].lower(),
         )
     )
-    
+
     status = max(
         (item["status"] for item in items),
         key=rank.get,
         default="🟢",
     )
 
-    details = (
-        f"{len(items)} active alerts"
-        if len(items) > 1
-        else items[0]["event"]
-        if items
-        else "None"
-    )
+    if not items:
+        detail = "None"
+    elif len(items) == 1:
+        detail = items[0]["event"]
+    else:
+        detail = f"{len(items)} active alerts"
 
     return {
         "icon": "🚨",
         "label": "Alerts",
         "status": status,
-        "detail": details,
+        "detail": detail,
         "items": items,
         "source": {
             "provider": "National Weather Service",
-            "location": "Baltimore Inner Harbor",
-            "updated": datetime.now(
-                ZoneInfo("America/New_York")
-            ).isoformat(),
+            "location": "Baltimore Harbor",
+            "updated": now.isoformat(),
         },
     }
 
@@ -1104,21 +1110,21 @@ def marine_conditions():
     cbibs = safe_call(cbibs_measurements, {})
     periods = safe_call(nws_hourly_periods, [])
     alerts = safe_call(nws_alerts, [])
-    marine_alert_names = safe_call(
-        marine_text_alert_names,
-        [],
-    )
-    
+
     return {
-        "advisories": advisory_condition(
-            alerts,
-            marine_alert_names,
-        ),
-        "wind": cbibs_wind(cbibs) or safe_call(coops_wind) or unavailable("Wind"),
-        "waves": cbibs_waves(cbibs) or safe_call(forecast_waves) or unavailable("Waves"),
+        "advisories": advisory_condition(alerts),
+        "wind": cbibs_wind(cbibs)
+            or safe_call(coops_wind)
+            or unavailable("Wind"),
+        "waves": cbibs_waves(cbibs)
+            or safe_call(forecast_waves)
+            or unavailable("Waves"),
         "storms": storm_condition(periods),
-        "air_temp": cbibs_air_temp(cbibs) or forecast_air_temp(periods),
-        "water_temp": cbibs_water_temp(cbibs) or safe_call(ndbc_water_temp) or unavailable("Water Temp"),
+        "air_temp": cbibs_air_temp(cbibs)
+            or forecast_air_temp(periods),
+        "water_temp": cbibs_water_temp(cbibs)
+            or safe_call(ndbc_water_temp)
+            or unavailable("Water Temp"),
     }
 
 
