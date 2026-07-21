@@ -1,26 +1,4 @@
 {
-  "247564": {
-    "prompt_version": 1,
-    "fingerprint": "3e670ab7447741d3e27f00a98e9c92ed0746cf1167a6d9d8188f1103db9233a0",
-    "source_modified_at": "2026-07-12 14:44:11",
-    "reviewed_at": "2026-07-14T00:00:43-04:00",
-    "ai_result": {
-      "notice": false,
-      "title": "Dundalk: Paddle around Dundalk",
-      "summary": "Join Michelle for a laid-back two-hour paddle at a beginner-friendly slow-moderate pace."
-    }
-  },
-  "247375": {
-    "prompt_version": 1,
-    "fingerprint": "39eadb378520b3005ef942b7dac853982be2f9b1df07dfff6251ee5f807936fe",
-    "source_modified_at": "2026-07-04 14:43:09",
-    "reviewed_at": "2026-07-14T00:00:43-04:00",
-    "ai_result": {
-      "notice": false,
-      "title": "Chesapeake Harbour: Paddle to Back Creek",
-      "summary": "Join a paddle from Chesapeake Harbour to Back Creek with music and sunset views."
-    }
-  },
   "247648": {
     "prompt_version": 1,
     "fingerprint": "0030e9beaf2061eb8f4f38ec467453d4f1c28aa6460dbb83c242fc5bf56f9049",

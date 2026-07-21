@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-07-20T21:00:30-04:00",
+  "updated": "2026-07-20T21:30:37-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-07-20T21:00:30.634085-04:00"
+        "updated": "2026-07-20T21:30:26.657342-04:00"
       }
     },
     "storms": {
@@ -35,37 +35,37 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "9 kt, gusts 13",
-      "speed_kt": 9,
+      "detail": "11 kt, gusts 13",
+      "speed_kt": 11,
       "gust_kt": 13,
-      "direction_deg": 158.9,
+      "direction_deg": 164.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-20T21:00:30.634140-04:00"
+        "updated": "2026-07-20T21:30:26.657393-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.4 ft",
-      "height_ft": 0.4,
+      "detail": "0.3 ft",
+      "height_ft": 0.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-20T21:00:30.634157-04:00"
+        "updated": "2026-07-20T21:30:26.657409-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "80\u00b0F",
+      "detail": "79\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-20T21:00:30.634435-04:00"
+        "updated": "2026-07-20T21:30:26.657548-04:00"
       }
     },
     "water_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-20T21:00:30.634444-04:00"
+        "updated": "2026-07-20T21:30:26.657555-04:00"
       }
     },
     "bacteria": {
@@ -739,34 +739,8 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "1 notice \u00b7 9 upcoming events",
+      "detail": "1 notice \u00b7 7 upcoming events",
       "items": [
-        {
-          "event_id": 247564,
-          "title": "Dundalk: Paddle around Dundalk",
-          "summary": "Join Michelle for a laid-back two-hour paddle at a beginner-friendly slow-moderate pace.",
-          "notice": false,
-          "location": "Anchor Bay East Marina (Hard Yacht Cafe) \u2013 Bear Creek",
-          "address": "8500 Cove Rd",
-          "starts_at": "2026-07-21T17:00:00-04:00",
-          "ends_at": "2026-07-21T19:00:00-04:00",
-          "source_modified_at": "2026-07-16 01:54:35",
-          "reviewed_at": "2026-07-14T00:00:43-04:00",
-          "source_url": "https://cantonkayakclub.com/event/paddle-palstaco-tuesday-paddle-july-21-5-pm-to-7-pm-anchor-bay-east-w-michelle-s/"
-        },
-        {
-          "event_id": 247375,
-          "title": "Chesapeake Harbour: Paddle to Back Creek",
-          "summary": "Join a paddle from Chesapeake Harbour to Back Creek with music and sunset views.",
-          "notice": false,
-          "location": "Chesapeake Harbour",
-          "address": null,
-          "starts_at": "2026-07-21T17:30:00-04:00",
-          "ends_at": "2026-07-21T20:30:00-04:00",
-          "source_modified_at": "2026-07-04 14:43:09",
-          "reviewed_at": "2026-07-14T00:00:43-04:00",
-          "source_url": "https://cantonkayakclub.com/event/paddle-palstunesday-from-chesapeake-harbour-w-duane-tuesday-july-21-530-830pm/"
-        },
         {
           "event_id": 247648,
           "title": "Fells Point: Kayak availability may be limited",
@@ -863,7 +837,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-20T20:30:26-04:00"
+      "checked_at": "2026-07-20T21:30:26-04:00"
     }
   },
   "club_notes": [],
