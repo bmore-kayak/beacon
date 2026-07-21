@@ -75,5 +75,16 @@
       "title": "Solleys Cove: Paddle to ghost ships",
       "summary": "Join Rob for a 5-mile paddle to see the ghost ships at Solleys Cove."
     }
+  },
+  "247366": {
+    "prompt_version": 1,
+    "fingerprint": "06ccbabef8afbc7c4629c79e75f8f8241c3603c0afae56af467fabfeb5e29578",
+    "source_modified_at": "2026-07-04 14:22:00",
+    "reviewed_at": "2026-07-21T00:00:29-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Dundalk: Laid-back two-hour paddle",
+      "summary": "Join Michelle for a beginner-friendly paddle around Dundalk at a slow-moderate pace."
+    }
   }
 }
