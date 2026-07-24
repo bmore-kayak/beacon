@@ -64,5 +64,27 @@
       "title": "Fells Point: Paddle to Pier Six with music",
       "summary": "Join Katie and Colleen for a paddle from Fells Point to Pier Six while listening to the Little River Band."
     }
+  },
+  "247713": {
+    "prompt_version": 1,
+    "fingerprint": "6ecbfdf072732cdc533216007dffbd979cc05e784f097a21e79b3dc0f995da09",
+    "source_modified_at": "2026-07-23 22:10:18",
+    "reviewed_at": "2026-07-24T00:00:26-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Solleys Cove Ghost Ships",
+      "summary": "Join Michelle for a beginner-friendly Friday afternoon paddle at Solleys Cove to visit the ship graveyard and explore the coves."
+    }
+  },
+  "247746": {
+    "prompt_version": 1,
+    "fingerprint": "1b3a042de0963e4e6521cf6a89e735156aa538f3d3a93b09549ee6a11f0d991f",
+    "source_modified_at": "2026-07-24 00:28:27",
+    "reviewed_at": "2026-07-24T00:00:26-04:00",
+    "ai_result": {
+      "notice": true,
+      "title": "Fells Point: Kayak availability may be limited",
+      "summary": "New-member orientation will use club kayaks, limiting availability for other members."
+    }
   }
 }

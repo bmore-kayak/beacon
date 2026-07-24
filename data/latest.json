@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-07-23T23:30:33-04:00",
+  "updated": "2026-07-24T00:00:34-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-07-23T23:30:27.969748-04:00"
+        "updated": "2026-07-24T00:00:26.468233-04:00"
       }
     },
     "storms": {
@@ -26,44 +26,44 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-23T23:00:00-04:00"
+        "updated": "2026-07-24T00:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "5 kt, gusts 6",
-      "speed_kt": 5,
-      "gust_kt": 6,
-      "direction_deg": 242.5,
+      "detail": "2 kt, gusts 3",
+      "speed_kt": 2,
+      "gust_kt": 3,
+      "direction_deg": 241.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-23T23:30:27.969837-04:00"
+        "updated": "2026-07-24T00:00:26.468276-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.4 ft",
-      "height_ft": 0.4,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-23T23:30:27.969855-04:00"
+        "updated": "2026-07-24T00:00:26.468292-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "74\u00b0F",
+      "detail": "73\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-23T23:30:27.969872-04:00"
+        "updated": "2026-07-24T00:00:26.468306-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-23T23:30:27.969879-04:00"
+        "updated": "2026-07-24T00:00:26.468313-04:00"
       }
     },
     "bacteria": {
@@ -129,7 +129,7 @@
           "site": "Fort McHenry",
           "region": "Inner Harbor",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 1510
         },
@@ -161,7 +161,7 @@
           "site": "Ferry Bar Park",
           "region": "Middle Branch",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 10462
         },
@@ -169,7 +169,7 @@
           "site": "Harbor Tunnel",
           "region": "Middle Branch",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 3441
         },
@@ -177,7 +177,7 @@
           "site": "Masonville Channel",
           "region": "Middle Branch",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 14136
         },
@@ -185,7 +185,7 @@
           "site": "Middle Branch",
           "region": "Middle Branch",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 12033
         },
@@ -201,7 +201,7 @@
           "site": "Curtis Bay",
           "region": "Curtis Bay",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 474
         },
@@ -404,7 +404,7 @@
           "site_id": "BWB-PATMH-17",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 12033,
           "dissolved_oxygen": null,
@@ -420,7 +420,7 @@
           "site_id": "BWB-PATMH-20",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 14136,
           "dissolved_oxygen": null,
@@ -436,7 +436,7 @@
           "site_id": "BWB-PATMH-15",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 7701,
           "dissolved_oxygen": null,
@@ -468,7 +468,7 @@
           "site_id": "BWB-PATMH-07",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 3441,
           "dissolved_oxygen": null,
@@ -484,7 +484,7 @@
           "site_id": "BWB-PATMH-14",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 865,
           "dissolved_oxygen": null,
@@ -500,7 +500,7 @@
           "site_id": "BWB-PATMH-13",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 638,
           "dissolved_oxygen": null,
@@ -516,7 +516,7 @@
           "site_id": "BWB-PATMH-16",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 1510,
           "dissolved_oxygen": null,
@@ -532,7 +532,7 @@
           "site_id": "BWB-PATMH-06",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 474,
           "dissolved_oxygen": null,
@@ -564,7 +564,7 @@
           "site_id": "BWB-PATMH-19",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udd34",
+          "status": "\ud83d\udfe0",
           "stale": false,
           "bacteria": 10462,
           "dissolved_oxygen": null,
@@ -740,7 +740,7 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "6 upcoming events",
+      "detail": "1 notice \u00b7 8 upcoming events",
       "items": [
         {
           "event_id": 247637,
@@ -819,13 +819,39 @@
           "source_modified_at": "2026-07-10 22:32:30",
           "reviewed_at": "2026-07-23T00:00:23-04:00",
           "source_url": "https://cantonkayakclub.com/event/paddle-palfells-point-little-river-band-paddle-w-katie-l-thursday-july-30-630-930pm/"
+        },
+        {
+          "event_id": 247713,
+          "title": "Solleys Cove Ghost Ships",
+          "summary": "Join Michelle for a beginner-friendly Friday afternoon paddle at Solleys Cove to visit the ship graveyard and explore the coves.",
+          "notice": false,
+          "location": "Solleys Cove",
+          "address": "7360 Carbide Rd21226",
+          "starts_at": "2026-07-31T15:00:00-04:00",
+          "ends_at": "2026-07-31T18:30:00-04:00",
+          "source_modified_at": "2026-07-23 22:10:18",
+          "reviewed_at": "2026-07-24T00:00:26-04:00",
+          "source_url": "https://cantonkayakclub.com/event/paddle-pals-solleys-cove-ghost-ships-w-michelle-friday-july-31st-3pm-630-pm/"
+        },
+        {
+          "event_id": 247746,
+          "title": "Fells Point: Kayak availability may be limited",
+          "summary": "New-member orientation will use club kayaks, limiting availability for other members.",
+          "notice": true,
+          "location": "Fells Point",
+          "address": "Bond Street Wharf\u200b",
+          "starts_at": "2026-07-31T17:30:00-04:00",
+          "ends_at": "2026-07-31T20:30:00-04:00",
+          "source_modified_at": "2026-07-24 00:28:27",
+          "reviewed_at": "2026-07-24T00:00:26-04:00",
+          "source_url": "https://cantonkayakclub.com/event/ckc-orientation-training-25-fri-pm-07-31-26-from-530-830p-at-fells-point-2/"
         }
       ],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-23T23:30:27-04:00"
+      "checked_at": "2026-07-24T00:00:26-04:00"
     }
   },
   "club_notes": [],
