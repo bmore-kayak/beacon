@@ -4,18 +4,25 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-07-28T23:30:30-04:00",
+  "updated": "2026-07-29T00:00:32-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
       "label": "Alerts",
-      "status": "\ud83d\udfe2",
-      "detail": "None",
-      "items": [],
+      "status": "\ud83d\udfe1",
+      "detail": "Small Craft Advisory",
+      "items": [
+        {
+          "event": "Small Craft Advisory",
+          "status": "\ud83d\udfe1",
+          "starts": "2026-07-29T06:00:00-04:00",
+          "ends": "2026-07-29T18:00:00-04:00"
+        }
+      ],
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-07-28T23:30:27.948070-04:00"
+        "updated": "2026-07-29T00:00:29.431880-04:00"
       }
     },
     "storms": {
@@ -26,72 +33,69 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-28T23:00:00-04:00"
+        "updated": "2026-07-29T00:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "3 kt, gusts 4",
-      "speed_kt": 3,
-      "gust_kt": 4,
-      "direction_deg": 351.3,
+      "detail": "6 kt, gusts 8",
+      "speed_kt": 6,
+      "gust_kt": 8,
+      "direction_deg": 242.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-28T23:30:27.948131-04:00"
+        "updated": "2026-07-29T00:00:29.431941-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.2 ft",
-      "height_ft": 0.2,
+      "detail": "0.1 ft",
+      "height_ft": 0.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-28T23:30:27.948149-04:00"
+        "updated": "2026-07-29T00:00:29.431957-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "70\u00b0F",
+      "detail": "71\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-28T23:30:27.948167-04:00"
+        "updated": "2026-07-29T00:00:29.431971-04:00"
       }
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
       "status": "\ud83d\udfe2",
-      "detail": "80\u00b0F",
+      "detail": "81\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-28T23:30:27.948174-04:00"
+        "updated": "2026-07-29T00:00:29.431978-04:00"
       }
     },
     "bacteria": {
       "icon": "\ud83e\udda0",
       "label": "Bacteria",
       "status": "\ud83d\udfe0",
-      "detail": "0\u20131510 MPN",
+      "detail": "0\u2013620 MPN",
       "source": {
         "provider": "Waterfront Partnership \u00b7 Baltimore Water Watch",
         "updated": "2026-07-24T08:00:00-04:00"
       },
       "passing": 5,
-      "failing": 3,
-      "failing_regions": [
-        "Curtis Bay",
-        "Middle Branch"
-      ],
+      "failing": 2,
+      "failing_regions": [],
       "stations": [
         {
           "site": "Canton Waterfront Park",
@@ -129,8 +133,8 @@
           "site": "Fort McHenry",
           "region": "Inner Harbor",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 1510
         },
         {
@@ -161,32 +165,32 @@
           "site": "Ferry Bar Park",
           "region": "Middle Branch",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10462
         },
         {
           "site": "Harbor Tunnel",
           "region": "Middle Branch",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 3441
         },
         {
           "site": "Masonville Channel",
           "region": "Middle Branch",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 14136
         },
         {
           "site": "Middle Branch",
           "region": "Middle Branch",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 12033
         },
         {
@@ -201,24 +205,24 @@
           "site": "Curtis Bay",
           "region": "Curtis Bay",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 474
         },
         {
           "site": "Curtis Creek",
           "region": "Curtis Bay",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 20
         },
         {
           "site": "Wagners Point",
           "region": "Curtis Bay",
           "date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 31
         },
         {
@@ -404,8 +408,8 @@
           "site_id": "BWB-PATMH-06",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 474,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -420,8 +424,8 @@
           "site_id": "BWB-PATMH-20",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 14136,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -436,8 +440,8 @@
           "site_id": "BWB-PATMH-21",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 20,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -452,8 +456,8 @@
           "site_id": "BWB-PATMH-13",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 638,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -468,8 +472,8 @@
           "site_id": "BWB-PATMH-07",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 3441,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -484,8 +488,8 @@
           "site_id": "BWB-PATMH-15",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 7701,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -500,8 +504,8 @@
           "site_id": "BWB-PATMH-16",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 1510,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -516,8 +520,8 @@
           "site_id": "BWB-PATMH-14",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 865,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -532,8 +536,8 @@
           "site_id": "BWB-PATMH-19",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10462,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -548,8 +552,8 @@
           "site_id": "BWB-PATMH-08",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 31,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -564,8 +568,8 @@
           "site_id": "BWB-PATMH-17",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 12033,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -786,9 +790,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-28T23:30:27-04:00"
+      "checked_at": "2026-07-29T00:00:29-04:00"
     }
   },
   "club_notes": [],
-  "note": "Elevated bacteria in Inner Harbor, sampled 4 days ago, Curtis Bay and Middle Branch."
+  "note": "Small Craft Advisory from 6 AM to 6 PM.\nElevated bacteria in Inner Harbor, sampled 4 days ago."
 }
