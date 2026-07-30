@@ -1,10 +1,10 @@
 {
   "location": "Baltimore Harbor",
   "overall": {
-    "status": "\ud83d\udfe0",
-    "label": "Use caution"
+    "status": "\ud83d\udd34",
+    "label": "Stay off water"
   },
-  "updated": "2026-07-30T05:00:33-04:00",
+  "updated": "2026-07-30T05:30:35-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-07-30T05:00:29.577657-04:00"
+        "updated": "2026-07-30T05:30:32.097807-04:00"
       }
     },
     "storms": {
@@ -39,15 +39,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "14 kt, gusts 17",
-      "speed_kt": 14,
-      "gust_kt": 17,
-      "direction_deg": 265.3,
+      "status": "\ud83d\udd34",
+      "detail": "15 kt, gusts 18",
+      "speed_kt": 15,
+      "gust_kt": 18,
+      "direction_deg": 281.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-30T05:00:29.577724-04:00"
+        "updated": "2026-07-30T05:30:32.097870-04:00"
       }
     },
     "waves": {
@@ -59,18 +59,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-30T05:00:29.577740-04:00"
+        "updated": "2026-07-30T05:30:32.097886-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "72\u00b0F",
+      "detail": "73\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-30T05:00:29.577754-04:00"
+        "updated": "2026-07-30T05:30:32.097900-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-30T05:00:29.577761-04:00"
+        "updated": "2026-07-30T05:30:32.097906-04:00"
       }
     },
     "bacteria": {
@@ -790,9 +790,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-07-30T05:00:29-04:00"
+      "checked_at": "2026-07-30T05:30:32-04:00"
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory from 8 AM to 6 PM.\nElevated winds."
+  "note": "Small Craft Advisory from 8 AM to 6 PM.\nStrong winds."
 }
