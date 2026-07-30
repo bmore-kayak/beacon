@@ -4,18 +4,25 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-07-29T23:30:33-04:00",
+  "updated": "2026-07-30T00:00:33-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
       "label": "Alerts",
-      "status": "\ud83d\udfe2",
-      "detail": "None",
-      "items": [],
+      "status": "\ud83d\udfe1",
+      "detail": "Small Craft Advisory",
+      "items": [
+        {
+          "event": "Small Craft Advisory",
+          "status": "\ud83d\udfe1",
+          "starts": "2026-07-30T08:00:00-04:00",
+          "ends": "2026-07-30T18:00:00-04:00"
+        }
+      ],
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-07-29T23:30:30.323325-04:00"
+        "updated": "2026-07-30T00:00:33.003814-04:00"
       }
     },
     "storms": {
@@ -26,44 +33,44 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-07-29T23:00:00-04:00"
+        "updated": "2026-07-30T00:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "15 kt, gusts 19",
-      "speed_kt": 15,
-      "gust_kt": 19,
-      "direction_deg": 329.6,
+      "detail": "13 kt, gusts 18",
+      "speed_kt": 13,
+      "gust_kt": 18,
+      "direction_deg": 318.9,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-29T23:30:30.323384-04:00"
+        "updated": "2026-07-30T00:00:33.003878-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
-      "status": "\ud83d\udfe1",
-      "detail": "1.0 ft",
-      "height_ft": 1.0,
+      "status": "\ud83d\udfe2",
+      "detail": "0.8 ft",
+      "height_ft": 0.8,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-29T23:30:30.323426-04:00"
+        "updated": "2026-07-30T00:00:33.003894-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "76\u00b0F",
+      "detail": "75\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-29T23:30:30.323444-04:00"
+        "updated": "2026-07-30T00:00:33.003908-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-07-29T23:30:30.323452-04:00"
+        "updated": "2026-07-30T00:00:33.003914-04:00"
       }
     },
     "bacteria": {
@@ -86,7 +93,7 @@
         "provider": "Waterfront Partnership \u00b7 Baltimore Water Watch",
         "updated": "2026-07-28T08:00:00-04:00"
       },
-      "passing": 7,
+      "passing": 5,
       "failing": 0,
       "failing_regions": [],
       "stations": [
@@ -110,8 +117,8 @@
           "site": "Dragon Boats",
           "region": "Inner Harbor",
           "date": "2026-07-23T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 41
         },
         {
@@ -150,8 +157,8 @@
           "site": "Science Center",
           "region": "Inner Harbor",
           "date": "2026-07-23T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 31
         },
         {
@@ -353,8 +360,8 @@
           "site_id": "BWB-PATMH-DB",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-23T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 41,
           "dissolved_oxygen": 0.23,
           "chlorophyll": null,
@@ -369,8 +376,8 @@
           "site_id": "BWB-PATMH-12",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-23T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 414,
           "dissolved_oxygen": 0.14,
           "chlorophyll": null,
@@ -385,8 +392,8 @@
           "site_id": "BWB-PATMH-SC",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-23T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 31,
           "dissolved_oxygen": 1.87,
           "chlorophyll": null,
@@ -787,5 +794,5 @@
     }
   },
   "club_notes": [],
-  "note": "Strong winds."
+  "note": "Small Craft Advisory from 8 AM to 6 PM.\nStrong winds."
 }
