@@ -9,5 +9,16 @@
       "title": "Dundalk: Laid back two-hour paddle",
       "summary": "Join Michelle for a beginner-friendly paddle around Dundalk at a slow-moderate pace."
     }
+  },
+  "247814": {
+    "prompt_version": 1,
+    "fingerprint": "324db26cccd49698011a3e7756d60e52ea2e8d460f2f32605e7bd6bf221c3e42",
+    "source_modified_at": "2026-08-01 02:01:01",
+    "reviewed_at": "2026-07-31T22:30:50-04:00",
+    "ai_result": {
+      "notice": true,
+      "title": "Fells Point: Limited kayak availability",
+      "summary": "New-member orientation will use club kayaks, limiting availability for other members."
+    }
   }
 }
