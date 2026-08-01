@@ -20,5 +20,16 @@
       "title": "Fells Point: Limited kayak availability",
       "summary": "New-member orientation will use club kayaks, limiting availability for other members."
     }
+  },
+  "247754": {
+    "prompt_version": 1,
+    "fingerprint": "67d8fe98364831bf5885e2b4dc114ee2078113f9a6ca8a67da3df5a45f8a1055",
+    "source_modified_at": "2026-07-25 01:51:17",
+    "reviewed_at": "2026-08-01T00:30:38-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Delta, PA: Rescue Training",
+      "summary": "Attendees will learn and practice skills such as wet exit, partner rescue, self-rescue, and emptying a kayak when it takes on water."
+    }
   }
 }
