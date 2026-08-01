@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-08-01T16:00:38-04:00",
+  "updated": "2026-08-01T16:30:28-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-01T16:00:34.888868-04:00"
+        "updated": "2026-08-01T16:30:28.079423-04:00"
       }
     },
     "storms": {
@@ -39,27 +39,27 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "9 kt, gusts 12",
-      "speed_kt": 9,
-      "gust_kt": 12,
-      "direction_deg": 146.6,
+      "status": "\ud83d\udfe0",
+      "detail": "11 kt, gusts 14",
+      "speed_kt": 11,
+      "gust_kt": 14,
+      "direction_deg": 155.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-01T16:00:34.888938-04:00"
+        "updated": "2026-08-01T16:30:28.079490-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.6 ft",
-      "height_ft": 0.6,
+      "detail": "0.7 ft",
+      "height_ft": 0.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-01T16:00:34.888955-04:00"
+        "updated": "2026-08-01T16:30:28.079507-04:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-01T16:00:34.888971-04:00"
+        "updated": "2026-08-01T16:30:28.079522-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-01T16:00:34.888978-04:00"
+        "updated": "2026-08-01T16:30:28.079529-04:00"
       }
     },
     "bacteria": {
@@ -796,5 +796,5 @@
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory from 5 PM to 4 AM.\nElevated bacteria in Inner Harbor, sampled 3 days ago and Middle Branch."
+  "note": "Small Craft Advisory from 5 PM to 4 AM.\nElevated bacteria in Inner Harbor, sampled 3 days ago and Middle Branch.\nElevated winds."
 }
