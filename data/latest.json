@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-08-03T07:30:34-04:00",
+  "updated": "2026-08-03T08:00:49-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,34 +22,34 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-03T07:30:31.843823-04:00"
+        "updated": "2026-08-03T08:00:46.753713-04:00"
       }
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Storm risk 7 AM\u20134 PM",
-      "starts": "2026-08-03T07:00:00-04:00",
-      "ends": "2026-08-03T16:00:00-04:00",
+      "detail": "Storm risk 8 AM\u20135 PM",
+      "starts": "2026-08-03T08:00:00-04:00",
+      "ends": "2026-08-03T17:00:00-04:00",
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-08-03T07:00:00-04:00"
+        "updated": "2026-08-03T08:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "10 kt, gusts 12",
-      "speed_kt": 10,
-      "gust_kt": 12,
-      "direction_deg": 216.3,
+      "detail": "11 kt, gusts 13",
+      "speed_kt": 11,
+      "gust_kt": 13,
+      "direction_deg": 229.9,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-03T07:30:31.843917-04:00"
+        "updated": "2026-08-03T08:00:46.753778-04:00"
       }
     },
     "waves": {
@@ -61,18 +61,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-03T07:30:31.843932-04:00"
+        "updated": "2026-08-03T08:00:46.753794-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "76\u00b0F",
+      "detail": "77\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-03T07:30:31.844178-04:00"
+        "updated": "2026-08-03T08:00:46.753894-04:00"
       }
     },
     "water_temp": {
@@ -83,13 +83,13 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-03T07:30:31.844185-04:00"
+        "updated": "2026-08-03T08:00:46.753902-04:00"
       }
     },
     "bacteria": {
       "icon": "\ud83e\udda0",
       "label": "Bacteria",
-      "status": "\ud83d\udfe0",
+      "status": "\ud83d\udfe1",
       "detail": "41\u20131602 MPN",
       "source": {
         "provider": "Waterfront Partnership \u00b7 Baltimore Water Watch",
@@ -105,7 +105,7 @@
           "site": "Canton Waterfront Park",
           "region": "Inner Harbor",
           "date": "2026-07-29T08:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 109
         },
@@ -113,7 +113,7 @@
           "site": "Downtown Sailing Center",
           "region": "Inner Harbor",
           "date": "2026-07-29T08:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 1602
         },
@@ -129,7 +129,7 @@
           "site": "Fells Point",
           "region": "Inner Harbor",
           "date": "2026-07-29T08:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 161
         },
@@ -153,7 +153,7 @@
           "site": "Mr. Trash Wheel",
           "region": "Inner Harbor",
           "date": "2026-07-29T08:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 393
         },
@@ -307,7 +307,7 @@
           "source": "wp",
           "site": "Fells Point",
           "sample_date": "2026-07-29T08:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 161,
           "latitude": null,
@@ -318,7 +318,7 @@
           "source": "wp",
           "site": "Canton Waterfront Park",
           "sample_date": "2026-07-29T08:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 109,
           "latitude": null,
@@ -329,7 +329,7 @@
           "source": "wp",
           "site": "Mr. Trash Wheel",
           "sample_date": "2026-07-29T08:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 393,
           "latitude": null,
@@ -340,7 +340,7 @@
           "source": "wp",
           "site": "Downtown Sailing Center",
           "sample_date": "2026-07-29T08:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 1602,
           "latitude": null,
@@ -794,9 +794,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-03T07:30:31-04:00"
+      "checked_at": "2026-08-03T08:00:46-04:00"
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory until 11 AM.\nStorm risk 7 AM\u20134 PM.\nElevated bacteria in Inner Harbor, sampled 4 days ago and Middle Branch."
+  "note": "Small Craft Advisory until 11 AM.\nStorm risk 8 AM\u20135 PM.\nElevated bacteria in Inner Harbor, sampled 5 days ago and Middle Branch."
 }
