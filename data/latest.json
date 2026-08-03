@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-08-03T08:00:49-04:00",
+  "updated": "2026-08-03T08:30:34-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-03T08:00:46.753713-04:00"
+        "updated": "2026-08-03T08:30:31.755654-04:00"
       }
     },
     "storms": {
@@ -41,15 +41,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "11 kt, gusts 13",
+      "status": "\ud83d\udfe0",
+      "detail": "11 kt, gusts 15",
       "speed_kt": 11,
-      "gust_kt": 13,
-      "direction_deg": 229.9,
+      "gust_kt": 15,
+      "direction_deg": 235.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-03T08:00:46.753778-04:00"
+        "updated": "2026-08-03T08:30:31.755727-04:00"
       }
     },
     "waves": {
@@ -61,7 +61,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-03T08:00:46.753794-04:00"
+        "updated": "2026-08-03T08:30:31.755743-04:00"
       }
     },
     "air_temp": {
@@ -72,7 +72,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-03T08:00:46.753894-04:00"
+        "updated": "2026-08-03T08:30:31.755837-04:00"
       }
     },
     "water_temp": {
@@ -83,7 +83,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-03T08:00:46.753902-04:00"
+        "updated": "2026-08-03T08:30:31.755843-04:00"
       }
     },
     "bacteria": {
@@ -794,9 +794,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-03T08:00:46-04:00"
+      "checked_at": "2026-08-03T08:30:31-04:00"
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory until 11 AM.\nStorm risk 8 AM\u20135 PM.\nElevated bacteria in Inner Harbor, sampled 5 days ago and Middle Branch."
+  "note": "Small Craft Advisory until 11 AM.\nStorm risk 8 AM\u20135 PM.\nElevated bacteria in Inner Harbor, sampled 5 days ago and Middle Branch.\nElevated winds."
 }
