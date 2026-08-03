@@ -1161,10 +1161,12 @@ def note(conditions, water, club_notes):
         notes.append(conditions["storms"]["detail"] + ".")
 
     regions = []
+    elevated_dates = []
     
     if water["failing"]:
+        regions.append("Inner Harbor")
         elevated_dates = [
-            sample_datetime(station.get("date"))
+            sample_datetime(station["date"])
             for station in water.get("stations", [])
             if station.get("region") == "Inner Harbor"
             and not station.get("stale")
@@ -1172,39 +1174,38 @@ def note(conditions, water, club_notes):
             and station["bacteria"] > PASS_LIMIT
             and station.get("date")
         ]
-    
-        inner_harbor = "Inner Harbor"
-    
+
+    regions.extend(
+        water.get("failing_regions", [])
+    )
+
+    if regions:
+        region_text = regions[0]
+
+        if len(regions) > 1:
+            region_text = (
+                ", ".join(regions[:-1])
+                + f" and {regions[-1]}"
+            )
+
+        sample_note = ""
+
         if elevated_dates:
-            latest_elevated = max(elevated_dates)
-    
             age = (
                 datetime.now(
                     ZoneInfo("America/New_York")
                 )
-                - latest_elevated
+                - max(elevated_dates)
             )
-            
+
             if age > timedelta(days=2):
-                inner_harbor += (
-                    f", sampled {age.days} days ago"
+                sample_note = (
+                    f" (sampled {age.days} days ago)"
                 )
-    
-        regions.append(inner_harbor)
-    
-    regions.extend(
-        water.get("failing_regions", [])
-    )
-    
-    if len(regions) == 1:
+
         notes.append(
-            f"Elevated bacteria in {regions[0]}."
-        )
-    elif len(regions) > 1:
-        notes.append(
-            "Elevated bacteria in "
-            + ", ".join(regions[:-1])
-            + f" and {regions[-1]}."
+            f"Elevated bacteria in {region_text}"
+            f"{sample_note}."
         )
 
     if conditions["wind"]["status"] == "🔴":
