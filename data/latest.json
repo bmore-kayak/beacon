@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Heads up"
   },
-  "updated": "2026-08-04T14:00:40-04:00",
+  "updated": "2026-08-04T14:30:33-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-04T14:00:37.730239-04:00"
+        "updated": "2026-08-04T14:30:33.575103-04:00"
       }
     },
     "storms": {
@@ -33,14 +33,14 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "2 kt, gusts 3",
-      "speed_kt": 2,
-      "gust_kt": 3,
-      "direction_deg": 179.8,
+      "detail": "4 kt, gusts 7",
+      "speed_kt": 4,
+      "gust_kt": 7,
+      "direction_deg": 65.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-04T14:00:37.730294-04:00"
+        "updated": "2026-08-04T14:30:33.575153-04:00"
       }
     },
     "waves": {
@@ -52,29 +52,29 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-04T14:00:37.730312-04:00"
+        "updated": "2026-08-04T14:30:33.575172-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "82\u00b0F",
+      "detail": "81\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-04T14:00:37.730329-04:00"
+        "updated": "2026-08-04T14:30:33.575188-04:00"
       }
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
       "status": "\ud83d\udfe2",
-      "detail": "81\u00b0F",
+      "detail": "82\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-04T14:00:37.730335-04:00"
+        "updated": "2026-08-04T14:30:33.575194-04:00"
       }
     },
     "bacteria": {
