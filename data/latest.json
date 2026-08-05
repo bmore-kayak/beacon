@@ -4,20 +4,14 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-08-05T15:00:50-04:00",
+  "updated": "2026-08-05T15:30:46-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
       "label": "Alerts",
-      "status": "\ud83d\udfe0",
-      "detail": "2 active alerts",
+      "status": "\ud83d\udfe1",
+      "detail": "Marine Weather Statement",
       "items": [
-        {
-          "event": "Flood Watch",
-          "status": "\ud83d\udfe0",
-          "starts": "2026-08-05T13:14:00-04:00",
-          "ends": "2026-08-05T16:00:00-04:00"
-        },
         {
           "event": "Marine Weather Statement",
           "status": "\ud83d\udfe1",
@@ -28,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-05T15:00:38.225792-04:00"
+        "updated": "2026-08-05T15:30:34.030362-04:00"
       }
     },
     "storms": {
@@ -48,14 +42,14 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "11 kt, gusts 13",
-      "speed_kt": 11,
-      "gust_kt": 13,
-      "direction_deg": 161.8,
+      "detail": "9 kt, gusts 12",
+      "speed_kt": 9,
+      "gust_kt": 12,
+      "direction_deg": 161.9,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-05T15:00:38.225873-04:00"
+        "updated": "2026-08-05T15:30:34.030435-04:00"
       }
     },
     "waves": {
@@ -67,7 +61,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-05T15:00:38.225889-04:00"
+        "updated": "2026-08-05T15:30:34.030453-04:00"
       }
     },
     "air_temp": {
@@ -78,7 +72,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-05T15:00:38.226145-04:00"
+        "updated": "2026-08-05T15:30:34.030697-04:00"
       }
     },
     "water_temp": {
@@ -89,7 +83,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-05T15:00:38.226152-04:00"
+        "updated": "2026-08-05T15:30:34.030706-04:00"
       }
     },
     "bacteria": {
@@ -760,11 +754,11 @@
           "summary": "New members must attend an orientation training session to access club kayaks and equipment.",
           "notice": true,
           "location": "Fells Point",
-          "address": "421 E Lafayette Ave",
+          "address": null,
           "starts_at": "2026-08-06T17:30:00-04:00",
           "ends_at": "2026-08-06T20:30:00-04:00",
           "source_modified_at": "2026-08-01 02:01:01",
-          "reviewed_at": "2026-08-05T15:00:38-04:00",
+          "reviewed_at": "2026-08-05T15:30:34-04:00",
           "source_url": "https://cantonkayakclub.com/event/ckc-orientation-training-26-thur-pm-08-06-26-from-530-830p-at-fells-point/"
         },
         {
@@ -811,9 +805,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-05T15:00:38-04:00"
+      "checked_at": "2026-08-05T15:30:34-04:00"
     }
   },
   "club_notes": [],
-  "note": "Flood Watch until 4 PM.\nMarine Weather Statement until 4 PM.\nStorm risk 3 PM\u20139 PM.\nElevated bacteria in Inner Harbor."
+  "note": "Marine Weather Statement until 4 PM.\nStorm risk 3 PM\u20139 PM.\nElevated bacteria in Inner Harbor."
 }
