@@ -884,7 +884,7 @@ def storm_condition(periods):
             "icon": "⛈",
             "label": "Storms",
             "status": "🟢",
-            "detail": "None noted",
+            "detail": "None",
             "source": source,
         }
 
