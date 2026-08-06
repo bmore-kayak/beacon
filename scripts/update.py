@@ -522,7 +522,7 @@ def bacteria_conditions(waterfront, bww):
             "🟢": 0,
             "🟡": 1,
             "🟠": 2,
-            "🔴": 3,
+            "🟠": 3,
         }
         status = max(
             (station["status"] for station in current_inner_harbor),
