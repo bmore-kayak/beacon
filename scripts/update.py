@@ -152,9 +152,6 @@ def station_status(count, sample_date):
         - sample_date
     )
 
-    if age <= timedelta(days=2):
-        return "🔴"
-
     if age <= timedelta(days=5):
         return "🟠"
 
@@ -519,10 +516,10 @@ def bacteria_conditions(waterfront, bww):
 
     if current_inner_harbor:
         rank = {
+            "⚪": -1,
             "🟢": 0,
             "🟡": 1,
             "🟠": 2,
-            "🟠": 3,
         }
         status = max(
             (station["status"] for station in current_inner_harbor),
