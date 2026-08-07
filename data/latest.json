@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-08-07T09:30:44-04:00",
+  "updated": "2026-08-07T10:01:01-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-07T09:30:37.026942-04:00"
+        "updated": "2026-08-07T10:00:50.963339-04:00"
       }
     },
     "storms": {
@@ -24,48 +24,48 @@
       "status": "\ud83d\udfe1",
       "detail": "Storms possible after 2 PM",
       "starts": "2026-08-07T14:00:00-04:00",
-      "ends": "2026-08-07T18:00:00-04:00",
+      "ends": "2026-08-07T19:00:00-04:00",
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-08-07T09:00:00-04:00"
+        "updated": "2026-08-07T10:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "2 kt, gusts 3",
-      "speed_kt": 2,
-      "gust_kt": 3,
-      "direction_deg": 157.0,
+      "detail": "4 kt, gusts 5",
+      "speed_kt": 4,
+      "gust_kt": 5,
+      "direction_deg": 108.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-07T09:30:37.026985-04:00"
+        "updated": "2026-08-07T10:00:50.963383-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-07T09:30:37.027001-04:00"
+        "updated": "2026-08-07T10:00:50.963399-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "88\u00b0F",
+      "detail": "82\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-07T09:30:37.027265-04:00"
+        "updated": "2026-08-07T10:00:50.963503-04:00"
       }
     },
     "water_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-07T09:30:37.027272-04:00"
+        "updated": "2026-08-07T10:00:50.963510-04:00"
       }
     },
     "bacteria": {
@@ -385,6 +385,22 @@
         },
         {
           "source": "bww",
+          "site": "Middle Branch A",
+          "site_id": "BWB-PATMH-17",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-04T00:00:00-04:00",
+          "status": "\ud83d\udfe0",
+          "stale": false,
+          "bacteria": 211,
+          "dissolved_oxygen": null,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": null,
+          "latitude": 39.263507,
+          "longitude": -76.623106
+        },
+        {
+          "source": "bww",
           "site": "Ferry Bar Park",
           "site_id": "BWB-PATMH-19",
           "watershed": "Tidal Patapsco River",
@@ -417,22 +433,6 @@
         },
         {
           "source": "bww",
-          "site": "Middle Branch A",
-          "site_id": "BWB-PATMH-17",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-04T00:00:00-04:00",
-          "status": "\ud83d\udfe0",
-          "stale": false,
-          "bacteria": 211,
-          "dissolved_oxygen": null,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": null,
-          "latitude": 39.263507,
-          "longitude": -76.623106
-        },
-        {
-          "source": "bww",
           "site": "Science Center",
           "site_id": "BWB-PATMH-SC",
           "watershed": "Tidal Patapsco River",
@@ -462,22 +462,6 @@
           "salinity": null,
           "latitude": 39.28499,
           "longitude": -76.609811
-        },
-        {
-          "source": "bww",
-          "site": "Curtis Bay",
-          "site_id": "BWB-PATMH-06",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-07-22T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 474,
-          "dissolved_oxygen": null,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": null,
-          "latitude": 39.223374,
-          "longitude": -76.56862
         },
         {
           "source": "bww",
@@ -529,19 +513,19 @@
         },
         {
           "source": "bww",
-          "site": "Mainstem B",
-          "site_id": "BWB-PATMH-08",
+          "site": "Curtis Bay",
+          "site_id": "BWB-PATMH-06",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-07-22T00:00:00-04:00",
           "status": "\u26aa",
           "stale": true,
-          "bacteria": 31,
+          "bacteria": 474,
           "dissolved_oxygen": null,
           "chlorophyll": null,
           "turbidity": null,
           "salinity": null,
-          "latitude": 39.235341,
-          "longitude": -76.555953
+          "latitude": 39.223374,
+          "longitude": -76.56862
         },
         {
           "source": "bww",
@@ -577,19 +561,19 @@
         },
         {
           "source": "bww",
-          "site": "Stoney Creek",
-          "site_id": "BWB-PATMH-02",
+          "site": "Mainstem B",
+          "site_id": "BWB-PATMH-08",
           "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-07-08T00:00:00-04:00",
+          "sample_date": "2026-07-22T00:00:00-04:00",
           "status": "\u26aa",
           "stale": true,
-          "bacteria": 20,
-          "dissolved_oxygen": 5.41,
+          "bacteria": 31,
+          "dissolved_oxygen": null,
           "chlorophyll": null,
           "turbidity": null,
-          "salinity": 9.52,
-          "latitude": 39.160976,
-          "longitude": -76.528152
+          "salinity": null,
+          "latitude": 39.235341,
+          "longitude": -76.555953
         },
         {
           "source": "bww",
@@ -609,6 +593,38 @@
         },
         {
           "source": "bww",
+          "site": "Rock Creek",
+          "site_id": "BWB-PATMH-01",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-07-08T00:00:00-04:00",
+          "status": "\u26aa",
+          "stale": true,
+          "bacteria": 20,
+          "dissolved_oxygen": 6.78,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 9.21,
+          "latitude": 39.153209,
+          "longitude": -76.507068
+        },
+        {
+          "source": "bww",
+          "site": "Stoney Creek",
+          "site_id": "BWB-PATMH-02",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-07-08T00:00:00-04:00",
+          "status": "\u26aa",
+          "stale": true,
+          "bacteria": 20,
+          "dissolved_oxygen": 5.41,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 9.52,
+          "latitude": 39.160976,
+          "longitude": -76.528152
+        },
+        {
+          "source": "bww",
           "site": "Mainstem E",
           "site_id": "BWB-PATMH-11",
           "watershed": "Tidal Patapsco River",
@@ -622,6 +638,22 @@
           "salinity": 7.58,
           "latitude": 39.181426,
           "longitude": -76.458249
+        },
+        {
+          "source": "bww",
+          "site": "Bodkin Creek",
+          "site_id": "BWB-PATMH-22",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-07-08T00:00:00-04:00",
+          "status": "\u26aa",
+          "stale": true,
+          "bacteria": 31,
+          "dissolved_oxygen": 5.69,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 9.12,
+          "latitude": 39.126776,
+          "longitude": -76.445482
         },
         {
           "source": "bww",
@@ -654,38 +686,6 @@
           "salinity": 8.26,
           "latitude": 39.213125,
           "longitude": -76.4534
-        },
-        {
-          "source": "bww",
-          "site": "Bodkin Creek",
-          "site_id": "BWB-PATMH-22",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-07-08T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 31,
-          "dissolved_oxygen": 5.69,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 9.12,
-          "latitude": 39.126776,
-          "longitude": -76.445482
-        },
-        {
-          "source": "bww",
-          "site": "Rock Creek",
-          "site_id": "BWB-PATMH-01",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-07-08T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 20,
-          "dissolved_oxygen": 6.78,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 9.21,
-          "latitude": 39.153209,
-          "longitude": -76.507068
         },
         {
           "source": "bww",
@@ -787,7 +787,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-07T09:30:37-04:00"
+      "checked_at": "2026-08-07T10:00:50-04:00"
     }
   },
   "club_notes": [],
