@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-08-11T23:30:39-04:00",
+  "updated": "2026-08-12T00:00:42-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,34 +15,34 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-11T23:30:34.763332-04:00"
+        "updated": "2026-08-12T00:00:34.680312-04:00"
       }
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Storm risk 11 PM\u20132 AM",
-      "starts": "2026-08-11T23:00:00-04:00",
+      "detail": "Storm risk 12 AM\u20132 AM",
+      "starts": "2026-08-12T00:00:00-04:00",
       "ends": "2026-08-12T02:00:00-04:00",
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-08-11T23:00:00-04:00"
+        "updated": "2026-08-12T00:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "9 kt, gusts 10",
-      "speed_kt": 9,
-      "gust_kt": 10,
-      "direction_deg": 310.9,
+      "detail": "11 kt, gusts 13",
+      "speed_kt": 11,
+      "gust_kt": 13,
+      "direction_deg": 326.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-11T23:30:34.763401-04:00"
+        "updated": "2026-08-12T00:00:34.680357-04:00"
       }
     },
     "waves": {
@@ -54,7 +54,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-11T23:30:34.763419-04:00"
+        "updated": "2026-08-12T00:00:34.680373-04:00"
       }
     },
     "air_temp": {
@@ -65,7 +65,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-11T23:30:34.763531-04:00"
+        "updated": "2026-08-12T00:00:34.680656-04:00"
       }
     },
     "water_temp": {
@@ -76,20 +76,20 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-11T23:30:34.763538-04:00"
+        "updated": "2026-08-12T00:00:34.680665-04:00"
       }
     },
     "bacteria": {
       "icon": "\ud83e\udda0",
       "label": "Bacteria",
-      "status": "\ud83d\udfe1",
-      "detail": "10\u2013275 MPN",
+      "status": "\ud83d\udfe2",
+      "detail": "10\u201331 MPN",
       "source": {
         "provider": "Waterfront Partnership \u00b7 Baltimore Water Watch",
         "updated": "2026-08-10T08:00:00-04:00"
       },
       "passing": 5,
-      "failing": 1,
+      "failing": 0,
       "failing_regions": [],
       "stations": [
         {
@@ -128,8 +128,8 @@
           "site": "Fort McHenry",
           "region": "Inner Harbor",
           "date": "2026-08-05T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 275
         },
         {
@@ -168,8 +168,8 @@
           "site": "Harbor Tunnel",
           "region": "Middle Branch",
           "date": "2026-08-05T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
@@ -216,8 +216,8 @@
           "site": "Wagners Point",
           "region": "Curtis Bay",
           "date": "2026-08-05T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 20
         },
         {
@@ -248,8 +248,8 @@
           "site": "Key Bridge / Fort Carroll",
           "region": "Outer Harbor",
           "date": "2026-08-05T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
@@ -355,8 +355,8 @@
           "site_id": "BWB-PATMH-09",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-05T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -371,8 +371,8 @@
           "site_id": "BWB-PATMH-16",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-05T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 275,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -387,8 +387,8 @@
           "site_id": "BWB-PATMH-08",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-05T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 20,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -403,8 +403,8 @@
           "site_id": "BWB-PATMH-14",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-05T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 1376,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -419,8 +419,8 @@
           "site_id": "BWB-PATMH-07",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-05T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -436,7 +436,7 @@
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-05T00:00:00-04:00",
           "status": "\u26aa",
-          "stale": false,
+          "stale": true,
           "bacteria": null,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -739,7 +739,7 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "1 notice \u00b7 4 upcoming events",
+      "detail": "1 notice \u00b7 5 upcoming events",
       "items": [
         {
           "event_id": 247933,
@@ -792,15 +792,28 @@
           "source_modified_at": "2026-08-07 00:11:15",
           "reviewed_at": "2026-08-11T01:00:32-04:00",
           "source_url": "https://cantonkayakclub.com/event/paddle-palstunesday-from-chesapeake-harbour-w-duane-tuesday-august-18th-530-830pm/"
+        },
+        {
+          "event_id": 247868,
+          "title": "Fells Point Social",
+          "summary": "Join members for snacks and beverages at a member's condo overlooking the harbor.",
+          "notice": false,
+          "location": "Fells Point",
+          "address": null,
+          "starts_at": "2026-08-19T17:30:00-04:00",
+          "ends_at": "2026-08-19T20:00:00-04:00",
+          "source_modified_at": "2026-08-06 13:43:38",
+          "reviewed_at": "2026-08-12T00:00:34-04:00",
+          "source_url": "https://cantonkayakclub.com/event/ckc-social-august-wednesday-8-19-6-8pm-in-fells-point-condo-overlooking-the-harbor/"
         }
       ],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-11T22:30:33-04:00"
+      "checked_at": "2026-08-12T00:00:34-04:00"
     }
   },
   "club_notes": [],
-  "note": "Storm risk 11 PM\u20132 AM.\nElevated bacteria in Inner Harbor (sampled 6 days ago)."
+  "note": "Storm risk 12 AM\u20132 AM."
 }
