@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-08-13T11:00:46-04:00",
+  "updated": "2026-08-13T11:30:57-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-13T11:00:41.616538-04:00"
+        "updated": "2026-08-13T11:30:37.735339-04:00"
       }
     },
     "storms": {
@@ -36,11 +36,11 @@
       "detail": "9 kt, gusts 11",
       "speed_kt": 9,
       "gust_kt": 11,
-      "direction_deg": 323.4,
+      "direction_deg": 341.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-13T11:00:41.616588-04:00"
+        "updated": "2026-08-13T11:30:37.735391-04:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-13T11:00:41.616605-04:00"
+        "updated": "2026-08-13T11:30:37.735409-04:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-13T11:00:41.616622-04:00"
+        "updated": "2026-08-13T11:30:37.735426-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-13T11:00:41.616629-04:00"
+        "updated": "2026-08-13T11:30:37.735433-04:00"
       }
     },
     "bacteria": {
@@ -737,7 +737,7 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "1 notice \u00b7 5 upcoming events",
+      "detail": "2 notices \u00b7 6 upcoming events",
       "items": [
         {
           "event_id": 247933,
@@ -792,6 +792,19 @@
           "source_url": "https://cantonkayakclub.com/event/paddle-palstunesday-from-chesapeake-harbour-w-duane-tuesday-august-18th-530-830pm/"
         },
         {
+          "event_id": 247966,
+          "title": "Fells Point: Kayak availability may be limited",
+          "summary": "New members must attend an orientation training session to gain access to club kayaks and equipment.",
+          "notice": true,
+          "location": "Fells Point",
+          "address": null,
+          "starts_at": "2026-08-18T17:30:00-04:00",
+          "ends_at": "2026-08-18T20:30:00-04:00",
+          "source_modified_at": "2026-08-13 15:19:07",
+          "reviewed_at": "2026-08-13T11:30:37-04:00",
+          "source_url": "https://cantonkayakclub.com/event/ckc-orientation-training-28-tues-pm-08-18-26-from-530-830p-at-fells-point/"
+        },
+        {
           "event_id": 247868,
           "title": "Fells Point Social",
           "summary": "Join members for snacks and beverages at a member's condo overlooking the harbor.",
@@ -809,7 +822,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-13T11:00:41-04:00"
+      "checked_at": "2026-08-13T11:30:37-04:00"
     }
   },
   "club_notes": [],
