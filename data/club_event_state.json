@@ -53,5 +53,16 @@
       "title": "Fells Point: Kayak availability may be limited",
       "summary": "New members must attend an orientation training session to gain access to club kayaks and equipment."
     }
+  },
+  "247787": {
+    "prompt_version": 1,
+    "fingerprint": "90d4b5a8c3d6ad593cf004b2dd1165da5f1cbc685c3f3a76a55a8e4ccdb3712d",
+    "source_modified_at": "2026-08-06 12:07:26",
+    "reviewed_at": "2026-08-15T00:00:39-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Delta, PA: Susquehanna islands tour",
+      "summary": "Join Katie for a 2-2.5 hour tour of the Susquehanna islands and natural elements of the river."
+    }
   }
 }
