@@ -75,5 +75,16 @@
       "title": "Canton Kayak Club – Rescue Training",
       "summary": "Attendees will learn and practice rescue skills such as wet exit, partner rescue, self-rescue, and emptying a kayak when it takes on water."
     }
+  },
+  "247999": {
+    "prompt_version": 1,
+    "fingerprint": "72d67b629e408533ad87d17aa392a4b03d491e1aee316e10340145f53704a2b4",
+    "source_modified_at": "2026-08-16 23:19:42",
+    "reviewed_at": "2026-08-16T19:30:47-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Delta: Explore Conowingo and Muddy Creek Islands",
+      "summary": "Join Ricardo for a 5-8 mile exploratory paddle around the islands of Conowingo and Muddy Creek."
+    }
   }
 }
