@@ -1,15 +1,4 @@
 {
-  "247917": {
-    "prompt_version": 1,
-    "fingerprint": "f73b62489180b77cf43b8c4a2b6a0c5d3b588364821326e52087302e057b4c99",
-    "source_modified_at": "2026-08-07 00:11:15",
-    "reviewed_at": "2026-08-11T01:00:32-04:00",
-    "ai_result": {
-      "notice": false,
-      "title": "Chesapeake Harbour: Paddle to Back Creek",
-      "summary": "Join a paddle from Chesapeake Harbour to Back Creek with music and sunset views."
-    }
-  },
   "247868": {
     "prompt_version": 1,
     "fingerprint": "b002eb6b48e893f1b6dbc13d11a99f231a9db98151c84c93545ef61b74d4e650",
@@ -19,17 +8,6 @@
       "notice": false,
       "title": "Fells Point Social",
       "summary": "Join members for snacks and beverages at a member's condo overlooking the harbor."
-    }
-  },
-  "247966": {
-    "prompt_version": 1,
-    "fingerprint": "f05669c1549f82929dcba1b9d3e209c2e05f3700c03a050c21086df940b7c22b",
-    "source_modified_at": "2026-08-13 15:19:07",
-    "reviewed_at": "2026-08-13T11:30:37-04:00",
-    "ai_result": {
-      "notice": true,
-      "title": "Fells Point: Kayak availability may be limited",
-      "summary": "New members must attend an orientation training session to gain access to club kayaks and equipment."
     }
   },
   "247787": {
