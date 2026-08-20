@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-08-20T12:30:45-04:00",
+  "updated": "2026-08-20T13:00:54-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,46 +22,46 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-20T12:30:32.510194-04:00"
+        "updated": "2026-08-20T13:00:40.703602-04:00"
       }
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Storm risk 12 PM\u20139 PM",
-      "starts": "2026-08-20T12:00:00-04:00",
+      "detail": "Storm risk 1 PM\u20139 PM",
+      "starts": "2026-08-20T13:00:00-04:00",
       "ends": "2026-08-20T21:00:00-04:00",
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-08-20T12:00:00-04:00"
+        "updated": "2026-08-20T13:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "6 kt, gusts 8",
+      "detail": "6 kt, gusts 7",
       "speed_kt": 6,
-      "gust_kt": 8,
-      "direction_deg": 88.1,
+      "gust_kt": 7,
+      "direction_deg": 41.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-20T12:30:32.510267-04:00"
+        "updated": "2026-08-20T13:00:40.703673-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.2 ft",
-      "height_ft": 0.2,
+      "detail": "0.4 ft",
+      "height_ft": 0.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-20T12:30:32.510282-04:00"
+        "updated": "2026-08-20T13:00:40.703688-04:00"
       }
     },
     "air_temp": {
@@ -72,7 +72,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-20T12:30:32.510498-04:00"
+        "updated": "2026-08-20T13:00:40.703932-04:00"
       }
     },
     "water_temp": {
@@ -83,7 +83,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-20T12:30:32.510504-04:00"
+        "updated": "2026-08-20T13:00:40.703939-04:00"
       }
     },
     "bacteria": {
@@ -783,7 +783,7 @@
           "address": "11 Home Port Dr,",
           "starts_at": "2026-08-22T09:00:00-04:00",
           "ends_at": "2026-08-22T11:00:00-04:00",
-          "source_modified_at": "2026-08-15 22:57:47",
+          "source_modified_at": "2026-08-20 16:33:41",
           "reviewed_at": "2026-08-15T19:00:42-04:00",
           "source_url": "https://cantonkayakclub.com/event/new-members-beginners-only-pop-up-paddle-palhomeport-farm-park-with-colleen-saturday-august-22-9-11-am/"
         },
@@ -818,9 +818,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-20T12:30:32-04:00"
+      "checked_at": "2026-08-20T13:00:40-04:00"
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory from 2 PM to 8 PM.\nStorm risk 12 PM\u20139 PM."
+  "note": "Small Craft Advisory from 2 PM to 8 PM.\nStorm risk 1 PM\u20139 PM."
 }
