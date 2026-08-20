@@ -4,86 +4,92 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-08-20T14:30:45-04:00",
+  "updated": "2026-08-20T15:00:49-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
       "label": "Alerts",
       "status": "\ud83d\udd34",
-      "detail": "Small Craft Advisory",
+      "detail": "2 active alerts",
       "items": [
         {
           "event": "Small Craft Advisory",
           "status": "\ud83d\udd34",
           "starts": "2026-08-20T14:26:00-04:00",
           "ends": "2026-08-20T20:00:00-04:00"
+        },
+        {
+          "event": "Severe Thunderstorm Watch",
+          "status": "\ud83d\udfe0",
+          "starts": "2026-08-20T14:32:00-04:00",
+          "ends": "2026-08-20T22:00:00-04:00"
         }
       ],
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-20T14:30:40.992262-04:00"
+        "updated": "2026-08-20T15:00:44.860598-04:00"
       }
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Storm risk 2 PM\u20139 PM",
-      "starts": "2026-08-20T14:00:00-04:00",
-      "ends": "2026-08-20T21:00:00-04:00",
+      "detail": "Storm risk 3 PM\u201311 PM",
+      "starts": "2026-08-20T15:00:00-04:00",
+      "ends": "2026-08-20T23:00:00-04:00",
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-08-20T14:00:00-04:00"
+        "updated": "2026-08-20T15:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "7 kt, gusts 10",
-      "speed_kt": 7,
-      "gust_kt": 10,
-      "direction_deg": 156.0,
+      "status": "\ud83d\udfe2",
+      "detail": "3 kt, gusts 5",
+      "speed_kt": 3,
+      "gust_kt": 5,
+      "direction_deg": 147.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-20T14:30:40.992340-04:00"
+        "updated": "2026-08-20T15:00:44.860686-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-20T14:30:40.992358-04:00"
+        "updated": "2026-08-20T15:00:44.860704-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "83\u00b0F",
+      "detail": "86\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-20T14:30:40.992468-04:00"
+        "updated": "2026-08-20T15:00:44.860840-04:00"
       }
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
       "status": "\ud83d\udfe2",
-      "detail": "83\u00b0F",
+      "detail": "82\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-20T14:30:40.992476-04:00"
+        "updated": "2026-08-20T15:00:44.860849-04:00"
       }
     },
     "bacteria": {
@@ -818,9 +824,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-20T14:30:40-04:00"
+      "checked_at": "2026-08-20T15:00:44-04:00"
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory until 8 PM.\nStorm risk 2 PM\u20139 PM."
+  "note": "Small Craft Advisory until 8 PM.\nSevere Thunderstorm Watch until 10 PM.\nStorm risk 3 PM\u201311 PM."
 }
