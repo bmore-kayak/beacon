@@ -42,5 +42,16 @@
       "title": "Delta: Explore Conowingo and Muddy Creek Islands",
       "summary": "Join Ricardo for a 5-8 mile exploratory paddle around the islands of Conowingo and Muddy Creek."
     }
+  },
+  "248029": {
+    "prompt_version": 1,
+    "fingerprint": "e0cb0752e12c7cf75ed12659010a44fac6cc017dcf5479fe93ecf3d03c98dca4",
+    "source_modified_at": "2026-08-20 11:35:27",
+    "reviewed_at": "2026-08-20T08:00:44-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Baltimore Peninsula: Evening paddle to Ft. McHenry",
+      "summary": "Join Zach and Lisa M for a beginner-friendly paddle with great bird-watching opportunities."
+    }
   }
 }
