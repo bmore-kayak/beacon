@@ -1,10 +1,10 @@
 {
   "location": "Baltimore Harbor",
   "overall": {
-    "status": "\ud83d\udfe1",
-    "label": "Heads up"
+    "status": "\ud83d\udfe2",
+    "label": "Looks good"
   },
-  "updated": "2026-08-21T20:00:53-04:00",
+  "updated": "2026-08-21T20:30:58-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-21T20:00:43.796450-04:00"
+        "updated": "2026-08-21T20:30:44.824653-04:00"
       }
     },
     "storms": {
@@ -32,15 +32,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "9 kt, gusts 12",
-      "speed_kt": 9,
-      "gust_kt": 12,
-      "direction_deg": 136.6,
+      "status": "\ud83d\udfe2",
+      "detail": "6 kt, gusts 7",
+      "speed_kt": 6,
+      "gust_kt": 7,
+      "direction_deg": 119.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-21T20:00:43.796494-04:00"
+        "updated": "2026-08-21T20:30:44.824704-04:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-21T20:00:43.796510-04:00"
+        "updated": "2026-08-21T20:30:44.824721-04:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-21T20:00:43.796523-04:00"
+        "updated": "2026-08-21T20:30:44.824737-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-21T20:00:43.796529-04:00"
+        "updated": "2026-08-21T20:30:44.824743-04:00"
       }
     },
     "bacteria": {
@@ -737,7 +737,7 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "4 upcoming events",
+      "detail": "3 upcoming events",
       "items": [
         {
           "event_id": 247787,
@@ -751,19 +751,6 @@
           "source_modified_at": "2026-08-06 12:07:26",
           "reviewed_at": "2026-08-15T00:00:39-04:00",
           "source_url": "https://cantonkayakclub.com/event/paddle-palsdelta-sunday-august-23-9am-to-12pm-w-katie-l/"
-        },
-        {
-          "event_id": 247980,
-          "title": "Homeport Farm Park: New Members/Beginners Only Pop-Up Paddle",
-          "summary": "Join Colleen for a beginner-friendly paddling session at Homeport Farm Park.",
-          "notice": false,
-          "location": "Homeport Farm Park",
-          "address": "11 Home Port Dr,",
-          "starts_at": "2026-08-22T09:00:00-04:00",
-          "ends_at": "2026-08-22T11:00:00-04:00",
-          "source_modified_at": "2026-08-20 16:33:41",
-          "reviewed_at": "2026-08-15T19:00:42-04:00",
-          "source_url": "https://cantonkayakclub.com/event/new-members-beginners-only-pop-up-paddle-palhomeport-farm-park-with-colleen-saturday-august-22-9-11-am/"
         },
         {
           "event_id": 247760,
@@ -796,7 +783,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-21T20:00:43-04:00"
+      "checked_at": "2026-08-21T20:30:44-04:00"
     }
   },
   "club_notes": [],
