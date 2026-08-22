@@ -31,5 +31,16 @@
       "title": "Baltimore Peninsula: Evening paddle to Ft. McHenry",
       "summary": "Join Zach and Lisa M for a beginner-friendly paddle with great bird-watching opportunities."
     }
+  },
+  "248047": {
+    "prompt_version": 1,
+    "fingerprint": "396486b8506a63cea273d5f0b5ed90bcbd2594812bde0d833887e4906393b3ba",
+    "source_modified_at": "2026-08-22 00:50:22",
+    "reviewed_at": "2026-08-21T21:30:39-04:00",
+    "ai_result": {
+      "notice": true,
+      "title": "Fells Point: Kayak availability may be limited",
+      "summary": "New members must RSVP in advance to attend orientation training, which will use club kayaks."
+    }
   }
 }
