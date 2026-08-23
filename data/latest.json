@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-08-23T01:00:51-04:00",
+  "updated": "2026-08-23T01:30:44-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-23T01:00:42.950731-04:00"
+        "updated": "2026-08-23T01:30:40.053599-04:00"
       }
     },
     "storms": {
@@ -34,15 +34,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "10 kt, gusts 14",
-      "speed_kt": 10,
-      "gust_kt": 14,
-      "direction_deg": 157.5,
+      "status": "\ud83d\udfe2",
+      "detail": "5 kt, gusts 7",
+      "speed_kt": 5,
+      "gust_kt": 7,
+      "direction_deg": 213.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-23T01:00:42.950779-04:00"
+        "updated": "2026-08-23T01:30:40.053650-04:00"
       }
     },
     "waves": {
@@ -54,18 +54,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-23T01:00:42.950796-04:00"
+        "updated": "2026-08-23T01:30:40.053668-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "72\u00b0F",
+      "detail": "71\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-23T01:00:42.950920-04:00"
+        "updated": "2026-08-23T01:30:40.053909-04:00"
       }
     },
     "water_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-23T01:00:42.950928-04:00"
+        "updated": "2026-08-23T01:30:40.053917-04:00"
       }
     },
     "bacteria": {
@@ -811,9 +811,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-23T01:00:42-04:00"
+      "checked_at": "2026-08-23T01:30:40-04:00"
     }
   },
   "club_notes": [],
-  "note": "Storm risk 1 AM\u20135 AM.\nElevated winds."
+  "note": "Storm risk 1 AM\u20135 AM."
 }
