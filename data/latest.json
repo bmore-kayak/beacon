@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-08-22T20:00:54-04:00",
+  "updated": "2026-08-22T20:30:42-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-22T20:00:45.228979-04:00"
+        "updated": "2026-08-22T20:30:39.523513-04:00"
       }
     },
     "storms": {
@@ -34,15 +34,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "10 kt, gusts 13",
-      "speed_kt": 10,
-      "gust_kt": 13,
-      "direction_deg": 106.1,
+      "status": "\ud83d\udfe0",
+      "detail": "11 kt, gusts 14",
+      "speed_kt": 11,
+      "gust_kt": 14,
+      "direction_deg": 103.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-22T20:00:45.229030-04:00"
+        "updated": "2026-08-22T20:30:39.523561-04:00"
       }
     },
     "waves": {
@@ -54,7 +54,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-22T20:00:45.229048-04:00"
+        "updated": "2026-08-22T20:30:39.523578-04:00"
       }
     },
     "air_temp": {
@@ -65,7 +65,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-22T20:00:45.229302-04:00"
+        "updated": "2026-08-22T20:30:39.523931-04:00"
       }
     },
     "water_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-22T20:00:45.229310-04:00"
+        "updated": "2026-08-22T20:30:39.523940-04:00"
       }
     },
     "bacteria": {
@@ -798,9 +798,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-22T20:00:45-04:00"
+      "checked_at": "2026-08-22T20:30:39-04:00"
     }
   },
   "club_notes": [],
-  "note": "Storm risk 8 PM\u20135 AM."
+  "note": "Storm risk 8 PM\u20135 AM.\nElevated winds."
 }
