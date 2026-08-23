@@ -42,5 +42,16 @@
       "title": "Anchor Bay East: Explore coves and otter habitats",
       "summary": "Join Rob for a Paddle Pal at Anchor Bay East, exploring coves and possibly paddling to the former Key Bridge site."
     }
+  },
+  "246720": {
+    "prompt_version": 1,
+    "fingerprint": "5b05be6db6db573a7465165b05bd3e37704558fd20332e5d23daa24b72a852f0",
+    "source_modified_at": "2026-05-13 12:53:28",
+    "reviewed_at": "2026-08-23T00:00:40-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Fells Point: Mindfulness led by Phillip McKnight",
+      "summary": "Join mindfulness teacher Phillip McKnight for a 90-minute kayak session exploring techniques for stress reduction, calm, and wellbeing."
+    }
   }
 }
