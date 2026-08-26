@@ -1,15 +1,4 @@
 {
-  "248047": {
-    "prompt_version": 1,
-    "fingerprint": "396486b8506a63cea273d5f0b5ed90bcbd2594812bde0d833887e4906393b3ba",
-    "source_modified_at": "2026-08-22 00:50:22",
-    "reviewed_at": "2026-08-21T21:30:39-04:00",
-    "ai_result": {
-      "notice": true,
-      "title": "Fells Point: Kayak availability may be limited",
-      "summary": "New members must RSVP in advance to attend orientation training, which will use club kayaks."
-    }
-  },
   "247809": {
     "prompt_version": 1,
     "fingerprint": "755a5488373eff04beb5953454aa9a241f4666f8706792be03f0c9abc250abd9",
@@ -30,6 +19,17 @@
       "notice": false,
       "title": "Fells Point: Mindfulness led by Phillip McKnight",
       "summary": "Join mindfulness teacher Phillip McKnight for a 90-minute kayak session exploring techniques for stress reduction, calm, and wellbeing."
+    }
+  },
+  "248058": {
+    "prompt_version": 1,
+    "fingerprint": "0f2786af01a442be0042663c1821fbbea4d158b0fd3571640717cfc256ccdab6",
+    "source_modified_at": "2026-08-26 00:16:52",
+    "reviewed_at": "2026-08-25T20:30:43-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Delta, PA: Rescue Training",
+      "summary": "Attendees will learn and practice skills such as wet exit, partner rescue, self-rescue, and emptying a kayak when it takes on water."
     }
   }
 }
