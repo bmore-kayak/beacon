@@ -1,10 +1,10 @@
 {
   "location": "Baltimore Harbor",
   "overall": {
-    "status": "\ud83d\udfe0",
-    "label": "Use caution"
+    "status": "\ud83d\udd34",
+    "label": "Stay off water"
   },
-  "updated": "2026-08-27T19:00:50-04:00",
+  "updated": "2026-08-27T19:30:52-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-27T19:00:46.151623-04:00"
+        "updated": "2026-08-27T19:30:47.686842-04:00"
       }
     },
     "storms": {
@@ -41,15 +41,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "14 kt, gusts 16",
+      "status": "\ud83d\udd34",
+      "detail": "14 kt, gusts 19",
       "speed_kt": 14,
-      "gust_kt": 16,
-      "direction_deg": 161.3,
+      "gust_kt": 19,
+      "direction_deg": 165.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-27T19:00:46.151696-04:00"
+        "updated": "2026-08-27T19:30:47.686907-04:00"
       }
     },
     "waves": {
@@ -61,7 +61,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-27T19:00:46.151712-04:00"
+        "updated": "2026-08-27T19:30:47.686922-04:00"
       }
     },
     "air_temp": {
@@ -72,7 +72,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-27T19:00:46.151820-04:00"
+        "updated": "2026-08-27T19:30:47.687128-04:00"
       }
     },
     "water_temp": {
@@ -83,7 +83,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-27T19:00:46.151827-04:00"
+        "updated": "2026-08-27T19:30:47.687134-04:00"
       }
     },
     "bacteria": {
@@ -93,7 +93,7 @@
       "detail": "10\u2013153 MPN",
       "source": {
         "provider": "Waterfront Partnership \u00b7 Baltimore Water Watch",
-        "updated": "2026-08-26T08:00:00-04:00"
+        "updated": "2026-08-27T00:00:00-04:00"
       },
       "passing": 4,
       "failing": 1,
@@ -118,10 +118,10 @@
         {
           "site": "Dragon Boats",
           "region": "Inner Harbor",
-          "date": "2026-08-19T00:00:00-04:00",
+          "date": "2026-08-27T00:00:00-04:00",
           "status": "\u26aa",
-          "stale": true,
-          "bacteria": 63
+          "stale": false,
+          "bacteria": null
         },
         {
           "site": "Fells Point",
@@ -158,18 +158,18 @@
         {
           "site": "Science Center",
           "region": "Inner Harbor",
-          "date": "2026-08-19T00:00:00-04:00",
+          "date": "2026-08-27T00:00:00-04:00",
           "status": "\u26aa",
-          "stale": true,
-          "bacteria": 31
+          "stale": false,
+          "bacteria": null
         },
         {
           "site": "Ferry Bar Park",
           "region": "Middle Branch",
-          "date": "2026-08-19T00:00:00-04:00",
+          "date": "2026-08-27T00:00:00-04:00",
           "status": "\u26aa",
-          "stale": true,
-          "bacteria": 41
+          "stale": false,
+          "bacteria": null
         },
         {
           "site": "Harbor Tunnel",
@@ -190,10 +190,10 @@
         {
           "site": "Middle Branch",
           "region": "Middle Branch",
-          "date": "2026-08-19T00:00:00-04:00",
+          "date": "2026-08-27T00:00:00-04:00",
           "status": "\u26aa",
-          "stale": true,
-          "bacteria": 83
+          "stale": false,
+          "bacteria": null
         },
         {
           "site": "Patapsco Outlet",
@@ -206,42 +206,42 @@
         {
           "site": "Curtis Bay",
           "region": "Curtis Bay",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
           "bacteria": 10
         },
         {
           "site": "Curtis Creek",
           "region": "Curtis Bay",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
           "bacteria": 10
         },
         {
           "site": "Wagners Point",
           "region": "Curtis Bay",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
           "bacteria": 10
         },
         {
           "site": "Bear Creek",
           "region": "Outer Harbor",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 63
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10
         },
         {
           "site": "Bodkin Creek",
           "region": "Outer Harbor",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 31
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10
         },
         {
           "site": "Cox Creek",
@@ -254,33 +254,33 @@
         {
           "site": "Key Bridge / Fort Carroll",
           "region": "Outer Harbor",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
           "bacteria": 10
         },
         {
           "site": "Old Road Bay",
           "region": "Outer Harbor",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
           "bacteria": 10
         },
         {
           "site": "Outer Harbor Midpoint",
           "region": "Outer Harbor",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
           "bacteria": 10
         },
         {
           "site": "Outer Harbor Mouth",
           "region": "Outer Harbor",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
           "bacteria": 10
         },
         {
@@ -294,9 +294,9 @@
         {
           "site": "Stoney Creek",
           "region": "Outer Harbor",
-          "date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
+          "date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
           "bacteria": 10
         }
       ],
@@ -358,51 +358,275 @@
         },
         {
           "source": "bww",
-          "site": "Masonville Channel",
-          "site_id": "BWB-PATMH-20",
+          "site": "Dragon Boats",
+          "site_id": "BWB-PATMH-DB",
           "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-19T00:00:00-04:00",
+          "sample_date": "2026-08-27T00:00:00-04:00",
           "status": "\u26aa",
-          "stale": true,
-          "bacteria": 31,
-          "dissolved_oxygen": 3.51,
+          "stale": false,
+          "bacteria": null,
+          "dissolved_oxygen": null,
           "chlorophyll": null,
           "turbidity": null,
-          "salinity": 10.04,
-          "latitude": 39.254674,
-          "longitude": -76.594605
+          "salinity": null,
+          "latitude": 39.28499,
+          "longitude": -76.609811
+        },
+        {
+          "source": "bww",
+          "site": "Jones Falls Outlet",
+          "site_id": "BWB-PATMH-12",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-27T00:00:00-04:00",
+          "status": "\u26aa",
+          "stale": false,
+          "bacteria": null,
+          "dissolved_oxygen": null,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": null,
+          "latitude": 39.283701,
+          "longitude": -76.603718
+        },
+        {
+          "source": "bww",
+          "site": "Middle Branch A",
+          "site_id": "BWB-PATMH-17",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-27T00:00:00-04:00",
+          "status": "\u26aa",
+          "stale": false,
+          "bacteria": null,
+          "dissolved_oxygen": null,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": null,
+          "latitude": 39.263507,
+          "longitude": -76.623106
         },
         {
           "source": "bww",
           "site": "Ferry Bar Park",
           "site_id": "BWB-PATMH-19",
           "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-19T00:00:00-04:00",
+          "sample_date": "2026-08-27T00:00:00-04:00",
           "status": "\u26aa",
-          "stale": true,
-          "bacteria": 41,
-          "dissolved_oxygen": 3.46,
+          "stale": false,
+          "bacteria": null,
+          "dissolved_oxygen": null,
           "chlorophyll": null,
           "turbidity": null,
-          "salinity": 9.76,
+          "salinity": null,
           "latitude": 39.25579,
           "longitude": -76.610105
+        },
+        {
+          "source": "bww",
+          "site": "Science Center",
+          "site_id": "BWB-PATMH-SC",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-27T00:00:00-04:00",
+          "status": "\u26aa",
+          "stale": false,
+          "bacteria": null,
+          "dissolved_oxygen": null,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": null,
+          "latitude": 39.282422,
+          "longitude": -76.611053
+        },
+        {
+          "source": "bww",
+          "site": "Mainstem D",
+          "site_id": "BWB-PATMH-10",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 8.78,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 9.28,
+          "latitude": 39.187325,
+          "longitude": -76.494584
+        },
+        {
+          "source": "bww",
+          "site": "Old Road Bay",
+          "site_id": "BWB-PATMH-03",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 7.76,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 8.51,
+          "latitude": 39.213125,
+          "longitude": -76.4534
+        },
+        {
+          "source": "bww",
+          "site": "Bear Creek",
+          "site_id": "BWB-PATMH-05",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 4.26,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 10.57,
+          "latitude": 39.246741,
+          "longitude": -76.491001
+        },
+        {
+          "source": "bww",
+          "site": "Stoney Creek",
+          "site_id": "BWB-PATMH-02",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 7.63,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 10.22,
+          "latitude": 39.160976,
+          "longitude": -76.528152
+        },
+        {
+          "source": "bww",
+          "site": "Mainstem E",
+          "site_id": "BWB-PATMH-11",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 8.78,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 8.08,
+          "latitude": 39.181426,
+          "longitude": -76.458249
+        },
+        {
+          "source": "bww",
+          "site": "Curtis Creek",
+          "site_id": "BWB-PATMH-21",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 11.08,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 10.38,
+          "latitude": 39.197375,
+          "longitude": -76.574604
+        },
+        {
+          "source": "bww",
+          "site": "Mainstem B",
+          "site_id": "BWB-PATMH-08",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 2.69,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 12.03,
+          "latitude": 39.235341,
+          "longitude": -76.555953
+        },
+        {
+          "source": "bww",
+          "site": "Mainstem C",
+          "site_id": "BWB-PATMH-09",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 6.32,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 11.41,
+          "latitude": 39.213094,
+          "longitude": -76.522536
+        },
+        {
+          "source": "bww",
+          "site": "Bodkin Creek",
+          "site_id": "BWB-PATMH-22",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 6.24,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 9.39,
+          "latitude": 39.126776,
+          "longitude": -76.445482
         },
         {
           "source": "bww",
           "site": "Northwest Branch A",
           "site_id": "BWB-PATMH-13",
           "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-19T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 5.85,
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 20,
+          "dissolved_oxygen": null,
           "chlorophyll": null,
           "turbidity": null,
-          "salinity": 10.17,
+          "salinity": null,
           "latitude": 39.276857,
           "longitude": -76.596738
+        },
+        {
+          "source": "bww",
+          "site": "Curtis Bay",
+          "site_id": "BWB-PATMH-06",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": 9.25,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": 11.86,
+          "latitude": 39.223374,
+          "longitude": -76.56862
+        },
+        {
+          "source": "bww",
+          "site": "Canton Park",
+          "site_id": "BWB-PATMH-15",
+          "watershed": "Tidal Patapsco River",
+          "sample_date": "2026-08-26T00:00:00-04:00",
+          "status": "\ud83d\udfe2",
+          "stale": false,
+          "bacteria": 10,
+          "dissolved_oxygen": null,
+          "chlorophyll": null,
+          "turbidity": null,
+          "salinity": null,
+          "latitude": 39.276674,
+          "longitude": -76.573921
         },
         {
           "source": "bww",
@@ -422,67 +646,19 @@
         },
         {
           "source": "bww",
-          "site": "Science Center",
-          "site_id": "BWB-PATMH-SC",
+          "site": "Masonville Channel",
+          "site_id": "BWB-PATMH-20",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-19T00:00:00-04:00",
           "status": "\u26aa",
           "stale": true,
           "bacteria": 31,
-          "dissolved_oxygen": null,
+          "dissolved_oxygen": 3.51,
           "chlorophyll": null,
           "turbidity": null,
-          "salinity": 10.73,
-          "latitude": 39.282422,
-          "longitude": -76.611053
-        },
-        {
-          "source": "bww",
-          "site": "Dragon Boats",
-          "site_id": "BWB-PATMH-DB",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-19T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 63,
-          "dissolved_oxygen": 3.65,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 10.56,
-          "latitude": 39.28499,
-          "longitude": -76.609811
-        },
-        {
-          "source": "bww",
-          "site": "Jones Falls Outlet",
-          "site_id": "BWB-PATMH-12",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-19T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 300,
-          "dissolved_oxygen": 0.75,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 10.71,
-          "latitude": 39.283701,
-          "longitude": -76.603718
-        },
-        {
-          "source": "bww",
-          "site": "Mainstem A",
-          "site_id": "BWB-PATMH-07",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-19T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 3.49,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 10.12,
-          "latitude": 39.254541,
-          "longitude": -76.573837
+          "salinity": 10.04,
+          "latitude": 39.254674,
+          "longitude": -76.594605
         },
         {
           "source": "bww",
@@ -502,67 +678,19 @@
         },
         {
           "source": "bww",
-          "site": "Middle Branch A",
-          "site_id": "BWB-PATMH-17",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-19T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 83,
-          "dissolved_oxygen": 3.4,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 10.39,
-          "latitude": 39.263507,
-          "longitude": -76.623106
-        },
-        {
-          "source": "bww",
-          "site": "Canton Park",
-          "site_id": "BWB-PATMH-15",
+          "site": "Mainstem A",
+          "site_id": "BWB-PATMH-07",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-19T00:00:00-04:00",
           "status": "\u26aa",
           "stale": true,
           "bacteria": 10,
-          "dissolved_oxygen": 9.07,
+          "dissolved_oxygen": 3.49,
           "chlorophyll": null,
           "turbidity": null,
-          "salinity": 10.63,
-          "latitude": 39.276674,
-          "longitude": -76.573921
-        },
-        {
-          "source": "bww",
-          "site": "Stoney Creek",
-          "site_id": "BWB-PATMH-02",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 7.18,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 9.98,
-          "latitude": 39.160976,
-          "longitude": -76.528152
-        },
-        {
-          "source": "bww",
-          "site": "Mainstem B",
-          "site_id": "BWB-PATMH-08",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 2.27,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 10.04,
-          "latitude": 39.235341,
-          "longitude": -76.555953
+          "salinity": 10.12,
+          "latitude": 39.254541,
+          "longitude": -76.573837
         },
         {
           "source": "bww",
@@ -579,134 +707,6 @@
           "salinity": 10,
           "latitude": 39.153209,
           "longitude": -76.507068
-        },
-        {
-          "source": "bww",
-          "site": "Mainstem E",
-          "site_id": "BWB-PATMH-11",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 7.71,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 8.45,
-          "latitude": 39.181426,
-          "longitude": -76.458249
-        },
-        {
-          "source": "bww",
-          "site": "Curtis Bay",
-          "site_id": "BWB-PATMH-06",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 5.29,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 10.32,
-          "latitude": 39.223374,
-          "longitude": -76.56862
-        },
-        {
-          "source": "bww",
-          "site": "Old Road Bay",
-          "site_id": "BWB-PATMH-03",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 7.28,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 8.7,
-          "latitude": 39.213125,
-          "longitude": -76.4534
-        },
-        {
-          "source": "bww",
-          "site": "Bodkin Creek",
-          "site_id": "BWB-PATMH-22",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 31,
-          "dissolved_oxygen": 6.29,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 9.68,
-          "latitude": 39.126776,
-          "longitude": -76.445482
-        },
-        {
-          "source": "bww",
-          "site": "Curtis Creek",
-          "site_id": "BWB-PATMH-21",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 9.96,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 9.12,
-          "latitude": 39.197375,
-          "longitude": -76.574604
-        },
-        {
-          "source": "bww",
-          "site": "Mainstem C",
-          "site_id": "BWB-PATMH-09",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 5.54,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 10.23,
-          "latitude": 39.213094,
-          "longitude": -76.522536
-        },
-        {
-          "source": "bww",
-          "site": "Bear Creek",
-          "site_id": "BWB-PATMH-05",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 63,
-          "dissolved_oxygen": 5.23,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 8.77,
-          "latitude": 39.246741,
-          "longitude": -76.491001
-        },
-        {
-          "source": "bww",
-          "site": "Mainstem D",
-          "site_id": "BWB-PATMH-10",
-          "watershed": "Tidal Patapsco River",
-          "sample_date": "2026-08-12T00:00:00-04:00",
-          "status": "\u26aa",
-          "stale": true,
-          "bacteria": 10,
-          "dissolved_oxygen": 7.6,
-          "chlorophyll": null,
-          "turbidity": null,
-          "salinity": 9.77,
-          "latitude": 39.187325,
-          "longitude": -76.494584
         },
         {
           "source": "bww",
@@ -805,9 +805,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-27T19:00:46-04:00"
+      "checked_at": "2026-08-27T19:30:47-04:00"
     }
   },
   "club_notes": [],
-  "note": "Severe Thunderstorm Watch until 10 PM.\nStorm risk 7 PM\u20132 AM.\nElevated bacteria in Inner Harbor.\nElevated winds."
+  "note": "Severe Thunderstorm Watch until 10 PM.\nStorm risk 7 PM\u20132 AM.\nElevated bacteria in Inner Harbor.\nStrong winds."
 }
