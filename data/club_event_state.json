@@ -42,5 +42,16 @@
       "title": "Anchor Bay: Explore suburban waters and creeks",
       "summary": "Join Zach to paddle and explore several smaller creeks and coves in the Dundalk area."
     }
+  },
+  "248109": {
+    "prompt_version": 1,
+    "fingerprint": "2e4f7e20c3231619cf282de609a90c4530ce1bcc53c750611f305c8b639ba47f",
+    "source_modified_at": "2026-08-26 22:53:18",
+    "reviewed_at": "2026-08-28T00:30:39-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Baltimore Peninsula’s The Cove: End the Week Paddle",
+      "summary": "Join Jennifer for a relaxing paddle out of the Baltimore Peninsula Dock, the Cove."
+    }
   }
 }
