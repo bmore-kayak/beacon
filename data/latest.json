@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-08-30T11:00:54-04:00",
+  "updated": "2026-08-30T11:30:48-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-30T11:00:46.784087-04:00"
+        "updated": "2026-08-30T11:30:43.393973-04:00"
       }
     },
     "storms": {
@@ -34,15 +34,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "12 kt, gusts 15",
-      "speed_kt": 12,
-      "gust_kt": 15,
-      "direction_deg": 223.7,
+      "status": "\ud83d\udfe1",
+      "detail": "10 kt, gusts 12",
+      "speed_kt": 10,
+      "gust_kt": 12,
+      "direction_deg": 243.8,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-30T11:00:46.784125-04:00"
+        "updated": "2026-08-30T11:30:43.394021-04:00"
       }
     },
     "waves": {
@@ -54,18 +54,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-30T11:00:46.784141-04:00"
+        "updated": "2026-08-30T11:30:43.394039-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "77\u00b0F",
+      "detail": "79\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-30T11:00:46.784408-04:00"
+        "updated": "2026-08-30T11:30:43.394291-04:00"
       }
     },
     "water_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-30T11:00:46.784418-04:00"
+        "updated": "2026-08-30T11:30:43.394298-04:00"
       }
     },
     "bacteria": {
@@ -739,21 +739,8 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "4 upcoming events",
+      "detail": "3 upcoming events",
       "items": [
-        {
-          "event_id": 246720,
-          "title": "Fells Point: Mindfulness led by Phillip McKnight",
-          "summary": "Join mindfulness teacher Phillip McKnight for a 90-minute kayak session exploring techniques for stress reduction, calm, and wellbeing.",
-          "notice": false,
-          "location": "Fells Point",
-          "address": null,
-          "starts_at": "2026-08-30T10:00:00-04:00",
-          "ends_at": "2026-08-30T11:30:00-04:00",
-          "source_modified_at": "2026-05-13 12:53:28",
-          "reviewed_at": "2026-08-23T00:00:40-04:00",
-          "source_url": "https://cantonkayakclub.com/event/ckc-kayak-float-02-of-03-mindfulness-led-by-phillip-mcknight-sunday-8-30-10a-1115-from-fells-point/"
-        },
         {
           "event_id": 248058,
           "title": "Delta, PA: Rescue Training",
@@ -798,9 +785,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-08-30T11:00:46-04:00"
+      "checked_at": "2026-08-30T11:30:43-04:00"
     }
   },
   "club_notes": [],
-  "note": "Storms possible after 2 PM.\nElevated bacteria in Inner Harbor (sampled 3 days ago).\nElevated winds."
+  "note": "Storms possible after 2 PM.\nElevated bacteria in Inner Harbor (sampled 3 days ago)."
 }
