@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-08-31T23:30:51-04:00",
+  "updated": "2026-09-01T00:00:52-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-08-31T23:30:48.145488-04:00"
+        "updated": "2026-09-01T00:00:48.389939-04:00"
       }
     },
     "storms": {
@@ -26,33 +26,33 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-08-31T23:00:00-04:00"
+        "updated": "2026-09-01T00:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "2 kt, gusts 3",
-      "speed_kt": 2,
-      "gust_kt": 3,
-      "direction_deg": 243.3,
+      "detail": "5 kt, gusts 6",
+      "speed_kt": 5,
+      "gust_kt": 6,
+      "direction_deg": 200.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-31T23:30:48.145532-04:00"
+        "updated": "2026-09-01T00:00:48.389990-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.2 ft",
-      "height_ft": 0.2,
+      "detail": "0.1 ft",
+      "height_ft": 0.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-31T23:30:48.145547-04:00"
+        "updated": "2026-09-01T00:00:48.390008-04:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-31T23:30:48.145562-04:00"
+        "updated": "2026-09-01T00:00:48.390046-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-08-31T23:30:48.145569-04:00"
+        "updated": "2026-09-01T00:00:48.390054-04:00"
       }
     },
     "bacteria": {
@@ -150,7 +150,7 @@
           "site": "Science Center",
           "region": "Inner Harbor",
           "date": "2026-08-27T00:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 201
         },
@@ -385,7 +385,7 @@
           "site_id": "BWB-PATMH-SC",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-27T00:00:00-04:00",
-          "status": "\ud83d\udfe0",
+          "status": "\ud83d\udfe1",
           "stale": false,
           "bacteria": 201,
           "dissolved_oxygen": null,
