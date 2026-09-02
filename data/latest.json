@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-09-01T23:30:48-04:00",
+  "updated": "2026-09-02T00:00:52-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,20 +15,20 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-01T23:30:45.866604-04:00"
+        "updated": "2026-09-02T00:00:48.209935-04:00"
       }
     },
     "storms": {
       "icon": "\u26c8",
       "label": "Storms",
       "status": "\ud83d\udfe0",
-      "detail": "Storm risk 11 PM\u20135 AM",
-      "starts": "2026-09-01T23:00:00-04:00",
+      "detail": "Storm risk 12 AM\u20135 AM",
+      "starts": "2026-09-02T00:00:00-04:00",
       "ends": "2026-09-02T05:00:00-04:00",
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-09-01T23:00:00-04:00"
+        "updated": "2026-09-02T00:00:00-04:00"
       }
     },
     "wind": {
@@ -38,11 +38,11 @@
       "detail": "11 kt, gusts 13",
       "speed_kt": 11,
       "gust_kt": 13,
-      "direction_deg": 84.3,
+      "direction_deg": 72.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-01T23:30:45.866656-04:00"
+        "updated": "2026-09-02T00:00:48.209980-04:00"
       }
     },
     "waves": {
@@ -54,18 +54,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-01T23:30:45.866673-04:00"
+        "updated": "2026-09-02T00:00:48.209997-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "80\u00b0F",
+      "detail": "79\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-01T23:30:45.867000-04:00"
+        "updated": "2026-09-02T00:00:48.210103-04:00"
       }
     },
     "water_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-01T23:30:45.867009-04:00"
+        "updated": "2026-09-02T00:00:48.210111-04:00"
       }
     },
     "bacteria": {
@@ -200,40 +200,40 @@
           "site": "Curtis Bay",
           "region": "Curtis Bay",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Curtis Creek",
           "region": "Curtis Bay",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Wagners Point",
           "region": "Curtis Bay",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Bear Creek",
           "region": "Outer Harbor",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Bodkin Creek",
           "region": "Outer Harbor",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
@@ -248,32 +248,32 @@
           "site": "Key Bridge / Fort Carroll",
           "region": "Outer Harbor",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Old Road Bay",
           "region": "Outer Harbor",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Outer Harbor Midpoint",
           "region": "Outer Harbor",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Outer Harbor Mouth",
           "region": "Outer Harbor",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
@@ -288,8 +288,8 @@
           "site": "Stoney Creek",
           "region": "Outer Harbor",
           "date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         }
       ],
@@ -435,8 +435,8 @@
           "site_id": "BWB-PATMH-02",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 7.63,
           "chlorophyll": null,
@@ -451,8 +451,8 @@
           "site_id": "BWB-PATMH-10",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 8.78,
           "chlorophyll": null,
@@ -467,8 +467,8 @@
           "site_id": "BWB-PATMH-03",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 7.76,
           "chlorophyll": null,
@@ -483,8 +483,8 @@
           "site_id": "BWB-PATMH-06",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 9.25,
           "chlorophyll": null,
@@ -499,8 +499,8 @@
           "site_id": "BWB-PATMH-05",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 4.26,
           "chlorophyll": null,
@@ -515,8 +515,8 @@
           "site_id": "BWB-PATMH-11",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 8.78,
           "chlorophyll": null,
@@ -531,8 +531,8 @@
           "site_id": "BWB-PATMH-21",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 11.08,
           "chlorophyll": null,
@@ -547,8 +547,8 @@
           "site_id": "BWB-PATMH-08",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 2.69,
           "chlorophyll": null,
@@ -563,8 +563,8 @@
           "site_id": "BWB-PATMH-09",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 6.32,
           "chlorophyll": null,
@@ -579,8 +579,8 @@
           "site_id": "BWB-PATMH-22",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 6.24,
           "chlorophyll": null,
@@ -595,8 +595,8 @@
           "site_id": "BWB-PATMH-13",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 20,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -611,8 +611,8 @@
           "site_id": "BWB-PATMH-15",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-08-26T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -776,5 +776,5 @@
     }
   },
   "club_notes": [],
-  "note": "Storm risk 11 PM\u20135 AM.\nElevated bacteria in Inner Harbor."
+  "note": "Storm risk 12 AM\u20135 AM.\nElevated bacteria in Inner Harbor."
 }
