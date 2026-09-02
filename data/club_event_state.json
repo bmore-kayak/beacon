@@ -20,5 +20,16 @@
       "title": "Baltimore Peninsula’s The Cove: End the Week Paddle",
       "summary": "Join Jennifer for a relaxing paddle out of the Baltimore Peninsula Dock, the Cove."
     }
+  },
+  "248114": {
+    "prompt_version": 1,
+    "fingerprint": "76695eec6ee8d14a6afff8d30a5e8c60058e2d37d8a8aa002362fcee98804f0b",
+    "source_modified_at": "2026-08-26 23:00:59",
+    "reviewed_at": "2026-09-02T00:30:47-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Baltimore Peninsula: Evening paddle to West Covington Park",
+      "summary": "Join Zach for a beginner-friendly paddle on the Middle Branch of the Baltimore Harbor."
+    }
   }
 }

@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-09-02T00:00:52-04:00",
+  "updated": "2026-09-02T00:30:53-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-02T00:00:48.209935-04:00"
+        "updated": "2026-09-02T00:30:47.430959-04:00"
       }
     },
     "storms": {
@@ -34,27 +34,27 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "11 kt, gusts 13",
-      "speed_kt": 11,
-      "gust_kt": 13,
-      "direction_deg": 72.2,
+      "status": "\ud83d\udfe2",
+      "detail": "8 kt, gusts 9",
+      "speed_kt": 8,
+      "gust_kt": 9,
+      "direction_deg": 90.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-02T00:00:48.209980-04:00"
+        "updated": "2026-09-02T00:30:47.431005-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-02T00:00:48.209997-04:00"
+        "updated": "2026-09-02T00:30:47.431053-04:00"
       }
     },
     "air_temp": {
@@ -65,7 +65,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-02T00:00:48.210103-04:00"
+        "updated": "2026-09-02T00:30:47.431287-04:00"
       }
     },
     "water_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-02T00:00:48.210111-04:00"
+        "updated": "2026-09-02T00:30:47.431293-04:00"
       }
     },
     "bacteria": {
@@ -739,7 +739,7 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "2 upcoming events",
+      "detail": "3 upcoming events",
       "items": [
         {
           "event_id": 248086,
@@ -766,13 +766,26 @@
           "source_modified_at": "2026-08-26 22:53:18",
           "reviewed_at": "2026-08-28T00:30:39-04:00",
           "source_url": "https://cantonkayakclub.com/event/paddle-pals-baltimore-peninsulas-the-cove-for-an-end-the-week-paddle-with-jennifer-friday-september-4th-415-600pm/"
+        },
+        {
+          "event_id": 248114,
+          "title": "Baltimore Peninsula: Evening paddle to West Covington Park",
+          "summary": "Join Zach for a beginner-friendly paddle on the Middle Branch of the Baltimore Harbor.",
+          "notice": false,
+          "location": "BMore Peninsula \u2013 Port Covington Marina \u2013 The Cove",
+          "address": "225 East Cromwell Street",
+          "starts_at": "2026-09-09T16:45:00-04:00",
+          "ends_at": "2026-09-09T19:00:00-04:00",
+          "source_modified_at": "2026-08-26 23:00:59",
+          "reviewed_at": "2026-09-02T00:30:47-04:00",
+          "source_url": "https://cantonkayakclub.com/event/paddle-pal-an-evening-paddle-baltimore-peninsula-with-zach-wednesday-september-9th-5-7-pm/"
         }
       ],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-09-01T23:30:45-04:00"
+      "checked_at": "2026-09-02T00:30:47-04:00"
     }
   },
   "club_notes": [],
