@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-09-03T11:01:03-04:00",
+  "updated": "2026-09-03T11:30:56-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-03T11:00:58.378176-04:00"
+        "updated": "2026-09-03T11:30:54.054194-04:00"
       }
     },
     "storms": {
@@ -34,15 +34,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "10 kt, gusts 13",
-      "speed_kt": 10,
-      "gust_kt": 13,
-      "direction_deg": 225.1,
+      "status": "\ud83d\udfe0",
+      "detail": "14 kt, gusts 16",
+      "speed_kt": 14,
+      "gust_kt": 16,
+      "direction_deg": 247.9,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-03T11:00:58.378222-04:00"
+        "updated": "2026-09-03T11:30:54.054245-04:00"
       }
     },
     "waves": {
@@ -54,7 +54,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-03T11:00:58.378238-04:00"
+        "updated": "2026-09-03T11:30:54.054264-04:00"
       }
     },
     "air_temp": {
@@ -65,7 +65,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-03T11:00:58.378496-04:00"
+        "updated": "2026-09-03T11:30:54.054375-04:00"
       }
     },
     "water_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-03T11:00:58.378504-04:00"
+        "updated": "2026-09-03T11:30:54.054382-04:00"
       }
     },
     "bacteria": {
@@ -785,9 +785,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-09-03T11:00:58-04:00"
+      "checked_at": "2026-09-03T11:30:54-04:00"
     }
   },
   "club_notes": [],
-  "note": "Storms possible after 2 PM.\nElevated bacteria in Inner Harbor."
+  "note": "Storms possible after 2 PM.\nElevated bacteria in Inner Harbor.\nElevated winds."
 }
