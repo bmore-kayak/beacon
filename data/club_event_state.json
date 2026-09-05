@@ -31,5 +31,16 @@
       "title": "Delta, PA: Rescue Training",
       "summary": "Attendees will learn and practice skills such as wet exit, partner rescue, self-rescue, and emptying a kayak when it takes on water."
     }
+  },
+  "248217": {
+    "prompt_version": 1,
+    "fingerprint": "2ad70a9a9b7d76bc667d9d2851de33057cdbc8a09472c1c55fc2fe825e02c101",
+    "source_modified_at": "2026-09-05 13:26:02",
+    "reviewed_at": "2026-09-05T09:30:49-04:00",
+    "ai_result": {
+      "notice": true,
+      "title": "Fells Point: Limited kayak availability",
+      "summary": "New-member orientation will use club kayaks, limiting availability for other members."
+    }
   }
 }
