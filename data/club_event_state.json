@@ -9,5 +9,27 @@
       "title": "Baltimore Peninsula: Evening paddle to West Covington Park",
       "summary": "Join Zach for a beginner-friendly paddle along the Middle Branch of the Baltimore Harbor."
     }
+  },
+  "248137": {
+    "prompt_version": 1,
+    "fingerprint": "c02574652a5dd05a20dc10fe7e813a7d2a8a8de62a1fa1bc10caeef2cf0ba667",
+    "source_modified_at": "2026-08-27 12:01:58",
+    "reviewed_at": "2026-09-05T00:00:49-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Chesapeake Harbour: Paddle to Lake Ogleton or Back Creek",
+      "summary": "Join a paddle to Lake Ogleton or Back Creek with Duane."
+    }
+  },
+  "248064": {
+    "prompt_version": 1,
+    "fingerprint": "0dd1ff91eff048943ff0901d99bb73d9231c4c44f7d8dfb3988e910ac156e415",
+    "source_modified_at": "2026-08-26 00:24:18",
+    "reviewed_at": "2026-09-05T00:00:49-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Delta, PA: Rescue Training",
+      "summary": "Attendees will learn and practice skills such as wet exit, partner rescue, self-rescue, and emptying a kayak when it takes on water."
+    }
   }
 }
