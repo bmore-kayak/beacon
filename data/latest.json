@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-09-06T14:01:09-04:00",
+  "updated": "2026-09-06T14:30:53-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-06T14:01:04.547160-04:00"
+        "updated": "2026-09-06T14:30:51.011444-04:00"
       }
     },
     "storms": {
@@ -32,15 +32,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe2",
-      "detail": "7 kt, gusts 9",
-      "speed_kt": 7,
-      "gust_kt": 9,
-      "direction_deg": 121.0,
+      "status": "\ud83d\udfe1",
+      "detail": "8 kt, gusts 11",
+      "speed_kt": 8,
+      "gust_kt": 11,
+      "direction_deg": 128.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-06T14:01:04.547209-04:00"
+        "updated": "2026-09-06T14:30:51.011520-04:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-06T14:01:04.547227-04:00"
+        "updated": "2026-09-06T14:30:51.011539-04:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-06T14:01:04.547244-04:00"
+        "updated": "2026-09-06T14:30:51.011556-04:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-06T14:01:04.547251-04:00"
+        "updated": "2026-09-06T14:30:51.011563-04:00"
       }
     },
     "bacteria": {
@@ -822,7 +822,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-09-06T14:01:04-04:00"
+      "checked_at": "2026-09-06T14:30:51-04:00"
     }
   },
   "club_notes": [],
