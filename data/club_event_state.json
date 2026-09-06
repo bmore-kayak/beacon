@@ -42,5 +42,27 @@
       "title": "Fells Point: Limited kayak availability",
       "summary": "New-member orientation will use club kayaks, limiting availability for other members."
     }
+  },
+  "248127": {
+    "prompt_version": 1,
+    "fingerprint": "5f243f7271e74d2e3124416fdedd02414f34f35ade4e670538b26829a6fff69d",
+    "source_modified_at": "2026-09-03 22:20:59",
+    "reviewed_at": "2026-09-06T00:00:48-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Baltimore Peninsula: Search for Mr. Trash Wheel's Friends",
+      "summary": "Join Colleen for an intermediate-level paddle in search of Mr. Trash Wheel's friends."
+    }
+  },
+  "246726": {
+    "prompt_version": 1,
+    "fingerprint": "55c3f26fb2219d792f040302be0a11d54517905a248e25b1fab3b08bba84be9e",
+    "source_modified_at": "2026-06-18 20:14:19",
+    "reviewed_at": "2026-09-06T00:00:48-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Fells Point: Mindfulness led by Phillip McKnight",
+      "summary": "Join mindfulness teacher Phillip McKnight for a 90-minute kayak session exploring techniques for stress reduction and wellbeing."
+    }
   }
 }
