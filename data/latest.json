@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-09-09T23:31:18-04:00",
+  "updated": "2026-09-10T00:01:12-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-09T23:30:57.294351-04:00"
+        "updated": "2026-09-10T00:01:02.826880-04:00"
       }
     },
     "storms": {
@@ -33,33 +33,33 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-09-09T23:00:00-04:00"
+        "updated": "2026-09-10T00:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "16 kt, gusts 19",
-      "speed_kt": 16,
-      "gust_kt": 19,
-      "direction_deg": 197.1,
+      "detail": "14 kt, gusts 18",
+      "speed_kt": 14,
+      "gust_kt": 18,
+      "direction_deg": 210.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-09T23:30:57.294411-04:00"
+        "updated": "2026-09-10T00:01:02.826943-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.4 ft",
-      "height_ft": 0.4,
+      "detail": "0.5 ft",
+      "height_ft": 0.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-09T23:30:57.294425-04:00"
+        "updated": "2026-09-10T00:01:02.826958-04:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-09T23:30:57.294439-04:00"
+        "updated": "2026-09-10T00:01:02.826972-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-09T23:30:57.294444-04:00"
+        "updated": "2026-09-10T00:01:02.826979-04:00"
       }
     },
     "bacteria": {
@@ -744,7 +744,7 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "1 notice \u00b7 5 upcoming events",
+      "detail": "1 notice \u00b7 6 upcoming events",
       "items": [
         {
           "event_id": 248217,
@@ -810,13 +810,26 @@
           "source_modified_at": "2026-06-18 20:14:19",
           "reviewed_at": "2026-09-06T00:00:48-04:00",
           "source_url": "https://cantonkayakclub.com/event/ckc-kayak-float-03-of-03-mindfulness-led-by-phillip-mcknight-sunday-9-27-10a-1115-from-fells-point/"
+        },
+        {
+          "event_id": 248232,
+          "title": "CKC Social \u2013 September",
+          "summary": "Join us for our September Social at Pusser\u2019s Landing in Canton, with appetizers provided and happy hour specials available.",
+          "notice": false,
+          "location": "Pusser\u2019s Landing",
+          "address": "2780 Lighthouse Point East",
+          "starts_at": "2026-09-17T17:30:00-04:00",
+          "ends_at": "2026-09-17T20:00:00-04:00",
+          "source_modified_at": "2026-09-08 20:26:30",
+          "reviewed_at": "2026-09-10T00:01:02-04:00",
+          "source_url": "https://cantonkayakclub.com/event/ckc-social-september-thursday-september-17-530-8pm-pussers-landing-in-canton/"
         }
       ],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-09-09T23:30:57-04:00"
+      "checked_at": "2026-09-10T00:01:02-04:00"
     }
   },
   "club_notes": [],

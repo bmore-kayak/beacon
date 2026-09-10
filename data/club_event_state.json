@@ -53,5 +53,16 @@
       "title": "Fells Point: Mindfulness led by Phillip McKnight",
       "summary": "Join mindfulness teacher Phillip McKnight for a 90-minute kayak session exploring techniques for stress reduction and wellbeing."
     }
+  },
+  "248232": {
+    "prompt_version": 1,
+    "fingerprint": "bc360e3f5ecc6eb221e7315b24a201948fca725fa4503fe4dcbd2524b5ba03cc",
+    "source_modified_at": "2026-09-08 20:26:30",
+    "reviewed_at": "2026-09-10T00:01:02-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "CKC Social – September",
+      "summary": "Join us for our September Social at Pusser’s Landing in Canton, with appetizers provided and happy hour specials available."
+    }
   }
 }
