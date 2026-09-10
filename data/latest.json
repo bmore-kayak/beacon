@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-09-10T00:01:12-04:00",
+  "updated": "2026-09-10T00:31:09-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-10T00:01:02.826880-04:00"
+        "updated": "2026-09-10T00:31:01.922066-04:00"
       }
     },
     "storms": {
@@ -39,38 +39,38 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udd34",
-      "detail": "14 kt, gusts 18",
-      "speed_kt": 14,
-      "gust_kt": 18,
-      "direction_deg": 210.3,
+      "status": "\ud83d\udfe0",
+      "detail": "13 kt, gusts 15",
+      "speed_kt": 13,
+      "gust_kt": 15,
+      "direction_deg": 208.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-10T00:01:02.826943-04:00"
+        "updated": "2026-09-10T00:31:01.922129-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.5 ft",
-      "height_ft": 0.5,
+      "detail": "0.4 ft",
+      "height_ft": 0.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-10T00:01:02.826958-04:00"
+        "updated": "2026-09-10T00:31:01.922144-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "77\u00b0F",
+      "detail": "76\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-10T00:01:02.826972-04:00"
+        "updated": "2026-09-10T00:31:01.922159-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-10T00:01:02.826979-04:00"
+        "updated": "2026-09-10T00:31:01.922165-04:00"
       }
     },
     "bacteria": {
@@ -829,9 +829,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-09-10T00:01:02-04:00"
+      "checked_at": "2026-09-10T00:31:01-04:00"
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory until 7 AM.\nElevated bacteria in Inner Harbor.\nStrong winds."
+  "note": "Small Craft Advisory until 7 AM.\nElevated bacteria in Inner Harbor.\nElevated winds."
 }
