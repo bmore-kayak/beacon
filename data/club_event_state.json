@@ -56,13 +56,13 @@
   },
   "248232": {
     "prompt_version": 1,
-    "fingerprint": "bc360e3f5ecc6eb221e7315b24a201948fca725fa4503fe4dcbd2524b5ba03cc",
-    "source_modified_at": "2026-09-08 20:26:30",
-    "reviewed_at": "2026-09-10T00:01:02-04:00",
+    "fingerprint": "e8e1444e20696c6461a0e0c372b01a45573e799b75d04702a6853539cbe6d29a",
+    "source_modified_at": "2026-09-11 17:21:08",
+    "reviewed_at": "2026-09-11T14:01:07-04:00",
     "ai_result": {
       "notice": false,
-      "title": "CKC Social – September",
-      "summary": "Join us for our September Social at Pusser’s Landing in Canton, with appetizers provided and happy hour specials available."
+      "title": "Canton: CKC Social",
+      "summary": "Join us for a celebration of Baltimore's Waterfront Women at Pusser's Landing in Canton."
     }
   }
 }
