@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-09-12T12:00:51-04:00",
+  "updated": "2026-09-12T12:31:07-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-12T12:00:46.848514-04:00"
+        "updated": "2026-09-12T12:31:03.572056-04:00"
       }
     },
     "storms": {
@@ -41,15 +41,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "10 kt, gusts 12",
+      "status": "\ud83d\udfe0",
+      "detail": "10 kt, gusts 14",
       "speed_kt": 10,
-      "gust_kt": 12,
-      "direction_deg": 133.8,
+      "gust_kt": 14,
+      "direction_deg": 134.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-12T12:00:46.848555-04:00"
+        "updated": "2026-09-12T12:31:03.572116-04:00"
       }
     },
     "waves": {
@@ -61,18 +61,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-12T12:00:46.848569-04:00"
+        "updated": "2026-09-12T12:31:03.572131-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "76\u00b0F",
+      "detail": "77\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-12T12:00:46.848622-04:00"
+        "updated": "2026-09-12T12:31:03.572400-04:00"
       }
     },
     "water_temp": {
@@ -83,7 +83,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-12T12:00:46.848626-04:00"
+        "updated": "2026-09-12T12:31:03.572408-04:00"
       }
     },
     "bacteria": {
@@ -822,5 +822,5 @@
     }
   },
   "club_notes": [],
-  "note": "Marine Weather Statement until 1 PM.\nStorms possible after 7 PM.\nElevated bacteria in Inner Harbor (sampled 2 days ago)."
+  "note": "Marine Weather Statement until 1 PM.\nStorms possible after 7 PM.\nElevated bacteria in Inner Harbor (sampled 2 days ago).\nElevated winds."
 }
