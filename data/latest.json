@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-09-12T13:01:10-04:00",
+  "updated": "2026-09-12T13:31:03-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-12T13:01:05.413829-04:00"
+        "updated": "2026-09-12T13:31:01.054185-04:00"
       }
     },
     "storms": {
@@ -35,14 +35,14 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe0",
-      "detail": "12 kt, gusts 15",
+      "detail": "12 kt, gusts 14",
       "speed_kt": 12,
-      "gust_kt": 15,
-      "direction_deg": 130.7,
+      "gust_kt": 14,
+      "direction_deg": 132.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-12T13:01:05.413866-04:00"
+        "updated": "2026-09-12T13:31:01.054224-04:00"
       }
     },
     "waves": {
@@ -54,7 +54,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-12T13:01:05.413880-04:00"
+        "updated": "2026-09-12T13:31:01.054240-04:00"
       }
     },
     "air_temp": {
@@ -65,7 +65,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-12T13:01:05.413983-04:00"
+        "updated": "2026-09-12T13:31:01.054566-04:00"
       }
     },
     "water_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-12T13:01:05.413991-04:00"
+        "updated": "2026-09-12T13:31:01.054574-04:00"
       }
     },
     "bacteria": {
@@ -811,7 +811,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-09-12T13:01:05-04:00"
+      "checked_at": "2026-09-12T13:31:01-04:00"
     }
   },
   "club_notes": [],
