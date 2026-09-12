@@ -53,5 +53,16 @@
       "title": "Canton: CKC Social",
       "summary": "Join us for a celebration of Baltimore's Waterfront Women at Pusser's Landing in Canton."
     }
+  },
+  "247439": {
+    "prompt_version": 1,
+    "fingerprint": "6796a4d9bf85d53c7a83f1516b676845b61c628adc94c8bd34388975497b7d61",
+    "source_modified_at": "2026-09-03 02:27:22",
+    "reviewed_at": "2026-09-12T00:01:07-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Muddy Run Reservoir: Kayak and Camp",
+      "summary": "Join Denny and Carissa for an overnight adventure at Muddy Run Reservoir and Campground."
+    }
   }
 }
