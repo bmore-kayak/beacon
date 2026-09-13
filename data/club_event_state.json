@@ -42,5 +42,16 @@
       "title": "Muddy Run Reservoir: Kayak and Camp",
       "summary": "Join Denny and Carissa for an overnight adventure at Muddy Run Reservoir and Campground."
     }
+  },
+  "248093": {
+    "prompt_version": 1,
+    "fingerprint": "f2c72d96b5a0c3a9eaa6bc6ba2b3f661af25312db7b136c91c6e3fbce7f426af",
+    "source_modified_at": "2026-08-26 22:43:54",
+    "reviewed_at": "2026-09-13T00:01:07-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Havre de Grace: Explore the Susquehanna",
+      "summary": "Join Katie L for a Sunday paddle from our newest dock to explore the Susquehanna River."
+    }
   }
 }
