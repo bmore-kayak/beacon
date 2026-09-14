@@ -31,5 +31,16 @@
       "title": "Havre de Grace: Explore the Susquehanna",
       "summary": "Join Katie L for a Sunday paddle from our newest dock to explore the Susquehanna River."
     }
+  },
+  "248292": {
+    "prompt_version": 1,
+    "fingerprint": "5a748939b1344da7c3eb2ee61032dda96db468a36e736cd538ffc6eca939ffb5",
+    "source_modified_at": "2026-09-13 23:40:45",
+    "reviewed_at": "2026-09-13T20:01:09-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Fells Point: New Member Orientation Training",
+      "summary": "New Canton Kayak Club members will learn safety expectations and club rules, and practice launching and paddling in a kayak."
+    }
   }
 }
