@@ -1,15 +1,4 @@
 {
-  "248232": {
-    "prompt_version": 1,
-    "fingerprint": "e8e1444e20696c6461a0e0c372b01a45573e799b75d04702a6853539cbe6d29a",
-    "source_modified_at": "2026-09-11 17:21:08",
-    "reviewed_at": "2026-09-11T14:01:07-04:00",
-    "ai_result": {
-      "notice": false,
-      "title": "Canton: CKC Social",
-      "summary": "Join us for a celebration of Baltimore's Waterfront Women at Pusser's Landing in Canton."
-    }
-  },
   "247439": {
     "prompt_version": 1,
     "fingerprint": "6796a4d9bf85d53c7a83f1516b676845b61c628adc94c8bd34388975497b7d61",
@@ -30,17 +19,6 @@
       "notice": false,
       "title": "Havre de Grace: Explore the Susquehanna",
       "summary": "Join Katie L for a Sunday paddle from our newest dock to explore the Susquehanna River."
-    }
-  },
-  "248292": {
-    "prompt_version": 1,
-    "fingerprint": "5a748939b1344da7c3eb2ee61032dda96db468a36e736cd538ffc6eca939ffb5",
-    "source_modified_at": "2026-09-13 23:40:45",
-    "reviewed_at": "2026-09-13T20:01:09-04:00",
-    "ai_result": {
-      "notice": false,
-      "title": "Fells Point: New Member Orientation Training",
-      "summary": "New Canton Kayak Club members will learn safety expectations and club rules, and practice launching and paddling in a kayak."
     }
   },
   "248132": {
