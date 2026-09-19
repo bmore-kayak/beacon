@@ -20,5 +20,16 @@
       "title": "Fells Point: Full Moon Paddle",
       "summary": "Join Zach and Lisa for a special paddle under the September full moon."
     }
+  },
+  "248359": {
+    "prompt_version": 1,
+    "fingerprint": "7751ebc906cf2dce2acd7278fc9df97779fe954ec61e44531e3e186b0316a9cf",
+    "source_modified_at": "2026-09-19 21:23:01",
+    "reviewed_at": "2026-09-19T17:31:25-04:00",
+    "ai_result": {
+      "notice": true,
+      "title": "Fells Point: Kayak availability may be limited",
+      "summary": "New members must RSVP in advance to attend orientation training, which will use club kayaks."
+    }
   }
 }
