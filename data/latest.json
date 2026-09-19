@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe0",
     "label": "Use caution"
   },
-  "updated": "2026-09-19T05:01:40-04:00",
+  "updated": "2026-09-19T05:31:49-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-19T05:01:36.063539-04:00"
+        "updated": "2026-09-19T05:31:45.219597-04:00"
       }
     },
     "storms": {
@@ -32,15 +32,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe1",
-      "detail": "9 kt, gusts 13",
-      "speed_kt": 9,
-      "gust_kt": 13,
-      "direction_deg": 33.0,
+      "status": "\ud83d\udfe0",
+      "detail": "7 kt, gusts 14",
+      "speed_kt": 7,
+      "gust_kt": 14,
+      "direction_deg": 47.0,
       "source": {
         "provider": "NOAA CO-OPS",
         "location": "Baltimore",
-        "updated": "2026-09-19T05:01:36.484210-04:00"
+        "updated": "2026-09-19T05:31:45.551422-04:00"
       }
     },
     "waves": {
@@ -51,7 +51,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-09-19T05:01:37.175469-04:00"
+        "updated": "2026-09-19T05:31:45.992334-04:00"
       }
     },
     "air_temp": {
@@ -73,7 +73,7 @@
       "source": {
         "provider": "NOAA NDBC",
         "location": "BLTM2",
-        "updated": "2026-09-19T04:18:00-04:00"
+        "updated": "2026-09-19T04:30:00-04:00"
       }
     },
     "bacteria": {
@@ -782,9 +782,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-09-19T05:01:37-04:00"
+      "checked_at": "2026-09-19T05:31:46-04:00"
     }
   },
   "club_notes": [],
-  "note": "Elevated bacteria in Inner Harbor."
+  "note": "Elevated bacteria in Inner Harbor.\nElevated winds."
 }
