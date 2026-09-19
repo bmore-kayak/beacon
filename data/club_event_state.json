@@ -1,15 +1,4 @@
 {
-  "247439": {
-    "prompt_version": 1,
-    "fingerprint": "6796a4d9bf85d53c7a83f1516b676845b61c628adc94c8bd34388975497b7d61",
-    "source_modified_at": "2026-09-03 02:27:22",
-    "reviewed_at": "2026-09-12T00:01:07-04:00",
-    "ai_result": {
-      "notice": false,
-      "title": "Muddy Run Reservoir: Kayak and Camp",
-      "summary": "Join Denny and Carissa for an overnight adventure at Muddy Run Reservoir and Campground."
-    }
-  },
   "248093": {
     "prompt_version": 1,
     "fingerprint": "f2c72d96b5a0c3a9eaa6bc6ba2b3f661af25312db7b136c91c6e3fbce7f426af",
@@ -30,6 +19,17 @@
       "notice": false,
       "title": "Baltimore Peninsula: Paddle around the area",
       "summary": "Join Rob for an easy paddle around Baltimore Peninsula, heading towards Ft McHenry."
+    }
+  },
+  "248317": {
+    "prompt_version": 1,
+    "fingerprint": "32cb03a1b67c9c59ef6cebc95da9f357269bb19bc660f919595739b7ecb17f2e",
+    "source_modified_at": "2026-09-15 20:25:46",
+    "reviewed_at": "2026-09-19T00:01:15-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Fells Point: Full Moon Paddle",
+      "summary": "Join Zach and Lisa for a special paddle under the September full moon."
     }
   }
 }
