@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-09-26T19:31:33-04:00",
+  "updated": "2026-09-26T20:01:35-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-09-26T19:31:29.410860-04:00"
+        "updated": "2026-09-26T20:01:31.225903-04:00"
       }
     },
     "storms": {
@@ -33,21 +33,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-09-26T19:00:00-04:00"
+        "updated": "2026-09-26T20:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "23 kt, gusts 28",
-      "speed_kt": 23,
-      "gust_kt": 28,
-      "direction_deg": 338.4,
+      "detail": "20 kt, gusts 25",
+      "speed_kt": 20,
+      "gust_kt": 25,
+      "direction_deg": 352.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-26T19:31:29.410968-04:00"
+        "updated": "2026-09-26T20:01:31.225965-04:00"
       }
     },
     "waves": {
@@ -59,18 +59,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-26T19:31:29.410984-04:00"
+        "updated": "2026-09-26T20:01:31.225981-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "59\u00b0F",
+      "detail": "61\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-26T19:31:29.410998-04:00"
+        "updated": "2026-09-26T20:01:31.225994-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-09-26T19:31:29.411006-04:00"
+        "updated": "2026-09-26T20:01:31.226000-04:00"
       }
     },
     "bacteria": {
@@ -747,19 +747,6 @@
       "detail": "3 upcoming events",
       "items": [
         {
-          "event_id": 248317,
-          "title": "Fells Point: Full Moon Paddle",
-          "summary": "Join Zach and Lisa for a special paddle under the September full moon.",
-          "notice": false,
-          "location": "Fells Point",
-          "address": null,
-          "starts_at": "2026-09-26T17:30:00-04:00",
-          "ends_at": "2026-09-26T20:00:00-04:00",
-          "source_modified_at": "2026-09-15 20:25:46",
-          "reviewed_at": "2026-09-19T00:01:15-04:00",
-          "source_url": "https://cantonkayakclub.com/event/paddle-pal-full-moon-paddlefells-point-w-zach-and-lisa-530-800-pm/"
-        },
-        {
           "event_id": 248099,
           "title": "Delta, PA: Susquehanna islands tour",
           "summary": "Join Katie for a 2-hour tour of the Susquehanna islands and natural elements of the river.",
@@ -784,13 +771,26 @@
           "source_modified_at": "2026-08-26 23:10:19",
           "reviewed_at": "2026-09-20T00:01:04-04:00",
           "source_url": "https://cantonkayakclub.com/event/paddle-pal-solleys-cove-ghost-ships-w-jennifer-sunday-september-27th-3-pm-5pm/"
+        },
+        {
+          "event_id": 248337,
+          "title": "Baltimore Peninsula: Shoreline clean up and festival",
+          "summary": "Join Rob and the Maryland Waterways Foundation for a shoreline clean up and the Oyster Blues & Brews Festival.",
+          "notice": false,
+          "location": "BMore Peninsula \u2013 Port Covington Marina \u2013 The Cove",
+          "address": "225 East Cromwell Street",
+          "starts_at": "2026-10-03T10:30:00-04:00",
+          "ends_at": "2026-10-03T13:00:00-04:00",
+          "source_modified_at": "2026-09-17 19:50:54",
+          "reviewed_at": "2026-09-26T20:01:31-04:00",
+          "source_url": "https://cantonkayakclub.com/event/special-paddle-pal-volunteer-opportunity-baltimore-peninsulas-the-cove-with-rob-and-maryland-waterways-foundation-saturday-october-3th-1015-am-1-pmm/"
         }
       ],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-09-26T19:31:29-04:00"
+      "checked_at": "2026-09-26T20:01:31-04:00"
     }
   },
   "club_notes": [],

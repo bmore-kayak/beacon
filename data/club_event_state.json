@@ -1,15 +1,4 @@
 {
-  "248317": {
-    "prompt_version": 1,
-    "fingerprint": "32cb03a1b67c9c59ef6cebc95da9f357269bb19bc660f919595739b7ecb17f2e",
-    "source_modified_at": "2026-09-15 20:25:46",
-    "reviewed_at": "2026-09-19T00:01:15-04:00",
-    "ai_result": {
-      "notice": false,
-      "title": "Fells Point: Full Moon Paddle",
-      "summary": "Join Zach and Lisa for a special paddle under the September full moon."
-    }
-  },
   "248099": {
     "prompt_version": 1,
     "fingerprint": "8310a31fde27cb2b3d98841745b065624e7c2d555b66e09dbc4c525d17c46cee",
@@ -30,6 +19,17 @@
       "notice": false,
       "title": "Solley's Cove: Ghost Ships",
       "summary": "Join Jennifer for a paddle up Curtis Creek to see the ghost ships and explore Marley Creek."
+    }
+  },
+  "248337": {
+    "prompt_version": 1,
+    "fingerprint": "f21cb8a5518b568f2db70573811a3db194da5b06352b21d65ebb2f9f33de1613",
+    "source_modified_at": "2026-09-17 19:50:54",
+    "reviewed_at": "2026-09-26T20:01:31-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Baltimore Peninsula: Shoreline clean up and festival",
+      "summary": "Join Rob and the Maryland Waterways Foundation for a shoreline clean up and the Oyster Blues & Brews Festival."
     }
   }
 }
