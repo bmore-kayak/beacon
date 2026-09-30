@@ -9,5 +9,16 @@
       "title": "Baltimore Peninsula: Shoreline clean up and festival",
       "summary": "Join Rob and the Maryland Waterways Foundation for a shoreline clean up and the Oyster Blues & Brews Festival."
     }
+  },
+  "248409": {
+    "prompt_version": 1,
+    "fingerprint": "b774cf9be48a2f3bb157e8c1cb6a022d9d0ec441080c8bb47c829205c5d88aaa",
+    "source_modified_at": "2026-09-30 20:12:43",
+    "reviewed_at": "2026-09-30T16:31:37-04:00",
+    "ai_result": {
+      "notice": true,
+      "title": "Fells Point: Limited kayak availability",
+      "summary": "New-member orientation will use club kayaks, limiting availability for other members."
+    }
   }
 }
