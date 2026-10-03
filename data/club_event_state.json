@@ -31,5 +31,16 @@
       "title": "Fells Point: Paddle to Pier Six",
       "summary": "Join Katie and Rob for a sunset paddle from Fells Point to Pier Six."
     }
+  },
+  "248144": {
+    "prompt_version": 1,
+    "fingerprint": "e0adcc9747b9e3fa0c813c3be7aa995e0d2db61bbcc7c7a74aeb51a40be1e744",
+    "source_modified_at": "2026-09-09 00:41:46",
+    "reviewed_at": "2026-10-03T00:01:41-04:00",
+    "ai_result": {
+      "notice": true,
+      "title": "Fells Point: Kayak availability may be limited",
+      "summary": "New-member orientation will use club kayaks during this themed paddle event."
+    }
   }
 }
