@@ -31,5 +31,16 @@
       "title": "Fells Point: Kayak availability may be limited",
       "summary": "New-member orientation will use club kayaks during this themed paddle event."
     }
+  },
+  "248453": {
+    "prompt_version": 1,
+    "fingerprint": "1569f782f41bae32792dab97f28698fb568e0d30d19f7a3b708bedbf9dc4f65a",
+    "source_modified_at": "2026-10-01 00:49:39",
+    "reviewed_at": "2026-10-04T00:01:45-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Delta, PA: Susquehanna islands tour",
+      "summary": "Join Katie for a 2.5-hour paddle tour of the Susquehanna islands and natural elements of the river."
+    }
   }
 }
