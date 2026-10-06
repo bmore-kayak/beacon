@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-10-06T04:31:55-04:00",
+  "updated": "2026-10-06T05:02:01-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-10-06T04:31:50.891285-04:00"
+        "updated": "2026-10-06T05:01:56.182244-04:00"
       }
     },
     "storms": {
@@ -33,21 +33,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-10-06T04:00:00-04:00"
+        "updated": "2026-10-06T05:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udd34",
-      "detail": "14 kt, gusts 18",
+      "status": "\ud83d\udfe0",
+      "detail": "14 kt, gusts 16",
       "speed_kt": 14,
-      "gust_kt": 18,
-      "direction_deg": 337.8,
+      "gust_kt": 16,
+      "direction_deg": 337.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-10-06T04:31:50.891359-04:00"
+        "updated": "2026-10-06T05:01:56.182310-04:00"
       }
     },
     "waves": {
@@ -59,7 +59,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-10-06T04:31:50.891376-04:00"
+        "updated": "2026-10-06T05:01:56.182326-04:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-10-06T04:31:50.891390-04:00"
+        "updated": "2026-10-06T05:01:56.182340-04:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-10-06T04:31:50.891397-04:00"
+        "updated": "2026-10-06T05:01:56.182347-04:00"
       }
     },
     "bacteria": {
@@ -820,5 +820,5 @@
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory until 6 AM.\nStrong winds."
+  "note": "Small Craft Advisory until 6 AM.\nElevated winds."
 }
