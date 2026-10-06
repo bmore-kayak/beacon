@@ -42,5 +42,16 @@
       "title": "Delta, PA: Susquehanna islands tour",
       "summary": "Join Katie for a 2.5-hour paddle tour of the Susquehanna islands and natural elements of the river."
     }
+  },
+  "248429": {
+    "prompt_version": 1,
+    "fingerprint": "1702d7c624d5f49fc78f8ce2a0067853fba0b704aea9fc78f36223450abdff82",
+    "source_modified_at": "2026-10-01 00:19:31",
+    "reviewed_at": "2026-10-06T00:01:10-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Dundalk: Taco Tuesday Paddle",
+      "summary": "Join Zach for a 1.5-hour paddle around Dundalk at a beginner-friendly slow-moderate pace."
+    }
   }
 }
