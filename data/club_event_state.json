@@ -20,5 +20,16 @@
       "title": "Dundalk: Taco Tuesday Paddle",
       "summary": "Join Zach for a 1.5-hour paddle around Dundalk at a beginner-friendly slow-moderate pace."
     }
+  },
+  "248407": {
+    "prompt_version": 1,
+    "fingerprint": "1dd7513bfd6ad871fc33609ed98904fb39676baadc70e329f253b1205b98a999",
+    "source_modified_at": "2026-09-30 21:09:15",
+    "reviewed_at": "2026-10-14T00:02:00-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "CKC Social – October",
+      "summary": "Join us for our October Social at Little Havana with happy hour drink specials and club-provided appetizers."
+    }
   }
 }
