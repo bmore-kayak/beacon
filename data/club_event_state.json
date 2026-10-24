@@ -9,5 +9,16 @@
       "title": "Dundalk: Taco Tuesday Paddle",
       "summary": "Join Zach for a 1.5-hour paddle around Dundalk at a beginner-friendly slow-moderate pace."
     }
+  },
+  "248458": {
+    "prompt_version": 1,
+    "fingerprint": "9fb16cfaafb9946e1b52b9172052574ca474b2579d96161ed1b4bdac8cc3c723",
+    "source_modified_at": "2026-10-01 01:14:59",
+    "reviewed_at": "2026-10-24T00:02:49-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Solley's Cove: Spooky Ghost Ships",
+      "summary": "Join Rob and Michelle for a Halloween paddle to see ghost ships and explore Marley Creek."
+    }
   }
 }
