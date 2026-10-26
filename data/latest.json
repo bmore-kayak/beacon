@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Heads up"
   },
-  "updated": "2026-10-26T15:32:35-04:00",
+  "updated": "2026-10-26T16:03:13-04:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-10-26T15:32:25.848948-04:00"
+        "updated": "2026-10-26T16:03:01.226623-04:00"
       }
     },
     "storms": {
@@ -26,55 +26,55 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-10-26T15:00:00-04:00"
+        "updated": "2026-10-26T16:00:00-04:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "2 kt, gusts 3",
-      "speed_kt": 2,
-      "gust_kt": 3,
-      "direction_deg": 316.7,
+      "detail": "3 kt, gusts 4",
+      "speed_kt": 3,
+      "gust_kt": 4,
+      "direction_deg": 299.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-10-26T15:32:25.848994-04:00"
+        "updated": "2026-10-26T16:03:01.226656-04:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.2 ft",
-      "height_ft": 0.2,
+      "detail": "0.3 ft",
+      "height_ft": 0.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-10-26T15:32:25.849010-04:00"
+        "updated": "2026-10-26T16:03:01.226670-04:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "70\u00b0F",
+      "detail": "69\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-10-26T15:32:25.849023-04:00"
+        "updated": "2026-10-26T16:03:01.226682-04:00"
       }
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
       "status": "\ud83d\udfe2",
-      "detail": "62\u00b0F",
+      "detail": "63\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-10-26T15:32:25.849028-04:00"
+        "updated": "2026-10-26T16:03:01.226688-04:00"
       }
     },
     "bacteria": {
@@ -737,8 +737,21 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "2 upcoming events",
+      "detail": "3 upcoming events",
       "items": [
+        {
+          "event_id": 248574,
+          "title": "Delta: Explore Fall Foliage",
+          "summary": "Join Ricardo for a 5-8 mile exploratory paddle through the Delta-Conwingo Islands & Muddy Creek area.",
+          "notice": false,
+          "location": "Delta, PA",
+          "address": "497 Cold Cabin Road",
+          "starts_at": "2026-10-27T10:30:00-04:00",
+          "ends_at": "2026-10-27T16:30:00-04:00",
+          "source_modified_at": "2026-10-26 19:54:00",
+          "reviewed_at": "2026-10-26T16:03:01-04:00",
+          "source_url": "https://cantonkayakclub.com/event/paddle-pal-tuesday-october-26-2026-w-ricardo-1030-am-430pm-delta-conwingo-islands-muddy-creek/"
+        },
         {
           "event_id": 248438,
           "title": "Dundalk: Taco Tuesday Paddle",
@@ -770,7 +783,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-10-26T15:32:25-04:00"
+      "checked_at": "2026-10-26T16:03:01-04:00"
     }
   },
   "club_notes": [],
