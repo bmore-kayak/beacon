@@ -20,5 +20,16 @@
       "title": "Dundalk: Taco Tuesday Paddle",
       "summary": "Join Zach for a 1.5-hour paddle around Dundalk at a beginner-friendly slow-moderate pace."
     }
+  },
+  "248588": {
+    "prompt_version": 1,
+    "fingerprint": "83f7fc8ba5005b218fa30f5d31e0ae600cb3c2884eca60e7b8503a5e82b78ca7",
+    "source_modified_at": "2026-10-30 17:34:10",
+    "reviewed_at": "2026-10-31T00:02:40-04:00",
+    "ai_result": {
+      "notice": false,
+      "title": "Fells Point: Late afternoon paddle around the harbor",
+      "summary": "Join Lisa for a choose-your-adventure paddle around the Baltimore Harbor."
+    }
   }
 }
