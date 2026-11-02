@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Heads up"
   },
-  "updated": "2026-11-02T04:03:04-05:00",
+  "updated": "2026-11-02T04:33:28-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-02T04:03:02.071056-05:00"
+        "updated": "2026-11-02T04:33:26.147414-05:00"
       }
     },
     "storms": {
@@ -33,14 +33,14 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "3 kt, gusts 4",
-      "speed_kt": 3,
-      "gust_kt": 4,
-      "direction_deg": 341.1,
+      "detail": "4 kt, gusts 5",
+      "speed_kt": 4,
+      "gust_kt": 5,
+      "direction_deg": 4.8,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-02T04:03:02.071100-05:00"
+        "updated": "2026-11-02T04:33:26.147485-05:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-02T04:03:02.071114-05:00"
+        "updated": "2026-11-02T04:33:26.147506-05:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-02T04:03:02.071128-05:00"
+        "updated": "2026-11-02T04:33:26.147524-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-02T04:03:02.071133-05:00"
+        "updated": "2026-11-02T04:33:26.147530-05:00"
       }
     },
     "bacteria": {
@@ -770,7 +770,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-02T04:03:02-05:00"
+      "checked_at": "2026-11-02T04:33:26-05:00"
     }
   },
   "club_notes": [],
