@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Heads up"
   },
-  "updated": "2026-11-02T13:32:58-05:00",
+  "updated": "2026-11-02T14:03:00-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-02T13:32:51.695116-05:00"
+        "updated": "2026-11-02T14:02:55.382422-05:00"
       }
     },
     "storms": {
@@ -26,21 +26,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-02T13:00:00-05:00"
+        "updated": "2026-11-02T14:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "11 kt, gusts 12",
+      "detail": "11 kt, gusts 13",
       "speed_kt": 11,
-      "gust_kt": 12,
-      "direction_deg": 128.0,
+      "gust_kt": 13,
+      "direction_deg": 116.8,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-02T13:32:51.695159-05:00"
+        "updated": "2026-11-02T14:02:55.382467-05:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-02T13:32:51.695174-05:00"
+        "updated": "2026-11-02T14:02:55.382481-05:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-02T13:32:51.695188-05:00"
+        "updated": "2026-11-02T14:02:55.382494-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-02T13:32:51.695192-05:00"
+        "updated": "2026-11-02T14:02:55.382499-05:00"
       }
     },
     "bacteria": {
