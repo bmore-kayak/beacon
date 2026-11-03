@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Heads up"
   },
-  "updated": "2026-11-03T17:03:52-05:00",
+  "updated": "2026-11-03T17:33:36-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-03T17:03:50.006753-05:00"
+        "updated": "2026-11-03T17:33:34.280578-05:00"
       }
     },
     "storms": {
@@ -33,14 +33,14 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "10 kt, gusts 12",
-      "speed_kt": 10,
+      "detail": "9 kt, gusts 12",
+      "speed_kt": 9,
       "gust_kt": 12,
-      "direction_deg": 154.1,
+      "direction_deg": 152.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T17:03:50.006806-05:00"
+        "updated": "2026-11-03T17:33:34.280628-05:00"
       }
     },
     "waves": {
@@ -52,18 +52,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T17:03:50.006823-05:00"
+        "updated": "2026-11-03T17:33:34.280643-05:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "65\u00b0F",
+      "detail": "64\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T17:03:50.006837-05:00"
+        "updated": "2026-11-03T17:33:34.280659-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T17:03:50.006842-05:00"
+        "updated": "2026-11-03T17:33:34.280664-05:00"
       }
     },
     "bacteria": {
@@ -737,21 +737,8 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "2 upcoming events",
+      "detail": "1 upcoming event",
       "items": [
-        {
-          "event_id": 248583,
-          "title": "Dundalk: Taco Tuesday Paddle",
-          "summary": "Join Zach for a 1.5-hour paddle around Dundalk at a beginner-friendly slow-moderate pace.",
-          "notice": false,
-          "location": "Anchor Bay East Marina (Hard Yacht Cafe) \u2013 Bear Creek",
-          "address": "8500 Cove Rd",
-          "starts_at": "2026-11-03T15:30:00-05:00",
-          "ends_at": "2026-11-03T17:30:00-05:00",
-          "source_modified_at": "2026-10-30 17:24:52",
-          "reviewed_at": "2026-10-30T13:32:03-04:00",
-          "source_url": "https://cantonkayakclub.com/event/paddle-palstaco-tuesday-paddle-november-3-345-pm-to-515-pm-anchor-bay-east-w-zach/"
-        },
         {
           "event_id": 248588,
           "title": "Fells Point: Late afternoon paddle around the harbor",
@@ -770,7 +757,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-03T17:03:50-05:00"
+      "checked_at": "2026-11-03T17:33:34-05:00"
     }
   },
   "club_notes": [],
