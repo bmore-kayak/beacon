@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Heads up"
   },
-  "updated": "2026-11-03T22:33:44-05:00",
+  "updated": "2026-11-03T23:02:21-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-03T22:33:42.390527-05:00"
+        "updated": "2026-11-03T23:02:17.062574-05:00"
       }
     },
     "storms": {
@@ -26,44 +26,44 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-03T22:00:00-05:00"
+        "updated": "2026-11-03T23:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "10 kt, gusts 13",
-      "speed_kt": 10,
-      "gust_kt": 13,
-      "direction_deg": 177.6,
+      "detail": "8 kt, gusts 10",
+      "speed_kt": 8,
+      "gust_kt": 10,
+      "direction_deg": 174.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T22:33:42.390577-05:00"
+        "updated": "2026-11-03T23:02:17.062620-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T22:33:42.390594-05:00"
+        "updated": "2026-11-03T23:02:17.062634-05:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "62\u00b0F",
+      "detail": "61\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T22:33:42.390609-05:00"
+        "updated": "2026-11-03T23:02:17.062648-05:00"
       }
     },
     "water_temp": {
@@ -74,60 +74,60 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T22:33:42.390614-05:00"
+        "updated": "2026-11-03T23:02:17.062652-05:00"
       }
     },
     "bacteria": {
       "icon": "\ud83e\udda0",
       "label": "Bacteria",
-      "status": "\ud83d\udfe1",
-      "detail": "10\u2013119 MPN",
+      "status": "\u26aa",
+      "detail": "Outdated",
       "source": {
         "provider": "Waterfront Partnership \u00b7 Baltimore Water Watch",
         "updated": "2026-10-28T00:00:00-04:00"
       },
-      "passing": 6,
-      "failing": 1,
+      "passing": 0,
+      "failing": 0,
       "failing_regions": [],
       "stations": [
         {
           "site": "Canton Waterfront Park",
           "region": "Inner Harbor",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Downtown Sailing Center",
           "region": "Inner Harbor",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Dragon Boats",
           "region": "Inner Harbor",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Fells Point",
           "region": "Inner Harbor",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 20
         },
         {
           "site": "Fort McHenry",
           "region": "Inner Harbor",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
@@ -142,48 +142,48 @@
           "site": "Mr. Trash Wheel",
           "region": "Inner Harbor",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 119
         },
         {
           "site": "Science Center",
           "region": "Inner Harbor",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 73
         },
         {
           "site": "Ferry Bar Park",
           "region": "Middle Branch",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Harbor Tunnel",
           "region": "Middle Branch",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Masonville Channel",
           "region": "Middle Branch",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Middle Branch",
           "region": "Middle Branch",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 63
         },
         {
@@ -198,24 +198,24 @@
           "site": "Curtis Bay",
           "region": "Curtis Bay",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Curtis Creek",
           "region": "Curtis Bay",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
           "site": "Wagners Point",
           "region": "Curtis Bay",
           "date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10
         },
         {
@@ -757,9 +757,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-03T22:33:42-05:00"
+      "checked_at": "2026-11-03T23:02:17-05:00"
     }
   },
   "club_notes": [],
-  "note": "Elevated bacteria in Inner Harbor (sampled 6 days ago)."
+  "note": ""
 }
