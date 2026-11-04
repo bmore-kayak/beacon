@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe2",
     "label": "Looks good"
   },
-  "updated": "2026-11-03T23:33:11-05:00",
+  "updated": "2026-11-04T00:03:40-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-03T23:33:06.210455-05:00"
+        "updated": "2026-11-04T00:03:38.854314-05:00"
       }
     },
     "storms": {
@@ -26,7 +26,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-03T23:00:00-05:00"
+        "updated": "2026-11-04T00:00:00-05:00"
       }
     },
     "wind": {
@@ -36,23 +36,23 @@
       "detail": "3 kt, gusts 5",
       "speed_kt": 3,
       "gust_kt": 5,
-      "direction_deg": 225.1,
+      "direction_deg": 219.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T23:33:06.210502-05:00"
+        "updated": "2026-11-04T00:03:38.854359-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.2 ft",
-      "height_ft": 0.2,
+      "detail": "0.3 ft",
+      "height_ft": 0.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T23:33:06.210516-05:00"
+        "updated": "2026-11-04T00:03:38.854374-05:00"
       }
     },
     "air_temp": {
@@ -63,18 +63,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T23:33:06.210532-05:00"
+        "updated": "2026-11-04T00:03:38.854390-05:00"
       }
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
       "status": "\ud83d\udfe2",
-      "detail": "62\u00b0F",
+      "detail": "63\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-03T23:33:06.210536-05:00"
+        "updated": "2026-11-04T00:03:38.854394-05:00"
       }
     },
     "bacteria": {
@@ -353,8 +353,8 @@
           "site_id": "BWB-PATMH-16",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 12.73,
           "chlorophyll": null,
@@ -369,8 +369,8 @@
           "site_id": "BWB-PATMH-06",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 12.01,
           "chlorophyll": null,
@@ -385,8 +385,8 @@
           "site_id": "BWB-PATMH-21",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 14.03,
           "chlorophyll": null,
@@ -401,8 +401,8 @@
           "site_id": "BWB-PATMH-20",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 14.4,
           "chlorophyll": null,
@@ -417,8 +417,8 @@
           "site_id": "BWB-PATMH-14",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 20,
           "dissolved_oxygen": 13.9,
           "chlorophyll": null,
@@ -433,8 +433,8 @@
           "site_id": "BWB-PATMH-08",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 11.59,
           "chlorophyll": null,
@@ -449,8 +449,8 @@
           "site_id": "BWB-PATMH-SC",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 73,
           "dissolved_oxygen": 13.34,
           "chlorophyll": null,
@@ -465,8 +465,8 @@
           "site_id": "BWB-PATMH-13",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 13.06,
           "chlorophyll": null,
@@ -481,8 +481,8 @@
           "site_id": "BWB-PATMH-19",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 14.78,
           "chlorophyll": null,
@@ -497,8 +497,8 @@
           "site_id": "BWB-PATMH-17",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 63,
           "dissolved_oxygen": 13.94,
           "chlorophyll": null,
@@ -513,8 +513,8 @@
           "site_id": "BWB-PATMH-15",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 13.63,
           "chlorophyll": null,
@@ -529,8 +529,8 @@
           "site_id": "BWB-PATMH-07",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": null,
           "chlorophyll": null,
@@ -545,8 +545,8 @@
           "site_id": "BWB-PATMH-DB",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe2",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 10,
           "dissolved_oxygen": 14.36,
           "chlorophyll": null,
@@ -561,8 +561,8 @@
           "site_id": "BWB-PATMH-12",
           "watershed": "Tidal Patapsco River",
           "sample_date": "2026-10-28T00:00:00-04:00",
-          "status": "\ud83d\udfe1",
-          "stale": false,
+          "status": "\u26aa",
+          "stale": true,
           "bacteria": 119,
           "dissolved_oxygen": 12.93,
           "chlorophyll": null,
@@ -757,7 +757,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-03T23:33:06-05:00"
+      "checked_at": "2026-11-04T00:03:38-05:00"
     }
   },
   "club_notes": [],
