@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-05T01:32:25-05:00",
+  "updated": "2026-11-05T02:03:07-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-05T01:32:20.897656-05:00"
+        "updated": "2026-11-05T02:03:05.686737-05:00"
       }
     },
     "storms": {
@@ -33,33 +33,33 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-05T01:00:00-05:00"
+        "updated": "2026-11-05T02:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "5 kt, gusts 7",
+      "detail": "5 kt, gusts 6",
       "speed_kt": 5,
-      "gust_kt": 7,
-      "direction_deg": 147.8,
+      "gust_kt": 6,
+      "direction_deg": 162.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-05T01:32:20.897700-05:00"
+        "updated": "2026-11-05T02:03:05.686800-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-05T01:32:20.897713-05:00"
+        "updated": "2026-11-05T02:03:05.686841-05:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-05T01:32:20.897722-05:00"
+        "updated": "2026-11-05T02:03:05.686856-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-05T01:32:20.897726-05:00"
+        "updated": "2026-11-05T02:03:05.686861-05:00"
       }
     },
     "bacteria": {
@@ -764,7 +764,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-05T01:32:20-05:00"
+      "checked_at": "2026-11-05T02:03:05-05:00"
     }
   },
   "club_notes": [],
