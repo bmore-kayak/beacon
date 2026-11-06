@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe2",
     "label": "Looks good"
   },
-  "updated": "2026-11-06T04:02:29-05:00",
+  "updated": "2026-11-06T04:33:44-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-06T04:02:26.462389-05:00"
+        "updated": "2026-11-06T04:33:42.115616-05:00"
       }
     },
     "storms": {
@@ -36,11 +36,11 @@
       "detail": "3 kt, gusts 4",
       "speed_kt": 3,
       "gust_kt": 4,
-      "direction_deg": 67.0,
+      "direction_deg": 216.0,
       "source": {
         "provider": "NOAA CO-OPS",
         "location": "Baltimore",
-        "updated": "2026-11-06T04:02:26.770372-05:00"
+        "updated": "2026-11-06T04:33:42.323318-05:00"
       }
     },
     "waves": {
@@ -51,7 +51,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "ANZ538",
-        "updated": "2026-11-06T04:02:27.165720-05:00"
+        "updated": "2026-11-06T04:33:42.722736-05:00"
       }
     },
     "air_temp": {
@@ -73,7 +73,7 @@
       "source": {
         "provider": "NOAA NDBC",
         "location": "BLTM2",
-        "updated": "2026-11-06T02:30:00-05:00"
+        "updated": "2026-11-06T03:30:00-05:00"
       }
     },
     "bacteria": {
@@ -756,7 +756,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-06T04:02:27-05:00"
+      "checked_at": "2026-11-06T04:33:42-05:00"
     }
   },
   "club_notes": [],
