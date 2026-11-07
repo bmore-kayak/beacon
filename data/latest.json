@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-07T11:03:58-05:00",
+  "updated": "2026-11-07T11:32:21-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-07T11:03:56.366165-05:00"
+        "updated": "2026-11-07T11:32:19.458908-05:00"
       }
     },
     "storms": {
@@ -43,23 +43,23 @@
       "detail": "18 kt, gusts 23",
       "speed_kt": 18,
       "gust_kt": 23,
-      "direction_deg": 300.8,
+      "direction_deg": 316.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-07T11:03:56.366227-05:00"
+        "updated": "2026-11-07T11:32:19.458951-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe1",
-      "detail": "1.1 ft",
-      "height_ft": 1.1,
+      "detail": "1.0 ft",
+      "height_ft": 1.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-07T11:03:56.366240-05:00"
+        "updated": "2026-11-07T11:32:19.458963-05:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-07T11:03:56.366256-05:00"
+        "updated": "2026-11-07T11:32:19.458972-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-07T11:03:56.366261-05:00"
+        "updated": "2026-11-07T11:32:19.458976-05:00"
       }
     },
     "bacteria": {
@@ -764,7 +764,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-07T11:03:56-05:00"
+      "checked_at": "2026-11-07T11:32:19-05:00"
     }
   },
   "club_notes": [],
