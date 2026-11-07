@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-07T16:32:23-05:00",
+  "updated": "2026-11-07T17:03:49-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-07T16:32:21.861557-05:00"
+        "updated": "2026-11-07T17:03:47.365307-05:00"
       }
     },
     "storms": {
@@ -33,44 +33,44 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-07T16:00:00-05:00"
+        "updated": "2026-11-07T17:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "22 kt, gusts 28",
-      "speed_kt": 22,
-      "gust_kt": 28,
-      "direction_deg": 294.7,
+      "detail": "24 kt, gusts 31",
+      "speed_kt": 24,
+      "gust_kt": 31,
+      "direction_deg": 298.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-07T16:32:21.861623-05:00"
+        "updated": "2026-11-07T17:03:47.365373-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe1",
-      "detail": "1.3 ft",
-      "height_ft": 1.3,
+      "detail": "1.2 ft",
+      "height_ft": 1.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-07T16:32:21.861636-05:00"
+        "updated": "2026-11-07T17:03:47.365388-05:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "57\u00b0F",
+      "detail": "56\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-07T16:32:21.861647-05:00"
+        "updated": "2026-11-07T17:03:47.365402-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-07T16:32:21.861651-05:00"
+        "updated": "2026-11-07T17:03:47.365408-05:00"
       }
     },
     "bacteria": {
@@ -744,27 +744,13 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "1 upcoming event",
-      "items": [
-        {
-          "event_id": 248588,
-          "title": "Fells Point: Late afternoon paddle around the harbor",
-          "summary": "Join Lisa for a choose-your-adventure paddle around the Baltimore Harbor.",
-          "notice": false,
-          "location": "Fells Point",
-          "address": null,
-          "starts_at": "2026-11-07T15:30:00-05:00",
-          "ends_at": "2026-11-07T17:00:00-05:00",
-          "source_modified_at": "2026-10-30 17:34:10",
-          "reviewed_at": "2026-10-31T00:02:40-04:00",
-          "source_url": "https://cantonkayakclub.com/event/paddle-pal-a-late-afternoon-paddle-fells-point-with-lisa-m-saturday-november-7-330-500-pm/"
-        }
-      ],
+      "detail": "No upcoming events",
+      "items": [],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-07T16:32:21-05:00"
+      "checked_at": "2026-11-07T17:03:47-05:00"
     }
   },
   "club_notes": [],
