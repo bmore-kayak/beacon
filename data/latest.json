@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-08T16:32:25-05:00",
+  "updated": "2026-11-08T17:04:01-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-08T16:32:23.918776-05:00"
+        "updated": "2026-11-08T17:03:59.678469-05:00"
       }
     },
     "storms": {
@@ -33,21 +33,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-08T16:00:00-05:00"
+        "updated": "2026-11-08T17:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udd34",
-      "detail": "14 kt, gusts 19",
-      "speed_kt": 14,
-      "gust_kt": 19,
-      "direction_deg": 225.4,
+      "status": "\ud83d\udfe0",
+      "detail": "13 kt, gusts 16",
+      "speed_kt": 13,
+      "gust_kt": 16,
+      "direction_deg": 236.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-08T16:32:23.918833-05:00"
+        "updated": "2026-11-08T17:03:59.678534-05:00"
       }
     },
     "waves": {
@@ -59,18 +59,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-08T16:32:23.918846-05:00"
+        "updated": "2026-11-08T17:03:59.678548-05:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "61\u00b0F",
+      "detail": "60\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-08T16:32:23.918858-05:00"
+        "updated": "2026-11-08T17:03:59.678562-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-08T16:32:23.918861-05:00"
+        "updated": "2026-11-08T17:03:59.678567-05:00"
       }
     },
     "bacteria": {
@@ -754,5 +754,5 @@
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory from 6 PM to 12 AM.\nStrong winds."
+  "note": "Small Craft Advisory from 6 PM to 12 AM.\nElevated winds."
 }
