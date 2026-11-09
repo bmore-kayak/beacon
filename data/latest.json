@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-09T13:03:23-05:00",
+  "updated": "2026-11-09T13:33:22-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-09T13:03:21.831293-05:00"
+        "updated": "2026-11-09T13:33:17.583367-05:00"
       }
     },
     "storms": {
@@ -40,26 +40,26 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "20 kt, gusts 25",
-      "speed_kt": 20,
-      "gust_kt": 25,
-      "direction_deg": 314.8,
+      "detail": "22 kt, gusts 28",
+      "speed_kt": 22,
+      "gust_kt": 28,
+      "direction_deg": 312.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-09T13:03:21.831356-05:00"
+        "updated": "2026-11-09T13:33:17.583438-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
-      "status": "\ud83d\udfe0",
-      "detail": "1.6 ft",
-      "height_ft": 1.6,
+      "status": "\ud83d\udfe1",
+      "detail": "1.2 ft",
+      "height_ft": 1.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-09T13:03:21.831369-05:00"
+        "updated": "2026-11-09T13:33:17.583453-05:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-09T13:03:21.831381-05:00"
+        "updated": "2026-11-09T13:33:17.583469-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-09T13:03:21.831385-05:00"
+        "updated": "2026-11-09T13:33:17.583474-05:00"
       }
     },
     "bacteria": {
@@ -754,5 +754,5 @@
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory until 12 AM.\nStrong winds.\nChoppy water."
+  "note": "Small Craft Advisory until 12 AM.\nStrong winds."
 }
