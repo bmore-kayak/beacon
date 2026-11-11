@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe2",
     "label": "Looks good"
   },
-  "updated": "2026-11-11T05:04:07-05:00",
+  "updated": "2026-11-11T05:33:19-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-11T05:04:05.789006-05:00"
+        "updated": "2026-11-11T05:33:18.113764-05:00"
       }
     },
     "storms": {
@@ -36,11 +36,11 @@
       "detail": "4 kt, gusts 5",
       "speed_kt": 4,
       "gust_kt": 5,
-      "direction_deg": 277.1,
+      "direction_deg": 285.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-11T05:04:05.789051-05:00"
+        "updated": "2026-11-11T05:33:18.113809-05:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-11T05:04:05.789066-05:00"
+        "updated": "2026-11-11T05:33:18.113824-05:00"
       }
     },
     "air_temp": {
@@ -63,18 +63,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-11T05:04:05.789081-05:00"
+        "updated": "2026-11-11T05:33:18.113838-05:00"
       }
     },
     "water_temp": {
       "icon": "\ud83c\udf21",
       "label": "Water Temp",
       "status": "\ud83d\udfe2",
-      "detail": "61\u00b0F",
+      "detail": "60\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-11T05:04:05.789086-05:00"
+        "updated": "2026-11-11T05:33:18.113843-05:00"
       }
     },
     "bacteria": {
@@ -757,7 +757,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-11T05:04:05-05:00"
+      "checked_at": "2026-11-11T05:33:18-05:00"
     }
   },
   "club_notes": [],
