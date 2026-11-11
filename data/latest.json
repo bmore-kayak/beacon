@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Heads up"
   },
-  "updated": "2026-11-11T14:34:17-05:00",
+  "updated": "2026-11-11T15:04:09-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-11T14:34:15.928199-05:00"
+        "updated": "2026-11-11T15:04:07.912383-05:00"
       }
     },
     "storms": {
@@ -26,21 +26,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-11T14:00:00-05:00"
+        "updated": "2026-11-11T15:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe1",
-      "detail": "8 kt, gusts 11",
-      "speed_kt": 8,
+      "detail": "9 kt, gusts 11",
+      "speed_kt": 9,
       "gust_kt": 11,
-      "direction_deg": 148.2,
+      "direction_deg": 155.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-11T14:34:15.928251-05:00"
+        "updated": "2026-11-11T15:04:07.912426-05:00"
       }
     },
     "waves": {
@@ -52,18 +52,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-11T14:34:15.928268-05:00"
+        "updated": "2026-11-11T15:04:07.912441-05:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "62\u00b0F",
+      "detail": "63\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-11T14:34:15.928286-05:00"
+        "updated": "2026-11-11T15:04:07.912456-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-11T14:34:15.928291-05:00"
+        "updated": "2026-11-11T15:04:07.912462-05:00"
       }
     },
     "bacteria": {
@@ -757,7 +757,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-11T14:34:15-05:00"
+      "checked_at": "2026-11-11T15:04:07-05:00"
     }
   },
   "club_notes": [],
