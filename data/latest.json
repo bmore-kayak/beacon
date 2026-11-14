@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-13T23:03:44-05:00",
+  "updated": "2026-11-13T23:34:20-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-13T23:03:42.530581-05:00"
+        "updated": "2026-11-13T23:34:18.570671-05:00"
       }
     },
     "storms": {
@@ -39,15 +39,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "13 kt, gusts 16",
+      "status": "\ud83d\udd34",
+      "detail": "13 kt, gusts 19",
       "speed_kt": 13,
-      "gust_kt": 16,
-      "direction_deg": 331.4,
+      "gust_kt": 19,
+      "direction_deg": 334.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-13T23:03:42.530631-05:00"
+        "updated": "2026-11-13T23:34:18.570737-05:00"
       }
     },
     "waves": {
@@ -59,7 +59,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-13T23:03:42.530643-05:00"
+        "updated": "2026-11-13T23:34:18.570753-05:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-13T23:03:42.530654-05:00"
+        "updated": "2026-11-13T23:34:18.570766-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-13T23:03:42.530658-05:00"
+        "updated": "2026-11-13T23:34:18.570771-05:00"
       }
     },
     "bacteria": {
@@ -764,9 +764,9 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-13T23:03:42-05:00"
+      "checked_at": "2026-11-13T23:34:18-05:00"
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory until 6 AM.\nElevated winds."
+  "note": "Small Craft Advisory until 6 AM.\nStrong winds."
 }
