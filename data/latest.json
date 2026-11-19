@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe1",
     "label": "Heads up"
   },
-  "updated": "2026-11-19T13:33:55-05:00",
+  "updated": "2026-11-19T14:03:56-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-19T13:33:50.202660-05:00"
+        "updated": "2026-11-19T14:03:54.706098-05:00"
       }
     },
     "storms": {
@@ -26,7 +26,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-19T13:00:00-05:00"
+        "updated": "2026-11-19T14:00:00-05:00"
       }
     },
     "wind": {
@@ -36,11 +36,11 @@
       "detail": "11 kt, gusts 12",
       "speed_kt": 11,
       "gust_kt": 12,
-      "direction_deg": 137.1,
+      "direction_deg": 123.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-19T13:33:50.202739-05:00"
+        "updated": "2026-11-19T14:03:54.706145-05:00"
       }
     },
     "waves": {
@@ -52,18 +52,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-19T13:33:50.202755-05:00"
+        "updated": "2026-11-19T14:03:54.706159-05:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "54\u00b0F",
+      "detail": "57\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-19T13:33:50.202771-05:00"
+        "updated": "2026-11-19T14:03:54.706174-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-19T13:33:50.202776-05:00"
+        "updated": "2026-11-19T14:03:54.706178-05:00"
       }
     },
     "bacteria": {
