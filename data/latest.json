@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe2",
     "label": "Looks good"
   },
-  "updated": "2026-11-18T19:34:43-05:00",
+  "updated": "2026-11-18T20:04:54-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-18T19:34:41.435612-05:00"
+        "updated": "2026-11-18T20:04:52.290824-05:00"
       }
     },
     "storms": {
@@ -26,33 +26,33 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-18T19:00:00-05:00"
+        "updated": "2026-11-18T20:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "1 kt, gusts 1",
-      "speed_kt": 1,
-      "gust_kt": 1,
-      "direction_deg": 210.4,
+      "detail": "3 kt, gusts 3",
+      "speed_kt": 3,
+      "gust_kt": 3,
+      "direction_deg": 234.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-18T19:34:41.435654-05:00"
+        "updated": "2026-11-18T20:04:52.290867-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.3 ft",
-      "height_ft": 0.3,
+      "detail": "0.2 ft",
+      "height_ft": 0.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-18T19:34:41.435668-05:00"
+        "updated": "2026-11-18T20:04:52.290881-05:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-18T19:34:41.435682-05:00"
+        "updated": "2026-11-18T20:04:52.290896-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-18T19:34:41.435687-05:00"
+        "updated": "2026-11-18T20:04:52.290901-05:00"
       }
     },
     "bacteria": {
@@ -737,27 +737,13 @@
       "icon": "\ud83d\udef6",
       "label": "Club Notices",
       "status": "\u26aa",
-      "detail": "1 upcoming event",
-      "items": [
-        {
-          "event_id": 248596,
-          "title": "Fells Point: Social Event",
-          "summary": "Join members and guests for snacks and beverages at a condo overlooking the Inner Harbor.",
-          "notice": false,
-          "location": "Fells Point",
-          "address": null,
-          "starts_at": "2026-11-18T17:30:00-05:00",
-          "ends_at": "2026-11-18T20:00:00-05:00",
-          "source_modified_at": "2026-11-02 15:56:59",
-          "reviewed_at": "2026-11-11T00:02:38-05:00",
-          "source_url": "https://cantonkayakclub.com/event/ckc-social-november-wednesday-11-18-530-8pm-in-fells-point-condo-overlooking-the-harbor/"
-        }
-      ],
+      "detail": "No upcoming events",
+      "items": [],
       "source": {
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-18T19:34:41-05:00"
+      "checked_at": "2026-11-18T20:04:52-05:00"
     }
   },
   "club_notes": [],
