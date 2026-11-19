@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe2",
     "label": "Looks good"
   },
-  "updated": "2026-11-18T21:33:52-05:00",
+  "updated": "2026-11-18T22:03:10-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-18T21:33:49.589035-05:00"
+        "updated": "2026-11-18T22:03:08.111912-05:00"
       }
     },
     "storms": {
@@ -26,21 +26,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-18T21:00:00-05:00"
+        "updated": "2026-11-18T22:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "3 kt, gusts 4",
+      "detail": "3 kt, gusts 3",
       "speed_kt": 3,
-      "gust_kt": 4,
-      "direction_deg": 219.1,
+      "gust_kt": 3,
+      "direction_deg": 257.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-18T21:33:49.589082-05:00"
+        "updated": "2026-11-18T22:03:08.111977-05:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-18T21:33:49.589096-05:00"
+        "updated": "2026-11-18T22:03:08.111992-05:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-18T21:33:49.589108-05:00"
+        "updated": "2026-11-18T22:03:08.112005-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-18T21:33:49.589112-05:00"
+        "updated": "2026-11-18T22:03:08.112009-05:00"
       }
     },
     "bacteria": {
@@ -743,7 +743,7 @@
         "label": "Canton Kayak Club",
         "url": "https://cantonkayakclub.com/events/"
       },
-      "checked_at": "2026-11-18T21:33:49-05:00"
+      "checked_at": "2026-11-18T22:03:08-05:00"
     }
   },
   "club_notes": [],
