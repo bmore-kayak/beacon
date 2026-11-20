@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe2",
     "label": "Looks good"
   },
-  "updated": "2026-11-20T09:33:57-05:00",
+  "updated": "2026-11-20T10:04:05-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-20T09:33:55.363145-05:00"
+        "updated": "2026-11-20T10:04:03.749451-05:00"
       }
     },
     "storms": {
@@ -26,21 +26,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-20T09:00:00-05:00"
+        "updated": "2026-11-20T10:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "1 kt, gusts 1",
-      "speed_kt": 1,
-      "gust_kt": 1,
-      "direction_deg": 186.2,
+      "detail": "2 kt, gusts 2",
+      "speed_kt": 2,
+      "gust_kt": 2,
+      "direction_deg": 155.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-20T09:33:55.363193-05:00"
+        "updated": "2026-11-20T10:04:03.749498-05:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-20T09:33:55.363207-05:00"
+        "updated": "2026-11-20T10:04:03.749513-05:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-20T09:33:55.363220-05:00"
+        "updated": "2026-11-20T10:04:03.749528-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-20T09:33:55.363224-05:00"
+        "updated": "2026-11-20T10:04:03.749532-05:00"
       }
     },
     "bacteria": {
