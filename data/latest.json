@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe2",
     "label": "Looks good"
   },
-  "updated": "2026-11-21T17:34:08-05:00",
+  "updated": "2026-11-21T18:04:08-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-21T17:34:06.410812-05:00"
+        "updated": "2026-11-21T18:04:06.445078-05:00"
       }
     },
     "storms": {
@@ -26,21 +26,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-21T17:00:00-05:00"
+        "updated": "2026-11-21T18:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "1 kt, gusts 2",
-      "speed_kt": 1,
+      "detail": "2 kt, gusts 2",
+      "speed_kt": 2,
       "gust_kt": 2,
-      "direction_deg": 171.2,
+      "direction_deg": 175.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-21T17:34:06.410858-05:00"
+        "updated": "2026-11-21T18:04:06.445122-05:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-21T17:34:06.410873-05:00"
+        "updated": "2026-11-21T18:04:06.445136-05:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-21T17:34:06.410887-05:00"
+        "updated": "2026-11-21T18:04:06.445149-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-21T17:34:06.410892-05:00"
+        "updated": "2026-11-21T18:04:06.445153-05:00"
       }
     },
     "bacteria": {
