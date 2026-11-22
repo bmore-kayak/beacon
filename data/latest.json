@@ -4,7 +4,7 @@
     "status": "\ud83d\udfe2",
     "label": "Looks good"
   },
-  "updated": "2026-11-22T12:35:52-05:00",
+  "updated": "2026-11-22T13:05:16-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -15,7 +15,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-22T12:35:50.409312-05:00"
+        "updated": "2026-11-22T13:05:14.331801-05:00"
       }
     },
     "storms": {
@@ -26,21 +26,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-22T12:00:00-05:00"
+        "updated": "2026-11-22T13:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe2",
-      "detail": "7 kt, gusts 8",
-      "speed_kt": 7,
-      "gust_kt": 8,
-      "direction_deg": 78.6,
+      "detail": "8 kt, gusts 9",
+      "speed_kt": 8,
+      "gust_kt": 9,
+      "direction_deg": 70.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-22T12:35:50.409364-05:00"
+        "updated": "2026-11-22T13:05:14.331844-05:00"
       }
     },
     "waves": {
@@ -52,7 +52,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-22T12:35:50.409379-05:00"
+        "updated": "2026-11-22T13:05:14.331859-05:00"
       }
     },
     "air_temp": {
@@ -63,7 +63,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-22T12:35:50.409396-05:00"
+        "updated": "2026-11-22T13:05:14.331876-05:00"
       }
     },
     "water_temp": {
@@ -74,7 +74,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-22T12:35:50.409401-05:00"
+        "updated": "2026-11-22T13:05:14.331881-05:00"
       }
     },
     "bacteria": {
