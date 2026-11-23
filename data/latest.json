@@ -1,17 +1,23 @@
 {
   "location": "Baltimore Harbor",
   "overall": {
-    "status": "\ud83d\udfe0",
-    "label": "Use caution"
+    "status": "\ud83d\udfe1",
+    "label": "Heads up"
   },
-  "updated": "2026-11-23T13:33:58-05:00",
+  "updated": "2026-11-23T14:04:14-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
       "label": "Alerts",
       "status": "\ud83d\udfe1",
-      "detail": "Small Craft Advisory",
+      "detail": "2 active alerts",
       "items": [
+        {
+          "event": "Marine Weather Statement",
+          "status": "\ud83d\udfe1",
+          "starts": "2026-11-23T13:36:00-05:00",
+          "ends": "2026-11-23T20:00:00-05:00"
+        },
         {
           "event": "Small Craft Advisory",
           "status": "\ud83d\udfe1",
@@ -22,7 +28,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-23T13:33:56.993919-05:00"
+        "updated": "2026-11-23T14:04:12.902834-05:00"
       }
     },
     "storms": {
@@ -33,33 +39,33 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-23T13:00:00-05:00"
+        "updated": "2026-11-23T14:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "14 kt, gusts 16",
-      "speed_kt": 14,
-      "gust_kt": 16,
-      "direction_deg": 308.8,
+      "status": "\ud83d\udfe1",
+      "detail": "10 kt, gusts 12",
+      "speed_kt": 10,
+      "gust_kt": 12,
+      "direction_deg": 321.8,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-23T13:33:56.993995-05:00"
+        "updated": "2026-11-23T14:04:12.902909-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.5 ft",
-      "height_ft": 0.5,
+      "detail": "0.7 ft",
+      "height_ft": 0.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-23T13:33:56.994011-05:00"
+        "updated": "2026-11-23T14:04:12.902922-05:00"
       }
     },
     "air_temp": {
@@ -70,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-23T13:33:56.994026-05:00"
+        "updated": "2026-11-23T14:04:12.902935-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +87,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-23T13:33:56.994031-05:00"
+        "updated": "2026-11-23T14:04:12.902939-05:00"
       }
     },
     "bacteria": {
@@ -754,5 +760,5 @@
     }
   },
   "club_notes": [],
-  "note": "Small Craft Advisory from 8 PM to 1 PM.\nElevated winds."
+  "note": "Marine Weather Statement until 8 PM.\nSmall Craft Advisory from 8 PM to 1 PM."
 }
