@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-24T11:04:02-05:00",
+  "updated": "2026-11-24T11:35:25-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -34,7 +34,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-24T11:04:00.915316-05:00"
+        "updated": "2026-11-24T11:35:15.399460-05:00"
       }
     },
     "storms": {
@@ -51,15 +51,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udd34",
-      "detail": "18 kt, gusts 22",
-      "speed_kt": 18,
-      "gust_kt": 22,
-      "direction_deg": 350.8,
+      "status": "\ud83d\udfe0",
+      "detail": "13 kt, gusts 16",
+      "speed_kt": 13,
+      "gust_kt": 16,
+      "direction_deg": 351.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-24T11:04:00.915411-05:00"
+        "updated": "2026-11-24T11:35:15.399576-05:00"
       }
     },
     "waves": {
@@ -71,7 +71,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-24T11:04:00.915425-05:00"
+        "updated": "2026-11-24T11:35:15.399592-05:00"
       }
     },
     "air_temp": {
@@ -82,7 +82,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-24T11:04:00.915440-05:00"
+        "updated": "2026-11-24T11:35:15.399607-05:00"
       }
     },
     "water_temp": {
@@ -93,7 +93,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-24T11:04:00.915444-05:00"
+        "updated": "2026-11-24T11:35:15.399612-05:00"
       }
     },
     "bacteria": {
@@ -766,5 +766,5 @@
     }
   },
   "club_notes": [],
-  "note": "3 active alerts.\nStrong winds."
+  "note": "3 active alerts.\nElevated winds."
 }
