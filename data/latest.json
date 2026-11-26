@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-26T03:34:23-05:00",
+  "updated": "2026-11-26T04:05:43-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -46,7 +46,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-26T03:34:22.005323-05:00"
+        "updated": "2026-11-26T04:05:41.350146-05:00"
       }
     },
     "storms": {
@@ -57,33 +57,33 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-26T03:00:00-05:00"
+        "updated": "2026-11-26T04:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "18 kt, gusts 24",
-      "speed_kt": 18,
-      "gust_kt": 24,
-      "direction_deg": 54.1,
+      "detail": "22 kt, gusts 29",
+      "speed_kt": 22,
+      "gust_kt": 29,
+      "direction_deg": 56.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T03:34:22.005417-05:00"
+        "updated": "2026-11-26T04:05:41.350287-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.8 ft",
-      "height_ft": 0.8,
+      "detail": "0.6 ft",
+      "height_ft": 0.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T03:34:22.005431-05:00"
+        "updated": "2026-11-26T04:05:41.350306-05:00"
       }
     },
     "air_temp": {
@@ -94,7 +94,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T03:34:22.005444-05:00"
+        "updated": "2026-11-26T04:05:41.350326-05:00"
       }
     },
     "water_temp": {
@@ -105,7 +105,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T03:34:22.005448-05:00"
+        "updated": "2026-11-26T04:05:41.350331-05:00"
       }
     },
     "bacteria": {
