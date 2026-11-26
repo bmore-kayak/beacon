@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-26T18:05:30-05:00",
+  "updated": "2026-11-26T18:35:18-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -28,7 +28,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-26T18:05:28.302786-05:00"
+        "updated": "2026-11-26T18:35:16.832674-05:00"
       }
     },
     "storms": {
@@ -46,37 +46,37 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "20 kt, gusts 25",
-      "speed_kt": 20,
-      "gust_kt": 25,
-      "direction_deg": 69.7,
+      "detail": "27 kt, gusts 33",
+      "speed_kt": 27,
+      "gust_kt": 33,
+      "direction_deg": 59.4,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T18:05:28.302872-05:00"
+        "updated": "2026-11-26T18:35:16.832754-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.5 ft",
-      "height_ft": 0.5,
+      "detail": "0.6 ft",
+      "height_ft": 0.6,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T18:05:28.302888-05:00"
+        "updated": "2026-11-26T18:35:16.832767-05:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "50\u00b0F",
+      "detail": "51\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T18:05:28.302903-05:00"
+        "updated": "2026-11-26T18:35:16.832781-05:00"
       }
     },
     "water_temp": {
@@ -87,7 +87,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T18:05:28.302908-05:00"
+        "updated": "2026-11-26T18:35:16.832785-05:00"
       }
     },
     "bacteria": {
