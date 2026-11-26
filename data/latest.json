@@ -4,25 +4,49 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-25T23:33:20-05:00",
+  "updated": "2026-11-26T00:05:22-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
       "label": "Alerts",
       "status": "\ud83d\udd34",
-      "detail": "Storm Warning",
+      "detail": "5 active alerts",
       "items": [
         {
           "event": "Storm Warning",
           "status": "\ud83d\udd34",
           "starts": "2026-11-25T20:09:00-05:00",
           "ends": "2026-11-26T18:00:00-05:00"
+        },
+        {
+          "event": "Wind Advisory",
+          "status": "\ud83d\udfe1",
+          "starts": "2026-11-26T04:00:00-05:00",
+          "ends": "2026-11-26T16:00:00-05:00"
+        },
+        {
+          "event": "High Wind Warning",
+          "status": "\ud83d\udfe1",
+          "starts": "2026-11-26T04:00:00-05:00",
+          "ends": "2026-11-26T19:00:00-05:00"
+        },
+        {
+          "event": "Coastal Flood Advisory",
+          "status": "\ud83d\udfe1",
+          "starts": "2026-11-26T16:00:00-05:00",
+          "ends": "2026-11-27T12:00:00-05:00"
+        },
+        {
+          "event": "Gale Warning",
+          "status": "\ud83d\udfe1",
+          "starts": "2026-11-26T18:00:00-05:00",
+          "ends": "2026-11-27T13:00:00-05:00"
         }
       ],
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-25T23:33:18.868489-05:00"
+        "updated": "2026-11-26T00:05:21.101261-05:00"
       }
     },
     "storms": {
@@ -33,21 +57,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-25T23:00:00-05:00"
+        "updated": "2026-11-26T00:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "15 kt, gusts 22",
-      "speed_kt": 15,
-      "gust_kt": 22,
-      "direction_deg": 63.2,
+      "detail": "21 kt, gusts 29",
+      "speed_kt": 21,
+      "gust_kt": 29,
+      "direction_deg": 46.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-25T23:33:18.868564-05:00"
+        "updated": "2026-11-26T00:05:21.101341-05:00"
       }
     },
     "waves": {
@@ -59,7 +83,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-25T23:33:18.868577-05:00"
+        "updated": "2026-11-26T00:05:21.101353-05:00"
       }
     },
     "air_temp": {
@@ -70,7 +94,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-25T23:33:18.868590-05:00"
+        "updated": "2026-11-26T00:05:21.101365-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +105,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-25T23:33:18.868593-05:00"
+        "updated": "2026-11-26T00:05:21.101370-05:00"
       }
     },
     "bacteria": {
@@ -754,5 +778,5 @@
     }
   },
   "club_notes": [],
-  "note": "Storm Warning until 6 PM.\nStrong winds."
+  "note": "5 active alerts.\nStrong winds."
 }
