@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-26T22:03:21-05:00",
+  "updated": "2026-11-26T22:34:08-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -28,7 +28,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-26T22:03:18.665543-05:00"
+        "updated": "2026-11-26T22:34:06.736263-05:00"
       }
     },
     "storms": {
@@ -45,15 +45,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udfe0",
-      "detail": "10 kt, gusts 14",
-      "speed_kt": 10,
-      "gust_kt": 14,
-      "direction_deg": 77.4,
+      "status": "\ud83d\udfe2",
+      "detail": "7 kt, gusts 9",
+      "speed_kt": 7,
+      "gust_kt": 9,
+      "direction_deg": 107.3,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T22:03:18.665621-05:00"
+        "updated": "2026-11-26T22:34:06.736353-05:00"
       }
     },
     "waves": {
@@ -65,18 +65,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T22:03:18.665634-05:00"
+        "updated": "2026-11-26T22:34:06.736367-05:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "50\u00b0F",
+      "detail": "51\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T22:03:18.665646-05:00"
+        "updated": "2026-11-26T22:34:06.736383-05:00"
       }
     },
     "water_temp": {
@@ -87,7 +87,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T22:03:18.665650-05:00"
+        "updated": "2026-11-26T22:34:06.736388-05:00"
       }
     },
     "bacteria": {
@@ -760,5 +760,5 @@
     }
   },
   "club_notes": [],
-  "note": "Coastal Flood Warning until 12 PM.\nGale Warning until 1 PM.\nElevated winds."
+  "note": "Coastal Flood Warning until 12 PM.\nGale Warning until 1 PM."
 }
