@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-26T20:06:25-05:00",
+  "updated": "2026-11-26T20:35:43-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -28,7 +28,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-26T20:06:24.036523-05:00"
+        "updated": "2026-11-26T20:35:41.758250-05:00"
       }
     },
     "storms": {
@@ -46,26 +46,26 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "17 kt, gusts 22",
-      "speed_kt": 17,
-      "gust_kt": 22,
-      "direction_deg": 56.6,
+      "detail": "18 kt, gusts 24",
+      "speed_kt": 18,
+      "gust_kt": 24,
+      "direction_deg": 60.0,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T20:06:24.036620-05:00"
+        "updated": "2026-11-26T20:35:41.758335-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.9 ft",
-      "height_ft": 0.9,
+      "detail": "0.7 ft",
+      "height_ft": 0.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T20:06:24.036637-05:00"
+        "updated": "2026-11-26T20:35:41.758350-05:00"
       }
     },
     "air_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T20:06:24.036653-05:00"
+        "updated": "2026-11-26T20:35:41.758365-05:00"
       }
     },
     "water_temp": {
@@ -87,7 +87,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T20:06:24.036659-05:00"
+        "updated": "2026-11-26T20:35:41.758371-05:00"
       }
     },
     "bacteria": {
