@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-26T19:05:31-05:00",
+  "updated": "2026-11-26T19:34:21-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -13,22 +13,22 @@
       "detail": "2 active alerts",
       "items": [
         {
+          "event": "Coastal Flood Warning",
+          "status": "\ud83d\udd34",
+          "starts": "2026-11-26T19:23:00-05:00",
+          "ends": "2026-11-27T12:00:00-05:00"
+        },
+        {
           "event": "Gale Warning",
           "status": "\ud83d\udd34",
           "starts": "2026-11-26T15:22:00-05:00",
           "ends": "2026-11-27T13:00:00-05:00"
-        },
-        {
-          "event": "Coastal Flood Advisory",
-          "status": "\ud83d\udfe0",
-          "starts": "2026-11-26T16:00:00-05:00",
-          "ends": "2026-11-27T12:00:00-05:00"
         }
       ],
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-26T19:05:29.677232-05:00"
+        "updated": "2026-11-26T19:34:19.891348-05:00"
       }
     },
     "storms": {
@@ -46,14 +46,14 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "28 kt, gusts 34",
-      "speed_kt": 28,
-      "gust_kt": 34,
-      "direction_deg": 73.4,
+      "detail": "25 kt, gusts 32",
+      "speed_kt": 25,
+      "gust_kt": 32,
+      "direction_deg": 71.7,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T19:05:29.677325-05:00"
+        "updated": "2026-11-26T19:34:19.891423-05:00"
       }
     },
     "waves": {
@@ -65,7 +65,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T19:05:29.677340-05:00"
+        "updated": "2026-11-26T19:34:19.891436-05:00"
       }
     },
     "air_temp": {
@@ -76,7 +76,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T19:05:29.677356-05:00"
+        "updated": "2026-11-26T19:34:19.891450-05:00"
       }
     },
     "water_temp": {
@@ -87,7 +87,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-26T19:05:29.677361-05:00"
+        "updated": "2026-11-26T19:34:19.891454-05:00"
       }
     },
     "bacteria": {
@@ -760,5 +760,5 @@
     }
   },
   "club_notes": [],
-  "note": "Gale Warning until 1 PM.\nCoastal Flood Advisory until 12 PM.\nStrong winds."
+  "note": "Coastal Flood Warning until 12 PM.\nGale Warning until 1 PM.\nStrong winds."
 }
