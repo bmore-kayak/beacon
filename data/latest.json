@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-27T02:04:29-05:00",
+  "updated": "2026-11-27T02:35:32-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -40,7 +40,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-27T02:04:27.576358-05:00"
+        "updated": "2026-11-27T02:35:29.620330-05:00"
       }
     },
     "storms": {
@@ -57,15 +57,15 @@
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
-      "status": "\ud83d\udd34",
-      "detail": "16 kt, gusts 21",
-      "speed_kt": 16,
-      "gust_kt": 21,
-      "direction_deg": 208.9,
+      "status": "\ud83d\udfe0",
+      "detail": "12 kt, gusts 16",
+      "speed_kt": 12,
+      "gust_kt": 16,
+      "direction_deg": 196.9,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-27T02:04:27.576444-05:00"
+        "updated": "2026-11-27T02:35:29.620434-05:00"
       }
     },
     "waves": {
@@ -77,18 +77,18 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-27T02:04:27.576458-05:00"
+        "updated": "2026-11-27T02:35:29.620448-05:00"
       }
     },
     "air_temp": {
       "icon": "\ud83c\udf21",
       "label": "Air Temp",
       "status": "\ud83d\udfe2",
-      "detail": "54\u00b0F",
+      "detail": "52\u00b0F",
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-27T02:04:27.576471-05:00"
+        "updated": "2026-11-27T02:35:29.620463-05:00"
       }
     },
     "water_temp": {
@@ -99,7 +99,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-27T02:04:27.576476-05:00"
+        "updated": "2026-11-27T02:35:29.620467-05:00"
       }
     },
     "bacteria": {
@@ -772,5 +772,5 @@
     }
   },
   "club_notes": [],
-  "note": "4 active alerts.\nStrong winds."
+  "note": "4 active alerts.\nElevated winds."
 }
