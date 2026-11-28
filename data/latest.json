@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-28T04:35:30-05:00",
+  "updated": "2026-11-28T05:05:33-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-28T04:35:27.951544-05:00"
+        "updated": "2026-11-28T05:05:31.296008-05:00"
       }
     },
     "storms": {
@@ -33,21 +33,21 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Inner Harbor",
-        "updated": "2026-11-28T04:00:00-05:00"
+        "updated": "2026-11-28T05:00:00-05:00"
       }
     },
     "wind": {
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udd34",
-      "detail": "17 kt, gusts 19",
+      "detail": "17 kt, gusts 21",
       "speed_kt": 17,
-      "gust_kt": 19,
-      "direction_deg": 230.8,
+      "gust_kt": 21,
+      "direction_deg": 230.1,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-28T04:35:27.951611-05:00"
+        "updated": "2026-11-28T05:05:31.296114-05:00"
       }
     },
     "waves": {
@@ -59,7 +59,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-28T04:35:27.951626-05:00"
+        "updated": "2026-11-28T05:05:31.296129-05:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-28T04:35:27.951641-05:00"
+        "updated": "2026-11-28T05:05:31.296144-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-28T04:35:27.951646-05:00"
+        "updated": "2026-11-28T05:05:31.296148-05:00"
       }
     },
     "bacteria": {
