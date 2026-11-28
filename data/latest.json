@@ -4,7 +4,7 @@
     "status": "\ud83d\udd34",
     "label": "Stay off water"
   },
-  "updated": "2026-11-28T02:03:31-05:00",
+  "updated": "2026-11-28T02:34:34-05:00",
   "conditions": {
     "advisories": {
       "icon": "\ud83d\udea8",
@@ -22,7 +22,7 @@
       "source": {
         "provider": "National Weather Service",
         "location": "Baltimore Harbor",
-        "updated": "2026-11-28T02:03:29.418434-05:00"
+        "updated": "2026-11-28T02:34:29.697678-05:00"
       }
     },
     "storms": {
@@ -40,26 +40,26 @@
       "icon": "\ud83c\udf2c",
       "label": "Wind",
       "status": "\ud83d\udfe0",
-      "detail": "12 kt, gusts 15",
-      "speed_kt": 12,
-      "gust_kt": 15,
-      "direction_deg": 231.2,
+      "detail": "13 kt, gusts 16",
+      "speed_kt": 13,
+      "gust_kt": 16,
+      "direction_deg": 217.2,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-28T02:03:29.418501-05:00"
+        "updated": "2026-11-28T02:34:29.697741-05:00"
       }
     },
     "waves": {
       "icon": "\ud83c\udf0a",
       "label": "Waves",
       "status": "\ud83d\udfe2",
-      "detail": "0.4 ft",
-      "height_ft": 0.4,
+      "detail": "0.5 ft",
+      "height_ft": 0.5,
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-28T02:03:29.418516-05:00"
+        "updated": "2026-11-28T02:34:29.697755-05:00"
       }
     },
     "air_temp": {
@@ -70,7 +70,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-28T02:03:29.418528-05:00"
+        "updated": "2026-11-28T02:34:29.697767-05:00"
       }
     },
     "water_temp": {
@@ -81,7 +81,7 @@
       "source": {
         "provider": "NOAA CBIBS",
         "location": "Baltimore Harbor Buoy",
-        "updated": "2026-11-28T02:03:29.418532-05:00"
+        "updated": "2026-11-28T02:34:29.697772-05:00"
       }
     },
     "bacteria": {
